@@ -6,13 +6,13 @@ const Hero = () => {
   return (
     <Section
       id="hero"
-      className="py-10 bg-white flex flex-col md:flex-row justify-center"
+      className="py-10 flex flex-col md:flex-row justify-center"
     >
-      <section className="relative overflow-hidden bg-gradient-to-br from-yellow-100 via-red-100 to-orange-100 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 py-28 px-6">
+      <section className="relative overflow-hidden py-28 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
           {/* Text Column */}
           <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-red-700 dark:text-red-400 leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-red-700 dark:text-red-400 leading-tight mb-6 hero-font">
               Invest in Flavor.
               <br />
               <span className="bg-gradient-to-r from-red-500 via-yellow-400 to-orange-500 bg-clip-text text-transparent">

@@ -1,3 +1,11 @@
+import { airbnb, binance, coinbase, dropbox } from "../assets";
+
+type Client = {
+  id: string;
+  logo: string;
+  name: string;
+};
+
 type FooterLink = {
   title: string;
   links: {
@@ -12,6 +20,29 @@ type SocialMedia = {
   link: string;
   name: string;
 };
+
+export const clients: Client[] = [
+  {
+    id: "client-1",
+    logo: airbnb,
+    name: "Dominos Crypto",
+  },
+  {
+    id: "client-2",
+    logo: binance,
+    name: "Pizza Hut DAO",
+  },
+  {
+    id: "client-3",
+    logo: coinbase,
+    name: "Papa Johns Blockchain",
+  },
+  {
+    id: "client-4",
+    logo: dropbox,
+    name: "Mama Mia Crypto Pizzeria",
+  },
+];
 
 export const footerLinks: FooterLink[] = [
   {

@@ -1,0 +1,51 @@
+.infinite-carousel {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: auto;
+  height: 100%;
+  margin-right: 1.8rem;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  width: 200px;
+  border-radius: 8px;
+  transition: all ease-in-out 200ms;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.1);
+
+  filter: drop-shadow(0 0 1em #ff6347aa) /* Sombra roja de tomate */
+    drop-shadow(0 0 1.5em #ffd700aa) /* Sombra dorada de queso */
+    drop-shadow(0 0 2em #8b0000aa); /* Sombra oscura de pepperoni */
+}
+
+/* Animación que mueve el carrusel de izquierda a derecha */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

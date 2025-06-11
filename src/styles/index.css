@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Fredoka";
+  src: local("Fredoka"),
+    url("../../public/fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+    url("../../public/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+  font-weight: semibold;
+}
+
+.hero-font {
+  font-family: "Fredoka";
+  font-size: 72px;
+}
+
 :root {
   /* Base Theme Colors (Light Mode) */
   --color-bg: #fff8f0;
@@ -35,6 +53,30 @@
   --color-card-bg: #2a2a2a;
   --color-button-bg: var(--color-accent);
   --color-button-text: #fff;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0b0b0b;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --font-title: "Fredoka";
+  --font-body: "Baloo 2", sans-serif;
 }
 
 @layer utilities {

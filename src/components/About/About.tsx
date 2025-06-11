@@ -1,13 +1,32 @@
 import React from "react";
 import { Section } from "../../layout";
+import {
+  pepeCivilian,
+  pepePets,
+  pepePresident,
+  pepeSpy,
+  pepeSurf,
+  pepeWarrior,
+} from "../../assets";
+
+import "./About.css";
 
 const About = () => {
+  const images = [
+    pepeWarrior,
+    pepeCivilian,
+    pepePresident,
+    pepeSpy,
+    pepePets,
+    pepeSurf,
+  ];
+
   return (
     <Section
       id="about"
       className="py-10 flex flex-col md:flex-row justify-center"
     >
-      <section className="bg-white dark:bg-zinc-800 py-20 px-6">
+      <section className="bg-white dark:bg-zinc-800 py-20 px-6 overflow-hidden">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">
@@ -25,11 +44,15 @@ const About = () => {
               oven.
             </p>
           </div>
-          <img
-            src="/assets/peperoni-crypto-illustration.svg"
-            alt="Peperoni Coin crypto illustration"
-            className="w-full max-w-sm mx-auto"
-          />
+          <div className="relative">
+            <div className="grid-memes">
+              {images.map((src, index) => (
+                <div className="grid-item" key={index}>
+                  <img src={src} alt={`meme-${index}`} className="h-16" />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </Section>

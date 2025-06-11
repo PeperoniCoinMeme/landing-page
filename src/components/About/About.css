@@ -1,0 +1,23 @@
+.grid-memes {
+  position: absolute;
+  top: -200px;
+  right: -150px;
+  /* transform: rotate3d(360, 120, -90, 55deg) rotateZ(60deg); */
+  transform: rotate3d(360, -160, 150, 55deg) rotateZ(8deg);
+  perspective: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+.grid-item img {
+  width: 100%;
+  box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.5);
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.grid-item img:hover {
+  box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.5);
+}
