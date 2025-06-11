@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  /* Base Theme Colors (Light Mode) */
+  --color-bg: #fff8f0;
+  --color-text: #1e1e1e;
+  --color-accent: #d62828; /* Peperoni red */
+  --color-secondary: #f77f00; /* Golden cheese */
+  --color-tertiary: #fcbf49; /* Warm crust */
+  --color-success: #7ebc59; /* Basil green */
+  --color-border: #e0e0e0;
+  --color-muted: #888;
+
+  /* Special Elements */
+  --color-card-bg: #fff;
+  --color-button-bg: var(--color-accent);
+  --color-button-text: #fff;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.4s ease;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --color-bg: #1a1a1a;
+  --color-text: #f0f0f0;
+  --color-accent: #ff4d4d;
+  --color-secondary: #ffaa00;
+  --color-tertiary: #d49f3a;
+  --color-success: #91d36c;
+  --color-border: #333;
+  --color-muted: #aaa;
+
+  --color-card-bg: #2a2a2a;
+  --color-button-bg: var(--color-accent);
+  --color-button-text: #fff;
+}
+
+@layer utilities {
+  .animate-float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+}
