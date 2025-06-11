@@ -1,11 +1,12 @@
 import { useState } from "react";
+import LandingPage from "./views/LandingPage";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <LandingPage />
     </>
   );
 }
