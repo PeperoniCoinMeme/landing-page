@@ -16,6 +16,7 @@ import PricingContent from "./Content/Pricing";
 import TokenomicsContent from "./Content/Tokenomics";
 import AboutContent from "./Content/About";
 import MeltingCheese from "../../components/MeltingCheese/MeltingCheese";
+import FlyoutLink from "./Flyout/Flyout";
 
 const menuItems = [
   { label: "Tokenomics", href: "#tokenomics", icon: CurrencyDollarIcon },
@@ -36,7 +37,8 @@ const Navbar = () => {
         </div>
 
         <div className="flex justify-between w-6/12">
-          <div className="flex flex-row">
+          {/* Deprecated */}
+          {/* <div className="flex flex-row">
             <FlyoutLink href="#" FlyoutContent={PricingContent}>
               Pricing
             </FlyoutLink>
@@ -46,14 +48,14 @@ const Navbar = () => {
             <FlyoutLink href="#" FlyoutContent={TokenomicsContent}>
               Tokenomics
             </FlyoutLink>
-          </div>
-          <button
-            onClick={toggleMenu}
-            className="text-[var(--color-pepperoni)] relative p-[14px] "
-          >
-            <Bars3Icon className="h-7 w-7 absolute top-0 left-0" />
-          </button>
+          </div> */}
         </div>
+        <button
+          onClick={toggleMenu}
+          className="text-[var(--color-pepperoni)] relative p-[14px] "
+        >
+          <Bars3Icon className="h-7 w-7 absolute top-0 left-0" />
+        </button>
 
         {/* Melting Cheese Images  */}
         <MeltingCheese />
@@ -118,59 +120,6 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </>
-  );
-};
-
-interface FlyoutLinkProps {
-  children?: any;
-  href?: any;
-  FlyoutContent?: any;
-}
-
-const FlyoutLink: React.FC<FlyoutLinkProps> = ({
-  children,
-  href,
-  FlyoutContent,
-}) => {
-  const [open, setOpen] = useState(false);
-
-  const showFlyout = open && FlyoutContent;
-
-  return (
-    <div
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-      className="group relative h-fit w-fit px-5"
-    >
-      <a
-        href={href}
-        className="relative text-[var(--color-pepperoni)] font-semibold"
-      >
-        {children}
-        {/* TODO: Render underline animation thingy */}
-        <span
-          style={{ transform: showFlyout ? "scaleX(1)" : "scaleX(0)" }}
-          className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-[var(--color-pepperoni)] transition-transform duration-300 ease-out"
-        />
-      </a>
-      {/* TODO: Render flyout content */}
-      <AnimatePresence>
-        {showFlyout && (
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 15 }}
-            style={{ x: "-50%" }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="absolute left-1/2 top-12 bg-white text-black "
-          >
-            <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
-            <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
-            <FlyoutContent />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
   );
 };
 
