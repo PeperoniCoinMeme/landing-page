@@ -37,7 +37,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex justify-between w-6/12">
-          {/* Deprecated */}
+          {/* Deprecated | No nav links */}
           {/* <div className="flex flex-row">
             <FlyoutLink href="#" FlyoutContent={PricingContent}>
               Pricing
