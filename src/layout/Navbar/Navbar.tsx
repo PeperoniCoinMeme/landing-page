@@ -15,6 +15,7 @@ import { logo } from "../../assets";
 import PricingContent from "./Content/Pricing";
 import TokenomicsContent from "./Content/Tokenomics";
 import AboutContent from "./Content/About";
+import MeltingCheese from "../../components/MeltingCheese/MeltingCheese";
 
 const menuItems = [
   { label: "Tokenomics", href: "#tokenomics", icon: CurrencyDollarIcon },
@@ -28,9 +29,10 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   return (
     <>
-      <nav className="fixed top-0 left-0 z-50 w-full shadow-md flex justify-between bg-orange-400 px-3 py-8 h-1 items-center">
-        <div id="logo" className="w-12 ">
-          <img src={logo} alt="" className="hover:shadow-md" />
+      <nav className="fixed bg-[var(--color-cheese)] top-0 left-0 z-150 w-full shadow-lg flex justify-between px-3 py-8 h-1 items-center">
+        <div id="logo" className="w-12 flex flex-row gap-3 items-center ">
+          <img src={logo} alt="" className="hover:scale-120 transition-all" />
+          <p className="text-gray-900 font-extrabold text-xl">PEPERONI</p>
         </div>
 
         <div className="flex justify-between w-6/12">
@@ -47,11 +49,14 @@ const Navbar = () => {
           </div>
           <button
             onClick={toggleMenu}
-            className="text-white relative p-[14px] "
+            className="text-[var(--color-pepperoni)] relative p-[14px] "
           >
             <Bars3Icon className="h-7 w-7 absolute top-0 left-0" />
           </button>
         </div>
+
+        {/* Melting Cheese Images  */}
+        <MeltingCheese />
       </nav>
 
       <AnimatePresence>
@@ -137,12 +142,15 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
       onMouseLeave={() => setOpen(false)}
       className="group relative h-fit w-fit px-5"
     >
-      <a href={href} className="relative text-white">
+      <a
+        href={href}
+        className="relative text-[var(--color-pepperoni)] font-semibold"
+      >
         {children}
         {/* TODO: Render underline animation thingy */}
         <span
           style={{ transform: showFlyout ? "scaleX(1)" : "scaleX(0)" }}
-          className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-orange-300 transition-transform duration-300 ease-out"
+          className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-[var(--color-pepperoni)] transition-transform duration-300 ease-out"
         />
       </a>
       {/* TODO: Render flyout content */}

@@ -4,7 +4,7 @@ import pepeBanner from "./meme/pepe-banner.jpeg";
 import pepeCar from "./meme/car.jpeg";
 import pepeCivilian from "./meme/civilian.jpeg";
 import pepeClimbing from "./meme/climbing.jpeg";
-import pepeFitString from "./meme/fit.jpeg";
+import pepeFitStrong from "./meme/fit.jpeg";
 import pepeFitSkinny from "./meme/fit-2.jpeg";
 import pepePets from "./meme/pets.jpeg";
 import pepePresident from "./meme/president.jpeg";
@@ -30,13 +30,15 @@ import instagram from "./social/instagram.svg";
 import linkedin from "./social/linkedin.svg";
 import twitter from "./social/twitter.svg";
 
+import meltingCheese from "./cheese/melting-cheese-transparent.png";
+
 export {
   peperoniPizza,
   pepeBanner,
   pepeCar,
   pepeCivilian,
   pepeClimbing,
-  pepeFitString,
+  pepeFitStrong,
   pepeFitSkinny,
   pepePets,
   pepePresident,
@@ -45,6 +47,8 @@ export {
   pepeWarrior,
   pepeLogo,
 };
+
+export { meltingCheese };
 
 export {
   airbnb,

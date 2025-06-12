@@ -1,19 +1,49 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import React from "react";
 import { Section } from "../../layout";
 import { logo } from "../../assets";
+import { words } from "../../constants";
+import AnimatedCounter from "../AnimatedCounter/AnimatedCounter";
+import HeroExperience from "../models/Hero/HeroExperience";
 
 const Hero = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      ".hero-text h1",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
+    );
+  });
+
   return (
     <Section
       id="hero"
-      className="py-10 flex flex-col md:flex-row justify-center"
+      className="pt-28 pb-10 flex flex-col md:flex-row justify-center"
     >
-      <section className="relative overflow-hidden py-28 px-6">
+      <section className="relative overflow-hidden py-20 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
           {/* Text Column */}
-          <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-red-700 dark:text-red-400 leading-tight mb-6 hero-font">
-              Invest in Flavor.
+          <div className="hero-text">
+            <h1 className="pointer-events-none text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-red-700 dark:text-red-400 leading-tight mb-6 hero-font">
+              Invest in{" "}
+              <span className="slide">
+                <span className="wrapper">
+                  {words.map((word, index) => (
+                    <span
+                      key={index}
+                      className="flex items-center md:gap-3 gap-1 pb-2"
+                    >
+                      <img
+                        src={word.imgPath}
+                        alt="person"
+                        className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
+                      />
+                      <span>{word.text}</span>
+                    </span>
+                  ))}
+                </span>
+              </span>
               <br />
               <span className="bg-gradient-to-r from-red-500 via-yellow-400 to-orange-500 bg-clip-text text-transparent">
                 Peperoni Coin
@@ -24,31 +54,33 @@ const Hero = () => {
               and powered by pizza. Community-focused, reward-driven, and 100%
               cheesy.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#buy"
-                className="inline-block px-6 py-3 bg-red-600 text-white font-semibold rounded-full shadow-lg hover:bg-red-700 transition"
-              >
+              <a href="#buy" className="hero-btn">
                 🍕 Buy Now
               </a>
-              <a
-                href="#tokenomics"
-                className="inline-block px-6 py-3 bg-white dark:bg-zinc-800 border border-red-500 text-red-600 dark:text-red-300 rounded-full hover:bg-yellow-100 dark:hover:bg-zinc-700 transition"
-              >
+              <a href="#tokenomics" className="hero-btn">
                 📊 View Tokenomics
               </a>
             </div>
           </div>
 
-          {/* Image Column */}
-          <div className="relative flex justify-center">
+          <div className="relative flex justify-center md:-mt-40">
+            {/* Image Column */}
             <img
-              // src="/assets/hero-peperoni-crypto.svg"
               src={logo}
               alt="Illustration of Peperoni Coin - crypto meets pizza"
-              className="w-[210px] max-w-md md:max-w-lg animate-float-slow"
+              className="w-[210px] md:absolute -top-10 max-w-md md:max-w-lg animate-float-slow"
             />
+            <span className="w-[150px] hero-img-shadow top-60"></span>
           </div>
+
+          {/* RIGHT: 3D Model or Visual */}
+          <figure>
+            <div className="hero-3d-layout">
+              <HeroExperience />
+            </div>
+          </figure>
         </div>
 
         {/* Floating Background Pizza Decoration */}
@@ -61,6 +93,7 @@ const Hero = () => {
           />
         </div>
       </section>
+      <AnimatedCounter />
     </Section>
   );
 };

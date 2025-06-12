@@ -1,5 +1,6 @@
 import React from "react";
 import { Section } from "../../layout";
+import JoinButton from "../JoinButton/JoinButton";
 
 const CTA = () => {
   return (
@@ -9,22 +10,19 @@ const CTA = () => {
     >
       <section
         id="buy"
-        className="bg-red-500 text-white py-16 px-6 text-center"
+        className="px-10 bg-gradient-to-r from-zinc-800 to-zinc-800 text-white py-20 px-6 rounded-lg shadow-lg"
       >
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4">
+        <div className="max-w-3xl mx-auto space-y-2">
+          <h2 className="text-xl font-extrabold tracking-tight sm:text-4xl drop-shadow-md">
             Get Your Peperoni Coins Today!
           </h2>
-          <p className="text-lg mb-6">
+          <p className="text-white/90 leading-relaxed">
             Don’t miss out on the cheesiest opportunity in crypto. Buy $PEP and
             be part of the most flavorful movement on the blockchain.
           </p>
-          <a
-            href="/buy"
-            className="bg-white text-red-600 font-semibold py-3 px-8 rounded-full hover:bg-yellow-100 transition"
-          >
-            Buy Now
-          </a>
+          <div className="mt-15 px-10">
+            <JoinButton />
+          </div>
         </div>
       </section>
     </Section>
