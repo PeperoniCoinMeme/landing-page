@@ -68,7 +68,7 @@ const Navbar = () => {
           <>
             {/* Overlay blur background */}
             <motion.div
-              className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-md z-40"
+              className="fixed inset-0 bg-black-500 bg-opacity-40 backdrop-blur-md z-500"
               onClick={toggleMenu}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -77,14 +77,14 @@ const Navbar = () => {
 
             {/* Modal panel */}
             <motion.div
-              className="fixed z-50 inset-0 flex items-center justify-center"
+              className="fixed z-600 inset-0 flex items-center justify-center"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
             >
               <div
-                className="relative bg-dark-dough p-6 rounded-xl shadow-xl text-white w-6/12 space-y-6"
+                className="relative bg-dark-dough p-6 rounded-xl text-white w-6/12 space-y-6"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
