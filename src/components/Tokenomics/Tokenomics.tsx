@@ -1,7 +1,9 @@
 import React from "react";
 import { Section } from "../../layout";
 import GlowCard from "../models/GlowCard";
-import { testimonials } from "../../constants";
+import { overlayCards, testimonials } from "../../constants";
+import OverlayCard from "../OverlayCard/OverlayCard";
+import { pepeCivilian, pepeFitStrong } from "../../assets";
 
 const Tokenomics = () => {
   return (
@@ -10,13 +12,13 @@ const Tokenomics = () => {
       className="py-10 bg-red-500 flex flex-col md:flex-row justify-center"
     >
       <section className="bg-yellow-100 dark:bg-zinc-900 py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto relative">
           <h2 className="text-3xl font-bold text-center text-red-700 dark:text-red-400 mb-12">
             🍕 Tokenomics: Slice by Slice
           </h2>
 
           <div className="grid md:grid-cols-2 gap-10">
-            <div className="bg-white dark:bg-zinc-800 p-6 rounded-xl shadow text-gray-800 dark:text-gray-100">
+            {/* <div className="bg-white dark:bg-zinc-800 p-6 rounded-xl shadow text-gray-800 dark:text-gray-100">
               <h3 className="text-xl font-semibold mb-3">Total Supply</h3>
               <p className="text-lg">1,000,000,000 $PEP</p>
             </div>
@@ -39,10 +41,18 @@ const Tokenomics = () => {
             <div className="bg-white dark:bg-zinc-800 p-6 rounded-xl shadow text-gray-800 dark:text-gray-100">
               <h3 className="text-xl font-semibold mb-3">Rewards</h3>
               <p>2% redistributed to holders with every transaction.</p>
-            </div>
+            </div> */}
           </div>
 
-          <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
+          <div className="flex flex-col md:flex-row items-center my-6 flex-wrap relative z-50 gap-y-8">
+            {overlayCards.map((content, index) => (
+              <div key={index}>
+                <OverlayCard item={content} />
+              </div>
+            ))}
+          </div>
+
+          {/* <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
             {testimonials.map((testimonial, index) => (
               <GlowCard card={testimonial} key={index} index={index}>
                 <div className="flex items-center gap-3">
@@ -56,7 +66,7 @@ const Tokenomics = () => {
                 </div>
               </GlowCard>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
       ;

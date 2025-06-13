@@ -1,4 +1,22 @@
-import { airbnb, binance, coinbase, dropbox } from "../assets";
+import {
+  airbnb,
+  bg1,
+  bg2,
+  bg3,
+  bg4,
+  bg5,
+  bg6,
+  binance,
+  coinbase,
+  dropbox,
+  pepeClimbing,
+  pepeFitStrong,
+  pepeLogo,
+  pepePets,
+  pepePresident,
+  pepeSpy,
+  pepeWarrior,
+} from "../assets";
 
 type Client = {
   id: string;
@@ -46,6 +64,68 @@ type RoadMapCards = {
   date: string;
 };
 
+type OverlayCards = {
+  id: string;
+  backgroundUrl: string;
+  imageUrl: string;
+  title: string;
+  text: string;
+  iconUrl: string;
+  light?: boolean;
+};
+
+export const overlayCards: OverlayCards[] = [
+  {
+    id: "1",
+    backgroundUrl: bg1,
+    imageUrl: pepeFitStrong,
+    title: "Ask Anything",
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    iconUrl: pepeLogo,
+  },
+  {
+    id: "2",
+    backgroundUrl: bg2,
+    imageUrl: pepeWarrior,
+    title: "Ask Anything",
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    iconUrl: pepeLogo,
+  },
+  {
+    id: "3",
+    backgroundUrl: bg3,
+    imageUrl: pepePresident,
+    title: "Ask Anything",
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    iconUrl: pepeLogo,
+    light: true,
+  },
+  {
+    id: "4",
+    backgroundUrl: bg4,
+    imageUrl: pepeSpy,
+    title: "Ask Anything",
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    iconUrl: pepeLogo,
+  },
+  {
+    id: "5",
+    backgroundUrl: bg5,
+    imageUrl: pepeClimbing,
+    title: "Ask Anything",
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    iconUrl: pepeLogo,
+    light: true,
+  },
+  {
+    id: "6",
+    backgroundUrl: bg6,
+    imageUrl: pepePets,
+    title: "Ask Anything",
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    iconUrl: pepeLogo,
+  },
+];
 export const roadMapCards: RoadMapCards[] = [
   {
     review:

@@ -13,6 +13,14 @@ import pepeSurf from "./meme/surf.jpeg";
 import pepeWarrior from "./meme/warrior.jpeg";
 import pepeLogo from "./meme/logo.png";
 
+// Cards Backgrounds
+import bg1 from "./cards-bg/card-1.svg";
+import bg2 from "./cards-bg/card-2.svg";
+import bg3 from "./cards-bg/card-3.svg";
+import bg4 from "./cards-bg/card-4.svg";
+import bg5 from "./cards-bg/card-5.svg";
+import bg6 from "./cards-bg/card-6.svg";
+
 // Extra
 import airbnb from "./airbnb.png";
 import binance from "./binance.png";
@@ -33,6 +41,7 @@ import twitter from "./social/twitter.svg";
 import meltingCheese from "./cheese/melting-cheese-transparent.png";
 
 export {
+  logo,
   peperoniPizza,
   pepeBanner,
   pepeCar,
@@ -46,11 +55,7 @@ export {
   pepeSurf,
   pepeWarrior,
   pepeLogo,
-};
-
-export { meltingCheese };
-
-export {
+  //
   airbnb,
   binance,
   coinbase,
@@ -65,6 +70,13 @@ export {
   instagram,
   linkedin,
   twitter,
+  //
+  meltingCheese,
+  //
+  bg1,
+  bg2,
+  bg3,
+  bg4,
+  bg5,
+  bg6,
 };
-
-export { logo };
