@@ -1,0 +1,42 @@
+.hero-btn {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 16px;
+  color: rgb(193, 163, 98);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 12px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+  transform: scale(1); /* default scale */
+}
+
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  transform: scale(0); /* fixed */
+  z-index: -1;
+  background-color: rgb(193, 163, 98);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hero-btn:active {
+  transform: scale(1);
+}
+
+.hero-btn:hover {
+  color: #212121;
+  transform: scale(1.1); /* fixed */
+  box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+}
+
+.hero-btn:hover::before {
+  transform: scale(3); /* fixed */
+}

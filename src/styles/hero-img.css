@@ -1,0 +1,12 @@
+.hero-img-shadow {
+  position: relative;
+}
+.hero-img-shadow::before {
+  position: absolute;
+  bottom: 0;
+  content: " ";
+  height: 20px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: rgba(17, 15, 15, 0.249);
+}

@@ -1,14 +1,43 @@
 import React from "react";
 import { Section } from "../../layout";
+import {
+  pepeCivilian,
+  pepePets,
+  pepePresident,
+  pepeSpy,
+  pepeSurf,
+  pepeWarrior,
+  pepeFitSkinny,
+  pepeBanner,
+  pepeCar,
+  pepeClimbing,
+  pepeFitStrong,
+  pepeLogo,
+} from "../../assets";
+
+import "./About.css";
 
 const About = () => {
+  const images = [
+    pepeBanner,
+    pepeFitStrong,
+    pepePresident,
+    pepeCivilian,
+    pepeSurf,
+    pepeSpy,
+    pepeClimbing,
+    pepeCar,
+    pepeWarrior,
+    pepeLogo,
+  ];
+
   return (
     <Section
       id="about"
       className="py-10 flex flex-col md:flex-row justify-center"
     >
-      <section className="bg-white dark:bg-zinc-800 py-20 px-6">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <section className="bg-gradient-to-r from-zinc-800 to-zinc-900 py-20 px-16 overflow-hidden rounded-lg">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center min-h-[350px]">
           <div>
             <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">
               What is Peperoni Coin?
@@ -19,17 +48,24 @@ const About = () => {
               crypto enthusiast or a pepperoni lover, there's a slice for
               everyone here.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
-              Our project is built on a passionate community, a deliciously
-              limited supply, and real-world utilities that go far beyond the
-              oven.
-            </p>
+
+            <div className="flex flex-row justify-between gap-4 my-4">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="#buy" className="hero-btn">
+                  🍕 Buy Now
+                </a>
+              </div>
+            </div>
           </div>
-          <img
-            src="/assets/peperoni-crypto-illustration.svg"
-            alt="Peperoni Coin crypto illustration"
-            className="w-full max-w-sm mx-auto"
-          />
+          <div className="relative">
+            <div className="grid-memes">
+              {images.map((src, index) => (
+                <div className="grid-item" key={index}>
+                  <img src={src} alt={`meme-${index}`} className="h-16" />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </Section>
