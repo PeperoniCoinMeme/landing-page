@@ -17,6 +17,7 @@ import TokenomicsContent from "./Content/Tokenomics";
 import AboutContent from "./Content/About";
 import MeltingCheese from "../../components/MeltingCheese/MeltingCheese";
 import FlyoutLink from "./Flyout/Flyout";
+// import Headroom from "@webappsconception/react-headroom";
 
 const menuItems = [
   { label: "Tokenomics", href: "#tokenomics", icon: CurrencyDollarIcon },
@@ -30,6 +31,7 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   return (
     <>
+      {/* <Headroom> */}
       <nav className="fixed bg-[var(--color-cheese)] top-0 left-0 z-150 w-full shadow-lg flex justify-between px-3 py-8 h-1 items-center">
         <div id="logo" className="w-12 flex flex-row gap-3 items-center ">
           <img src={logo} alt="" className="hover:scale-120 transition-all" />
@@ -119,6 +121,7 @@ const Navbar = () => {
           </>
         )}
       </AnimatePresence>
+      {/* </Headroom> */}
     </>
   );
 };
