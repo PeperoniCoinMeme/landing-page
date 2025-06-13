@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Fredoka";
+  src: local("Fredoka"),
+    url("../../public/fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+    url("../../public/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+  font-weight: semibold;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url("../../public/fonts/Poppins/Poppins-Light.ttf");
+}
+
+.hero-font {
+  font-family: "Fredoka";
+  font-size: 72px;
+}
+
+:root {
+  /* Base Theme Colors (Light Mode) */
+  --color-bg: #fff8f0;
+  --color-text: #1e1e1e;
+  --color-accent: #d62828; /* Peperoni red */
+  --color-secondary: #f77f00; /* Golden cheese */
+  --color-tertiary: #fcbf49; /* Warm crust */
+  --color-success: #7ebc59; /* Basil green */
+  --color-border: #e0e0e0;
+  --color-muted: #888;
+
+  /* Special Elements */
+  --color-card-bg: #fff;
+  --color-button-bg: var(--color-accent);
+  --color-button-text: #fff;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.4s ease;
+
+  --color-cheese: #fdcf1a;
+  --color-cheese-lighter: #feee7d;
+  --color-pepperoni: #f0491c;
+  --color-pepperoni-darker: #d2320e;
+
+  --color-cheese-shadow: #d2320e;
+  --color-pepperoni-shadow: #cb2d05;
+  --color-cheese-border: #6a2f0c;
+  --color-pepperoni-border: #531e08;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --color-bg: #1a1a1a;
+  --color-text: #f0f0f0;
+  --color-accent: #ff4d4d;
+  --color-secondary: #ffaa00;
+  --color-tertiary: #d49f3a;
+  --color-success: #91d36c;
+  --color-border: #333;
+  --color-muted: #aaa;
+
+  --color-card-bg: #2a2a2a;
+  --color-button-bg: var(--color-accent);
+  --color-button-text: #fff;
+}
+
+* {
+  scroll-behavior: smooth;
+  font-family: "Poppins";
+}
+
+button,
+div,
+p,
+a {
+  font-size: 21px;
+}
+
+.timeline {
+  background-color: var(--color-text);
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--color-text);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --font-title: "Fredoka";
+  --font-body: "Baloo 2", sans-serif;
+}
+
+@layer utilities {
+  .animate-float-slow {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+}
+
+@layer components {
+  .card-border {
+    @apply border;
+  }
+
+  .hero-3d-layout {
+    @apply xl:w-[80%] w-full h-full min-h-[50vh] absolute xl:-top-50 top-16 xl:left-20 left-0;
+  }
+
+  .marquee-item {
+    @apply md:w-40 w-32;
+  }
+
+  .timeline-wrapper {
+    @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full flex justify-center;
+  }
+
+  .timeline {
+    @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28;
+  }
+
+  .timeline-logo {
+    @apply md:size-17 size-8 flex-none rounded-full flex justify-center items-center md:-translate-y-7;
+  }
+
+  .exp-card-wrapper {
+    @apply flex flex-col-reverse xl:flex-row xl:gap-20 gap-10 justify-between;
+  }
+
+  .gradient-edge {
+    @apply w-36 h-full absolute bottom-0 z-20;
+  }
+}
