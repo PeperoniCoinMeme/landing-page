@@ -12,6 +12,10 @@
     url("../../public/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
   font-weight: semibold;
 }
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url("../../public/fonts/Poppins/Poppins-Light.ttf");
+}
 
 .hero-font {
   font-family: "Fredoka";
@@ -67,6 +71,14 @@
 
 * {
   scroll-behavior: smooth;
+  font-family: "Poppins";
+}
+
+button,
+div,
+p,
+a {
+  font-size: 21px;
 }
 
 .timeline {
