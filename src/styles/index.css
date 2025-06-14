@@ -16,6 +16,10 @@
   font-family: "Poppins";
   src: local("Poppins"), url("../../public/fonts/Poppins/Poppins-Light.ttf");
 }
+@font-face {
+  font-family: "Bangers";
+  src: local("bangers"), url("../../public/fonts/Bangers/Bangers-Regular.ttf");
+}
 
 .hero-font {
   font-family: "Fredoka";
@@ -43,6 +47,7 @@
   --transition-smooth: 0.4s ease;
 
   --color-cheese: #fdcf1a;
+  --color-cheese-modified: #e3b602; /* -10%*/
   --color-cheese-lighter: #feee7d;
   --color-pepperoni: #f0491c;
   --color-pepperoni-darker: #d2320e;
@@ -76,9 +81,11 @@
 
 button,
 div,
-p,
-a {
+p {
   font-size: 21px;
+}
+a {
+  font-size: 18px;
 }
 
 .timeline {

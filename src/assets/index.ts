@@ -21,6 +21,15 @@ import bg4 from "./cards-bg/card-4.svg";
 import bg5 from "./cards-bg/card-5.svg";
 import bg6 from "./cards-bg/card-6.svg";
 
+// Waves
+import wave1 from "./svg/waves/wave1.svg";
+import wave2 from "./svg/waves/wave2.svg";
+import wave3 from "./svg/waves/wave3.svg";
+import wave4 from "./svg/waves/wave4.svg";
+import wave5 from "./svg/waves/wave5.svg";
+import wave6 from "./svg/waves/wave6.svg";
+import wave7 from "./svg/waves/wave7.svg";
+
 // Extra
 import airbnb from "./airbnb.png";
 import binance from "./binance.png";
@@ -79,4 +88,13 @@ export {
   bg4,
   bg5,
   bg6,
+
+  // Waves
+  wave1,
+  wave2,
+  wave3,
+  wave4,
+  wave5,
+  wave6,
+  wave7,
 };

@@ -6,6 +6,7 @@ import TitleHeader from "../models/TitleHeader";
 import GlowCard from "../models/GlowCard";
 import { roadMapCards } from "../../constants";
 import { logo } from "../../assets";
+import { Section } from "../../layout";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -91,9 +92,10 @@ const Roadmap = () => {
   }, []);
 
   return (
-    <section
+    <Section
       id="experience"
-      className="flex-center md:mt-40 mt-20 section-padding xl:px-0"
+      className="pt-28 pb-10 flex flex-col md:flex-row justify-center flex-center section-padding xl:px-0"
+      bgColor="#060000"
     >
       <div className="w-full h-full md:px-20 px-5">
         <TitleHeader
@@ -135,7 +137,7 @@ const Roadmap = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

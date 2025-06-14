@@ -11,7 +11,7 @@ const Tokenomics = () => {
       id="tokenomics"
       className="py-10 bg-red-500 flex flex-col md:flex-row justify-center"
     >
-      <section className="bg-yellow-100 dark:bg-zinc-900 py-20 px-6">
+      <section className="bg-[#130505] py-20 px-6 rounded-xl shadow-xl">
         <div className="max-w-6xl mx-auto relative">
           <h2 className="text-3xl font-bold text-center text-red-700 dark:text-red-400 mb-12">
             🍕 Tokenomics: Slice by Slice

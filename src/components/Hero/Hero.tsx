@@ -2,10 +2,11 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React from "react";
 import { Section } from "../../layout";
-import { logo } from "../../assets";
+import { logo, wave1 } from "../../assets";
 import { words } from "../../constants";
 import AnimatedCounter from "../AnimatedCounter/AnimatedCounter";
 import HeroExperience from "../models/Hero/HeroExperience";
+import WavySpacer from "../design/WavySpacer";
 
 const Hero = () => {
   useGSAP(() => {
@@ -20,6 +21,7 @@ const Hero = () => {
     <Section
       id="hero"
       className="pt-28 pb-10 flex flex-col md:flex-row justify-center"
+      bgColor="#060000"
     >
       <section className="relative overflow-hidden py-20 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
@@ -65,16 +67,6 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative flex justify-center md:-mt-40">
-            {/* Image Column */}
-            <img
-              src={logo}
-              alt="Illustration of Peperoni Coin - crypto meets pizza"
-              className="w-[210px] md:absolute -top-10 max-w-md md:max-w-lg animate-float-slow"
-            />
-            <span className="w-[150px] hero-img-shadow top-60"></span>
-          </div>
-
           {/* RIGHT: 3D Model or Visual */}
           <figure>
             <div className="hero-3d-layout">
@@ -84,14 +76,14 @@ const Hero = () => {
         </div>
 
         {/* Floating Background Pizza Decoration */}
-        <div className="absolute -top-20 -right-24 opacity-20 dark:opacity-10 z-0 pointer-events-none">
+        {/* <div className="absolute -top-20 -right-24 opacity-20 dark:opacity-10 z-0 pointer-events-none">
           <img
             src="/assets/pizza-bg.svg"
             alt=""
             aria-hidden="true"
             className="w-[300px] rotate-[15deg]"
           />
-        </div>
+        </div> */}
       </section>
       <AnimatedCounter />
     </Section>

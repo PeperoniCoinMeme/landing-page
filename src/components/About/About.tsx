@@ -35,8 +35,9 @@ const About = () => {
     <Section
       id="about"
       className="py-10 flex flex-col md:flex-row justify-center"
+      bgColor="#f0491c"
     >
-      <section className="bg-gradient-to-r from-zinc-800 to-zinc-900 py-20 px-16 overflow-hidden rounded-lg">
+      <section className="bg-[#130505] py-20 px-16 overflow-hidden rounded-xl">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center min-h-[350px]">
           <div>
             <h2 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-4">

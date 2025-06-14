@@ -29,13 +29,23 @@ const menuItems = [
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
+
+  const fontStyles: React.CSSProperties = {
+    fontFamily: "bangers",
+  };
+
   return (
     <>
       {/* <Headroom> */}
       <nav className="fixed bg-[var(--color-cheese)] top-0 left-0 z-150 w-full shadow-lg flex justify-between px-3 py-8 h-1 items-center">
-        <div id="logo" className="w-12 flex flex-row gap-3 items-center ">
+        <div id="logo" className="w-12 flex flex-row gap-3 items-center">
           <img src={logo} alt="" className="hover:scale-120 transition-all" />
-          <p className="text-gray-900 font-extrabold text-xl">PEPERONI</p>
+          <h4
+            className="text-gray-100 text-3xl text-shadow-lg"
+            style={fontStyles}
+          >
+            PEPERONI
+          </h4>
         </div>
 
         <div className="flex justify-between w-6/12">
@@ -94,7 +104,10 @@ const Navbar = () => {
                   <XMarkIcon className="h-6 w-6" />
                 </button>
 
-                <h2 className="text-2xl font-bold text-center">
+                <h2
+                  className="text-5xl font-bold text-center"
+                  style={fontStyles}
+                >
                   🍕 Peperoni Menu
                 </h2>
 
