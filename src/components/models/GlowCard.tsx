@@ -48,7 +48,7 @@ const GlowCard: React.FC<GlowCardProps> = ({ card, index, children }) => {
         ))}
       </div>
       <div className="mb-5">
-        <p className="text-white-50 text-lg">{card.review}</p>
+        <p className="text-white-50 text-sm">{card.review}</p>
       </div>
       {children}
     </div>

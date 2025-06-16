@@ -20,7 +20,7 @@ const LandingPage = () => {
       <Hero />
       <WavySpacer bgWaveUrl={waveYellowWhite1} flip={false} />
       {/* Pepperoni Pizza */}
-      <div className="absolute top-250 right-0 pointer-events-none z-11 overflow-hidden">
+      <div className="absolute top-330 md:top-250 right-0 pointer-events-none z-11 overflow-hidden">
         <img
           src={peperoniPizza}
           alt="Pepperoni Pizza"

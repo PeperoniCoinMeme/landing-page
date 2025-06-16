@@ -6,7 +6,6 @@
   color: #ff4500;
   border: 2px solid #ff4500;
   border-radius: 12px;
-  background-color: transparent;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   overflow: hidden;

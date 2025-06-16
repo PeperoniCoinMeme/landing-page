@@ -22,25 +22,25 @@
     transform: translateY(0.5%);
   }
   12.5% {
-    transform: translateY(-12%);
+    transform: translateY(-16%);
   }
   25% {
-    transform: translateY(-26%);
+    transform: translateY(-32%);
   }
   37.5% {
-    transform: translateY(-41%);
+    transform: translateY(-48%);
   }
   50% {
-    transform: translateY(-55.5%);
+    transform: translateY(-64%);
   }
   62.5% {
-    transform: translateY(-70%);
+    transform: translateY(-80%);
   }
   75% {
-    transform: translateY(-82%);
+    transform: translateY(-102%);
   }
   87.5% {
-    transform: translateY(-99%);
+    transform: translateY(-120%);
   }
   96% {
     transform: translateY(0.5%);
