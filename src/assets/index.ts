@@ -29,6 +29,31 @@ import wave4 from "./svg/waves/wave4.svg";
 import wave5 from "./svg/waves/wave5.svg";
 import wave6 from "./svg/waves/wave6.svg";
 import wave7 from "./svg/waves/wave7.svg";
+import waveYellowOrange1 from "./svg/waves/yellow-orange-1.svg";
+import waveYellowOrange2 from "./svg/waves/yellow-orange-2.svg";
+import waveYellowOrange3 from "./svg/waves/yellow-orange-3.svg";
+import waveYellowOrange4 from "./svg/waves/yellow-orange-4.svg";
+import waveYellowOrange5 from "./svg/waves/yellow-orange-5.svg";
+import waveYellowWhite1 from "./svg/waves/yellow-white-1.svg";
+import waveYellowWhite2 from "./svg/waves/yellow-white-2.svg";
+import waveYellowWhite3 from "./svg/waves/yellow-white-3.svg";
+
+// Blobs
+import peperoniBlob1 from "./svg/peperoni-blobs/blob1.svg";
+import peperoniBlob2 from "./svg/peperoni-blobs/blob2.svg";
+import peperoniBlob3 from "./svg/peperoni-blobs/blob3.svg";
+
+// Scatters
+import orangeScatteredYellow1 from "./svg/scatters/orange-scattered-yellow-1.svg";
+import orangeScatteredYellow2 from "./svg/scatters/orange-scattered-yellow-2.svg";
+import orangeScatteredYellow3 from "./svg/scatters/orange-scattered-yellow-3.svg";
+
+// Scenes
+import yellowWhitePath1 from "./svg/scenes/yellow-white-path-1.svg";
+import yellowWhitePath2 from "./svg/scenes/yellow-white-path-2.svg";
+import yellowWhitePath3 from "./svg/scenes/yellow-white-path-3.svg";
+import yellowWhitePath4 from "./svg/scenes/yellow-white-path-4.svg";
+import yellowWhitePath5 from "./svg/scenes/yellow-white-path-5.svg";
 
 // Extra
 import airbnb from "./airbnb.png";
@@ -48,6 +73,8 @@ import linkedin from "./social/linkedin.svg";
 import twitter from "./social/twitter.svg";
 
 import meltingCheese from "./cheese/melting-cheese-transparent.png";
+import cheesePie from "./cheese/cheese-pie.png";
+import iaOven from "./oven/ia-oven.png";
 
 export {
   logo,
@@ -81,6 +108,7 @@ export {
   twitter,
   //
   meltingCheese,
+  cheesePie,
   //
   bg1,
   bg2,
@@ -97,4 +125,31 @@ export {
   wave5,
   wave6,
   wave7,
+  waveYellowOrange1,
+  waveYellowOrange2,
+  waveYellowOrange3,
+  waveYellowOrange4,
+  waveYellowWhite1,
+  waveYellowWhite2,
+  waveYellowWhite3,
+
+  // Blobs
+  peperoniBlob1,
+  peperoniBlob2,
+  peperoniBlob3,
+
+  // Scattered
+  orangeScatteredYellow1,
+  orangeScatteredYellow2,
+  orangeScatteredYellow3,
+
+  // Scenes
+  yellowWhitePath1,
+  yellowWhitePath2,
+  yellowWhitePath3,
+  yellowWhitePath4,
+  yellowWhitePath5,
+
+  // Ovens
+  iaOven,
 };

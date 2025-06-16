@@ -3,8 +3,8 @@
   position: relative;
   padding: 10px 24px;
   font-size: 16px;
-  color: rgb(193, 163, 98);
-  border: 2px solid rgb(193, 163, 98);
+  color: #ff4500;
+  border: 2px solid #ff4500;
   border-radius: 12px;
   background-color: transparent;
   font-weight: 600;
@@ -23,7 +23,7 @@
   border-radius: inherit;
   transform: scale(0); /* fixed */
   z-index: -1;
-  background-color: rgb(193, 163, 98);
+  background-color: #ff4500;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -34,9 +34,30 @@
 .hero-btn:hover {
   color: #212121;
   transform: scale(1.1); /* fixed */
-  box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+  box-shadow: 0 0px 20px rgb(255, 105, 51);
 }
 
 .hero-btn:hover::before {
   transform: scale(4.2); /* fixed */
+}
+
+.landing-button {
+  border: 1px #ff4500 solid;
+  background-color: #ff4500;
+  padding: 8px 36px;
+  border-radius: 5px;
+  border-bottom: 4px solid hsl(16, 100%, 40%);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.landing-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }

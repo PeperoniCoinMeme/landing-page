@@ -79,17 +79,9 @@
   font-family: "Poppins";
 }
 
-button,
 div,
 p {
   font-size: 21px;
-}
-a {
-  font-size: 18px;
-}
-
-.timeline {
-  background-color: var(--color-text);
 }
 
 :root {
@@ -145,6 +137,9 @@ a {
     @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full flex justify-center;
   }
 
+  .timeline {
+    background-color: white;
+  }
   .timeline {
     @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28;
   }

@@ -15,7 +15,7 @@ const WavySpacer: React.FC<WavySpacerProps> = ({ bgWaveUrl, flip = false }) => {
     backgroundPosition: "center",
     width: "100%",
     height: "500px",
-    zIndex: 9999,
+    zIndex: 5,
   };
   return <div style={styles}></div>;
 };

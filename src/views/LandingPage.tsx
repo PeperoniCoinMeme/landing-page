@@ -1,45 +1,62 @@
 import React from "react";
 import { About, CTA, Hero, Tokenomics } from "../components";
 import { Navbar, Footer } from "../layout";
-import Feature from "../components/Feature/Feature";
-import GlowingTokenOrbit from "../components/GlowingTokenOrbit/GlowingTokenOrbit";
-import InfiniteCarousel from "../components/InfiniteCarousel/InfiniteCarousel";
+
 import {
-  logo,
-  wave1,
-  wave2,
-  wave3,
-  wave4,
-  wave5,
-  wave6,
-  wave7,
+  peperoniPizza,
+  waveYellowOrange1,
+  waveYellowOrange2,
+  waveYellowWhite1,
+  waveYellowWhite3,
 } from "../assets";
-import LogoShowcase from "../components/LogoShowcase/LogoShowcase";
+
 import Roadmap from "../components/Roadmap/Roadmap";
 import WavySpacer from "../components/design/WavySpacer";
 
 const LandingPage = () => {
   return (
-    <div className="overflow-hidden w-full square-framed-container">
+    <div className="overflow-hidden w-full square-framed-container m-auto">
       <Navbar />
       <Hero />
-      <WavySpacer bgWaveUrl={wave7} flip={false} />
+      <WavySpacer bgWaveUrl={waveYellowWhite1} flip={false} />
+      {/* Pepperoni Pizza */}
+      <div className="absolute top-250 right-0 pointer-events-none z-11 overflow-hidden">
+        <img
+          src={peperoniPizza}
+          alt="Pepperoni Pizza"
+          style={{
+            zIndex: 9999,
+            transformOrigin: "center center",
+            animation: "clockSpin 20s linear infinite",
+          }}
+          className="w-[400px] relative -right-40"
+        />
+        <style>{`
+          @keyframes clockSpin {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+        `}</style>
+      </div>
       <About />
-      <WavySpacer bgWaveUrl={wave2} flip={true} />
-      <LogoShowcase />
-      <WavySpacer bgWaveUrl={wave2} flip={true} />
+      <WavySpacer bgWaveUrl={waveYellowWhite3} flip={true} />
+      {/* <LogoShowcase /> */}
       <Roadmap />
-      <WavySpacer bgWaveUrl={wave3} flip={false} />
+      <WavySpacer bgWaveUrl={waveYellowWhite1} flip={false} />
       {/* <Feature /> */}
       <Tokenomics />
-      <WavySpacer bgWaveUrl={wave5} flip={true} />
-      <GlowingTokenOrbit
+      <WavySpacer bgWaveUrl={waveYellowOrange1} flip={true} />
+      {/* <GlowingTokenOrbit
         imageSrc={logo}
         label="$PEPERONI – THE MOST DELICIOUS TOKEN"
-      />
+      /> */}
       {/* <InfiniteCarousel images={images} speed={30} /> */}
       <CTA />
-      <WavySpacer bgWaveUrl={wave5} flip={true} />
+      <WavySpacer bgWaveUrl={waveYellowOrange2} flip={false} />
       <Footer />
     </div>
   );

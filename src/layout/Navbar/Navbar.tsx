@@ -62,10 +62,7 @@ const Navbar = () => {
             </FlyoutLink>
           </div> */}
         </div>
-        <button
-          onClick={toggleMenu}
-          className="text-[var(--color-pepperoni)] relative p-[14px] "
-        >
+        <button onClick={toggleMenu} className="text-white relative p-[14px] ">
           <Bars3Icon className="h-7 w-7 absolute top-0 left-0" />
         </button>
 
@@ -78,7 +75,7 @@ const Navbar = () => {
           <>
             {/* Overlay blur background */}
             <motion.div
-              className="fixed inset-0 bg-black-500 bg-opacity-40 backdrop-blur-md z-500"
+              className="fixed inset-0 bg-black-800 bg-opacity-90 backdrop-blur-md z-500"
               onClick={toggleMenu}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -99,25 +96,21 @@ const Navbar = () => {
               >
                 <button
                   onClick={toggleMenu}
-                  className="absolute top-3 right-3 text-white hover:text-red-400 transition"
+                  className="absolute top-3 right-3 text-[var(--color-pepperoni)] hover:text-red-400 transition"
                 >
                   <XMarkIcon className="h-6 w-6" />
                 </button>
 
-                <h2
-                  className="text-5xl font-bold text-center"
-                  style={fontStyles}
-                >
-                  🍕 Peperoni Menu
-                </h2>
+                <h2 className="text-5xl font-bold">🍕</h2>
 
-                <ul className="space-y-4">
+                <ul className="space-y-6">
                   {menuItems.map(({ label, href, icon: Icon }) => (
                     <li key={label}>
                       <a
                         href={href}
                         onClick={toggleMenu}
-                        className="flex items-center gap-3 text-lg hover:text-yellow-300 transition"
+                        className="flex text-4xl font-bold text-center justify-center hover:text-yellow-300 text-[var(--color-pepperoni)] transition"
+                        style={fontStyles}
                       >
                         {/* <Icon className="h-5 w-5 text-yellow-500" /> */}
                         {label}
