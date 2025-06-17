@@ -30,6 +30,7 @@ import {
   ChartBarIcon,
   GiftIcon,
 } from "@heroicons/react/24/solid";
+import LandingText from "../design/tipography/LandingText";
 
 // Array de objetos con texto e iconos relacionados
 const cryptoPizzaWords = [
@@ -93,12 +94,12 @@ const About = () => {
       className="pt-50 pb-90 md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center"
       backgroundSvg={orangeScatteredYellow1}
     >
-      <section className="shadow-inner bg-white overflow-hidden rounded-xl md:px-16 px-6 py-10 z-50">
+      <section className="rounded-xl md:px-16 px-6 py-10 z-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-50">
           {/* Text Column */}
           <div className="hero-text flex flex-col justify-center font-semibold relative z-50">
             <h1 className="pointer-events-none text-2xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-red-700 dark:text-red-400 leading-tight mb-6 hero-font">
-              <LandingHero>About Peperoni in</LandingHero>{" "}
+              <LandingHero color="white">About Peperoni in</LandingHero>{" "}
               <span className="slide absolute pt-0 px-2 h-[55px] overflow-hidden">
                 <span className="wrapper">
                   {/* {words.map((word, index) => (
@@ -122,18 +123,20 @@ const About = () => {
                       <span className="object-contain rounded-full bg-white bg-opacity-50">
                         {item.icon}
                       </span>
-                      <LandingTitle>{item.text}</LandingTitle>
+                      <LandingTitle color="white">{item.text}</LandingTitle>
                     </span>
                   ))}
                 </span>
               </span>
               <br />
             </h1>
-            <p className="text-lg sm:text-xl text-gray-800 dark:text-gray-300 mb-8 max-w-lg">
-              The first emotionally-backed cryptocurrency built on blockchain
-              and powered by pizza. Community-focused, reward-driven, and 100%
-              cheesy.
-            </p>
+            <div className="mb-8 max-w-lg">
+              <LandingText color="white">
+                The first emotionally-backed cryptocurrency built on blockchain
+                and powered by pizza. Community-focused, reward-driven, and 100%
+                cheesy.
+              </LandingText>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a

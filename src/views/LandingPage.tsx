@@ -29,7 +29,7 @@ const LandingPage = () => {
             transformOrigin: "center center",
             animation: "clockSpin 20s linear infinite",
           }}
-          className="w-[400px] relative -right-40"
+          className="w-[450px] relative -right-40"
         />
         <style>{`
           @keyframes clockSpin {

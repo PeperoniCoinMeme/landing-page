@@ -18,10 +18,12 @@ const Tokenomics = () => {
       className="py-10 md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center"
       backgroundSvg={orangeScatteredYellow1}
     >
-      <section className="overflow-hidden shadow-inner rounded-xl bg-white py-16 md:px-16 px-6 text-center">
+      <section className="overflow-hidden rounded-xl py-16 md:px-16 px-6 text-center">
         <div className="relative flex flex-col jutify-center">
           <div className="mb-5 text-center">
-            <LandingHero>🍕 Tokenomics: Slice by Slice</LandingHero>
+            <LandingHero color="white">
+              🍕 Tokenomics: Slice by Slice
+            </LandingHero>
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center my-6 flex-wrap relative z-50 gap-7">

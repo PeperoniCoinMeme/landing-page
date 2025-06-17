@@ -7,29 +7,32 @@ import WavySpacer from "../design/WavySpacer";
 import LandingTitle from "../design/tipography/LandingTitle";
 import LandingHero from "../design/tipography/LandingHero";
 import LandingButton from "../design/buttons/LandingButton";
+import LandingText from "../design/tipography/LandingText";
 
 const Hero = () => {
   return (
     <Section
       id="hero"
-      className="relative pt-28 pb-10 flex flex-col md:flex-row justify-around overflow-hidden"
+      className="relative pt-20 pb-5 flex flex-col md:flex-row justify-around overflow-hidden"
       bgColor="#ffffff"
     >
-      <div className="flex flex-col sm:flex-row justify-around p-5">
+      <div className="flex flex-col sm:flex-row justify-around px-5">
         {/* First Info container */}
         <div className="flex flex-col p-10 justify-center flex-1">
           <LandingHero>
             DELICIOUSLY <br />
             COOKED BY YOU
           </LandingHero>{" "}
-          <p className="text-gray-400 max-w-80 text-sm">
-            Not just a coin, not just a meme. $PEPERONI is a community payment
-            token built to celebrate the people who make Web3 spicy—creators,
-            builders, and degens.
-          </p>
+          <div className="text-gray-400 max-w-80 text-sm">
+            <LandingText>
+              Not just a coin, not just a meme. $PEPERONI is a community payment
+              token built to celebrate the people who make Web3 spicy—creators,
+              builders, and degens.
+            </LandingText>
+          </div>
         </div>
         {/* Oven container */}
-        <div className="flex flex-col p-5 justify-center flex-1">
+        <div className="flex flex-col px-5 justify-center flex-1">
           <div className="oven-container mx-5 mb-5 relative">
             <figure>
               <div className="hero-3d-layout">

@@ -20,10 +20,11 @@ import FlyoutLink from "./Flyout/Flyout";
 import Headroom from "../../components/Headroom/Headroom";
 
 const menuItems = [
-  { label: "Tokenomics", href: "#tokenomics", icon: CurrencyDollarIcon },
-  { label: "Roadmap", href: "#roadmap", icon: MapIcon },
-  { label: "FAQ", href: "#faq", icon: QuestionMarkCircleIcon },
+  { label: "Home", href: "#home", icon: FireIcon },
   { label: "About", href: "#about", icon: FireIcon },
+  { label: "Mission & Vibes", href: "#home", icon: FireIcon },
+  { label: "Slice of Utility", href: "#home", icon: FireIcon },
+  { label: "Slicenomics", href: "#home", icon: FireIcon },
 ];
 
 const Navbar = () => {
@@ -37,7 +38,7 @@ const Navbar = () => {
   return (
     <>
       {/* <Headroom> */}
-      <nav className="fixed bg-[var(--color-cheese)] top-0 left-0 z-150 w-full shadow-lg flex justify-between px-3 py-8 h-1 items-center">
+      <nav className="relative bg-[var(--color-cheese)] top-0 left-0 z-150 w-full shadow-lg flex justify-between px-3 py-8 h-1 items-center">
         <div id="logo" className="w-12 flex flex-row gap-3 items-center">
           <img src={logo} alt="" className="hover:scale-120 transition-all" />
           <h4
@@ -65,7 +66,6 @@ const Navbar = () => {
         <button onClick={toggleMenu} className="text-white relative p-[14px] ">
           <Bars3Icon className="h-7 w-7 absolute top-0 left-0" />
         </button>
-
         {/* Melting Cheese Images  */}
         <MeltingCheese />
       </nav>

@@ -2,6 +2,8 @@ import React from "react";
 import Arrow from "../../assets/svg/Arrow";
 import { GradientLight } from "../design/GradientLight";
 import ClipPath from "../../assets/svg/ClipPath";
+import LandingText from "../design/tipography/LandingText";
+import LandingSubtitle from "../design/tipography/LandingSubtitle";
 
 interface OverlayCardProps {
   item: {
@@ -25,8 +27,8 @@ const OverlayCard: React.FC<OverlayCardProps> = ({ item }) => {
       key={item.id}
     >
       <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
-        <h5 className="h5 mb-5 text-orange-500">{item.title}</h5>
-        <p className="body-2 mb-6 text-n-3 text-gray-500">{item.text}</p>
+        <LandingSubtitle>{item.title}</LandingSubtitle>
+        <LandingText color="white">{item.text}</LandingText>
         <div className="flex items-center mt-auto">
           <img src={item.iconUrl} width={30} height={30} alt={item.title} />
           <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
@@ -42,14 +44,14 @@ const OverlayCard: React.FC<OverlayCardProps> = ({ item }) => {
         className="absolute inset-0.5 bg-n-8"
         style={{ clipPath: "url(#benefits)" }}
       >
-        <div className="absolute inset-0 md:opacity-10 transition-opacity hover:opacity-40">
+        <div className="absolute inset-0 hover:scale-110 transition-all">
           {item.imageUrl && (
             <img
               src={item.imageUrl}
               width={340}
               height={362}
               alt={item.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-all"
             />
           )}
         </div>
