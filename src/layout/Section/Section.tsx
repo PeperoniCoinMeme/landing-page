@@ -30,7 +30,7 @@ const Section: React.FC<SectionProps> = ({
   return (
     <div
       id={id}
-      className={`relative flex flex-col md:flex-row overflow-hidden max-w-100vh
+      className={`relative flex flex-col md:flex-row max-w-100vh
    ${className || ""}`}
       style={styles}
     >

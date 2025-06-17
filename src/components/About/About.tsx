@@ -31,6 +31,7 @@ import {
   GiftIcon,
 } from "@heroicons/react/24/solid";
 import LandingText from "../design/tipography/LandingText";
+import LandingButton from "../design/buttons/LandingButton";
 
 // Array de objetos con texto e iconos relacionados
 const cryptoPizzaWords = [
@@ -139,12 +140,11 @@ const About = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
+              {/* <a
                 href="#buy"
                 className="hero-btn md:bg-transparent md:text-white bg-orange-300"
-              >
-                🍕 Buy Now
-              </a>
+              ></a> */}
+              <LandingButton>🍕 Buy Now</LandingButton>
             </div>
           </div>
 

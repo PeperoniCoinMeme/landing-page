@@ -55,6 +55,15 @@ import yellowWhitePath3 from "./svg/scenes/yellow-white-path-3.svg";
 import yellowWhitePath4 from "./svg/scenes/yellow-white-path-4.svg";
 import yellowWhitePath5 from "./svg/scenes/yellow-white-path-5.svg";
 
+// Pepperoni Slices
+import pepperoniSlice1 from "./pepperonis/pepperoniSlice1.png";
+import pepperoniSlice2 from "./pepperonis/pepperoniSlice2.png";
+import pepperoniSlice3 from "./pepperonis/pepperoniSlice3.png";
+import pepperoniSlice4 from "./pepperonis/pepperoniSlice4.png";
+import pepperoniSlice5 from "./pepperonis/pepperoniSlice5.png";
+import pepperoniSlice6 from "./pepperonis/pepperoniSlice6.png";
+import pepperoniSlice7 from "./pepperonis/pepperoniSlice7.png";
+
 // Extra
 import airbnb from "./airbnb.png";
 import binance from "./binance.png";
@@ -75,6 +84,7 @@ import twitter from "./social/twitter.svg";
 import meltingCheese from "./cheese/melting-cheese-transparent.png";
 import cheesePie from "./cheese/cheese-pie.png";
 import iaOven from "./oven/ia-oven.png";
+import splash from "./cheese/splash.png";
 
 export {
   logo,
@@ -109,6 +119,7 @@ export {
   //
   meltingCheese,
   cheesePie,
+  splash,
   //
   bg1,
   bg2,
@@ -116,6 +127,15 @@ export {
   bg4,
   bg5,
   bg6,
+
+  // Pepperoni Slices
+  pepperoniSlice1,
+  pepperoniSlice2,
+  pepperoniSlice3,
+  pepperoniSlice4,
+  pepperoniSlice5,
+  pepperoniSlice6,
+  pepperoniSlice7,
 
   // Waves
   wave1,

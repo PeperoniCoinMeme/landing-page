@@ -3,6 +3,7 @@ import { Section } from "../../layout";
 import JoinButton from "../JoinButton/JoinButton";
 import { logo, orangeScatteredYellow2, waveYellowOrange2 } from "../../assets";
 import LandingHero from "../design/tipography/LandingHero";
+import LandingText from "../design/tipography/LandingText";
 
 const Join = () => {
   return (
@@ -15,10 +16,10 @@ const Join = () => {
         <div className="max-w-3xl mx-auto space-y-2">
           <LandingHero>Join to the Pizza!</LandingHero>
 
-          <p className="text-gray-500 leading-relaxed">
+          <LandingText>
             Don’t miss out on the cheesiest opportunity in crypto. Buy $PEP and
             be part of the most flavorful movement on the blockchain.
-          </p>
+          </LandingText>
           <div className="mt-15 px-10"></div>
         </div>
 

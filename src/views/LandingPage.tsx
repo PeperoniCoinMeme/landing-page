@@ -7,19 +7,23 @@ import {
   waveYellowOrange1,
   waveYellowOrange2,
   waveYellowWhite1,
+  waveYellowWhite2,
   waveYellowWhite3,
 } from "../assets";
 
 import Roadmap from "../components/Roadmap/Roadmap";
 import WavySpacer from "../components/design/WavySpacer";
 import MissionVibes from "../components/MissionVibes/MissionVibes";
-import SliceOfUtility from "../components/SliceOfUtility/SliceofUtility";
+
 import Join from "../components/Join/Join";
+import SliceOfUtility from "../components/SliceOfUtility/SliceOfUtility";
+import Feature from "../components/Feature/Feature";
 
 const LandingPage = () => {
   return (
     <div className="overflow-hidden w-full square-framed-container m-auto">
       <Navbar />
+
       {/* 1 */}
       <Hero />
       <WavySpacer bgWaveUrl={waveYellowWhite1} flip={false} />
@@ -46,19 +50,23 @@ const LandingPage = () => {
           }
         `}</style>
       </div>
+
       {/* 2 */}
       <About />
       <WavySpacer bgWaveUrl={waveYellowWhite3} flip={true} />
+
       {/* 3 */}
       <MissionVibes />
+      <Feature />
       {/* 4 */}
       <SliceOfUtility />
       <WavySpacer bgWaveUrl={waveYellowWhite1} flip={false} />
-      {/* <Feature /> */}
+
       {/* 5 */}
       <Tokenomics />
-      <WavySpacer bgWaveUrl={waveYellowOrange1} flip={true} />
+      <WavySpacer bgWaveUrl={waveYellowWhite2} flip={true} />
       {/* <LogoShowcase /> */}
+
       {/* 6 */}
       <Roadmap />
       <WavySpacer bgWaveUrl={waveYellowWhite1} flip={false} />
@@ -67,9 +75,12 @@ const LandingPage = () => {
         label="$PEPERONI – THE MOST DELICIOUS TOKEN"
       /> */}
       {/* <InfiniteCarousel images={images} speed={30} /> */}
+
+      {/* 7 */}
       <Join />
       {/* <CTA /> */}
       <WavySpacer bgWaveUrl={waveYellowOrange2} flip={false} />
+
       <Footer />
     </div>
   );
