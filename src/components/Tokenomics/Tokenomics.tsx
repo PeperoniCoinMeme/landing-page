@@ -14,7 +14,7 @@ import LandingHero from "../design/tipography/LandingHero";
 const Tokenomics = () => {
   return (
     <Section
-      id="tokenomics"
+      id="slicenomics"
       className="py-10 md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center"
       backgroundSvg={orangeScatteredYellow1}
     >
@@ -22,7 +22,7 @@ const Tokenomics = () => {
         <div className="relative flex flex-col jutify-center">
           <div className="mb-5 text-center">
             <LandingHero color="white">
-              🍕 Tokenomics: Slice by Slice
+              🍕 Slicenomics: Slice by Slice
             </LandingHero>
           </div>
 

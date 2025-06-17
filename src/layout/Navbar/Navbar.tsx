@@ -22,9 +22,11 @@ import Headroom from "../../components/Headroom/Headroom";
 const menuItems = [
   { label: "Home", href: "#home", icon: FireIcon },
   { label: "About", href: "#about", icon: FireIcon },
-  { label: "Mission & Vibes", href: "#home", icon: FireIcon },
-  { label: "Slice of Utility", href: "#home", icon: FireIcon },
-  { label: "Slicenomics", href: "#home", icon: FireIcon },
+  { label: "Mission & Vibes", href: "#missionvibes", icon: FireIcon },
+  { label: "Slice of Utility", href: "#sliceofutility", icon: FireIcon },
+  { label: "Slicenomics", href: "#slicenomics", icon: FireIcon },
+  { label: "Road Map", href: "#roadmap", icon: FireIcon },
+  { label: "Join to the Pizza", href: "#join", icon: FireIcon },
 ];
 
 const Navbar = () => {
