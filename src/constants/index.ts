@@ -1,4 +1,22 @@
-import { airbnb, binance, coinbase, dropbox } from "../assets";
+import {
+  airbnb,
+  bg1,
+  bg2,
+  bg3,
+  bg4,
+  bg5,
+  bg6,
+  binance,
+  coinbase,
+  dropbox,
+  pepeClimbing,
+  pepeFitStrong,
+  pepeLogo,
+  pepePets,
+  pepePresident,
+  pepeSpy,
+  pepeWarrior,
+} from "../assets";
 
 type Client = {
   id: string;
@@ -40,52 +58,120 @@ type Testimonials = {
 
 type RoadMapCards = {
   review: string;
-  imgPath: string;
-  logoPath: string;
   title: string;
   date: string;
 };
 
+type OverlayCards = {
+  id: string;
+  backgroundUrl: string;
+  imageUrl: string;
+  title: string;
+  text: string;
+  iconUrl: string;
+  light?: boolean;
+};
+
+export const overlayCards: OverlayCards[] = [
+  {
+    id: "1",
+    backgroundUrl: bg1,
+    imageUrl: pepeFitStrong,
+    title: "Ask Anything",
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    iconUrl: pepeLogo,
+  },
+  {
+    id: "2",
+    backgroundUrl: bg2,
+    imageUrl: pepeWarrior,
+    title: "Ask Anything",
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    iconUrl: pepeLogo,
+  },
+  {
+    id: "3",
+    backgroundUrl: bg3,
+    imageUrl: pepePresident,
+    title: "Ask Anything",
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    iconUrl: pepeLogo,
+    light: true,
+  },
+  {
+    id: "4",
+    backgroundUrl: bg4,
+    imageUrl: pepeSpy,
+    title: "Ask Anything",
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    iconUrl: pepeLogo,
+  },
+  {
+    id: "5",
+    backgroundUrl: bg5,
+    imageUrl: pepeClimbing,
+    title: "Ask Anything",
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    iconUrl: pepeLogo,
+    light: true,
+  },
+  {
+    id: "6",
+    backgroundUrl: bg6,
+    imageUrl: pepePets,
+    title: "Ask Anything",
+    text: "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.",
+    iconUrl: pepeLogo,
+  },
+];
 export const roadMapCards: RoadMapCards[] = [
   {
     review:
       "The Great PEPE Launch - Our token rises like dough in a warm kitchen! Initial toppings (liquidity) added to the crypto pizza oven. Whitepaper served with extra cheese.",
-    imgPath: "/images/pepe-phase1.png",
-    logoPath: "/images/pepe-logo.png",
-    title: "Phase 1: Dough Preparation (Q1 2023)",
-    date: "Ingredients: Token minting, Website launch, First 1000 Pizza Lovers",
+    title: "🥇 M1 — Token Goes Live on Solana’s DEX",
+    date: "Phase 1: Dough Preparation (Q1 2023)",
   },
   {
     review:
       "PEPE Staking goes live - Earn extra toppings by locking your slices! First major exchange listing (PizzaSwap). Community grows faster than a yeast infection (the good kind!).",
-    imgPath: "/images/pepe-phase2.png",
-    logoPath: "/images/pepe-logo.png",
-    title: "Phase 2: Sauce Spread (Q2 2023)",
-    date: "Achievements: 10,000 holders, PEPE Merch Store, First PizzaDAO vote",
+    title: "🔥 M2 — Bake the Most Valuable Pizza Over the World",
+    date: "Phase 2: Sauce Spread (Q2 2023)",
   },
   {
     review:
       "PEPE goes multi-chain - Like delivering to new neighborhoods! PEPE DeFi Kitchen opens with yield farming. First real-world pizza bought with PEPE (historic moment captured on blockchain).",
-    imgPath: "/images/pepe-phase3.png",
-    logoPath: "/images/pepe-logo.png",
-    title: "Phase 3: Cheese Melt (Q3 2023)",
-    date: "Milestones: 100M market cap, PEPE Visa Card, First PEPE-themed pizzeria",
+    title: "🤖 M3 — Peperoni as a Service (PaaS)",
+    date: "Phase 3: Cheese Melt (Q3 2023)",
   },
   {
     review:
       "PEPE Ecosystem sizzles - NFT toppings collection drops. PEPE becomes official currency of 3 pizza chains. Community burns 50% supply in the Great Pizza Oven event.",
-    imgPath: "/images/pepe-phase4.png",
-    logoPath: "/images/pepe-logo.png",
-    title: "Phase 4: Golden Crust (Q4 2023)",
-    date: "To the moon: PEPE ATM in Naples, Elon Musk tweets about us, 1B MCap",
+    title: "🧢 M4 — Merchandising Store Goes Live",
+    date: "Phase 4: Golden Crust (Q4 2023)",
   },
   {
     review:
       "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
-    imgPath: "/images/pepe-phase5.png",
-    logoPath: "/images/pepe-logo.png",
-    title: "Phase 5: Infinite Toppings (2024+)",
-    date: "Final goal: One PEPE = One Pizza (universal basic pizza achieved)",
+    title: "💰 M5 — $PEPERONI as Payment Integration",
+    date: "Phase 5: Infinite Toppings (2024+)",
+  },
+  {
+    review:
+      "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
+    title: "🚀 M6 — Meme Coin Launchpad",
+    date: "Phase 5: Infinite Toppings (2024+)",
+  },
+  {
+    review:
+      "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
+    title: "🪂 M7 — Meme Airdrop Tool",
+    date: "Phase 5: Infinite Toppings (2024+)",
+  },
+  {
+    review:
+      "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
+    title: "📄 M8 — Meme On-Chain Form Tool",
+    date: "Phase 5: Infinite Toppings (2024+)",
   },
 ];
 

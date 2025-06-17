@@ -11,7 +11,7 @@ interface Props {
 
 const GlowingTokenOrbit: React.FC<Props> = ({ imageSrc, label }) => {
   return (
-    <div className="relative h-[100vh] items-center flex">
+    <div className="relative h-[100vh] items-center flex bg-[#060000]">
       <div className="glow-wrapper">
         <div className="glow-core">
           <img src={imageSrc} alt="token" className="token-img" />

@@ -2,14 +2,26 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import TitleHeader from "../models/TitleHeader";
 import GlowCard from "../models/GlowCard";
 import { roadMapCards } from "../../constants";
-import { logo } from "../../assets";
+import { cheesePie, logo } from "../../assets";
+import { Section } from "../../layout";
+import LandingHero from "../design/tipography/LandingHero";
+import { useState, useEffect } from "react";
+import LandingText from "../design/tipography/LandingText";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Roadmap = () => {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   useGSAP(() => {
     // Loop through each timeline card and animate them in
     // as the user scrolls to each card
@@ -91,24 +103,34 @@ const Roadmap = () => {
   }, []);
 
   return (
-    <section
-      id="experience"
-      className="flex-center md:mt-40 mt-20 section-padding xl:px-0"
+    <Section
+      id="roadmap"
+      className="pt-28 pb-10 flex flex-col md:flex-row justify-center flex-center section-padding xl:px-0"
+      bgColor="#ffffff"
     >
       <div className="w-full h-full md:px-20 px-5">
-        <TitleHeader
-          title="$Peperoni path to success"
-          sub="💼 Roadmap Overview"
-        />
+        <div className="flex flex-col items-center gap-5 text-orange-500">
+          <div className="hero-badge">
+            <p>⏱️ Roadmap Overview </p>
+          </div>
+          <LandingHero>"The Oven’s Always On"</LandingHero>
+        </div>
+
+        <div className="w-full md:px-50 flex flex-row items-center text-center">
+          <LandingText>
+            Our roadmap isn’t bound by rigid timelines — we build as the dough
+            rises and the sauce simmers. Milestones unlock based on community
+            growth, development readiness, and how spicy things get.
+          </LandingText>
+        </div>
+
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
             {roadMapCards.map((card) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
                   <GlowCard card={card} index={0}>
-                    <div>
-                      <img src={card.imgPath} alt="exp-img" />
-                    </div>
+                    <div>{/* <img src ={card.imgPath} alt="exp-img" /> */}</div>
                   </GlowCard>
                 </div>
                 <div className="xl:w-4/6">
@@ -122,10 +144,10 @@ const Roadmap = () => {
                         <img src={logo} alt="logo" />
                       </div>
                       <div>
-                        <h1 className="font-semibold text-3xl">{card.title}</h1>
-                        <p className="my-5 text-white-50">
-                          🗓️&nbsp;{card.date}
-                        </p>
+                        <h1 className="font-semibold text-gray-400 text-3xl">
+                          {card.title}
+                        </h1>
+                        <p className="my-5 text-gray-400">{card.date}</p>
                       </div>
                     </div>
                   </div>
@@ -135,7 +157,21 @@ const Roadmap = () => {
           </div>
         </div>
       </div>
-    </section>
+
+      {/* Cheese pie */}
+      <div
+        className="absolute -top-240 left-40 pointer-events-none"
+        style={{ transform: `translateY(${offsetY * 0.4}px)` }}
+      >
+        <img
+          src={cheesePie}
+          alt="Cheese Pie"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[200px] rotate-[12deg]"
+        />
+      </div>
+    </Section>
   );
 };
 

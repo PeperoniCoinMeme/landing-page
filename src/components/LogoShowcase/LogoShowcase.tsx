@@ -14,7 +14,7 @@ const LogoIcon: React.FC<LogoIconProps> = ({ name, imgPath }) => {
 };
 
 const LogoShowcase = () => (
-  <div className="md:my-20 my-10 relative">
+  <div className="relative bg-white">
     <div className="gradient-edge" />
     <div className="gradient-edge" />
 

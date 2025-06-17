@@ -1,98 +1,79 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import React from "react";
 import { Section } from "../../layout";
-import { logo } from "../../assets";
-import { words } from "../../constants";
+import { iaOven, logo, wave1 } from "../../assets";
 import AnimatedCounter from "../AnimatedCounter/AnimatedCounter";
 import HeroExperience from "../models/Hero/HeroExperience";
+import WavySpacer from "../design/WavySpacer";
+import LandingTitle from "../design/tipography/LandingTitle";
+import LandingHero from "../design/tipography/LandingHero";
+import LandingButton from "../design/buttons/LandingButton";
+import LandingText from "../design/tipography/LandingText";
 
 const Hero = () => {
-  useGSAP(() => {
-    gsap.fromTo(
-      ".hero-text h1",
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
-    );
-  });
-
   return (
     <Section
       id="hero"
-      className="pt-28 pb-10 flex flex-col md:flex-row justify-center"
+      className="relative pt-20 pb-5 flex flex-col md:flex-row justify-around overflow-hidden"
+      bgColor="#ffffff"
     >
-      <section className="relative overflow-hidden py-20 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
-          {/* Text Column */}
-          <div className="hero-text">
-            <h1 className="pointer-events-none text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-red-700 dark:text-red-400 leading-tight mb-6 hero-font">
-              Invest in{" "}
-              <span className="slide">
-                <span className="wrapper">
-                  {words.map((word, index) => (
-                    <span
-                      key={index}
-                      className="flex items-center md:gap-3 gap-1 pb-2"
-                    >
-                      <img
-                        src={word.imgPath}
-                        alt="person"
-                        className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
-                      />
-                      <span>{word.text}</span>
-                    </span>
-                  ))}
-                </span>
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-red-500 via-yellow-400 to-orange-500 bg-clip-text text-transparent">
-                Peperoni Coin
-              </span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-800 dark:text-gray-300 mb-8 max-w-lg">
-              The first emotionally-backed cryptocurrency built on blockchain
-              and powered by pizza. Community-focused, reward-driven, and 100%
-              cheesy.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#buy" className="hero-btn">
-                🍕 Buy Now
-              </a>
-              <a href="#tokenomics" className="hero-btn">
-                📊 View Tokenomics
-              </a>
-            </div>
+      <div className="flex flex-col sm:flex-row justify-around px-5">
+        {/* First Info container */}
+        <div className="flex flex-col p-10 justify-center flex-1">
+          <LandingHero>
+            DELICIOUSLY <br />
+            COOKED BY YOU
+          </LandingHero>{" "}
+          <div className="text-gray-400 max-w-80 text-sm">
+            <LandingText>
+              Not just a coin, not just a meme. $PEPERONI is a community payment
+              token built to celebrate the people who make Web3 spicy—creators,
+              builders, and degens.
+            </LandingText>
           </div>
-
-          <div className="relative flex justify-center md:-mt-40">
-            {/* Image Column */}
-            <img
-              src={logo}
-              alt="Illustration of Peperoni Coin - crypto meets pizza"
-              className="w-[210px] md:absolute -top-10 max-w-md md:max-w-lg animate-float-slow"
-            />
-            <span className="w-[150px] hero-img-shadow top-60"></span>
-          </div>
-
-          {/* RIGHT: 3D Model or Visual */}
-          <figure>
-            <div className="hero-3d-layout">
-              <HeroExperience />
-            </div>
-          </figure>
         </div>
-
-        {/* Floating Background Pizza Decoration */}
-        <div className="absolute -top-20 -right-24 opacity-20 dark:opacity-10 z-0 pointer-events-none">
-          <img
-            src="/assets/pizza-bg.svg"
-            alt=""
-            aria-hidden="true"
-            className="w-[300px] rotate-[15deg]"
-          />
+        {/* Oven container */}
+        <div className="flex flex-col px-5 justify-center flex-1">
+          <div className="oven-container mx-5 mb-5 relative">
+            <figure>
+              <div className="hero-3d-layout">
+                <HeroExperience />
+              </div>
+            </figure>
+            {/* Oven Image */}
+            <img src={iaOven} alt="" className="max-w-60 md:max-w-110" />
+          </div>{" "}
+          {/* <div className="flex flex-col sm:flex-row justify-around gap-3">
+            <a href="#buy" className="hero-btn">
+              🍕 Buy
+            </a>
+            <a href="#tokenomics" className="hero-btn">
+              📊 Bake
+            </a>
+          </div> */}
         </div>
-      </section>
+        {/* Wallet container */}
+        <div className="flex flex-col gap-1 items-end p-10 pt-25 flex-1">
+          <LandingButton>🔗 Connect</LandingButton>
+          {/* <span className="flex flex-row gap-2 items-center px-5 py-1 rounded-xl bg-gradient-to-r from-orange-800 to-red-900 border-2 border-gray-100 hover:border-yellow-500 hover:text-white transition-all shadow-lg">
+            <img src={logo} alt="" className="max-w-7" />
+            <p className="text-sm">1.234.884</p>
+          </span>
+          <div className="border-2 border-gray-300 my-1 px-5 py-4 rounded-lg shadow-md">
+            <p className="text-gray-900">Leader board</p>
+          </div> */}
+        </div>
+      </div>
+
+      {/* Floating Background Pizza Decoration */}
+      {/* <div className="absolute -top-20 -right-24 opacity-20 dark:opacity-10 z-0 pointer-events-none">
+        <img
+          src="/assets/pizza-bg.svg"
+          alt=""
+          aria-hidden="true"
+          className="w-[300px] rotate-[15deg]"
+        />
+      </div> */}
+
       <AnimatedCounter />
     </Section>
   );

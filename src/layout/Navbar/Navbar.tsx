@@ -16,27 +16,44 @@ import PricingContent from "./Content/Pricing";
 import TokenomicsContent from "./Content/Tokenomics";
 import AboutContent from "./Content/About";
 import MeltingCheese from "../../components/MeltingCheese/MeltingCheese";
+import FlyoutLink from "./Flyout/Flyout";
+import Headroom from "../../components/Headroom/Headroom";
 
 const menuItems = [
-  { label: "Tokenomics", href: "#tokenomics", icon: CurrencyDollarIcon },
-  { label: "Roadmap", href: "#roadmap", icon: MapIcon },
-  { label: "FAQ", href: "#faq", icon: QuestionMarkCircleIcon },
+  { label: "Home", href: "#home", icon: FireIcon },
   { label: "About", href: "#about", icon: FireIcon },
+  { label: "Mission & Vibes", href: "#missionvibes", icon: FireIcon },
+  { label: "Slice of Utility", href: "#sliceofutility", icon: FireIcon },
+  { label: "Slicenomics", href: "#slicenomics", icon: FireIcon },
+  { label: "Road Map", href: "#roadmap", icon: FireIcon },
+  { label: "Join to the Pizza", href: "#join", icon: FireIcon },
 ];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
+
+  const fontStyles: React.CSSProperties = {
+    fontFamily: "bangers",
+  };
+
   return (
     <>
-      <nav className="fixed bg-[var(--color-cheese)] top-0 left-0 z-150 w-full shadow-lg flex justify-between px-3 py-8 h-1 items-center">
-        <div id="logo" className="w-12 flex flex-row gap-3 items-center ">
+      {/* <Headroom> */}
+      <nav className="relative bg-[var(--color-cheese)] top-0 left-0 z-150 w-full shadow-lg flex justify-between px-3 py-8 h-1 items-center">
+        <div id="logo" className="w-12 flex flex-row gap-3 items-center">
           <img src={logo} alt="" className="hover:scale-120 transition-all" />
-          <p className="text-gray-900 font-extrabold text-xl">PEPERONI</p>
+          <h4
+            className="text-gray-100 text-3xl text-shadow-lg"
+            style={fontStyles}
+          >
+            PEPERONI
+          </h4>
         </div>
 
         <div className="flex justify-between w-6/12">
-          <div className="flex flex-row">
+          {/* Deprecated | No nav links */}
+          {/* <div className="flex flex-row">
             <FlyoutLink href="#" FlyoutContent={PricingContent}>
               Pricing
             </FlyoutLink>
@@ -46,15 +63,11 @@ const Navbar = () => {
             <FlyoutLink href="#" FlyoutContent={TokenomicsContent}>
               Tokenomics
             </FlyoutLink>
-          </div>
-          <button
-            onClick={toggleMenu}
-            className="text-[var(--color-pepperoni)] relative p-[14px] "
-          >
-            <Bars3Icon className="h-7 w-7 absolute top-0 left-0" />
-          </button>
+          </div> */}
         </div>
-
+        <button onClick={toggleMenu} className="text-white relative p-[14px] ">
+          <Bars3Icon className="h-7 w-7 absolute top-0 left-0" />
+        </button>
         {/* Melting Cheese Images  */}
         <MeltingCheese />
       </nav>
@@ -64,7 +77,7 @@ const Navbar = () => {
           <>
             {/* Overlay blur background */}
             <motion.div
-              className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-md z-40"
+              className="fixed inset-0 bg-black-800 bg-opacity-90 backdrop-blur-md z-500"
               onClick={toggleMenu}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -73,34 +86,33 @@ const Navbar = () => {
 
             {/* Modal panel */}
             <motion.div
-              className="fixed z-50 inset-0 flex items-center justify-center"
+              className="fixed z-600 inset-0 flex items-center justify-center"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
             >
               <div
-                className="relative bg-dark-dough p-6 rounded-xl shadow-xl text-white w-6/12 space-y-6"
+                className="relative bg-dark-dough p-6 rounded-xl text-white w-6/12 space-y-6"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
                   onClick={toggleMenu}
-                  className="absolute top-3 right-3 text-white hover:text-red-400 transition"
+                  className="absolute top-3 right-3 text-[var(--color-pepperoni)] hover:text-red-400 transition"
                 >
                   <XMarkIcon className="h-6 w-6" />
                 </button>
 
-                <h2 className="text-2xl font-bold text-center">
-                  🍕 Peperoni Menu
-                </h2>
+                <h2 className="text-5xl font-bold">🍕</h2>
 
-                <ul className="space-y-4">
+                <ul className="space-y-6">
                   {menuItems.map(({ label, href, icon: Icon }) => (
                     <li key={label}>
                       <a
                         href={href}
                         onClick={toggleMenu}
-                        className="flex items-center gap-3 text-lg hover:text-yellow-300 transition"
+                        className="flex text-4xl font-bold text-center justify-center hover:text-yellow-300 text-[var(--color-pepperoni)] transition"
+                        style={fontStyles}
                       >
                         {/* <Icon className="h-5 w-5 text-yellow-500" /> */}
                         {label}
@@ -117,60 +129,8 @@ const Navbar = () => {
           </>
         )}
       </AnimatePresence>
+      {/* </Headroom> */}
     </>
-  );
-};
-
-interface FlyoutLinkProps {
-  children?: any;
-  href?: any;
-  FlyoutContent?: any;
-}
-
-const FlyoutLink: React.FC<FlyoutLinkProps> = ({
-  children,
-  href,
-  FlyoutContent,
-}) => {
-  const [open, setOpen] = useState(false);
-
-  const showFlyout = open && FlyoutContent;
-
-  return (
-    <div
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-      className="group relative h-fit w-fit px-5"
-    >
-      <a
-        href={href}
-        className="relative text-[var(--color-pepperoni)] font-semibold"
-      >
-        {children}
-        {/* TODO: Render underline animation thingy */}
-        <span
-          style={{ transform: showFlyout ? "scaleX(1)" : "scaleX(0)" }}
-          className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left rounded-full bg-[var(--color-pepperoni)] transition-transform duration-300 ease-out"
-        />
-      </a>
-      {/* TODO: Render flyout content */}
-      <AnimatePresence>
-        {showFlyout && (
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 15 }}
-            style={{ x: "-50%" }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="absolute left-1/2 top-12 bg-white text-black "
-          >
-            <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
-            <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
-            <FlyoutContent />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
   );
 };
 

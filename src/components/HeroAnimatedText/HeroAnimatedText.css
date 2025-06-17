@@ -1,0 +1,12 @@
+.hero-text {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.warm-gradient {
+  background: linear-gradient(to right, #ff5c5c, #ffa94d, #ffcc70);
+  -webkit-background-clip: text;
+  color: transparent;
+}
