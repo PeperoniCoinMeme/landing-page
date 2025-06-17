@@ -9,7 +9,7 @@ interface LandingButtonProps {
 const Section: React.FC<LandingButtonProps> = ({
   className,
   children,
-  bgColor = "#ff4500;",
+  bgColor = "#ff4500",
 }) => {
   const styles: React.CSSProperties = {
     backgroundColor: bgColor,
