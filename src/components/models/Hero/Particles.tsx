@@ -1,6 +1,7 @@
 import { useRef, useMemo } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useLoader } from "@react-three/fiber";
 import * as THREE from "three";
+import { peperoniBlob1 } from "../../../assets";
 
 interface Particle {
   position: [number, number, number];
@@ -13,6 +14,9 @@ interface ParticlesProps {
 
 const Particles: React.FC<ParticlesProps> = ({ count = 200 }) => {
   const mesh = useRef<THREE.Points>(null);
+
+  // Cargar una textura circular (built-in)
+  const texture = useLoader(THREE.TextureLoader, peperoniBlob1); // Debes tener esta imagen en tu carpeta pública
 
   const particles = useMemo<Particle[]>(() => {
     const temp: Particle[] = [];
@@ -62,11 +66,13 @@ const Particles: React.FC<ParticlesProps> = ({ count = 200 }) => {
         />
       </bufferGeometry>
       <pointsMaterial
-        color="#ffffff"
-        size={0.05}
+        color="#FF4500"
+        size={0.15}
         transparent
         opacity={0.9}
         depthWrite={false}
+        map={texture}
+        alphaTest={0.5}
       />
     </points>
   );

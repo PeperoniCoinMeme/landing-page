@@ -1,16 +1,4 @@
-@layer components {
-  @import "tailwindcss";
-
-  .hero-text {
-    @apply flex flex-col justify-center font-semibold relative z-10;
-    img {
-      @apply size-8 md:size-10 object-contain;
-    }
-    .slide {
-      @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
-    }
-  }
-}
+@import "tailwindcss";
 
 .hero-text h1 {
   text-shadow: 0 10px 5px 10px white;
@@ -34,25 +22,25 @@
     transform: translateY(0.5%);
   }
   12.5% {
-    transform: translateY(-11.5%);
+    transform: translateY(-16%);
   }
   25% {
-    transform: translateY(-23%);
+    transform: translateY(-32%);
   }
   37.5% {
-    transform: translateY(-33.5%);
+    transform: translateY(-48%);
   }
   50% {
-    transform: translateY(-44.5%);
+    transform: translateY(-64%);
   }
   62.5% {
-    transform: translateY(-56%);
+    transform: translateY(-80%);
   }
   75% {
-    transform: translateY(-67%);
+    transform: translateY(-102%);
   }
   87.5% {
-    transform: translateY(-78.5%);
+    transform: translateY(-120%);
   }
   96% {
     transform: translateY(0.5%);

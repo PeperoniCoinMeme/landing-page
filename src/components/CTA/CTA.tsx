@@ -1,28 +1,37 @@
 import React from "react";
 import { Section } from "../../layout";
 import JoinButton from "../JoinButton/JoinButton";
+import { logo, orangeScatteredYellow2, waveYellowOrange2 } from "../../assets";
+import LandingHero from "../design/tipography/LandingHero";
 
 const CTA = () => {
   return (
     <Section
       id="cta"
-      className="py-10 flex flex-col md:flex-row justify-center"
+      className="py-18 md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center"
+      bgColor="#FF4500"
     >
-      <section
-        id="buy"
-        className="px-10 bg-gradient-to-r from-zinc-800 to-zinc-800 text-white py-20 px-6 rounded-lg shadow-lg"
-      >
+      <section className="cta-card relative rounded-xl shadow-lg rounded-xl bg-white md:px-16 px-6 p-8 md:py-12 flex flex-col md:flex-row">
         <div className="max-w-3xl mx-auto space-y-2">
-          <h2 className="text-xl font-extrabold tracking-tight sm:text-4xl drop-shadow-md">
-            Get Your Peperoni Coins Today!
-          </h2>
-          <p className="text-white/90 leading-relaxed">
+          <LandingHero>Get Your Peperoni Coins Today!</LandingHero>
+
+          <p className="text-gray-500 leading-relaxed">
             Don’t miss out on the cheesiest opportunity in crypto. Buy $PEP and
             be part of the most flavorful movement on the blockchain.
           </p>
           <div className="mt-15 px-10">
             <JoinButton />
           </div>
+        </div>
+
+        <div className="relative justify-center flex-1">
+          {/* Image Column */}
+          <img
+            src={logo}
+            alt="Illustration of Peperoni Coin - crypto meets pizza"
+            className="w-[100px] md:w-[150px] md:absolute max-w-md md:max-w-lg animate-float-slow"
+          />
+          <span className="w-[140px] hero-img-shadow top-60"></span>
         </div>
       </section>
     </Section>

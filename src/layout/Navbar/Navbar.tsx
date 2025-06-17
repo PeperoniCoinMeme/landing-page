@@ -20,22 +20,35 @@ import FlyoutLink from "./Flyout/Flyout";
 import Headroom from "../../components/Headroom/Headroom";
 
 const menuItems = [
-  { label: "Tokenomics", href: "#tokenomics", icon: CurrencyDollarIcon },
-  { label: "Roadmap", href: "#roadmap", icon: MapIcon },
-  { label: "FAQ", href: "#faq", icon: QuestionMarkCircleIcon },
+  { label: "Home", href: "#home", icon: FireIcon },
   { label: "About", href: "#about", icon: FireIcon },
+  { label: "Mission & Vibes", href: "#missionvibes", icon: FireIcon },
+  { label: "Slice of Utility", href: "#sliceofutility", icon: FireIcon },
+  { label: "Slicenomics", href: "#slicenomics", icon: FireIcon },
+  { label: "Road Map", href: "#roadmap", icon: FireIcon },
+  { label: "Join to the Pizza", href: "#join", icon: FireIcon },
 ];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
+
+  const fontStyles: React.CSSProperties = {
+    fontFamily: "bangers",
+  };
+
   return (
     <>
       {/* <Headroom> */}
-      <nav className="fixed bg-[var(--color-cheese)] top-0 left-0 z-150 w-full shadow-lg flex justify-between px-3 py-8 h-1 items-center">
-        <div id="logo" className="w-12 flex flex-row gap-3 items-center ">
+      <nav className="relative bg-[var(--color-cheese)] top-0 left-0 z-150 w-full shadow-lg flex justify-between px-3 py-8 h-1 items-center">
+        <div id="logo" className="w-12 flex flex-row gap-3 items-center">
           <img src={logo} alt="" className="hover:scale-120 transition-all" />
-          <p className="text-gray-900 font-extrabold text-xl">PEPERONI</p>
+          <h4
+            className="text-gray-100 text-3xl text-shadow-lg"
+            style={fontStyles}
+          >
+            PEPERONI
+          </h4>
         </div>
 
         <div className="flex justify-between w-6/12">
@@ -52,13 +65,9 @@ const Navbar = () => {
             </FlyoutLink>
           </div> */}
         </div>
-        <button
-          onClick={toggleMenu}
-          className="text-[var(--color-pepperoni)] relative p-[14px] "
-        >
+        <button onClick={toggleMenu} className="text-white relative p-[14px] ">
           <Bars3Icon className="h-7 w-7 absolute top-0 left-0" />
         </button>
-
         {/* Melting Cheese Images  */}
         <MeltingCheese />
       </nav>
@@ -68,7 +77,7 @@ const Navbar = () => {
           <>
             {/* Overlay blur background */}
             <motion.div
-              className="fixed inset-0 bg-black-500 bg-opacity-40 backdrop-blur-md z-500"
+              className="fixed inset-0 bg-black-800 bg-opacity-90 backdrop-blur-md z-500"
               onClick={toggleMenu}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -89,22 +98,21 @@ const Navbar = () => {
               >
                 <button
                   onClick={toggleMenu}
-                  className="absolute top-3 right-3 text-white hover:text-red-400 transition"
+                  className="absolute top-3 right-3 text-[var(--color-pepperoni)] hover:text-red-400 transition"
                 >
                   <XMarkIcon className="h-6 w-6" />
                 </button>
 
-                <h2 className="text-2xl font-bold text-center">
-                  🍕 Peperoni Menu
-                </h2>
+                <h2 className="text-5xl font-bold">🍕</h2>
 
-                <ul className="space-y-4">
+                <ul className="space-y-6">
                   {menuItems.map(({ label, href, icon: Icon }) => (
                     <li key={label}>
                       <a
                         href={href}
                         onClick={toggleMenu}
-                        className="flex items-center gap-3 text-lg hover:text-yellow-300 transition"
+                        className="flex text-4xl font-bold text-center justify-center hover:text-yellow-300 text-[var(--color-pepperoni)] transition"
+                        style={fontStyles}
                       >
                         {/* <Icon className="h-5 w-5 text-yellow-500" /> */}
                         {label}

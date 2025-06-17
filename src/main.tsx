@@ -2,7 +2,6 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles/index.css";
 import "./styles/hero-text.css";
-import "./styles/glow-card.css";
 import "./styles/hero-img.css";
 import "./styles/frames.css";
 import "./styles/buttons.css";
