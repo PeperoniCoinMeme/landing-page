@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { goldStar } from "../../assets";
 
 interface GlowCardProps {
   card: any;
@@ -38,13 +39,13 @@ const GlowCard: React.FC<GlowCardProps> = ({ card, index, children }) => {
         if (el) cardRefs.current[index] = el;
       }}
       onMouseMove={handleMouseMove(index)}
-      className="timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column bg-white text-orange-400 border-1 border-orange-2 max-w-80"
+      className="timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column shadow-lg text-gray-800 border-1 border-gray-300 max-w-80"
       style={{}}
     >
       <div className="glow"></div>
       <div className="flex items-center gap-1 mb-5">
         {Array.from({ length: 5 }, (_, i) => (
-          <img key={i} src="/images/star.png" alt="star" className="size-5" />
+          <img key={i} src={goldStar} alt="star" className="size-5" />
         ))}
       </div>
       <div className="mb-5">

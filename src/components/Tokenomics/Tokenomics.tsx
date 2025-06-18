@@ -16,7 +16,8 @@ const Tokenomics = () => {
     <Section
       id="slicenomics"
       className="py-10 md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center"
-      backgroundSvg={orangeScatteredYellow1}
+      bgColor="#0c0500"
+      // backgroundSvg={orangeScatteredYellow1}
     >
       <section className="overflow-hidden rounded-xl py-16 md:px-16 px-6 text-center">
         <div className="relative flex flex-col jutify-center">

@@ -16,6 +16,7 @@ import {
   pepeFitStrong,
   pepeLogo,
   orangeScatteredYellow1,
+  logo,
 } from "../../assets";
 
 import "./About.css";
@@ -76,24 +77,12 @@ const About = () => {
     );
   });
 
-  const images = [
-    pepeBanner,
-    pepeFitStrong,
-    pepePresident,
-    pepeCivilian,
-    pepeSurf,
-    pepeSpy,
-    pepeClimbing,
-    pepeCar,
-    pepeWarrior,
-    pepeLogo,
-  ];
-
   return (
     <Section
       id="about"
-      className="pt-50 pb-90 md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center"
-      backgroundSvg={orangeScatteredYellow1}
+      className="pt-50 py-20 md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center"
+      bgColor="#0c0500"
+      // backgroundSvg={orangeScatteredYellow1}
     >
       <section className="rounded-xl md:px-16 px-6 py-10 z-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-50">
@@ -124,7 +113,7 @@ const About = () => {
                       <span className="object-contain rounded-full bg-white bg-opacity-50">
                         {item.icon}
                       </span>
-                      <LandingTitle color="white">{item.text}</LandingTitle>
+                      <LandingTitle>{item.text}</LandingTitle>
                     </span>
                   ))}
                 </span>
@@ -149,16 +138,13 @@ const About = () => {
           </div>
 
           <div className="relative">
-            <div className="grid-memes">
-              {images.map((src, index) => (
-                <div className="grid-item" key={index}>
-                  <img src={src} alt={`meme-${index}`} className="h-16" />
-                </div>
-              ))}
-
-              {/* Shadow */}
-              {/* <TrackingShadow /> */}
-            </div>
+            {/* Image Column */}
+            <img
+              src={logo}
+              alt="Illustration of Peperoni Coin - crypto meets pizza"
+              className="w-[100px] md:w-[200px] md:absolute -top-40 right-45 max-w-md md:max-w-lg animate-float-slow"
+            />
+            <span className="w-[180px] -right-35 hero-img-shadow top-60"></span>
           </div>
         </div>
       </section>

@@ -11,7 +11,7 @@ const LandingText: React.FC<LandingTextProps> = ({ color, children }) => {
 
   return (
     <p
-      className="text-gray-400 text-md text-shadow-md font-bolder transition-all"
+      className="text-shadow-md font-bolder transition-all max-w-2xl"
       style={styles}
     >
       {children}

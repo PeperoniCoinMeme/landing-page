@@ -16,7 +16,7 @@ const Section: React.FC<SectionProps> = ({
   backgroundSvg,
 }) => {
   const styles: React.CSSProperties = {
-    backgroundColor: bgColor,
+    background: bgColor,
   };
   const bgStyles: React.CSSProperties = {
     backgroundImage: `url("${backgroundSvg}")`,
@@ -25,7 +25,7 @@ const Section: React.FC<SectionProps> = ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     width: "100%",
-    zIndex: 10,
+    zIndex: 0,
   };
   return (
     <div
