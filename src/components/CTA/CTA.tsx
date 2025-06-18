@@ -1,10 +1,36 @@
 import React from "react";
 import { Section } from "../../layout";
 import JoinButton from "../JoinButton/JoinButton";
-import { logo, orangeScatteredYellow2, waveYellowOrange2 } from "../../assets";
+import {
+  logo,
+  orangeScatteredYellow2,
+  pepeBanner,
+  pepeCar,
+  pepeCivilian,
+  pepeClimbing,
+  pepeFitStrong,
+  pepeLogo,
+  pepePresident,
+  pepeSpy,
+  pepeSurf,
+  pepeWarrior,
+  waveYellowOrange2,
+} from "../../assets";
 import LandingHero from "../design/tipography/LandingHero";
 
 const CTA = () => {
+  const images = [
+    pepeBanner,
+    pepeFitStrong,
+    pepePresident,
+    pepeCivilian,
+    pepeSurf,
+    pepeSpy,
+    pepeClimbing,
+    pepeCar,
+    pepeWarrior,
+    pepeLogo,
+  ];
   return (
     <Section
       id="cta"
@@ -25,13 +51,16 @@ const CTA = () => {
         </div>
 
         <div className="relative justify-center flex-1">
-          {/* Image Column */}
-          <img
-            src={logo}
-            alt="Illustration of Peperoni Coin - crypto meets pizza"
-            className="w-[100px] md:w-[150px] md:absolute max-w-md md:max-w-lg animate-float-slow"
-          />
-          <span className="w-[140px] hero-img-shadow top-60"></span>
+          <div className="grid-memes">
+            {images.map((src, index) => (
+              <div className="grid-item" key={index}>
+                <img src={src} alt={`meme-${index}`} className="h-16" />
+              </div>
+            ))}
+
+            {/* Shadow */}
+            {/* <TrackingShadow /> */}
+          </div>
         </div>
       </section>
     </Section>

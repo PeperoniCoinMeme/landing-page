@@ -4,6 +4,12 @@ import { Navbar, Footer } from "../layout";
 
 import {
   peperoniPizza,
+  waveYellowBlack1,
+  waveYellowBlack2,
+  waveYellowBlack4,
+  waveYellowBlack5,
+  waveYellowDark1,
+  waveYellowDark2,
   waveYellowOrange1,
   waveYellowOrange2,
   waveYellowWhite1,
@@ -23,12 +29,24 @@ const LandingPage = () => {
   return (
     <div className="overflow-hidden w-full max-w-[1920px] square-framed-container m-auto">
       <Navbar />
-
       {/* 1 */}
       <Hero />
-      <WavySpacer bgWaveUrl={waveYellowWhite1} flip={false} />
+
+      {/* 2 */}
+      <About />
+      <WavySpacer bgWaveUrl={waveYellowDark1} flip={false} />
+
+      {/* 3 */}
+      <MissionVibes />
+      <Feature />
+      {/* 4 */}
+      <SliceOfUtility />
+      <WavySpacer bgWaveUrl={waveYellowDark2} flip={true} />
+
+      {/* 5 */}
+      <Tokenomics />
       {/* Pepperoni Pizza */}
-      <div className="absolute top-330 md:top-250 right-0 pointer-events-none z-11 overflow-hidden">
+      <div className="absolute top-900 md:top-1200 right-0 opacity-30 pointer-events-none z-11 overflow-hidden">
         <img
           src={peperoniPizza}
           alt="Pepperoni Pizza"
@@ -51,35 +69,22 @@ const LandingPage = () => {
         `}</style>
       </div>
 
-      {/* 2 */}
-      <About />
-      <WavySpacer bgWaveUrl={waveYellowWhite3} flip={true} />
-
-      {/* 3 */}
-      <MissionVibes />
-      <Feature />
-      {/* 4 */}
-      <SliceOfUtility />
-      <WavySpacer bgWaveUrl={waveYellowWhite1} flip={false} />
-
-      {/* 5 */}
-      <Tokenomics />
-      <WavySpacer bgWaveUrl={waveYellowWhite2} flip={true} />
+      <WavySpacer bgWaveUrl={waveYellowDark1} flip={false} />
       {/* <LogoShowcase /> */}
 
       {/* 6 */}
       <Roadmap />
-      <WavySpacer bgWaveUrl={waveYellowWhite1} flip={false} />
+      <WavySpacer bgWaveUrl={waveYellowBlack4} flip={false} />
       {/* <GlowingTokenOrbit
         imageSrc={logo}
         label="$PEPERONI – THE MOST DELICIOUS TOKEN"
       /> */}
       {/* <InfiniteCarousel images={images} speed={30} /> */}
-
+      {/* <WavySpacer bgWaveUrl={waveYellowBlack1} flip={true} /> */}
       {/* 7 */}
       <Join />
       {/* <CTA /> */}
-      <WavySpacer bgWaveUrl={waveYellowOrange2} flip={false} />
+      {/* <WavySpacer bgWaveUrl={waveYellowBlack1} flip={false} /> */}
 
       <Footer />
     </div>

@@ -6,21 +6,32 @@ import GlowCard from "../models/GlowCard";
 import { roadMapCards } from "../../constants";
 import {
   cheesePie,
+  cloud1,
+  cloud2,
+  cloud3,
   logo,
+  mountainBg,
   parachutes1,
   parachutes2,
   parachutes3,
+  parachutes4,
+  sunsetGradientBg,
 } from "../../assets";
 import { Section } from "../../layout";
 import LandingHero from "../design/tipography/LandingHero";
 import { useState, useEffect } from "react";
 import LandingText from "../design/tipography/LandingText";
+import LandingTitle from "../design/tipography/LandingTitle";
+import LandingSubtitle from "../design/tipography/LandingSubtitle";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Roadmap = () => {
   const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  const [offsetX, setOffsetX] = useState(0);
+  const handleScroll = () => {
+    setOffsetY(window.pageYOffset), setOffsetX(window.pageXOffset);
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -112,7 +123,8 @@ const Roadmap = () => {
     <Section
       id="roadmap"
       className="pt-28 pb-10 flex flex-col md:flex-row justify-center flex-center section-padding xl:px-0"
-      bgColor="#ffffff"
+      bgColor="linear-gradient(360deg, rgba(31, 33, 77, 1) 0%, rgba(80, 54, 111, 1) 17%, rgba(191, 52, 117, 1) 36%, rgba(238, 108, 69, 1) 61%, rgba(255, 206, 97, 1) 79%, rgba(255, 204, 0, 1) 100%)"
+      // backgroundSvg={sunsetGradientBg}
     >
       <div className="w-full h-full md:px-20 px-5">
         <div className="flex flex-col items-center gap-5 text-orange-500">
@@ -141,18 +153,19 @@ const Roadmap = () => {
                 </div>
                 <div className="xl:w-4/6">
                   <div className="flex items-start">
-                    <div className="timeline-wrapper">
+                    {/* <div className="timeline-wrapper">
                       <div className="timeline" />
                       <div className="gradient-line w-1 h-full" />
-                    </div>
+                    </div> */}
                     <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
                       <div className="timeline-logo">
                         <img src={logo} alt="logo" />
                       </div>
                       <div>
-                        <h1 className="font-semibold text-gray-400 text-3xl">
+                        <LandingSubtitle color="white">
                           {card.title}
-                        </h1>
+                        </LandingSubtitle>
+
                         <p className="my-5 text-gray-400">{card.date}</p>
                       </div>
                     </div>
@@ -164,24 +177,94 @@ const Roadmap = () => {
         </div>
       </div>
 
-      {/* Cheese pie */}
-      <div
-        className="absolute -top-240 left-40 pointer-events-none"
-        style={{ transform: `translateY(${offsetY * 0.4}px)` }}
-      >
+      {/* Clouds */}
+      <div className="absolute top-300 left-270 pointer-events-none">
         <img
-          src={cheesePie}
-          alt="Cheese Pie"
+          src={cloud1}
+          alt="Cloud"
           aria-hidden="true"
           style={{ zIndex: 9999 }}
-          className="w-[200px] rotate-[12deg]"
+          className="w-[200px]"
+        />
+      </div>
+      <div className="absolute top-155 left-70 pointer-events-none">
+        <img
+          src={cloud2}
+          alt="Cloud"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[200px]"
+        />
+      </div>
+      <div className="absolute top-130 left-140 pointer-events-none">
+        <img
+          src={cloud3}
+          alt="Cloud"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[200px]"
+        />
+      </div>
+
+      <div className="absolute top-450 left-5 pointer-events-none">
+        <img
+          src={cloud1}
+          alt="Cloud"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[200px]"
+        />
+      </div>
+      <div className="absolute top-320 left-120 pointer-events-none">
+        <img
+          src={cloud2}
+          alt="Cloud"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[200px]"
+        />
+      </div>
+      <div className="absolute top-300 left-140 pointer-events-none">
+        <img
+          src={cloud3}
+          alt="Cloud"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[200px]"
+        />
+      </div>
+      <div className="absolute top-600 left-240 pointer-events-none">
+        <img
+          src={cloud2}
+          alt="Cloud"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[200px]"
+        />
+      </div>
+      <div className="absolute top-700 left-140 pointer-events-none">
+        <img
+          src={cloud3}
+          alt="Cloud"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[200px]"
+        />
+      </div>
+      <div className="absolute top-720 left-200 pointer-events-none">
+        <img
+          src={cloud3}
+          alt="Cloud"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[200px]"
         />
       </div>
 
       {/* Parachutes1 */}
       <div
         className="absolute -top-620 left-270 pointer-events-none"
-        style={{ transform: `translateY(${offsetY * 0.4}px)` }}
+        style={{ transform: `translateY(${offsetY * 0.43}px)` }}
       >
         <img
           src={parachutes1}
@@ -194,8 +277,12 @@ const Roadmap = () => {
 
       {/* Parachutes2 */}
       <div
-        className="absolute -top-600 left-90 pointer-events-none"
-        style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+        className="absolute -top-600 -left-70 pointer-events-none"
+        style={{
+          transform: `translateX(${offsetY * 0.09}px) translateY(${
+            offsetY * 0.5
+          }px)`,
+        }}
       >
         <img
           src={parachutes2}
@@ -216,7 +303,30 @@ const Roadmap = () => {
           alt="Parachutes"
           aria-hidden="true"
           style={{ zIndex: 9999 }}
-          className="w-[290px] rotate-[12deg]"
+          className="w-[290px] rotate-[12deg] animate-spin"
+        />
+      </div>
+      {/* Parachutes4 | Provision */}
+      <div
+        className="absolute -top-585 right-40 pointer-events-none"
+        style={{ transform: `translateY(${offsetY * 0.52}px)` }}
+      >
+        <img
+          src={parachutes4}
+          alt="Parachutes"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[180px] rotate-[12deg]"
+        />
+      </div>
+      {/* Mountain */}
+      <div className="absolute -bottom-135 pointer-events-none">
+        <img
+          src={mountainBg}
+          alt="Parachutes"
+          aria-hidden="true"
+          style={{ zIndex: 40 }}
+          className="w-[1920px]"
         />
       </div>
     </Section>

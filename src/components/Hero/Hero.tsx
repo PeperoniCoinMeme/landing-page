@@ -1,6 +1,6 @@
 import React from "react";
 import { Section } from "../../layout";
-import { iaOven, logo, wave1 } from "../../assets";
+import { brickBg, iaOven, logo, wave1 } from "../../assets";
 import AnimatedCounter from "../AnimatedCounter/AnimatedCounter";
 import HeroExperience from "../models/Hero/HeroExperience";
 import WavySpacer from "../design/WavySpacer";
@@ -13,17 +13,18 @@ const Hero = () => {
   return (
     <Section
       id="hero"
-      className="relative pt-35 pb-5 flex flex-col md:flex-row justify-around overflow-hidden"
-      bgColor="#ffffff"
+      className="relative pt-35 pb-5 flex flex-col md:flex-row justify-around overflow-hidden min-h-200"
+      bgColor="#191716"
+      backgroundSvg={brickBg}
     >
       <div className="flex flex-col sm:flex-row justify-around px-5">
         {/* First Info container */}
-        <div className="flex flex-col p-10 justify-center flex-1">
+        <div className="flex flex-col p-10 md:p-18 justify-center flex-1">
           <LandingHero>
             DELICIOUSLY <br />
             COOKED BY YOU
           </LandingHero>{" "}
-          <div className="text-gray-400 max-w-80 text-sm">
+          <div className="max-w-80">
             <LandingText>
               Not just a coin, not just a meme. $PEPERONI is a community payment
               token built to celebrate the people who make Web3 spicy—creators,
@@ -43,8 +44,8 @@ const Hero = () => {
             <img
               src={iaOven}
               alt=""
-              className="max-w-60 md:max-w-110"
-              style={{ zIndex: 9999 }}
+              className="absolute max-w-60 md:max-w-280 -top-100 -left-90"
+              style={{ zIndex: 400 }}
             />
           </div>{" "}
           {/* <div className="flex flex-col sm:flex-row justify-around gap-3">
