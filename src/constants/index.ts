@@ -129,49 +129,49 @@ export const roadMapCards: RoadMapCards[] = [
     review:
       "The Great PEPE Launch - Our token rises like dough in a warm kitchen! Initial toppings (liquidity) added to the crypto pizza oven. Whitepaper served with extra cheese.",
     title: "🥇 M1 — Token Goes Live on Solana’s DEX",
-    date: "Phase 1: Dough Preparation (Q1 2023)",
+    date: "Phase 1: Dough Preparation",
   },
   {
     review:
       "PEPE Staking goes live - Earn extra toppings by locking your slices! First major exchange listing (PizzaSwap). Community grows faster than a yeast infection (the good kind!).",
     title: "🔥 M2 — Bake the Most Valuable Pizza Over the World",
-    date: "Phase 2: Sauce Spread (Q2 2023)",
+    date: "Phase 2: Sauce Spread",
   },
   {
     review:
       "PEPE goes multi-chain - Like delivering to new neighborhoods! PEPE DeFi Kitchen opens with yield farming. First real-world pizza bought with PEPE (historic moment captured on blockchain).",
     title: "🤖 M3 — Peperoni as a Service (PaaS)",
-    date: "Phase 3: Cheese Melt (Q3 2023)",
+    date: "Phase 3: Cheese Melt",
   },
   {
     review:
       "PEPE Ecosystem sizzles - NFT toppings collection drops. PEPE becomes official currency of 3 pizza chains. Community burns 50% supply in the Great Pizza Oven event.",
     title: "🧢 M4 — Merchandising Store Goes Live",
-    date: "Phase 4: Golden Crust (Q4 2023)",
+    date: "Phase 4: Golden Crust",
   },
   {
     review:
       "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
     title: "💰 M5 — $PEPERONI as Payment Integration",
-    date: "Phase 5: Infinite Toppings (2024+)",
+    date: "Phase 5: Infinite Toppings",
   },
   {
     review:
       "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
     title: "🚀 M6 — Meme Coin Launchpad",
-    date: "Phase 5: Infinite Toppings (2024+)",
+    date: "Phase 5: Infinite Toppings",
   },
   {
     review:
       "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
     title: "🪂 M7 — Meme Airdrop Tool",
-    date: "Phase 5: Infinite Toppings (2024+)",
+    date: "Phase 5: Infinite Toppings",
   },
   {
     review:
       "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
     title: "📄 M8 — Meme On-Chain Form Tool",
-    date: "Phase 5: Infinite Toppings (2024+)",
+    date: "Phase 5: Infinite Toppings",
   },
 ];
 

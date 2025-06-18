@@ -4,7 +4,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import GlowCard from "../models/GlowCard";
 import { roadMapCards } from "../../constants";
-import { cheesePie, logo } from "../../assets";
+import {
+  cheesePie,
+  logo,
+  parachutes1,
+  parachutes2,
+  parachutes3,
+} from "../../assets";
 import { Section } from "../../layout";
 import LandingHero from "../design/tipography/LandingHero";
 import { useState, useEffect } from "react";
@@ -116,7 +122,7 @@ const Roadmap = () => {
           <LandingHero>"The Oven’s Always On"</LandingHero>
         </div>
 
-        <div className="w-full md:px-50 flex flex-row items-center text-center">
+        <div className="w-full md:px-50 flex flex-row justify-center items-center text-center">
           <LandingText>
             Our roadmap isn’t bound by rigid timelines — we build as the dough
             rises and the sauce simmers. Milestones unlock based on community
@@ -169,6 +175,48 @@ const Roadmap = () => {
           aria-hidden="true"
           style={{ zIndex: 9999 }}
           className="w-[200px] rotate-[12deg]"
+        />
+      </div>
+
+      {/* Parachutes1 */}
+      <div
+        className="absolute -top-620 left-270 pointer-events-none"
+        style={{ transform: `translateY(${offsetY * 0.4}px)` }}
+      >
+        <img
+          src={parachutes1}
+          alt="Parachutes"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[200px] rotate-[12deg]"
+        />
+      </div>
+
+      {/* Parachutes2 */}
+      <div
+        className="absolute -top-600 left-90 pointer-events-none"
+        style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+      >
+        <img
+          src={parachutes2}
+          alt="Parachutes"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[200px] rotate-[12deg]"
+        />
+      </div>
+
+      {/* Parachutes3 */}
+      <div
+        className="absolute -top-180 left-190 pointer-events-none"
+        style={{ transform: `translateY(${offsetY * 0.4}px)` }}
+      >
+        <img
+          src={parachutes3}
+          alt="Parachutes"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[290px] rotate-[12deg]"
         />
       </div>
     </Section>

@@ -21,7 +21,7 @@ import Feature from "../components/Feature/Feature";
 
 const LandingPage = () => {
   return (
-    <div className="overflow-hidden w-full square-framed-container m-auto">
+    <div className="overflow-hidden w-full max-w-[1920px] square-framed-container m-auto">
       <Navbar />
 
       {/* 1 */}

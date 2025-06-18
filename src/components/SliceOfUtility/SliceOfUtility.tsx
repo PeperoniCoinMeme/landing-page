@@ -21,7 +21,7 @@ const SliceOfUtility = () => {
             <LandingHero>The Slice of Utility</LandingHero>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center my-6 flex-wrap relative z-50 gap-7">
+          <div className="flex flex-col md:flex-row items-center my-6 flex-wrap relative z-50 gap-7">
             <LandingText>
               Whether you're a builder, creator, degen, or just here for the
               sauce — $PEPERONI isn't just a memecoin, it’s a full-course

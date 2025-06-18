@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <Section
       id="hero"
-      className="relative pt-20 pb-5 flex flex-col md:flex-row justify-around overflow-hidden"
+      className="relative pt-35 pb-5 flex flex-col md:flex-row justify-around overflow-hidden"
       bgColor="#ffffff"
     >
       <div className="flex flex-col sm:flex-row justify-around px-5">
@@ -40,7 +40,12 @@ const Hero = () => {
               </div>
             </figure>
             {/* Oven Image */}
-            <img src={iaOven} alt="" className="max-w-60 md:max-w-110" />
+            <img
+              src={iaOven}
+              alt=""
+              className="max-w-60 md:max-w-110"
+              style={{ zIndex: 9999 }}
+            />
           </div>{" "}
           {/* <div className="flex flex-col sm:flex-row justify-around gap-3">
             <a href="#buy" className="hero-btn">

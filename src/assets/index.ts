@@ -13,6 +13,11 @@ import pepeSurf from "./meme/surf.jpeg";
 import pepeWarrior from "./meme/warrior.jpeg";
 import pepeLogo from "./meme/logo.png";
 
+// Parachutes
+import parachutes1 from "./parachutes/parachutes-1.png";
+import parachutes2 from "./parachutes/parachutes-2.png";
+import parachutes3 from "./parachutes/parachutes-3.png";
+
 // Cards Backgrounds
 import bg1 from "./cards-bg/card-1.svg";
 import bg2 from "./cards-bg/card-2.svg";
@@ -81,10 +86,14 @@ import instagram from "./social/instagram.svg";
 import linkedin from "./social/linkedin.svg";
 import twitter from "./social/twitter.svg";
 
-import meltingCheese from "./cheese/melting-cheese-transparent.png";
+import meltingCheeseTransparent from "./cheese/melting-cheese-transparent.png";
 import cheesePie from "./cheese/cheese-pie.png";
 import iaOven from "./oven/ia-oven.png";
 import splash from "./cheese/splash.png";
+import meltingCheese from "./cheese/melting-cheese.png";
+import cheeseCenter from "./cheese/cheeseCenter.png";
+import cheeseRight from "./cheese/cheeseRight.png";
+import cheeseLeft from "./cheese/cheeseLeft.png";
 
 export {
   logo,
@@ -102,6 +111,10 @@ export {
   pepeWarrior,
   pepeLogo,
   //
+  parachutes1,
+  parachutes2,
+  parachutes3,
+  //
   airbnb,
   binance,
   coinbase,
@@ -117,8 +130,12 @@ export {
   linkedin,
   twitter,
   //
+  meltingCheeseTransparent,
   meltingCheese,
   cheesePie,
+  cheeseCenter,
+  cheeseRight,
+  cheeseLeft,
   splash,
   //
   bg1,

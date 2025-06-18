@@ -18,7 +18,7 @@ const MissionVibes = () => {
           <div className="text-center">
             <LandingHero>Mission & Vibes</LandingHero>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-center my-6 flex-wrap relative z-50 gap-7 max-w-2xl">
+          <div className="flex flex-col md:flex-row items-center my-6 flex-wrap relative z-50 gap-7">
             <LandingText>
               What happens when you throw community, culture, and a little
               insanity into a Solana oven? You get $PEPERONI — a decentralized
@@ -29,22 +29,21 @@ const MissionVibes = () => {
               No tax scams. No VCs calling shots. Just a growing tribe of meme
               chefs baking something tastier than the usual crypto soup.
             </LandingText>
-            <p className="text-red-500 font-bold my-4 underline px-4 py-1">
-              {" "}
-              Built different
-            </p>
           </div>
+          <p className="text-red-500 font-bold my-4 underline px-4 py-4">
+            Built different
+          </p>
           <div className="flex flex-col md:flex-row gap-4 -mt-5 z-50">
-            <div className="w-40 flex justify-center items-center text-xs text-white shadow-lg font-bold bg-gradient-to-r from-zinc-800 to-zinc-800 rounded-xl px-4 py-1">
+            <div className="w-full md:w-40 flex justify-center items-center text-xs text-white shadow-lg font-bold bg-gradient-to-r from-zinc-800 to-zinc-800 rounded-xl px-4 py-3 md:py-1">
               LP burned
             </div>
-            <div className="w-40 flex justify-center items-center text-xs text-white shadow-lg font-bold bg-gradient-to-r from-zinc-800 to-zinc-800 rounded-xl px-4 py-1">
+            <div className="w-full md:w-40 flex justify-center items-center text-xs text-white shadow-lg font-bold bg-gradient-to-r from-zinc-800 to-zinc-800 rounded-xl px-4 py-3 md:py-1">
               Ownership renounced
             </div>
-            <div className="w-40 flex justify-center items-center text-xs text-white shadow-lg font-bold bg-gradient-to-r from-zinc-800 to-zinc-800 rounded-xl px-4 py-1">
+            <div className="w-full md:w-40 flex justify-center items-center text-xs text-white shadow-lg font-bold bg-gradient-to-r from-zinc-800 to-zinc-800 rounded-xl px-4 py-3 md:py-1">
               Meme-first mission
             </div>
-            <div className="w-40 flex justify-center items-center text-xs text-white shadow-lg font-bold bg-gradient-to-r from-zinc-800 to-zinc-800 rounded-xl px-4 py-1">
+            <div className="w-full md:w-40 flex justify-center items-center text-xs text-white shadow-lg font-bold bg-gradient-to-r from-zinc-800 to-zinc-800 rounded-xl px-4 py-3 md:py-1">
               Permissionless utility layer on Solana
             </div>
           </div>
@@ -54,7 +53,7 @@ const MissionVibes = () => {
           </div>
         </div>
         {/* Cheese With Pepperoni Splash */}
-        <div className="top-55 right-50 absolute pointer-events-none z-0 overflow-hidden">
+        <div className="top-190 md:top-55 md:right-50 absolute pointer-events-none z-0 overflow-hidden">
           <img
             src={splash}
             alt="Pepperoni Pizza"
