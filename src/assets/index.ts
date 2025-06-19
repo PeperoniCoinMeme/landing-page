@@ -106,9 +106,13 @@ import cheeseCenter from "./cheese/cheeseCenter.png";
 import cheeseRight from "./cheese/cheeseRight.png";
 import cheeseLeft from "./cheese/cheeseLeft.png";
 import brickBg from "./brickbg.png";
-import mountainBg from "./mountain.png";
-import sunsetGradientBg from "./sunset-gradient-background.png";
+import brickRotatedBg from "./brickRotatedbg.png";
+import mountainBg from "./landscape/mountain.png";
+import grassBg from "./landscape/grass.png";
+import pepeSun from "./landscape/pepe-sun.png";
+import sunsetGradientBg from "./landscape/sunset-gradient-background.png";
 import blurryDarkGradient from "./svg/blurry-dark-gradient.svg";
+import about from "./about.png";
 
 export {
   logo,
@@ -219,7 +223,11 @@ export {
 
   // Backgrounds
   brickBg,
+  brickRotatedBg,
   mountainBg,
+  grassBg,
+  pepeSun,
   sunsetGradientBg,
   blurryDarkGradient,
+  about,
 };

@@ -1,7 +1,12 @@
 import React, { useRef } from "react";
 import { Section } from "../../layout";
 
-import { orangeScatteredYellow1, orangeScatteredYellow2 } from "../../assets";
+import {
+  brickBg,
+  brickRotatedBg,
+  orangeScatteredYellow1,
+  orangeScatteredYellow2,
+} from "../../assets";
 import LandingButton from "../design/buttons/LandingButton";
 import LandingHero from "../design/tipography/LandingHero";
 import LandingText from "../design/tipography/LandingText";
@@ -12,11 +17,11 @@ const SliceOfUtility = () => {
   return (
     <Section
       id="sliceofutility"
-      className="relative py-10 pb-55 md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center"
+      className="relative md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center min-h-255"
       // bgColor="#1e1e1e"
-      backgroundSvg={orangeScatteredYellow2}
+      backgroundSvg={brickRotatedBg}
     >
-      <section className="relative rounded-xl py-16 md:px-16 px-6">
+      <section className="relative rounded-xl py-16 md:px-16 px-6 py-30">
         <div className="relative flex flex-col justify-center">
           <div className="text-center">
             <LandingHero color="white">The Slice of Utility</LandingHero>

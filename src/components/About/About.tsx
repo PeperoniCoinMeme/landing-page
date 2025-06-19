@@ -17,6 +17,9 @@ import {
   pepeLogo,
   orangeScatteredYellow1,
   logo,
+  about,
+  brickBg,
+  brickRotatedBg,
 } from "../../assets";
 
 import "./About.css";
@@ -80,11 +83,11 @@ const About = () => {
   return (
     <Section
       id="about"
-      className="pt-50 py-20 md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center"
-      bgColor="#0c0500"
-      // backgroundSvg={orangeScatteredYellow1}
+      className="md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center min-h-255"
+      // bgColor="linear-gradient(to bottom, transparent, #0c0500)"
+      backgroundSvg={brickRotatedBg}
     >
-      <section className="rounded-xl md:px-16 px-6 py-10 z-50">
+      <section className="pt-50 py-20 rounded-xl md:px-16 px-6 py-10 z-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-50">
           {/* Text Column */}
           <div className="hero-text flex flex-col justify-center font-semibold relative z-50">
@@ -139,12 +142,14 @@ const About = () => {
 
           <div className="relative">
             {/* Image Column */}
-            <img
-              src={logo}
-              alt="Illustration of Peperoni Coin - crypto meets pizza"
-              className="w-[100px] md:w-[200px] md:absolute -top-40 right-45 max-w-md md:max-w-lg animate-float-slow"
-            />
-            <span className="w-[180px] -right-35 hero-img-shadow top-60"></span>
+            <div className="md:absolute -top-40 right-45 flex flex-col items-center">
+              <img
+                src={logo}
+                alt="Illustration of Peperoni Coin - crypto meets pizza"
+                className="w-[100px] md:w-[210px] max-w-md md:max-w-lg animate-float-slow"
+              />
+              <span className="w-[180px] hero-img-shadow top-60"></span>
+            </div>
           </div>
         </div>
       </section>

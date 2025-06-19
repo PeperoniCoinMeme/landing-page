@@ -34,14 +34,12 @@ const LandingPage = () => {
 
       {/* 2 */}
       <About />
-      <WavySpacer bgWaveUrl={waveYellowDark1} flip={false} />
 
       {/* 3 */}
       <MissionVibes />
       <Feature />
       {/* 4 */}
       <SliceOfUtility />
-      <WavySpacer bgWaveUrl={waveYellowDark2} flip={true} />
 
       {/* 5 */}
       <Tokenomics />
@@ -74,7 +72,7 @@ const LandingPage = () => {
 
       {/* 6 */}
       <Roadmap />
-      <WavySpacer bgWaveUrl={waveYellowBlack4} flip={false} />
+
       {/* <GlowingTokenOrbit
         imageSrc={logo}
         label="$PEPERONI – THE MOST DELICIOUS TOKEN"

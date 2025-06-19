@@ -2,6 +2,7 @@ import React from "react";
 import { Section } from "../../layout";
 
 import {
+  brickBg,
   orangeScatteredYellow1,
   orangeScatteredYellow2,
   orangeScatteredYellow3,
@@ -15,11 +16,11 @@ const MissionVibes = () => {
   return (
     <Section
       id="missionvibes"
-      className="md:px-20 py-25 px-4 lg:px-40 flex flex-col md:flex-row justify-center"
+      className="md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center min-h-255"
       // bgColor="#1e1e1e"
-      backgroundSvg={orangeScatteredYellow1}
+      backgroundSvg={brickBg}
     >
-      <section className="overflow-hidden rounded-xl py-16 md:px-16 px-6">
+      <section className="overflow-hidden rounded-xl py-16 md:px-16 px-6 py-25">
         <div className="relative flex flex-col jutify-center">
           <div className="text-center">
             <LandingHero color="white ">Mission & Vibes</LandingHero>

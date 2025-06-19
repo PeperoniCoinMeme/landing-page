@@ -9,12 +9,14 @@ import {
   cloud1,
   cloud2,
   cloud3,
+  grassBg,
   logo,
   mountainBg,
   parachutes1,
   parachutes2,
   parachutes3,
   parachutes4,
+  pepeSun,
   sunsetGradientBg,
 } from "../../assets";
 import { Section } from "../../layout";
@@ -28,11 +30,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Roadmap = () => {
   const [offsetY, setOffsetY] = useState(0);
-  const [offsetX, setOffsetX] = useState(0);
-  const handleScroll = () => {
-    setOffsetY(window.pageYOffset), setOffsetX(window.pageXOffset);
-  };
 
+  const handleScroll = () => setOffsetY(window.pageYOffset);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -122,8 +121,8 @@ const Roadmap = () => {
   return (
     <Section
       id="roadmap"
-      className="pt-28 pb-10 flex flex-col md:flex-row justify-center flex-center section-padding xl:px-0"
-      bgColor="linear-gradient(360deg, rgba(31, 33, 77, 1) 0%, rgba(80, 54, 111, 1) 17%, rgba(191, 52, 117, 1) 36%, rgba(238, 108, 69, 1) 61%, rgba(255, 206, 97, 1) 79%, rgba(255, 204, 0, 1) 100%)"
+      className="pt-28 pb-10 flex flex-col md:flex-row justify-center flex-center section-padding xl:px-0 overflow-hidden"
+      bgColor="linear-gradient(360deg,rgba(94, 35, 13, 1) 0%, rgba(199, 84, 42, 1) 17%, rgba(191, 75, 52, 1) 36%, rgba(238, 159, 69, 1) 61%, rgba(255, 206, 97, 1) 79%, rgba(255, 204, 0, 1) 100%)"
       // backgroundSvg={sunsetGradientBg}
     >
       <div className="w-full h-full md:px-20 px-5">
@@ -146,7 +145,7 @@ const Roadmap = () => {
           <div className="relative z-50 xl:space-y-32 space-y-10">
             {roadMapCards.map((card) => (
               <div key={card.title} className="exp-card-wrapper">
-                <div className="xl:w-2/6">
+                <div className="xl:w-2/6 hover:-translate-y-5 transition-transform">
                   <GlowCard card={card} index={0}>
                     <div>{/* <img src ={card.imgPath} alt="exp-img" /> */}</div>
                   </GlowCard>
@@ -294,7 +293,7 @@ const Roadmap = () => {
       </div>
 
       {/* Parachutes3 */}
-      <div
+      {/* <div
         className="absolute -top-180 left-190 pointer-events-none"
         style={{ transform: `translateY(${offsetY * 0.4}px)` }}
       >
@@ -305,7 +304,7 @@ const Roadmap = () => {
           style={{ zIndex: 9999 }}
           className="w-[290px] rotate-[12deg] animate-spin"
         />
-      </div>
+      </div> */}
       {/* Parachutes4 | Provision */}
       <div
         className="absolute -top-585 right-40 pointer-events-none"
@@ -320,10 +319,29 @@ const Roadmap = () => {
         />
       </div>
       {/* Mountain */}
-      <div className="absolute -bottom-135 pointer-events-none">
+      <div className="absolute -bottom-710 pointer-events-none">
         <img
           src={mountainBg}
-          alt="Parachutes"
+          alt="Mountain"
+          aria-hidden="true"
+          style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
+          className="w-[1920px]"
+        />
+      </div>
+      {/* Sun */}
+      <div className="absolute -top-230 left-60 pointer-events-none">
+        <img
+          src={pepeSun}
+          alt="Sun"
+          aria-hidden="true"
+          style={{ zIndex: -1, transform: `translateY(${offsetY * 0.43}px)` }}
+        />
+      </div>
+      {/* Grass */}
+      <div className="absolute -bottom-10 pointer-events-none">
+        <img
+          src={grassBg}
+          alt="Grass"
           aria-hidden="true"
           style={{ zIndex: 40 }}
           className="w-[1920px]"

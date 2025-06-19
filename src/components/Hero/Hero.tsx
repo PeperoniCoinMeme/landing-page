@@ -13,11 +13,11 @@ const Hero = () => {
   return (
     <Section
       id="hero"
-      className="relative pt-35 pb-5 flex flex-col md:flex-row justify-around overflow-hidden min-h-200"
+      className="relative flex flex-col md:flex-row justify-around overflow-hidden min-h-255"
       bgColor="#191716"
       backgroundSvg={brickBg}
     >
-      <div className="flex flex-col sm:flex-row justify-around px-5">
+      <div className="pt-40 flex flex-col sm:flex-row justify-around px-5">
         {/* First Info container */}
         <div className="flex flex-col p-10 md:p-18 justify-center flex-1">
           <LandingHero>
