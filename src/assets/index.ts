@@ -116,6 +116,7 @@ import blurryDarkGradient from "./svg/blurry-dark-gradient.svg";
 import about from "./about.png";
 
 export {
+  arrowUp,
   logo,
   peperoniPizza,
   pepeBanner,
@@ -148,7 +149,6 @@ export {
   goldStar,
   google,
   apple,
-  arrowUp,
   discount,
   facebook,
   instagram,

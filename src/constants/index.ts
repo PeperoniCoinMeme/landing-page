@@ -384,3 +384,61 @@ export const socialMedia: SocialMedia[] = [
     name: "CoinMarketCap",
   },
 ];
+
+type GalleryItem = {
+  id: string;
+  imageUrl: string;
+  title: string;
+  description: string;
+};
+
+export const galleryItems: GalleryItem[] = [
+  {
+    id: "1",
+    imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+    title: "Paisaje Montañoso",
+    description: "Hermoso atardecer en las montañas con colores vibrantes",
+  },
+  {
+    id: "2",
+    imageUrl: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
+    title: "Bosque Encantado",
+    description: "Sendero a través de un bosque denso con luz solar filtrada",
+  },
+  {
+    id: "3",
+    imageUrl: "https://images.unsplash.com/photo-1429087969512-1e85aab2683d",
+    title: "Océano Infinito",
+    description: "Vista panorámica del océano con olas rompiendo",
+  },
+  {
+    id: "4",
+    imageUrl: "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+    title: "Lago Sereno",
+    description: "Aguas cristalinas reflejando las montañas circundantes",
+  },
+  {
+    id: "5",
+    imageUrl: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05",
+    title: "Neblina Matutina",
+    description: "Amanecer en el campo con neblina y rayos de sol",
+  },
+  {
+    id: "6",
+    imageUrl: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d",
+    title: "Selva Tropical",
+    description: "Vegetación exuberante en un entorno de selva húmeda",
+  },
+  {
+    id: "7",
+    imageUrl: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e",
+    title: "Formaciones Rocosas",
+    description: "Extrañas formaciones geológicas bajo un cielo dramático",
+  },
+  {
+    id: "8",
+    imageUrl: "https://images.unsplash.com/photo-1511497584788-876760111969",
+    title: "Ciudad Nocturna",
+    description: "Skyline urbano iluminado en la noche con rascacielos",
+  },
+];
