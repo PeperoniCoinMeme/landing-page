@@ -9,7 +9,13 @@ import {
 const MeltingCheese = () => {
   // const cheesePositions = Array.from({ length: 50 }, (_, i) => i);
   return (
-    <div className="relative flex flex-row gap-0 -mt-18 z-5">
+    // <img
+    //   src={meltingCheese}
+    //   alt=""
+    //   className="absolute top-0 left-0 z-0 min-w-full"
+    // />
+
+    <div className="relative flex flex-row gap-0 z-5">
       <img
         src={cheeseLeft}
         alt=""

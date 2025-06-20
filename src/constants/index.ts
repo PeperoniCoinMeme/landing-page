@@ -124,7 +124,8 @@ export const overlayCards: OverlayCards[] = [
     iconUrl: pepeLogo,
   },
 ];
-export const roadMapCards: RoadMapCards[] = [
+
+export const roadMapCardsA: RoadMapCards[] = [
   {
     review:
       "The Great PEPE Launch - Our token rises like dough in a warm kitchen! Initial toppings (liquidity) added to the crypto pizza oven. Whitepaper served with extra cheese.",
@@ -137,6 +138,8 @@ export const roadMapCards: RoadMapCards[] = [
     title: "🔥 M2 — Bake the Most Valuable Pizza Over the World",
     date: "Phase 2: Sauce Spread",
   },
+];
+export const roadMapCardsB: RoadMapCards[] = [
   {
     review:
       "PEPE goes multi-chain - Like delivering to new neighborhoods! PEPE DeFi Kitchen opens with yield farming. First real-world pizza bought with PEPE (historic moment captured on blockchain).",

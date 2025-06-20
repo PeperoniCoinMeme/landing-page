@@ -2,29 +2,20 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import GlowCard from "../models/GlowCard";
-import { roadMapCards } from "../../constants";
+import GlowCard from "../../components/models/GlowCard";
+import { roadMapCardsB } from "../../constants";
 import {
-  cheesePie,
-  cloud1,
-  cloud2,
-  cloud3,
-  grassBg,
   logo,
   mountainBg,
-  parachutes1,
   parachutes2,
   parachutes3,
   parachutes4,
   pepeSun,
-  sunsetGradientBg,
 } from "../../assets";
 import { Section } from "../../layout";
-import LandingHero from "../design/tipography/LandingHero";
 import { useState, useEffect } from "react";
-import LandingText from "../design/tipography/LandingText";
-import LandingTitle from "../design/tipography/LandingTitle";
-import LandingSubtitle from "../design/tipography/LandingSubtitle";
+import LandingSubtitle from "../../components/design/tipography/LandingSubtitle";
+import Clouds from "./Clouds";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,27 +60,27 @@ const Roadmap = () => {
     // from the top of the timeline to 70% down the screen
     // The timeline height should scale down from 1 to 0
     // as the user scrolls up the screen
-    gsap.to(".timeline", {
-      // Set the origin of the animation to the bottom of the timeline
-      transformOrigin: "bottom bottom",
-      // Animate the timeline height over 1 second
-      ease: "power1.inOut",
-      // Trigger the animation when the timeline is at the top of the screen
-      // and end it when the timeline is at 70% down the screen
-      scrollTrigger: {
-        trigger: ".timeline",
-        start: "top center",
-        end: "70% center",
-        // Update the animation as the user scrolls
-        onUpdate: (self) => {
-          // Scale the timeline height as the user scrolls
-          // from 1 to 0 as the user scrolls up the screen
-          gsap.to(".timeline", {
-            scaleY: 1 - self.progress,
-          });
-        },
-      },
-    });
+    // gsap.to(".timeline", {
+    //   // Set the origin of the animation to the bottom of the timeline
+    //   transformOrigin: "bottom bottom",
+    //   // Animate the timeline height over 1 second
+    //   ease: "power1.inOut",
+    //   // Trigger the animation when the timeline is at the top of the screen
+    //   // and end it when the timeline is at 70% down the screen
+    //   scrollTrigger: {
+    //     trigger: ".timeline",
+    //     start: "top center",
+    //     end: "70% center",
+    //     // Update the animation as the user scrolls
+    //     onUpdate: (self) => {
+    //       // Scale the timeline height as the user scrolls
+    //       // from 1 to 0 as the user scrolls up the screen
+    //       gsap.to(".timeline", {
+    //         scaleY: 1 - self.progress,
+    //       });
+    //     },
+    //   },
+    // });
 
     // Loop through each expText element and animate them in
     // as the user scrolls to each text element
@@ -121,29 +112,14 @@ const Roadmap = () => {
   return (
     <Section
       id="roadmap"
-      className="pt-28 pb-10 flex flex-col md:flex-row justify-center flex-center section-padding xl:px-0 overflow-hidden"
-      bgColor="linear-gradient(360deg,rgba(94, 35, 13, 1) 0%, rgba(199, 84, 42, 1) 17%, rgba(191, 75, 52, 1) 36%, rgba(238, 159, 69, 1) 61%, rgba(255, 206, 97, 1) 79%, rgba(255, 204, 0, 1) 100%)"
+      className="pt-28 pb-10 flex flex-col md:flex-row justify-center flex-center xl:px-0"
+      bgColor="linear-gradient(360deg,rgba(94, 35, 13, 1) 0%, rgba(199, 84, 42, 1) 14%, rgba(238, 159, 69, 1) 38%, rgba(255, 206, 97, 1) 65%, rgba(155, 214, 255, 1) 100%)"
       // backgroundSvg={sunsetGradientBg}
     >
       <div className="w-full h-full md:px-20 px-5">
-        <div className="flex flex-col items-center gap-5 text-orange-500">
-          <div className="hero-badge">
-            <p>⏱️ Roadmap Overview </p>
-          </div>
-          <LandingHero>"The Oven’s Always On"</LandingHero>
-        </div>
-
-        <div className="w-full md:px-50 flex flex-row justify-center items-center text-center">
-          <LandingText>
-            Our roadmap isn’t bound by rigid timelines — we build as the dough
-            rises and the sauce simmers. Milestones unlock based on community
-            growth, development readiness, and how spicy things get.
-          </LandingText>
-        </div>
-
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
-            {roadMapCards.map((card) => (
+            {roadMapCardsB.map((card) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6 hover:-translate-y-5 transition-transform">
                   <GlowCard card={card} index={0}>
@@ -165,7 +141,7 @@ const Roadmap = () => {
                           {card.title}
                         </LandingSubtitle>
 
-                        <p className="my-5 text-gray-400">{card.date}</p>
+                        <p className="my-5 text-white">{card.date}</p>
                       </div>
                     </div>
                   </div>
@@ -177,106 +153,11 @@ const Roadmap = () => {
       </div>
 
       {/* Clouds */}
-      <div className="absolute top-300 left-270 pointer-events-none">
-        <img
-          src={cloud1}
-          alt="Cloud"
-          aria-hidden="true"
-          style={{ zIndex: 9999 }}
-          className="w-[200px]"
-        />
-      </div>
-      <div className="absolute top-155 left-70 pointer-events-none">
-        <img
-          src={cloud2}
-          alt="Cloud"
-          aria-hidden="true"
-          style={{ zIndex: 9999 }}
-          className="w-[200px]"
-        />
-      </div>
-      <div className="absolute top-130 left-140 pointer-events-none">
-        <img
-          src={cloud3}
-          alt="Cloud"
-          aria-hidden="true"
-          style={{ zIndex: 9999 }}
-          className="w-[200px]"
-        />
-      </div>
-
-      <div className="absolute top-450 left-5 pointer-events-none">
-        <img
-          src={cloud1}
-          alt="Cloud"
-          aria-hidden="true"
-          style={{ zIndex: 9999 }}
-          className="w-[200px]"
-        />
-      </div>
-      <div className="absolute top-320 left-120 pointer-events-none">
-        <img
-          src={cloud2}
-          alt="Cloud"
-          aria-hidden="true"
-          style={{ zIndex: 9999 }}
-          className="w-[200px]"
-        />
-      </div>
-      <div className="absolute top-300 left-140 pointer-events-none">
-        <img
-          src={cloud3}
-          alt="Cloud"
-          aria-hidden="true"
-          style={{ zIndex: 9999 }}
-          className="w-[200px]"
-        />
-      </div>
-      <div className="absolute top-600 left-240 pointer-events-none">
-        <img
-          src={cloud2}
-          alt="Cloud"
-          aria-hidden="true"
-          style={{ zIndex: 9999 }}
-          className="w-[200px]"
-        />
-      </div>
-      <div className="absolute top-700 left-140 pointer-events-none">
-        <img
-          src={cloud3}
-          alt="Cloud"
-          aria-hidden="true"
-          style={{ zIndex: 9999 }}
-          className="w-[200px]"
-        />
-      </div>
-      <div className="absolute top-720 left-200 pointer-events-none">
-        <img
-          src={cloud3}
-          alt="Cloud"
-          aria-hidden="true"
-          style={{ zIndex: 9999 }}
-          className="w-[200px]"
-        />
-      </div>
-
-      {/* Parachutes1 */}
-      <div
-        className="absolute -top-620 left-270 pointer-events-none"
-        style={{ transform: `translateY(${offsetY * 0.43}px)` }}
-      >
-        <img
-          src={parachutes1}
-          alt="Parachutes"
-          aria-hidden="true"
-          style={{ zIndex: 9999 }}
-          className="w-[200px] rotate-[12deg]"
-        />
-      </div>
+      <Clouds />
 
       {/* Parachutes2 */}
       <div
-        className="absolute -top-600 -left-70 pointer-events-none"
+        className="absolute -top-800 -left-70 pointer-events-none"
         style={{
           transform: `translateX(${offsetY * 0.09}px) translateY(${
             offsetY * 0.5
@@ -293,8 +174,8 @@ const Roadmap = () => {
       </div>
 
       {/* Parachutes3 */}
-      {/* <div
-        className="absolute -top-180 left-190 pointer-events-none"
+      <div
+        className="absolute -top-430 left-190 pointer-events-none"
         style={{ transform: `translateY(${offsetY * 0.4}px)` }}
       >
         <img
@@ -302,12 +183,13 @@ const Roadmap = () => {
           alt="Parachutes"
           aria-hidden="true"
           style={{ zIndex: 9999 }}
-          className="w-[290px] rotate-[12deg] animate-spin"
+          className="w-[290px] rotate-[12deg]"
+          // className="w-[290px] rotate-[12deg] animate-spin"
         />
-      </div> */}
+      </div>
       {/* Parachutes4 | Provision */}
       <div
-        className="absolute -top-585 right-40 pointer-events-none"
+        className="absolute -top-720 right-40 pointer-events-none"
         style={{ transform: `translateY(${offsetY * 0.52}px)` }}
       >
         <img
@@ -319,7 +201,7 @@ const Roadmap = () => {
         />
       </div>
       {/* Mountain */}
-      <div className="absolute -bottom-710 pointer-events-none">
+      {/* <div className="absolute -bottom-710 pointer-events-none">
         <img
           src={mountainBg}
           alt="Mountain"
@@ -327,21 +209,31 @@ const Roadmap = () => {
           style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
           className="w-[1920px]"
         />
-      </div>
+      </div> */}
       {/* Sun */}
-      <div className="absolute -top-230 left-60 pointer-events-none">
+      {/* <div className="absolute -top-500 left-60 pointer-events-none">
         <img
           src={pepeSun}
           alt="Sun"
           aria-hidden="true"
           style={{ zIndex: -1, transform: `translateY(${offsetY * 0.43}px)` }}
         />
-      </div>
+      </div> */}
       {/* Grass */}
-      <div className="absolute -bottom-10 pointer-events-none">
+      {/* <div className="absolute -bottom-10 pointer-events-none">
         <img
           src={grassBg}
           alt="Grass"
+          aria-hidden="true"
+          style={{ zIndex: 40 }}
+          className="w-[1920px]"
+        />
+      </div> */}
+      {/* Mountain */}
+      <div className="absolute -bottom-10 pointer-events-none">
+        <img
+          src={mountainBg}
+          alt="Mountain"
           aria-hidden="true"
           style={{ zIndex: 40 }}
           className="w-[1920px]"

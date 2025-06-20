@@ -1,34 +1,27 @@
 import React from "react";
-import { About, CTA, Hero, Tokenomics } from "../components";
 import { Navbar, Footer } from "../layout";
-
-import {
-  peperoniPizza,
-  waveYellowBlack1,
-  waveYellowBlack2,
-  waveYellowBlack4,
-  waveYellowBlack5,
-  waveYellowDark1,
-  waveYellowDark2,
-  waveYellowOrange1,
-  waveYellowOrange2,
-  waveYellowWhite1,
-  waveYellowWhite2,
-  waveYellowWhite3,
-} from "../assets";
-
-import Roadmap from "../components/Roadmap/Roadmap";
+import { peperoniPizza, planetBg, waveYellowDark1 } from "../assets";
 import WavySpacer from "../components/design/WavySpacer";
-import MissionVibes from "../components/MissionVibes/MissionVibes";
-
-import Join from "../components/Join/Join";
-import SliceOfUtility from "../components/SliceOfUtility/SliceOfUtility";
 import Feature from "../components/Feature/Feature";
+import {
+  Hero,
+  About,
+  Tokenomics,
+  Join,
+  MissionVibes,
+  Roadmap,
+  SliceOfUtility,
+} from "../sections";
+import RoadmapHeader from "../sections/RoadmapHeader/RoadmapHeader";
+import ScrollReveal from "../components/ScrollReveal/ScrollReveal";
+import BackToTopButton from "../components/BackToTopButton/BackToTopButton";
 
 const LandingPage = () => {
   return (
     <div className="overflow-hidden w-full max-w-[1920px] square-framed-container m-auto">
       <Navbar />
+      <BackToTopButton />
+
       {/* 1 */}
       <Hero />
 
@@ -38,46 +31,19 @@ const LandingPage = () => {
       {/* 3 */}
       <MissionVibes />
       <Feature />
+
       {/* 4 */}
       <SliceOfUtility />
 
       {/* 5 */}
       <Tokenomics />
-      {/* Pepperoni Pizza */}
-      <div className="absolute top-900 md:top-1200 right-0 opacity-30 pointer-events-none z-11 overflow-hidden">
-        <img
-          src={peperoniPizza}
-          alt="Pepperoni Pizza"
-          style={{
-            zIndex: 9999,
-            transformOrigin: "center center",
-            animation: "clockSpin 20s linear infinite",
-          }}
-          className="w-[450px] relative -right-40"
-        />
-        <style>{`
-          @keyframes clockSpin {
-            from {
-              transform: rotate(0deg);
-            }
-            to {
-              transform: rotate(360deg);
-            }
-          }
-        `}</style>
-      </div>
 
-      <WavySpacer bgWaveUrl={waveYellowDark1} flip={false} />
       {/* <LogoShowcase /> */}
 
       {/* 6 */}
+      <RoadmapHeader />
       <Roadmap />
 
-      {/* <GlowingTokenOrbit
-        imageSrc={logo}
-        label="$PEPERONI – THE MOST DELICIOUS TOKEN"
-      /> */}
-      {/* <InfiniteCarousel images={images} speed={30} /> */}
       {/* <WavySpacer bgWaveUrl={waveYellowBlack1} flip={true} /> */}
       {/* 7 */}
       <Join />

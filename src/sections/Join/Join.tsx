@@ -1,6 +1,6 @@
 import React from "react";
 import { Section } from "../../layout";
-import JoinButton from "../JoinButton/JoinButton";
+import JoinButton from "../../components/JoinButton/JoinButton";
 import {
   brickBg,
   logo,
@@ -15,15 +15,24 @@ import {
   pepeSpy,
   pepeSurf,
   pepeWarrior,
+  transitionDownBg,
+  transitionUpBg,
   waveYellowOrange2,
 } from "../../assets";
-import LandingHero from "../design/tipography/LandingHero";
-import LandingText from "../design/tipography/LandingText";
+import LandingHero from "../../components/design/tipography/LandingHero";
+import LandingText from "../../components/design/tipography/LandingText";
 import { overlayCards } from "../../constants";
-import OverlayCard from "../OverlayCard/OverlayCard";
-import LandingButton from "../design/buttons/LandingButton";
+import OverlayCard from "../../components/OverlayCard/OverlayCard";
+import LandingButton from "../../components/design/buttons/LandingButton";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Join = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
   const images = [
     pepeBanner,
     pepeFitStrong,
@@ -41,18 +50,30 @@ const Join = () => {
       id="join"
       className="md:px-20 px-4 py-20 lg:px-40 flex flex-col md:flex-row items-center justify-center min-h-440"
       // bgColor="#0c0500"
-      backgroundSvg={brickBg}
+      backgroundSvg={transitionUpBg}
     >
       <section className="cta-card relative rounded-xl shadow-lg rounded-xl md:px-16 px-6 p-8 md:py-16 flex flex-col md:flex-row">
-        <div className="flex flex-col md:flex-row items-center justify-center m-2 flex-wrap relative z-50 gap-7">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col md:flex-row items-center justify-center m-2 flex-wrap relative z-50 gap-7"
+        >
           {overlayCards.map((content, index) => (
             <div key={index}>
               <OverlayCard item={content} />
             </div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="max-w-3xl mx-auto space-y-2 py-8">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="max-w-3xl mx-auto space-y-2 py-8"
+        >
           <LandingHero>Join to the Pizza!</LandingHero>
 
           <LandingText>
@@ -66,7 +87,7 @@ const Join = () => {
           <div className="pt-18">
             <LandingButton>More</LandingButton>
           </div>
-        </div>
+        </motion.div>
 
         <div className="relative overflow-hidden justify-center flex-1">
           <div className="grid-memes">
