@@ -25,7 +25,7 @@ const menuItems = [
   { label: "Mission & Vibes", href: "#missionvibes", icon: FireIcon },
   { label: "Slice of Utility", href: "#sliceofutility", icon: FireIcon },
   { label: "Slicenomics", href: "#slicenomics", icon: FireIcon },
-  { label: "Road Map", href: "#roadmap", icon: FireIcon },
+  { label: "RoadMap", href: "#roadmap", icon: FireIcon },
   { label: "Join to the Pizza", href: "#join", icon: FireIcon },
 ];
 
@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <>
       {/* <Headroom> */}
-      <nav className="relative bg-[var(--color-cheese)] top-0 left-0 z-150 w-full shadow-lg flex justify-between px-3 py-8 h-1 items-center">
+      <nav className="relative top-0 left-0 z-150 w-full flex justify-between px-3 py-8 h-1 items-center">
         <div id="logo" className="w-12 flex flex-row gap-3 items-center">
           <img src={logo} alt="" className="hover:scale-120 transition-all" />
           <h4
@@ -69,8 +69,8 @@ const Navbar = () => {
           <Bars3Icon className="h-7 w-7 absolute top-0 left-0" />
         </button>
         {/* Melting Cheese Images  */}
-        <MeltingCheese />
       </nav>
+      <MeltingCheese />
 
       <AnimatePresence>
         {menuOpen && (

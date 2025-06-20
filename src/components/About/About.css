@@ -1,10 +1,9 @@
 .grid-memes {
   position: absolute;
-  top: -320px;
+  top: 120px;
   right: -200px;
   z-index: 0;
-  /* transform: rotate3d(360, 120, -90, 55deg) rotateZ(60deg); */
-  transform: rotateX(51deg) rotateZ(40deg);
+
   transform-style: preserve-3d;
   border-radius: 32px;
   transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
@@ -29,6 +28,6 @@
 
 .grid-item img:hover {
   transform: translate3d(0px, 0px, 1px);
-  box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+  box-shadow: 1px 1px 0 1px #ce32075e, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
     54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 }

@@ -4,6 +4,7 @@ import GlowCard from "../models/GlowCard";
 import { overlayCards, testimonials } from "../../constants";
 import OverlayCard from "../OverlayCard/OverlayCard";
 import {
+  brickBg,
   orangeScatteredYellow1,
   pepeCivilian,
   pepeFitStrong,
@@ -16,7 +17,8 @@ const Tokenomics = () => {
     <Section
       id="slicenomics"
       className="py-10 md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center"
-      backgroundSvg={orangeScatteredYellow1}
+      bgColor="#0c0500"
+      backgroundSvg={brickBg}
     >
       <section className="overflow-hidden rounded-xl py-16 md:px-16 px-6 text-center">
         <div className="relative flex flex-col jutify-center">
@@ -26,15 +28,9 @@ const Tokenomics = () => {
             </LandingHero>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center my-6 flex-wrap relative z-50 gap-7">
-            {overlayCards.map((content, index) => (
-              <div key={index}>
-                <OverlayCard item={content} />
-              </div>
-            ))}
-          </div>
+          <div className="flex flex-col md:flex-row items-center justify-center my-6 flex-wrap relative z-50 gap-7 min-h-150"></div>
 
-          <div className="pt-8">
+          <div className="pt-18">
             <LandingButton>More</LandingButton>
           </div>
 

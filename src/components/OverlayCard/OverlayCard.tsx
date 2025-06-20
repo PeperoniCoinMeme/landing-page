@@ -26,7 +26,7 @@ const OverlayCard: React.FC<OverlayCardProps> = ({ item }) => {
       }}
       key={item.id}
     >
-      <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
+      <div className="relative z-2 flex flex-col min-h-[20rem] p-[2rem] pointer-events-none">
         <LandingSubtitle>{item.title}</LandingSubtitle>
         <LandingText color="white">{item.text}</LandingText>
         <div className="flex items-center mt-auto">

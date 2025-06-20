@@ -5,8 +5,8 @@ import Section from "../Section/Section";
 
 const Footer = () => {
   return (
-    <Section id="footer" className="">
-      <footer className="bg-red-600 dark:bg-zinc-900 text-white dark:text-gray-300 py-12 px-6 w-full">
+    <Section id="footer" className="min-h-100" bgColor="0c0500">
+      <footer className="text-white dark:text-gray-300 py-30 px-5 w-full">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
           {/* <!-- Logo & About --> */}
           <div>

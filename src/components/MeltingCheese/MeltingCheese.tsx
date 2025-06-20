@@ -1,19 +1,30 @@
 import React from "react";
-import { meltingCheese } from "../../assets";
+import {
+  cheeseCenter,
+  cheeseLeft,
+  cheeseRight,
+  meltingCheese,
+} from "../../assets";
 
 const MeltingCheese = () => {
-  const cheesePositions = Array.from({ length: 50 }, (_, i) => i);
+  // const cheesePositions = Array.from({ length: 50 }, (_, i) => i);
   return (
-    <div className="absolute z-50">
-      {cheesePositions.map((left, index) => (
-        <img
-          key={index}
-          src={meltingCheese}
-          alt=""
-          className="fixed top-10 w-[170px]"
-          style={{ left: `${left * 137}px` }}
-        />
-      ))}
+    <div className="relative flex flex-row gap-0 -mt-18 z-5">
+      <img
+        src={cheeseLeft}
+        alt=""
+        className="absolute z-50 left-0 top-0 w-2xl rotate-180 w-115"
+      />
+      <img
+        src={cheeseCenter}
+        alt=""
+        className="absolute z-40 left-50 top-0 w-2xl w-300"
+      />
+      <img
+        src={cheeseRight}
+        alt=""
+        className="absolute z-50 right-0 top-0 w-2xl rotate-180 w-115"
+      />
     </div>
   );
 };

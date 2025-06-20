@@ -13,6 +13,17 @@ import pepeSurf from "./meme/surf.jpeg";
 import pepeWarrior from "./meme/warrior.jpeg";
 import pepeLogo from "./meme/logo.png";
 
+// Clouds
+import cloud1 from "./clouds/cloud1.png";
+import cloud2 from "./clouds/cloud2.png";
+import cloud3 from "./clouds/cloud3.png";
+
+// Parachutes
+import parachutes1 from "./parachutes/parachutes-1.png";
+import parachutes2 from "./parachutes/parachutes-2.png";
+import parachutes3 from "./parachutes/parachutes-3.png";
+import parachutes4 from "./parachutes/parachutes-4.png";
+
 // Cards Backgrounds
 import bg1 from "./cards-bg/card-1.svg";
 import bg2 from "./cards-bg/card-2.svg";
@@ -33,10 +44,16 @@ import waveYellowOrange1 from "./svg/waves/yellow-orange-1.svg";
 import waveYellowOrange2 from "./svg/waves/yellow-orange-2.svg";
 import waveYellowOrange3 from "./svg/waves/yellow-orange-3.svg";
 import waveYellowOrange4 from "./svg/waves/yellow-orange-4.svg";
-import waveYellowOrange5 from "./svg/waves/yellow-orange-5.svg";
+import waveYellowBlack1 from "./svg/waves/yellow-black-1.svg";
+import waveYellowBlack2 from "./svg/waves/yellow-black-2.svg";
+import waveYellowBlack3 from "./svg/waves/yellow-black-3.svg";
+import waveYellowBlack4 from "./svg/waves/yellow-black-4.svg";
+import waveYellowBlack5 from "./svg/waves/yellow-black-5.svg";
 import waveYellowWhite1 from "./svg/waves/yellow-white-1.svg";
 import waveYellowWhite2 from "./svg/waves/yellow-white-2.svg";
 import waveYellowWhite3 from "./svg/waves/yellow-white-3.svg";
+import waveYellowDark1 from "./svg/waves/yellow-dark-1.svg";
+import waveYellowDark2 from "./svg/waves/yellow-dark-2.svg";
 
 // Blobs
 import peperoniBlob1 from "./svg/peperoni-blobs/blob1.svg";
@@ -55,13 +72,21 @@ import yellowWhitePath3 from "./svg/scenes/yellow-white-path-3.svg";
 import yellowWhitePath4 from "./svg/scenes/yellow-white-path-4.svg";
 import yellowWhitePath5 from "./svg/scenes/yellow-white-path-5.svg";
 
+// Pepperoni Slices
+import pepperoniSlice1 from "./pepperonis/pepperoniSlice1.png";
+import pepperoniSlice2 from "./pepperonis/pepperoniSlice2.png";
+import pepperoniSlice3 from "./pepperonis/pepperoniSlice3.png";
+import pepperoniSlice4 from "./pepperonis/pepperoniSlice4.png";
+import pepperoniSlice5 from "./pepperonis/pepperoniSlice5.png";
+import pepperoniSlice6 from "./pepperonis/pepperoniSlice6.png";
+import pepperoniSlice7 from "./pepperonis/pepperoniSlice7.png";
+
 // Extra
 import airbnb from "./airbnb.png";
 import binance from "./binance.png";
 import coinbase from "./coinbase.png";
 import dropbox from "./dropbox.png";
-// import shield from "./Shield.svg";
-// import star from "./Star.svg";
+import goldStar from "./svg/hp_gold_star.png";
 
 import google from "./google.svg";
 import apple from "./apple.svg";
@@ -72,9 +97,22 @@ import instagram from "./social/instagram.svg";
 import linkedin from "./social/linkedin.svg";
 import twitter from "./social/twitter.svg";
 
-import meltingCheese from "./cheese/melting-cheese-transparent.png";
+import meltingCheeseTransparent from "./cheese/melting-cheese-transparent.png";
 import cheesePie from "./cheese/cheese-pie.png";
 import iaOven from "./oven/ia-oven.png";
+import splash from "./cheese/splash.png";
+import meltingCheese from "./cheese/melting-cheese.png";
+import cheeseCenter from "./cheese/cheeseCenter.png";
+import cheeseRight from "./cheese/cheeseRight.png";
+import cheeseLeft from "./cheese/cheeseLeft.png";
+import brickBg from "./brickbg.png";
+import brickRotatedBg from "./brickRotatedbg.png";
+import mountainBg from "./landscape/mountain.png";
+import grassBg from "./landscape/grass.png";
+import pepeSun from "./landscape/pepe-sun.png";
+import sunsetGradientBg from "./landscape/sunset-gradient-background.png";
+import blurryDarkGradient from "./svg/blurry-dark-gradient.svg";
+import about from "./about.png";
 
 export {
   logo,
@@ -92,12 +130,21 @@ export {
   pepeWarrior,
   pepeLogo,
   //
+  parachutes1,
+  parachutes2,
+  parachutes3,
+  parachutes4,
+  //
+  cloud1,
+  cloud2,
+  cloud3,
+
+  //
   airbnb,
   binance,
   coinbase,
   dropbox,
-  //   shield,
-  //   star,
+  goldStar,
   google,
   apple,
   arrowUp,
@@ -107,8 +154,13 @@ export {
   linkedin,
   twitter,
   //
+  meltingCheeseTransparent,
   meltingCheese,
   cheesePie,
+  cheeseCenter,
+  cheeseRight,
+  cheeseLeft,
+  splash,
   //
   bg1,
   bg2,
@@ -116,6 +168,15 @@ export {
   bg4,
   bg5,
   bg6,
+
+  // Pepperoni Slices
+  pepperoniSlice1,
+  pepperoniSlice2,
+  pepperoniSlice3,
+  pepperoniSlice4,
+  pepperoniSlice5,
+  pepperoniSlice6,
+  pepperoniSlice7,
 
   // Waves
   wave1,
@@ -129,9 +190,16 @@ export {
   waveYellowOrange2,
   waveYellowOrange3,
   waveYellowOrange4,
+  waveYellowBlack1,
+  waveYellowBlack2,
+  waveYellowBlack3,
+  waveYellowBlack4,
+  waveYellowBlack5,
   waveYellowWhite1,
   waveYellowWhite2,
   waveYellowWhite3,
+  waveYellowDark1,
+  waveYellowDark2,
 
   // Blobs
   peperoniBlob1,
@@ -152,4 +220,14 @@ export {
 
   // Ovens
   iaOven,
+
+  // Backgrounds
+  brickBg,
+  brickRotatedBg,
+  mountainBg,
+  grassBg,
+  pepeSun,
+  sunsetGradientBg,
+  blurryDarkGradient,
+  about,
 };

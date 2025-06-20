@@ -16,6 +16,10 @@ import {
   pepeFitStrong,
   pepeLogo,
   orangeScatteredYellow1,
+  logo,
+  about,
+  brickBg,
+  brickRotatedBg,
 } from "../../assets";
 
 import "./About.css";
@@ -31,6 +35,7 @@ import {
   GiftIcon,
 } from "@heroicons/react/24/solid";
 import LandingText from "../design/tipography/LandingText";
+import LandingButton from "../design/buttons/LandingButton";
 
 // Array de objetos con texto e iconos relacionados
 const cryptoPizzaWords = [
@@ -75,26 +80,14 @@ const About = () => {
     );
   });
 
-  const images = [
-    pepeBanner,
-    pepeFitStrong,
-    pepePresident,
-    pepeCivilian,
-    pepeSurf,
-    pepeSpy,
-    pepeClimbing,
-    pepeCar,
-    pepeWarrior,
-    pepeLogo,
-  ];
-
   return (
     <Section
       id="about"
-      className="pt-50 pb-90 md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center"
-      backgroundSvg={orangeScatteredYellow1}
+      className="md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center min-h-255"
+      // bgColor="linear-gradient(to bottom, transparent, #0c0500)"
+      backgroundSvg={brickRotatedBg}
     >
-      <section className="rounded-xl md:px-16 px-6 py-10 z-50">
+      <section className="pt-50 py-20 rounded-xl md:px-16 px-6 py-10 z-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-50">
           {/* Text Column */}
           <div className="hero-text flex flex-col justify-center font-semibold relative z-50">
@@ -123,7 +116,7 @@ const About = () => {
                       <span className="object-contain rounded-full bg-white bg-opacity-50">
                         {item.icon}
                       </span>
-                      <LandingTitle color="white">{item.text}</LandingTitle>
+                      <LandingTitle>{item.text}</LandingTitle>
                     </span>
                   ))}
                 </span>
@@ -139,25 +132,23 @@ const About = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
+              {/* <a
                 href="#buy"
                 className="hero-btn md:bg-transparent md:text-white bg-orange-300"
-              >
-                🍕 Buy Now
-              </a>
+              ></a> */}
+              <LandingButton>🍕 Buy Now</LandingButton>
             </div>
           </div>
 
           <div className="relative">
-            <div className="grid-memes">
-              {images.map((src, index) => (
-                <div className="grid-item" key={index}>
-                  <img src={src} alt={`meme-${index}`} className="h-16" />
-                </div>
-              ))}
-
-              {/* Shadow */}
-              {/* <TrackingShadow /> */}
+            {/* Image Column */}
+            <div className="md:absolute -top-40 right-45 flex flex-col items-center">
+              <img
+                src={logo}
+                alt="Illustration of Peperoni Coin - crypto meets pizza"
+                className="w-[100px] md:w-[210px] max-w-md md:max-w-lg animate-float-slow"
+              />
+              <span className="w-[180px] hero-img-shadow top-60"></span>
             </div>
           </div>
         </div>

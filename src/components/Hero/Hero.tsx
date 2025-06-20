@@ -1,6 +1,6 @@
 import React from "react";
 import { Section } from "../../layout";
-import { iaOven, logo, wave1 } from "../../assets";
+import { brickBg, iaOven, logo, wave1 } from "../../assets";
 import AnimatedCounter from "../AnimatedCounter/AnimatedCounter";
 import HeroExperience from "../models/Hero/HeroExperience";
 import WavySpacer from "../design/WavySpacer";
@@ -13,17 +13,18 @@ const Hero = () => {
   return (
     <Section
       id="hero"
-      className="relative pt-20 pb-5 flex flex-col md:flex-row justify-around overflow-hidden"
-      bgColor="#ffffff"
+      className="relative flex flex-col md:flex-row justify-around overflow-hidden min-h-255"
+      bgColor="#191716"
+      backgroundSvg={brickBg}
     >
-      <div className="flex flex-col sm:flex-row justify-around px-5">
+      <div className="pt-40 flex flex-col sm:flex-row justify-around px-5">
         {/* First Info container */}
-        <div className="flex flex-col p-10 justify-center flex-1">
+        <div className="flex flex-col p-10 md:p-18 justify-center flex-1">
           <LandingHero>
             DELICIOUSLY <br />
             COOKED BY YOU
           </LandingHero>{" "}
-          <div className="text-gray-400 max-w-80 text-sm">
+          <div className="max-w-80">
             <LandingText>
               Not just a coin, not just a meme. $PEPERONI is a community payment
               token built to celebrate the people who make Web3 spicy—creators,
@@ -40,7 +41,12 @@ const Hero = () => {
               </div>
             </figure>
             {/* Oven Image */}
-            <img src={iaOven} alt="" className="max-w-60 md:max-w-110" />
+            <img
+              src={iaOven}
+              alt=""
+              className="absolute max-w-60 md:max-w-280 -top-100 -left-90"
+              style={{ zIndex: 400 }}
+            />
           </div>{" "}
           {/* <div className="flex flex-col sm:flex-row justify-around gap-3">
             <a href="#buy" className="hero-btn">
@@ -53,7 +59,7 @@ const Hero = () => {
         </div>
         {/* Wallet container */}
         <div className="flex flex-col gap-1 items-end p-10 pt-25 flex-1">
-          <LandingButton>Connect</LandingButton>
+          <LandingButton>🔗 Connect</LandingButton>
           {/* <span className="flex flex-row gap-2 items-center px-5 py-1 rounded-xl bg-gradient-to-r from-orange-800 to-red-900 border-2 border-gray-100 hover:border-yellow-500 hover:text-white transition-all shadow-lg">
             <img src={logo} alt="" className="max-w-7" />
             <p className="text-sm">1.234.884</p>
