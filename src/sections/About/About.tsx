@@ -2,30 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Section } from "../../layout";
-import {
-  pepeCivilian,
-  pepePets,
-  pepePresident,
-  pepeSpy,
-  pepeSurf,
-  pepeWarrior,
-  pepeFitSkinny,
-  pepeBanner,
-  pepeCar,
-  pepeClimbing,
-  pepeFitStrong,
-  pepeLogo,
-  orangeScatteredYellow1,
-  logo,
-  about,
-  brickBg,
-  brickRotatedBg,
-} from "../../assets";
-
+import { logo, about, transitionUpBg } from "../../assets";
 import "./About.css";
 import { words } from "../../constants";
-import LandingTitle from "../design/tipography/LandingTitle";
-import LandingHero from "../design/tipography/LandingHero";
+import LandingTitle from "../../components/design/tipography/LandingTitle";
+import LandingHero from "../../components/design/tipography/LandingHero";
 
 import {
   CurrencyDollarIcon,
@@ -34,8 +15,10 @@ import {
   ChartBarIcon,
   GiftIcon,
 } from "@heroicons/react/24/solid";
-import LandingText from "../design/tipography/LandingText";
-import LandingButton from "../design/buttons/LandingButton";
+import LandingText from "../../components/design/tipography/LandingText";
+import LandingButton from "../../components/design/buttons/LandingButton";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 // Array de objetos con texto e iconos relacionados
 const cryptoPizzaWords = [
@@ -72,6 +55,11 @@ const cryptoPizzaWords = [
 ];
 
 const About = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
   useGSAP(() => {
     gsap.fromTo(
       ".hero-text h1",
@@ -85,12 +73,18 @@ const About = () => {
       id="about"
       className="md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center min-h-255"
       // bgColor="linear-gradient(to bottom, transparent, #0c0500)"
-      backgroundSvg={brickRotatedBg}
+      backgroundSvg={transitionUpBg}
     >
       <section className="pt-50 py-20 rounded-xl md:px-16 px-6 py-10 z-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-50">
           {/* Text Column */}
-          <div className="hero-text flex flex-col justify-center font-semibold relative z-50">
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="hero-text flex flex-col justify-center font-semibold relative z-50"
+          >
             <h1 className="pointer-events-none text-2xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-red-700 dark:text-red-400 leading-tight mb-6 hero-font">
               <LandingHero color="white">About Peperoni in</LandingHero>{" "}
               <span className="slide absolute pt-0 px-2 h-[55px] overflow-hidden">
@@ -138,7 +132,7 @@ const About = () => {
               ></a> */}
               <LandingButton>🍕 Buy Now</LandingButton>
             </div>
-          </div>
+          </motion.div>
 
           <div className="relative">
             {/* Image Column */}

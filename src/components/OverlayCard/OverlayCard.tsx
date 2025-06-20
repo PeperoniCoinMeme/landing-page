@@ -20,13 +20,13 @@ interface OverlayCardProps {
 const OverlayCard: React.FC<OverlayCardProps> = ({ item }) => {
   return (
     <div
-      className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[19rem]"
+      className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[14rem]"
       style={{
         backgroundImage: `url(${item.backgroundUrl})`,
       }}
       key={item.id}
     >
-      <div className="relative z-2 flex flex-col min-h-[20rem] p-[2rem] pointer-events-none">
+      <div className="relative z-2 flex flex-col h-[15rem] p-[2rem] pointer-events-none overflow-hidden">
         <LandingSubtitle>{item.title}</LandingSubtitle>
         <LandingText color="white">{item.text}</LandingText>
         <div className="flex items-center mt-auto">

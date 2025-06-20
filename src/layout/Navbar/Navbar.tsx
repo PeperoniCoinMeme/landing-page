@@ -11,7 +11,7 @@ import {
   GiftIcon,
   ClockIcon,
 } from "@heroicons/react/24/solid";
-import { logo } from "../../assets";
+import { logo, meltingCheese } from "../../assets";
 import PricingContent from "./Content/Pricing";
 import TokenomicsContent from "./Content/Tokenomics";
 import AboutContent from "./Content/About";
@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <>
       {/* <Headroom> */}
-      <nav className="relative top-0 left-0 z-150 w-full flex justify-between px-3 py-8 h-1 items-center">
+      <nav className="absolute top-0 left-0 z-50 w-full flex justify-between px-3 py-8 h-1 items-center max-w-[1920px]">
         <div id="logo" className="w-12 flex flex-row gap-3 items-center">
           <img src={logo} alt="" className="hover:scale-120 transition-all" />
           <h4
@@ -100,7 +100,7 @@ const Navbar = () => {
                   onClick={toggleMenu}
                   className="absolute top-3 right-3 text-[var(--color-pepperoni)] hover:text-red-400 transition"
                 >
-                  <XMarkIcon className="h-6 w-6" />
+                  <XMarkIcon className="h-12 w-12 m-3 text-orange-600 text-shadow-lg" />
                 </button>
 
                 <h2 className="text-5xl font-bold">🍕</h2>
