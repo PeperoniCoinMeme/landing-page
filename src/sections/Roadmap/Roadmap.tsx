@@ -7,6 +7,7 @@ import { roadMapCardsB } from "../../constants";
 import {
   logo,
   mountainBg,
+  parachutes1,
   parachutes2,
   parachutes3,
   parachutes4,
@@ -16,6 +17,9 @@ import { Section } from "../../layout";
 import { useState, useEffect } from "react";
 import LandingSubtitle from "../../components/design/tipography/LandingSubtitle";
 import Clouds from "./Clouds";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { layout } from "../../styles/styles";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -112,52 +116,79 @@ const Roadmap = () => {
   return (
     <Section
       id="roadmap"
-      className="pt-28 pb-10 flex flex-col md:flex-row justify-center flex-center xl:px-0"
+      className={`${layout.section}`}
       bgColor="linear-gradient(360deg,rgba(94, 35, 13, 1) 0%, rgba(199, 84, 42, 1) 14%, rgba(238, 159, 69, 1) 38%, rgba(255, 206, 97, 1) 65%, rgba(155, 214, 255, 1) 100%)"
       // backgroundSvg={sunsetGradientBg}
     >
-      <div className="w-full h-full md:px-20 px-5">
+      <section className="w-full h-full md:px-20 px-5 xl:px-15">
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
-            {roadMapCardsB.map((card) => (
-              <div key={card.title} className="exp-card-wrapper">
-                <div className="xl:w-2/6 hover:-translate-y-5 transition-transform">
-                  <GlowCard card={card} index={0}>
-                    <div>{/* <img src ={card.imgPath} alt="exp-img" /> */}</div>
-                  </GlowCard>
-                </div>
-                <div className="xl:w-4/6">
-                  <div className="flex items-start">
-                    {/* <div className="timeline-wrapper">
-                      <div className="timeline" />
-                      <div className="gradient-line w-1 h-full" />
-                    </div> */}
-                    <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
-                      <div className="timeline-logo">
-                        <img src={logo} alt="logo" />
-                      </div>
-                      <div>
-                        <LandingSubtitle color="white">
-                          {card.title}
-                        </LandingSubtitle>
+            {roadMapCardsB.map((card, index) => {
+              const { ref, inView } = useInView({
+                triggerOnce: true,
+                threshold: 0.2,
+              });
 
-                        <p className="my-5 text-white">{card.date}</p>
+              return (
+                <motion.div
+                  key={card.title}
+                  ref={ref}
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{
+                    duration: 0.6,
+                    ease: "easeOut",
+                    delay: index * 0.1,
+                  }}
+                  className="exp-card-wrapper"
+                >
+                  <div className="xl:w-2/6 hover:-translate-y-5 transition-transform">
+                    <GlowCard
+                      card={card}
+                      index={index}
+                      textColor={index === 5 ? "text-white" : ""}
+                    ></GlowCard>
+                  </div>
+                  <div className="xl:w-4/6">
+                    <div className="flex items-start">
+                      <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
+                        <div className="timeline-logo">
+                          <img src={logo} alt="logo" />
+                        </div>
+                        <div>
+                          <LandingSubtitle color="white">
+                            {card.title}
+                          </LandingSubtitle>
+                          <p className="my-5 text-white">{card.date}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Clouds */}
       <Clouds />
-
+      {/* Parachutes1 */}
+      <div
+        className="absolute -top-630 left-310 pointer-events-none"
+        style={{ transform: `translateY(${offsetY * 0.4}px)` }}
+      >
+        <img
+          src={parachutes1}
+          alt="Parachutes"
+          aria-hidden="true"
+          style={{ zIndex: 9999 }}
+          className="w-[200px] rotate-[12deg]"
+        />
+      </div>
       {/* Parachutes2 */}
       <div
-        className="absolute -top-800 -left-70 pointer-events-none"
+        className="absolute -top-650 -left-70 pointer-events-none"
         style={{
           transform: `translateX(${offsetY * 0.09}px) translateY(${
             offsetY * 0.5
@@ -172,10 +203,9 @@ const Roadmap = () => {
           className="w-[200px] rotate-[12deg]"
         />
       </div>
-
       {/* Parachutes3 */}
       <div
-        className="absolute -top-430 left-190 pointer-events-none"
+        className="absolute -top-330 left-190 pointer-events-none"
         style={{ transform: `translateY(${offsetY * 0.4}px)` }}
       >
         <img
@@ -189,7 +219,7 @@ const Roadmap = () => {
       </div>
       {/* Parachutes4 | Provision */}
       <div
-        className="absolute -top-720 right-40 pointer-events-none"
+        className="absolute -top-600 right-40 pointer-events-none"
         style={{ transform: `translateY(${offsetY * 0.52}px)` }}
       >
         <img
@@ -201,6 +231,16 @@ const Roadmap = () => {
         />
       </div>
       {/* Mountain */}
+      <div className="absolute bottom-0 pointer-events-none">
+        <img
+          src={mountainBg}
+          alt="Mountain"
+          aria-hidden="true"
+          style={{ zIndex: 40 }}
+          className="w-[1920px]"
+        />
+      </div>
+      {/* Mountain Snippet */}
       {/* <div className="absolute -bottom-710 pointer-events-none">
         <img
           src={mountainBg}
@@ -229,16 +269,7 @@ const Roadmap = () => {
           className="w-[1920px]"
         />
       </div> */}
-      {/* Mountain */}
-      <div className="absolute -bottom-10 pointer-events-none">
-        <img
-          src={mountainBg}
-          alt="Mountain"
-          aria-hidden="true"
-          style={{ zIndex: 40 }}
-          className="w-[1920px]"
-        />
-      </div>
+      <div className="absolute bottom-0 min-w-full w-[1920px] h-24 bg-gradient-to-b from-transparent to-[#0c0500] pointer-events-none z-9999" />
     </Section>
   );
 };

@@ -8,17 +8,20 @@ import LandingText from "../../components/design/tipography/LandingText";
 import HeroExperience from "../../components/models/Hero/HeroExperience";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { layout } from "../../styles/styles";
 
 const Hero = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.2,
   });
+
+  const zIndexOven = 100;
 
   return (
     <Section
       id="hero"
-      className="relative flex flex-col md:flex-row justify-around overflow-hidden min-h-255"
+      className={`${layout.section} ${layout.sectionHeight} overflow-hidden`}
       bgColor="#191716"
       backgroundSvg={brickBg}
     >
@@ -37,36 +40,27 @@ const Hero = () => {
           </LandingHero>{" "}
           <div className="max-w-80">
             <LandingText>
-              Not just a coin, not just a meme. $PEPERONI is a community payment
-              token built to celebrate the people who make Web3 spicy—creators,
-              builders, and degens.
+              We're not promising world domination. We're just here to build,
+              vibe, and feed the ecosystem one slice at a time.
             </LandingText>
           </div>
         </motion.div>
         {/* Oven container */}
-        <div className="flex flex-col px-5 justify-center flex-1">
-          <div className="oven-container mx-5 mb-5 relative">
-            <figure>
-              <div className="hero-3d-layout">
-                <HeroExperience />
-              </div>
-            </figure>
+        <div className="flex flex-col justify-center flex-1">
+          <figure>
+            <div className="hero-3d-layout">
+              <HeroExperience />
+            </div>
+          </figure>
+          <div className="oven-container mb-5 relative h-90 md:h-0">
             {/* Oven Image */}
             <img
               src={iaOven}
               alt=""
-              className="absolute max-w-60 md:max-w-280 -top-100 -left-90"
-              style={{ zIndex: 400 }}
+              className="absolute max-w-190 md:max-w-270 -top-40 -left-50 md:-top-120 md:-left-86"
+              style={{ zIndex: zIndexOven }}
             />
-          </div>{" "}
-          {/* <div className="flex flex-col sm:flex-row justify-around gap-3">
-            <a href="#buy" className="hero-btn">
-              🍕 Buy
-            </a>
-            <a href="#tokenomics" className="hero-btn">
-              📊 Bake
-            </a>
-          </div> */}
+          </div>
         </div>
         {/* Wallet container */}
         <motion.div
@@ -74,9 +68,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col gap-1 items-end p-10 pt-25 flex-1"
+          className="flex flex-col gap-1 md:items-end p-10 pt-25 flex-1"
         >
-          <LandingButton>🔗 Connect</LandingButton>
+          <LandingButton className="max-w-35 px-0">🔗 Connect</LandingButton>
           {/* <span className="flex flex-row gap-2 items-center px-5 py-1 rounded-xl bg-gradient-to-r from-orange-800 to-red-900 border-2 border-gray-100 hover:border-yellow-500 hover:text-white transition-all shadow-lg">
             <img src={logo} alt="" className="max-w-7" />
             <p className="text-sm">1.234.884</p>
@@ -87,17 +81,17 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Floating Background Pizza Decoration */}
-      {/* <div className="absolute -top-20 -right-24 opacity-20 dark:opacity-10 z-0 pointer-events-none">
-        <img
-          src="/assets/pizza-bg.svg"
-          alt=""
-          aria-hidden="true"
-          className="w-[300px] rotate-[15deg]"
-        />
-      </div> */}
+      <div
+        className="min-w-full flex flex-col md:flex-row justify-center mt-30"
+        style={{ zIndex: zIndexOven + 1 }}
+      >
+        <div className="flex flex-col sm:flex-row items-center justify-center z-100 mt-3">
+          <LandingButton bgColor="#3f2c2f">🍕 Buy</LandingButton>
+        </div>
+      </div>
 
       <AnimatedCounter />
+      <div className="absolute bottom-0 min-w-full w-[1920px] h-24 bg-gradient-to-b from-transparent to-[#0c0500] pointer-events-none z-9999" />
     </Section>
   );
 };

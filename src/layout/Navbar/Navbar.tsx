@@ -44,7 +44,7 @@ const Navbar = () => {
         <div id="logo" className="w-12 flex flex-row gap-3 items-center">
           <img src={logo} alt="" className="hover:scale-120 transition-all" />
           <h4
-            className="text-gray-100 text-3xl text-shadow-lg"
+            className="text-gray-100 text-3xl text-shadow-lg pointer-events-none"
             style={fontStyles}
           >
             PEPERONI
@@ -106,8 +106,17 @@ const Navbar = () => {
                 <h2 className="text-5xl font-bold">🍕</h2>
 
                 <ul className="space-y-6">
-                  {menuItems.map(({ label, href, icon: Icon }) => (
-                    <li key={label}>
+                  {menuItems.map(({ label, href, icon: Icon }, index) => (
+                    <motion.li
+                      key={label}
+                      initial={{ opacity: 0, x: -100 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 0.5,
+                        delay: index * 0.03,
+                        ease: "easeOut",
+                      }}
+                    >
                       <a
                         href={href}
                         onClick={toggleMenu}
@@ -117,7 +126,7 @@ const Navbar = () => {
                         {/* <Icon className="h-5 w-5 text-yellow-500" /> */}
                         {label}
                       </a>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
 

@@ -5,9 +5,15 @@ interface GlowCardProps {
   card: any;
   index: number;
   children?: React.ReactNode;
+  textColor?: string;
 }
 
-const GlowCard: React.FC<GlowCardProps> = ({ card, index, children }) => {
+const GlowCard: React.FC<GlowCardProps> = ({
+  card,
+  index,
+  children,
+  textColor,
+}) => {
   // refs for all the cards
   const cardRefs = useRef<HTMLDivElement[]>([]);
 
@@ -39,7 +45,7 @@ const GlowCard: React.FC<GlowCardProps> = ({ card, index, children }) => {
         if (el) cardRefs.current[index] = el;
       }}
       onMouseMove={handleMouseMove(index)}
-      className="timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column shadow-lg text-gray-800 border-1 border-gray-300 max-w-80"
+      className="timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column shadow-lg text-gray-800 border-1 border-gray-300 max-w-80 bg-white/10"
       style={{}}
     >
       <div className="glow"></div>
@@ -49,7 +55,7 @@ const GlowCard: React.FC<GlowCardProps> = ({ card, index, children }) => {
         ))}
       </div>
       <div className="mb-5">
-        <p className="text-white-50 text-sm">{card.review}</p>
+        <p className={`text-sm ${textColor}`}>{card.review}</p>
       </div>
       {children}
     </div>

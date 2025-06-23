@@ -6,11 +6,11 @@ import Feature from "../components/Feature/Feature";
 import {
   Hero,
   About,
-  Tokenomics,
   Join,
   MissionVibes,
   Roadmap,
   SliceOfUtility,
+  Slicenomics,
 } from "../sections";
 import RoadmapHeader from "../sections/RoadmapHeader/RoadmapHeader";
 import ScrollReveal from "../components/ScrollReveal/ScrollReveal";
@@ -18,7 +18,7 @@ import BackToTopButton from "../components/BackToTopButton/BackToTopButton";
 
 const LandingPage = () => {
   return (
-    <div className="overflow-hidden w-full max-w-[1920px] square-framed-container m-auto">
+    <div className="overflow-hidden w-full max-w-[1920px] m-auto">
       <Navbar />
       <BackToTopButton />
 
@@ -30,13 +30,13 @@ const LandingPage = () => {
 
       {/* 3 */}
       <MissionVibes />
-      <Feature />
+      {/* <Feature /> */}
 
       {/* 4 */}
       <SliceOfUtility />
 
       {/* 5 */}
-      <Tokenomics />
+      <Slicenomics />
 
       {/* <LogoShowcase /> */}
 

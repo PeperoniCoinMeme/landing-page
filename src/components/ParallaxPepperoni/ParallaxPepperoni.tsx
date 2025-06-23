@@ -23,10 +23,10 @@ export const ParallaxPepperoni: React.FC<ParallaxPepperoniProps> = ({
   }, []);
 
   return (
-    <div className="absolute w-full">
+    <div className="lg:absolute w-full hidden lg:block">
       {/* Moving background colored circle balls */}
       <MouseParallax strength={0.1}>
-        <div className="absolute bottom-1/2 left-1/2 w-50 h-50 origin-bottom -rotate-[56deg]">
+        <div className="absolute top-1/2 left-1/2 w-50 h-50 origin-bottom -rotate-[56deg]">
           <img
             src={pepperoniSlice1}
             alt="Pepperoni Slice 1"
@@ -46,7 +46,7 @@ export const ParallaxPepperoni: React.FC<ParallaxPepperoniProps> = ({
           />
         </div>
 
-        <div className="absolute bottom-1/2 left-1/2 w-50 h-50 origin-bottom -rotate-[65deg]">
+        <div className="absolute top-1/3 left-1/2 w-50 h-50 -rotate-[65deg]">
           <img
             src={pepperoniSlice3}
             alt="Pepperoni Slice 3"
@@ -56,7 +56,7 @@ export const ParallaxPepperoni: React.FC<ParallaxPepperoniProps> = ({
           />
         </div>
 
-        <div className="absolute bottom-1/2 left-1/2 w-50 h-50 origin-bottom -rotate-[85deg]">
+        {/* <div className="absolute bottom-1/2 left-1/2 w-50 h-50 origin-bottom -rotate-[85deg]">
           <img
             src={pepperoniSlice4}
             alt="Pepperoni Slice 4"
@@ -64,7 +64,7 @@ export const ParallaxPepperoni: React.FC<ParallaxPepperoniProps> = ({
               mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           />
-        </div>
+        </div> */}
 
         <div className="absolute bottom-1/2 left-1/2 w-50 h-50 origin-bottom rotate-[70deg]">
           <img
