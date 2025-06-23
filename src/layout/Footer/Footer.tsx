@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
           {/* <!-- Logo & About --> */}
           <div>
-            <h2 className="text-2xl font-bold mb-2">🍕 Peperoni Coin</h2>
+            <h2 className="text-2xl font-bold mb-2">Peperoni Coin</h2>
             <p className="text-sm max-w-sm">
               The tastiest cryptocurrency on the market. Built for the
               community, powered by blockchain, topped with extra flavor.
