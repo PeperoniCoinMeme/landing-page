@@ -29,11 +29,15 @@ const BackToTopButton: React.FC = () => {
   return (
     <div
       onClick={scrollToTop}
-      className={`fixed flex hover:bg-white/12 cursor-pointer justify-center items-center flex-col bottom-6 right-6 z-50 transition-all duration-300 rounded-full border-1 border-gray-400 p-5 ${
+      className={`fixed flex hover:bg-black/40 cursor-pointer justify-center items-center flex-col bottom-6 right-6 z-50 transition-all duration-300 rounded-full border-1 border-gray-300 p-3 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
-      <img src={arrowUp} alt="Arrow Up" className="rotate-310 text-gray-500" />
+      <img
+        src={arrowUp}
+        alt="Arrow Up"
+        className="rotate-310 text-gray-500 h-5 w-5"
+      />
       {/* Go up */}
     </div>
   );

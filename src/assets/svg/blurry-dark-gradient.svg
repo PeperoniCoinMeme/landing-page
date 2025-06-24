@@ -1,1 +1,24 @@
-<svg id="visual" viewBox="0 0 900 675" width="900" height="675" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><defs><filter id="blur1" x="-10%" y="-10%" width="120%" height="120%"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur stdDeviation="167" result="effect1_foregroundBlur"></feGaussianBlur></filter></defs><rect width="900" height="675" fill="#0b0300"></rect><g filter="url(#blur1)"><circle cx="66" cy="526" fill="#080300" r="371"></circle><circle cx="840" cy="373" fill="#0b0300" r="371"></circle><circle cx="841" cy="125" fill="#080300" r="371"></circle><circle cx="366" cy="500" fill="#080300" r="371"></circle><circle cx="257" cy="244" fill="#0b0300" r="371"></circle><circle cx="631" cy="492" fill="#080300" r="371"></circle></g></svg>
+ <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="24"
+                    cy="24"
+                    r="22"
+                    stroke="#10B981"
+                    strokeWidth="2"
+                    fill="transparent"
+                  />
+                  <path
+                    d="M16 24L22 30L34 18"
+                    stroke="#10B981"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <br />
+                </svg><svg id="visual" viewBox="0 0 900 675" width="900" height="675" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><defs><filter id="blur1" x="-10%" y="-10%" width="120%" height="120%"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur stdDeviation="167" result="effect1_foregroundBlur"></feGaussianBlur></filter></defs><rect width="900" height="675" fill="#0b0300"></rect><g filter="url(#blur1)"><circle cx="66" cy="526" fill="#080300" r="371"></circle><circle cx="840" cy="373" fill="#0b0300" r="371"></circle><circle cx="841" cy="125" fill="#080300" r="371"></circle><circle cx="366" cy="500" fill="#080300" r="371"></circle><circle cx="257" cy="244" fill="#0b0300" r="371"></circle><circle cx="631" cy="492" fill="#080300" r="371"></circle></g></svg>

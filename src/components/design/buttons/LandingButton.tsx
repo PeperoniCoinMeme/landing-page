@@ -18,12 +18,14 @@ interface LandingButtonProps {
   className?: string;
   children: string;
   bgColor?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const Section: React.FC<LandingButtonProps> = ({
   className,
   children,
   bgColor = "#ff4500",
+  onClick,
 }) => {
   const styles: React.CSSProperties = {
     backgroundColor: bgColor,
@@ -36,6 +38,7 @@ const Section: React.FC<LandingButtonProps> = ({
       className={`landing-button
    ${className || ""}`}
       style={styles}
+      onClick={onClick}
     >
       {children}
     </button>

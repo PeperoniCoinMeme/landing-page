@@ -1,0 +1,129 @@
+.gallery__strip--one {
+  animation: move-it 20s linear infinite;
+}
+
+.gallery__strip--two {
+  animation: move-it-2 22s linear infinite;
+}
+
+.gallery__strip--three {
+  animation: move-it 18s linear infinite;
+}
+
+.gallery__strip--four {
+  animation: move-it-2 24s linear infinite;
+}
+
+.gallery-card {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.gallery-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: animate 1.5s linear infinite;
+}
+
+.gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+}
+
+.gallery-card img {
+  transition: 0.2s;
+}
+
+.gallery-card__stripe {
+  transition: 0.2s;
+  height: 25%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
+  padding: 8px 16px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background: linear-gradient(180deg, #00000000, #000000);
+}
+
+.gallery-card__social {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Card Hover  */
+.gallery-card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(50, 49, 50, 0.3);
+  border-radius: 0;
+}
+
+.gallery-card:hover > img {
+  transform: scale(1.08);
+}
+
+.gallery-card:hover > .gallery-card__stripe {
+  opacity: 1;
+  transform: translateY(0);
+  height: 100%;
+  z-index: 9999;
+}
+
+.gallery-card:hover > .gallery-card::before {
+  opacity: 1;
+}
+
+.gallery-card:hover::before {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.872));
+  opacity: 1;
+}
+
+/* Animations  */
+@keyframes animate {
+  0% {
+    transform: translate(-99.5%, -99.5%);
+  }
+  25% {
+    transform: translate(99.5%, -99.5%);
+  }
+  50% {
+    transform: translate(99.5%, 99.5%);
+  }
+  75% {
+    transform: translate(-99.5%, 99.5%);
+  }
+  100% {
+    transform: translate(-99.5%, -99.5%);
+  }
+}
+
+@keyframes move-it {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes move-it-2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

@@ -55,7 +55,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
         ))}
       </div>
       <div className="mb-5">
-        <p className={`text-sm ${textColor}`}>{card.review}</p>
+        <p className={`${textColor}`}>{card.review}</p>
       </div>
       {children}
     </div>
