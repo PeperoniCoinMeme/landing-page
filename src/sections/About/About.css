@@ -31,3 +31,21 @@
   box-shadow: 1px 1px 0 1px #ce32075e, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
     54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 }
+
+.meme-coin--glow {
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  box-shadow: 0 0 30px rgba(255, 100, 0, 0.1);
+  /* filter: drop-shadow(0 0 6px rgba(255, 140, 0, 0.6)); */
+  /* background: radial-gradient(circle, #ff5c5c, #ff7f50, #ffa94d); */
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(255, 100, 0, 0.6),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 200ms;
+}
+
+.meme-coin--glow:hover {
+  transform: scale(1.4);
+  filter: drop-shadow(0 0 1em #ff6347aa) /* Sombra roja de tomate */
+    drop-shadow(0 0 1.5em #ffd700aa) /* Sombra dorada de queso */
+    drop-shadow(0 0 2em #8b0000aa); /* Sombra oscura de pepperoni */
+}

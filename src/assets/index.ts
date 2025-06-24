@@ -12,6 +12,7 @@ import pepeSpy from "./meme/spy.jpeg";
 import pepeSurf from "./meme/surf.jpeg";
 import pepeWarrior from "./meme/warrior.jpeg";
 import pepeLogo from "./meme/logo.png";
+import goldenMemeCoin from "./meme/golden-memecoin.png";
 
 // Clouds
 import cloud1 from "./clouds/cloud1.png";
@@ -23,6 +24,13 @@ import parachutes1 from "./parachutes/parachutes-1.png";
 import parachutes2 from "./parachutes/parachutes-2.png";
 import parachutes3 from "./parachutes/parachutes-3.png";
 import parachutes4 from "./parachutes/parachutes-4.png";
+
+// Space
+import cheeseMoon from "./space/cheese-moon.png";
+import satelliteCold from "./space/satellite.png";
+import satelliteWarm from "./space/satellite-warm.png";
+import astronaut1 from "./space/astronaut-1.png";
+import astronaut2 from "./space/astronaut-2.png";
 
 // Cards Backgrounds
 import bg1 from "./cards-bg/card-1.svg";
@@ -97,7 +105,6 @@ import instagram from "./social/instagram.svg";
 import linkedin from "./social/linkedin.svg";
 import twitter from "./social/twitter.svg";
 
-import meltingCheeseTransparent from "./cheese/melting-cheese-transparent.png";
 import iaOven from "./oven/ia-oven.png";
 import splash from "./cheese/splash.png";
 import meltingCheese from "./cheese/melting-cheese.png";
@@ -108,6 +115,7 @@ import brickBg from "./brickbg.png";
 import transitionDownBg from "./transitionDownBg.png";
 import transitionUpBg from "./transitionUpBg.png";
 import planetBg from "./landscape/planet.png";
+import starsBg from "./landscape/stars.png";
 import mountainBg from "./landscape/mountain.png";
 import grassBg from "./landscape/grass.png";
 import pepeSun from "./landscape/pepe-sun.png";
@@ -116,6 +124,7 @@ import blurryDarkGradient from "./svg/blurry-dark-gradient.svg";
 import about from "./about.png";
 
 export {
+  goldenMemeCoin,
   arrowUp,
   logo,
   peperoniPizza,
@@ -137,6 +146,12 @@ export {
   parachutes3,
   parachutes4,
   //
+  cheeseMoon,
+  satelliteCold,
+  satelliteWarm,
+  astronaut1,
+  astronaut2,
+  //
   cloud1,
   cloud2,
   cloud3,
@@ -155,7 +170,6 @@ export {
   linkedin,
   twitter,
   //
-  meltingCheeseTransparent,
   meltingCheese,
   cheeseCenter,
   cheeseRight,
@@ -226,6 +240,7 @@ export {
   transitionDownBg,
   transitionUpBg,
   planetBg,
+  starsBg,
   mountainBg,
   grassBg,
   pepeSun,

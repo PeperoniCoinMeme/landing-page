@@ -27,6 +27,7 @@ import OverlayCard from "../../components/OverlayCard/OverlayCard";
 import LandingButton from "../../components/design/buttons/LandingButton";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { layout } from "../../styles/styles";
 
 const Join = () => {
   const [expandedIndex, setExpandedIndex] = useState(0);
@@ -82,50 +83,52 @@ const Join = () => {
   return (
     <Section
       id="join"
-      className="md:px-20 px-4 py-20 lg:px-40 flex flex-col md:flex-row items-center justify-center min-h-340"
+      className={`${layout.section} min-h-280`}
       // bgColor="#0c0500"
-      backgroundSvg={transitionUpBg}
     >
-      <section className="cta-card relative rounded-xl shadow-lg flex flex-col md:flex-row">
-        <div
-          className="h-full w-full overflow-hidden flex items-center rounded-2xl justify-center p-4 relative"
-          style={{
-            backgroundImage: `url(${panels[expandedIndex].image})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        >
-          <div className="inset-0 absolute bg-[rgba(0,0,0,0.7)] backdrop-blur-md z-0"></div>
-          <div className="p-16 flex w-full h-full gap-2 items-center justify-center z-10">
-            <motion.div
-              ref={ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="min-w-50 mx-auto space-y-2 py-8"
-            >
-              <LandingHero>Join to the Pizza!</LandingHero>
+      <section className="relative md:px-20 px-4 py-40 lg:px-40 flex flex-col md:flex-row">
+        <div className="cta-card">
+          <div
+            className="overflow-hidden flex items-center rounded-2xl justify-center p-4 relative"
+            style={{
+              backgroundImage: `url(${panels[expandedIndex].image})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          >
+            <div className="inset-0 absolute bg-[rgba(0,0,0,0.7)] backdrop-blur-md z-0"></div>
+            <div className="md:p-8 p-16 flex flex-col md:flex-row gap-2 items-center justify-center z-10">
+              <motion.div
+                ref={ref}
+                initial={{ opacity: 0, y: 50 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="min-w-100 space-y-2 md:px-4 px-16"
+              >
+                <LandingHero>Join to the Pizza!</LandingHero>
 
-              <LandingText>
-                Don’t miss out on the cheesiest opportunity in crypto. Buy $PEP
-                and be part of the most flavorful movement on the blockchain.
-              </LandingText>
+                <LandingText>
+                  At the heart of $PEPERONI is a community of pizza-pilled
+                  memelords, creators, degens, and builders united by one
+                  delicious mission: 🍕 To bake the most valuable pizza the
+                  world has ever seen, on-chain, together.
+                </LandingText>
 
-              {/* <div className="mt-15 px-10">
+                {/* <div className="mt-15 px-10">
                   <JoinButton />
               </div> */}
-              <div className="pt-18">
-                <LandingButton>More</LandingButton>
-              </div>
-            </motion.div>
+                <div className="pt-12">
+                  <LandingButton>More</LandingButton>
+                </div>
+              </motion.div>
 
-            <div className="flex p-6 w-full items-center h-[70vh] justify-center gap-1">
-              {panels.map((panel, index) => (
-                <div
-                  key={index}
-                  onClick={() => handleClick(index)}
-                  className={`
-              h-full rounded-2xl bg-white cursor-pointer border-1 border-black/12
+              <div className="flex p-4 items-center h-[70vh] justify-center gap-1">
+                {panels.map((panel, index) => (
+                  <div
+                    key={index}
+                    onClick={() => handleClick(index)}
+                    className={`
+              h-full rounded-2xl bg-white cursor-pointer border-1 border-black/50
               transition-all duration-500 ease-in-out overflow-hidden 
               ${
                 expandedIndex === index
@@ -134,14 +137,15 @@ const Join = () => {
               }
               min-w-[40px] block
             `}
-                >
-                  <img
-                    src={panel.image}
-                    alt=""
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-              ))}
+                  >
+                    <img
+                      src={panel.image}
+                      alt=""
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -173,6 +177,7 @@ const Join = () => {
           </div>
         </div> */}
       </section>
+      <div className="absolute top-0 min-w-full w-[1920px] h-24 bg-gradient-to-t from-transparent to-[#0c0500] pointer-events-none z-9999" />
     </Section>
   );
 };

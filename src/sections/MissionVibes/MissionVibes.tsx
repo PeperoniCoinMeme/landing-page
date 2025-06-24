@@ -1,11 +1,17 @@
 import React from "react";
 import { Section } from "../../layout";
 
-import { brickBg, splash, transitionDownBg } from "../../assets";
+import {
+  brickBg,
+  splash,
+  transitionDownBg,
+  transitionUpBg,
+} from "../../assets";
 import LandingHero from "../../components/design/tipography/LandingHero";
 import LandingText from "../../components/design/tipography/LandingText";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { layout } from "../../styles/styles";
 
 const MissionVibes = () => {
   const { ref, inView } = useInView({
@@ -16,11 +22,10 @@ const MissionVibes = () => {
   return (
     <Section
       id="missionvibes"
-      className="md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center min-h-255"
-      // bgColor="#1e1e1e"
-      backgroundSvg={transitionDownBg}
+      className={`${layout.section} ${layout.sectionHeight}`}
+      bgColor="linear-gradient(180deg, #0c0500, #000000)"
     >
-      <section className="overflow-hidden rounded-xl py-16 md:px-16 px-6 py-25">
+      <section className="overflow-hidden px-4 md:px-20 lg:px-40 rounded-xl py-16 md:px-16 px-6 py-25">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -29,14 +34,14 @@ const MissionVibes = () => {
           className="relative flex flex-col jutify-center"
         >
           <div className="text-center">
-            <LandingHero color="white ">Mission & Vibes</LandingHero>
+            <LandingHero>Mission & Vibes</LandingHero>
           </div>
           <div className="flex flex-col md:flex-row items-center my-6 flex-wrap relative z-50 gap-7">
             <LandingText>
-              What happens when you throw community, culture, and a little
-              insanity into a Solana oven? You get $PEPERONI — a decentralized
-              memecoin that isn’t built on hype, but on fun, fairness, and
-              freedom.
+              "Cooked by the People". What happens when you throw community,
+              culture, and a little insanity into a Solana oven? You get
+              $PEPERONI, a decentralized memecoin that isn’t built on hype, but
+              on fun, fairness, and freedom.
             </LandingText>
             <LandingText>
               No tax scams. No VCs calling shots. Just a growing tribe of meme
@@ -64,8 +69,21 @@ const MissionVibes = () => {
           <div className="py-8">{/* <LandingButton>See</LandingButton> */}</div>
         </motion.div>
 
+        <div className="hole absolute bottom-20 left-1/2">
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+
         {/* Cheese With Pepperoni Splash */}
-        <div className="top-190 md:top-90 md:right-50 absolute pointer-events-none z-0 overflow-hidden">
+        <div className="top-110 left-40 md:top-60 md:left-150 absolute pointer-events-none z-0 overflow-hidden">
           <img
             src={splash}
             alt="Pepperoni Pizza"
@@ -73,10 +91,11 @@ const MissionVibes = () => {
               zIndex: 9999,
               transformOrigin: "center center",
             }}
-            className="w-[500px] relative"
+            className="md:w-[500px] w-[250px] relative"
           />
         </div>
       </section>
+      <div className="absolute top-0 min-w-full w-[1920px] h-24 bg-gradient-to-t from-transparent to-[#0c0500] pointer-events-none z-9999" />
     </Section>
   );
 };

@@ -13,7 +13,7 @@ const HeroExperience = () => {
 
   return (
     <>
-      <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+      <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
         {/* Configure OrbitControls to disable panning and control zoom based on device type */}
         <OrbitControls
           enablePan={false} // Prevents panning of the scene
@@ -26,14 +26,7 @@ const HeroExperience = () => {
         />
 
         <Suspense fallback={null}>
-          <Particles count={500} />
-          <group
-            scale={isMobile ? 0.7 : 1}
-            position={[0, -3.5, 0]}
-            rotation={[0, -Math.PI / 4, 0]}
-          >
-            {/* <Room /> */}
-          </group>
+          <Particles count={200} />
         </Suspense>
       </Canvas>
     </>

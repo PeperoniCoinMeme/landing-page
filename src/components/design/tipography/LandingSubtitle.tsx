@@ -11,11 +11,12 @@ const LandingSubtitle: React.FC<LandingSubtitleProps> = ({
   const styles: React.CSSProperties = {
     color: color,
     fontFamily: "bangers",
+    zIndex: 1000,
   };
 
   return (
     <h2
-      className="text-orange-400 text-2xl mb-2 text-shadow-md flex text-4xl font-bold text-[var(--color-pepperoni)] transition"
+      className="text-orange-400 text-2xl mb-2 text-shadow-md flex text-4xl font-bold text-[var(--color-pepperoni)] transition pointer-events-none"
       style={styles}
     >
       {children}

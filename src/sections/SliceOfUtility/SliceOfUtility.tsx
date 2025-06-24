@@ -3,6 +3,7 @@ import { Section } from "../../layout";
 
 import {
   brickBg,
+  cheeseMoon,
   orangeScatteredYellow1,
   orangeScatteredYellow2,
   transitionDownBg,
@@ -15,6 +16,8 @@ import LandingText from "../../components/design/tipography/LandingText";
 import { ParallaxPepperoni } from "../../components/ParallaxPepperoni/ParallaxPepperoni";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import StarBackground from "../../components/StarBackground/StarBackground";
+import { layout } from "../../styles/styles";
 
 const SliceOfUtility = () => {
   const { ref, inView } = useInView({
@@ -24,11 +27,12 @@ const SliceOfUtility = () => {
   return (
     <Section
       id="sliceofutility"
-      className="relative md:px-20 px-4 lg:px-40 flex flex-col md:flex-row justify-center min-h-255"
-      bgColor="linear-gradient(180deg, #0c0500, #000000 )"
+      className={`${layout.section} ${layout.sectionHeight} overflow-hidden`}
+      bgColor="#000000"
       // backgroundSvg={transitionDownBg}
     >
-      <section className="relative rounded-xl py-16 md:px-16 px-6 py-30">
+      <StarBackground />
+      <section className="relative rounded-xl md:px-20 px-4 lg:px-40 py-16 md:px-16 px-6 py-30">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -37,14 +41,14 @@ const SliceOfUtility = () => {
           className="relative flex flex-col justify-center"
         >
           <div className="text-center">
-            <LandingHero color="white">The Slice of Utility</LandingHero>
+            <LandingHero>The Slice of Utility</LandingHero>
           </div>
 
           <div className="flex flex-col md:flex-row items-center my-6 flex-wrap relative z-50 gap-7">
             <LandingText>
               Whether you're a builder, creator, degen, or just here for the
-              sauce — $PEPERONI isn't just a memecoin, it’s a full-course
-              utility token inside the world’s most flavorful Web3 experience.
+              sauce, $PEPERONI isn't just a memecoin, it’s a full-course utility
+              token inside the world’s most flavorful Web3 experience.
             </LandingText>
 
             <LandingText>
@@ -59,6 +63,26 @@ const SliceOfUtility = () => {
           <ParallaxPepperoni />
         </motion.div>
       </section>
+
+      {/* Cheese moon */}
+      <div className="absolute top-50 -left-130 translate-x-1/3 pointer-events-none z-0">
+        <motion.img
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
+          src={cheeseMoon}
+          alt="Cheese moon"
+          style={{
+            zIndex: 100,
+            transformOrigin: "center center",
+            animation: "clockSpin 350s linear infinite",
+            animationDelay: "0.2s",
+            animationFillMode: "forwards",
+          }}
+          className="w-[600px] relative -right-35"
+        />
+      </div>
     </Section>
   );
 };
