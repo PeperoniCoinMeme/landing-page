@@ -1,5 +1,5 @@
 import React from "react";
-import { cloud1, cloud2, cloud3 } from "../../assets";
+import { cloud1, cloud2, cloud3 } from "@/assets";
 
 const Clouds = () => {
   return (

@@ -1,37 +1,23 @@
 import React, { useState } from "react";
-import { Section } from "../../layout";
-import JoinButton from "../../components/JoinButton/JoinButton";
+import { Section } from "@/layout";
+
 import {
-  brickBg,
-  logo,
-  orangeScatteredYellow2,
-  pepeBanner,
   pepeCar,
   pepeCivilian,
   pepeClimbing,
   pepeFitSkinny,
   pepeFitStrong,
-  pepeLogo,
   pepePresident,
   pepeSpy,
   pepeSurf,
-  pepeWarrior,
-  transitionDownBg,
-  transitionUpBg,
-  waveYellowOrange2,
-} from "../../assets";
-import LandingHero from "../../components/design/tipography/LandingHero";
-import LandingText from "../../components/design/tipography/LandingText";
-import { galleryItems, overlayCards } from "../../constants";
-import OverlayCard from "../../components/OverlayCard/OverlayCard";
-import LandingButton from "../../components/design/buttons/LandingButton";
+} from "@/assets";
+import LandingHero from "@/components/design/tipography/LandingHero";
+import LandingText from "@/components/design/tipography/LandingText";
+import LandingButton from "@/components/design/buttons/LandingButton";
 import { useInView } from "react-intersection-observer";
 import { AnimatePresence, motion } from "framer-motion";
-import { layout } from "../../styles/styles";
-import Dialog from "@mui/material/Dialog";
-import DialogContent from "@mui/material/DialogContent";
-import ComingSoonDialog from "../../components/ComingSoonDialog/ComingSoonDialog";
-import Gallery from "../../components/Gallery/Gallery";
+import { layout } from "@/styles/styles";
+import Gallery from "@/components/Gallery/Gallery";
 import XMarkIcon from "@heroicons/react/24/solid/XMarkIcon";
 
 const Join = () => {
@@ -68,8 +54,6 @@ const Join = () => {
     setExpandedIndex(index);
   };
 
-  const [open, setOpen] = useState(false);
-
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
@@ -77,19 +61,6 @@ const Join = () => {
     triggerOnce: false,
     threshold: 0.2,
   });
-
-  const images = [
-    pepeBanner,
-    pepeFitStrong,
-    pepePresident,
-    pepeCivilian,
-    pepeSurf,
-    pepeSpy,
-    pepeClimbing,
-    pepeCar,
-    pepeWarrior,
-    pepeLogo,
-  ];
 
   return (
     <Section

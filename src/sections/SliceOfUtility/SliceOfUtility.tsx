@@ -1,23 +1,14 @@
-import React, { useRef } from "react";
-import { Section } from "../../layout";
-
-import {
-  brickBg,
-  cheeseMoon,
-  orangeScatteredYellow1,
-  orangeScatteredYellow2,
-  transitionDownBg,
-} from "../../assets";
-
-import { MouseParallax } from "react-just-parallax";
-import LandingButton from "../../components/design/buttons/LandingButton";
-import LandingHero from "../../components/design/tipography/LandingHero";
-import LandingText from "../../components/design/tipography/LandingText";
-import { ParallaxPepperoni } from "../../components/ParallaxPepperoni/ParallaxPepperoni";
+import React from "react";
+import { Section } from "@/layout";
+import { cheeseMoon } from "@/assets";
+import LandingButton from "@/components/design/buttons/LandingButton";
+import LandingHero from "@/components/design/tipography/LandingHero";
+import LandingText from "@/components/design/tipography/LandingText";
+import { ParallaxPepperoni } from "@/components/ParallaxPepperoni/ParallaxPepperoni";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import StarBackground from "../../components/StarBackground/StarBackground";
-import { layout } from "../../styles/styles";
+import StarBackground from "@/components/StarBackground/StarBackground";
+import { layout } from "@/styles/styles";
 
 const SliceOfUtility = () => {
   const { ref, inView } = useInView({

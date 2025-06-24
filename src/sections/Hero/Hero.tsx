@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { Section } from "../../layout";
-import { brickBg, iaOven } from "../../assets";
-import AnimatedCounter from "../../components/AnimatedCounter/AnimatedCounter";
-import LandingButton from "../../components/design/buttons/LandingButton";
-import LandingHero from "../../components/design/tipography/LandingHero";
-import LandingText from "../../components/design/tipography/LandingText";
-import HeroExperience from "../../components/models/Hero/HeroExperience";
+import { Section } from "@/layout";
+import { brickBg, iaOven } from "@/assets";
+import AnimatedCounter from "@/components/AnimatedCounter/AnimatedCounter";
+import LandingButton from "@/components/design/buttons/LandingButton";
+import LandingHero from "@/components/design/tipography/LandingHero";
+import LandingText from "@/components/design/tipography/LandingText";
+import HeroExperience from "@/components/models/Hero/HeroExperience";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { layout } from "../../styles/styles";
-import ComingSoonDialog from "../../components/ComingSoonDialog/ComingSoonDialog";
+import { layout } from "@/styles/styles";
+import ComingSoonDialog from "@/components/ComingSoonDialog/ComingSoonDialog";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 

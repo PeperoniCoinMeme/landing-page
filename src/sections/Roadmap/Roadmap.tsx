@@ -2,8 +2,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import GlowCard from "../../components/models/GlowCard";
-import { roadMapCardsB } from "../../constants";
+import GlowCard from "@/components/models/GlowCard";
+import { roadMapCardsB } from "@/constants";
 import {
   logo,
   mountainBg,
@@ -11,15 +11,14 @@ import {
   parachutes2,
   parachutes3,
   parachutes4,
-  pepeSun,
-} from "../../assets";
-import { Section } from "../../layout";
+} from "@/assets";
+import { Section } from "@/layout";
 import { useState, useEffect } from "react";
-import LandingSubtitle from "../../components/design/tipography/LandingSubtitle";
+import LandingSubtitle from "@/components/design/tipography/LandingSubtitle";
 import Clouds from "./Clouds";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { layout } from "../../styles/styles";
+import { layout } from "@/styles/styles";
 
 gsap.registerPlugin(ScrollTrigger);
 

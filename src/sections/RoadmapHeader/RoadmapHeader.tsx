@@ -1,15 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { logo, planetBg } from "../../assets";
-import LandingHero from "../../components/design/tipography/LandingHero";
-import LandingText from "../../components/design/tipography/LandingText";
-import { Section } from "../../layout";
-import { roadMapCardsA } from "../../constants";
-import GlowCard from "../../components/models/GlowCard";
-import LandingSubtitle from "../../components/design/tipography/LandingSubtitle";
+import { logo, planetBg } from "@/assets";
+import LandingHero from "@/components/design/tipography/LandingHero";
+import LandingText from "@/components/design/tipography/LandingText";
+import { Section } from "@/layout";
+import { roadMapCardsA } from "@/constants";
+import GlowCard from "@/components/models/GlowCard";
+import LandingSubtitle from "@/components/design/tipography/LandingSubtitle";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { layout } from "../../styles/styles";
+import { layout } from "@/styles/styles";
 
 const RoadmapHeader = () => {
   const { ref, inView } = useInView({
