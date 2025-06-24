@@ -131,7 +131,7 @@ const About = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a className="hero-btn md:bg-transparent md:text-white bg-orange-300"></a>
-              <LandingButton>🍕 Download LitePaper </LandingButton>
+              <LandingButton> Download LitePaper </LandingButton>
             </div>
           </motion.div>
 

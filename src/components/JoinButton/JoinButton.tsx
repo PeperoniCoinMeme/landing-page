@@ -19,13 +19,11 @@ const JoinButton: React.FC = () => {
           width={342}
           className="splash"
         >
-          {/* Asegúrate de pegar todos los <path> necesarios aquí */}
           <path
             strokeLinecap="round"
             strokeWidth={3}
             d="M54.1054 99.7837C54.1054 99.7837 40.0984 90.7874 26.6893 97.6362C13.2802 104.485 1.5 97.6362 1.5 97.6362"
           />
-          {/* ...otros paths */}
         </svg>
 
         <div className="wrap">

@@ -3,7 +3,9 @@ import { Section } from "../../layout";
 
 import {
   brickBg,
+  pepeBanner,
   splash,
+  tiktokVideo,
   transitionDownBg,
   transitionUpBg,
 } from "../../assets";
@@ -12,6 +14,8 @@ import LandingText from "../../components/design/tipography/LandingText";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { layout } from "../../styles/styles";
+import LandingVideo from "../../components/LandingVideo/LandingVideo";
+import Checkmark from "../../assets/svg/Checkmark";
 
 const MissionVibes = () => {
   const { ref, inView } = useInView({
@@ -19,24 +23,34 @@ const MissionVibes = () => {
     threshold: 0.2,
   });
 
+  const halfSectionPadding = "px-4 py-25 md:px-20 lg:px-40";
+
+  const highlights = [
+    "LP burned",
+    "Ownership renounced",
+    "Meme-first mission",
+    "Permissionless utility layer on Solana",
+  ];
+
   return (
     <Section
       id="missionvibes"
-      className={`${layout.section} ${layout.sectionHeight}`}
+      className={`${layout.section} min-h-190`}
       bgColor="linear-gradient(180deg, #0c0500, #000000)"
     >
-      <section className="overflow-hidden px-4 md:px-20 lg:px-40 rounded-xl py-16 md:px-16 px-6 py-25">
+      <section
+        className={`overflow-hidden flex flex-col lg:flex-row-reverse ${halfSectionPadding}`}
+      >
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative flex flex-col jutify-center"
+          className="relative flex flex-col jutify-center flex-1"
         >
-          <div className="text-center">
+          <div className="flex flex-col my-6 flex-wrap relative z-50 gap-7">
             <LandingHero>Mission & Vibes</LandingHero>
-          </div>
-          <div className="flex flex-col md:flex-row items-center my-6 flex-wrap relative z-50 gap-7">
+
             <LandingText>
               "Cooked by the People". What happens when you throw community,
               culture, and a little insanity into a Solana oven? You get
@@ -52,38 +66,42 @@ const MissionVibes = () => {
             Built different
           </p>
           {/* It’s not just a vibe — it’s a movement with mozzarella. */}
-          <div className="flex flex-col md:flex-row gap-4 mt-2 z-50">
-            <div className="w-full md:w-40 flex justify-center items-center text-xs text-white shadow-lg font-bold bg-gradient-to-r from-zinc-800 to-zinc-800 rounded-xl px-4 py-3 md:py-1">
-              LP burned
-            </div>
-            <div className="w-full md:w-40 flex justify-center items-center text-xs text-white shadow-lg font-bold bg-gradient-to-r from-zinc-800 to-zinc-800 rounded-xl px-4 py-3 md:py-1">
-              Ownership renounced
-            </div>
-            <div className="w-full md:w-40 flex justify-center items-center text-xs text-white shadow-lg font-bold bg-gradient-to-r from-zinc-800 to-zinc-800 rounded-xl px-4 py-3 md:py-1">
-              Meme-first mission
-            </div>
-            <div className="w-full md:w-40 flex justify-center items-center text-xs text-white shadow-lg font-bold bg-gradient-to-r from-zinc-800 to-zinc-800 rounded-xl px-4 py-3 md:py-1">
-              Permissionless utility layer on Solana
-            </div>
+          <div className="flex flex-col md:flex-row gap-3 mt-2 z-50 md:max-w-150">
+            {highlights.map((text, index) => (
+              <div
+                key={index}
+                className="px-5 md:px-0
+            w-full md:w-44 text-sm text-gray-100 transition-transform duration-300 hover:scale-110
+            flex flex-col gap-3"
+              >
+                <Checkmark />
+                {text}
+              </div>
+            ))}
           </div>
           <div className="py-8">{/* <LandingButton>See</LandingButton> */}</div>
         </motion.div>
 
-        <div className="hole absolute bottom-20 left-1/2">
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
+        <div className="relative flex-1 flex flex-col items-center min-w-6/12 m-5">
+          <LandingVideo src={tiktokVideo} className="rounded-md md:h-120" />
+          <div className="absolute top-0 left-0 w-full h-full flex items-center bg-black/10 justify-center z-10 text-white"></div>
         </div>
 
+        {/* <div className="hole absolute bottom-20 left-1/2">
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div> */}
+
         {/* Cheese With Pepperoni Splash */}
-        <div className="top-110 left-40 md:top-60 md:left-150 absolute pointer-events-none z-0 overflow-hidden">
+        {/* <div className="top-110 right-40 md:top-100 md:right-0 absolute pointer-events-none z-0 overflow-hidden">
           <img
             src={splash}
             alt="Pepperoni Pizza"
@@ -91,9 +109,9 @@ const MissionVibes = () => {
               zIndex: 9999,
               transformOrigin: "center center",
             }}
-            className="md:w-[500px] w-[250px] relative"
+            className="md:w-[350px] w-[250px] relative"
           />
-        </div>
+        </div> */}
       </section>
       <div className="absolute top-0 min-w-full w-[1920px] h-24 bg-gradient-to-t from-transparent to-[#0c0500] pointer-events-none z-9999" />
     </Section>

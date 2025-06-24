@@ -122,6 +122,7 @@ import pepeSun from "./landscape/pepe-sun.png";
 import sunsetGradientBg from "./landscape/sunset-gradient-background.png";
 import blurryDarkGradient from "./svg/blurry-dark-gradient.svg";
 import about from "./about.png";
+import tiktokVideo from "./tiktok-video.mp4";
 
 export {
   goldenMemeCoin,
@@ -140,6 +141,8 @@ export {
   pepeSurf,
   pepeWarrior,
   pepeLogo,
+  //
+  tiktokVideo,
   //
   parachutes1,
   parachutes2,

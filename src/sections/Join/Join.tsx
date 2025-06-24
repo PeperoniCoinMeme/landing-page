@@ -26,8 +26,13 @@ import { galleryItems, overlayCards } from "../../constants";
 import OverlayCard from "../../components/OverlayCard/OverlayCard";
 import LandingButton from "../../components/design/buttons/LandingButton";
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { layout } from "../../styles/styles";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import ComingSoonDialog from "../../components/ComingSoonDialog/ComingSoonDialog";
+import Gallery from "../../components/Gallery/Gallery";
+import XMarkIcon from "@heroicons/react/24/solid/XMarkIcon";
 
 const Join = () => {
   const [expandedIndex, setExpandedIndex] = useState(0);
@@ -63,6 +68,11 @@ const Join = () => {
     setExpandedIndex(index);
   };
 
+  const [open, setOpen] = useState(false);
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.2,
@@ -80,6 +90,7 @@ const Join = () => {
     pepeWarrior,
     pepeLogo,
   ];
+
   return (
     <Section
       id="join"
@@ -89,7 +100,7 @@ const Join = () => {
       <section className="relative md:px-20 px-4 py-40 lg:px-40 flex flex-col md:flex-row">
         <div className="cta-card">
           <div
-            className="overflow-hidden flex items-center rounded-2xl justify-center p-4 relative"
+            className="overflow-hidden flex items-center rounded-2xl justify-center p-4 relative border-1 border-gray-200/30"
             style={{
               backgroundImage: `url(${panels[expandedIndex].image})`,
               backgroundRepeat: "no-repeat",
@@ -97,7 +108,7 @@ const Join = () => {
             }}
           >
             <div className="inset-0 absolute bg-[rgba(0,0,0,0.7)] backdrop-blur-md z-0"></div>
-            <div className="md:p-8 p-16 flex flex-col md:flex-row gap-2 items-center justify-center z-10">
+            <div className="md:p-8 p-16 flex flex-col xl:flex-row gap-2 items-center justify-center z-10">
               <motion.div
                 ref={ref}
                 initial={{ opacity: 0, y: 50 }}
@@ -117,23 +128,23 @@ const Join = () => {
                 {/* <div className="mt-15 px-10">
                   <JoinButton />
               </div> */}
-                <div className="pt-12">
-                  <LandingButton>More</LandingButton>
+                <div className="pt-12 relative">
+                  <LandingButton onClick={toggleMenu}>Gallery</LandingButton>
                 </div>
               </motion.div>
 
-              <div className="flex p-4 items-center h-[70vh] justify-center gap-1">
+              <div className="hidden lg:flex px-16 py-8 items-center h-[80vh] max-h-[500px] justify-center gap-1">
                 {panels.map((panel, index) => (
                   <div
                     key={index}
                     onClick={() => handleClick(index)}
                     className={`
-              h-full rounded-2xl bg-white cursor-pointer border-1 border-black/50
+              h-full rounded-lg bg-white cursor-pointer border-1 border-black/50
               transition-all duration-500 ease-in-out overflow-hidden 
               ${
                 expandedIndex === index
                   ? "w-[60%] "
-                  : "w-[10%] hover:bg-gray-200"
+                  : "w-[8%] hover:bg-gray-200"
               }
               min-w-[40px] block
             `}
@@ -177,7 +188,45 @@ const Join = () => {
           </div>
         </div> */}
       </section>
-      <div className="absolute top-0 min-w-full w-[1920px] h-24 bg-gradient-to-t from-transparent to-[#0c0500] pointer-events-none z-9999" />
+
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            {/* Overlay blur background */}
+            <motion.div
+              className="fixed inset-0 bg-black-800 bg-opacity-90 backdrop-blur-md z-500"
+              onClick={toggleMenu}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            />
+
+            {/* Modal panel */}
+            <motion.div
+              className="fixed z-600 inset-0 flex h-full items-center justify-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+            >
+              <div
+                className="relative bg-dark-dough p-6 w-full space-y-6 flex justify-center"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  onClick={toggleMenu}
+                  className="absolute top-25 right-5 text-[var(--color-pepperoni)] hover:text-red-400 transition"
+                >
+                  <XMarkIcon className="h-10 w-10 m-10 text-orange-600 text-shadow-lg" />
+                </button>
+
+                <Gallery />
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+      <div className="absolute top-0 min-w-full w-[1920px] h-24 bg-gradient-to-t from-transparent to-[#0c0500] pointer-events-none z-500" />
     </Section>
   );
 };

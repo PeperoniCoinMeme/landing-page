@@ -128,13 +128,13 @@ export const overlayCards: OverlayCards[] = [
 export const roadMapCardsA: RoadMapCards[] = [
   {
     review:
-      "The Great PEPE Launch - Our token rises like dough in a warm kitchen! Initial toppings (liquidity) added to the crypto pizza oven. Whitepaper served with extra cheese.",
+      "The official $PEPERONI listing on a Solana’s DEX. Let the swaps begin and the oven starts warming.",
     title: "🥇 M1 — Token Goes Live on Solana’s DEX",
     date: "Phase 1: Dough Preparation",
   },
   {
     review:
-      "PEPE Staking goes live - Earn extra toppings by locking your slices! First major exchange listing (PizzaSwap). Community grows faster than a yeast infection (the good kind!).",
+      "Launch the on-chain most valuable pizza in the history where the community fights for meme glory and $PEPERONI.",
     title: "🔥 M2 — Bake the Most Valuable Pizza Over the World",
     date: "Phase 2: Sauce Spread",
   },
@@ -142,39 +142,39 @@ export const roadMapCardsA: RoadMapCards[] = [
 export const roadMapCardsB: RoadMapCards[] = [
   {
     review:
-      "PEPE goes multi-chain - Like delivering to new neighborhoods! PEPE DeFi Kitchen opens with yield farming. First real-world pizza bought with PEPE (historic moment captured on blockchain).",
+      "A full-stack toolkit for meme creators, degens, and community builders powered by $PEPERONI.",
     title: "🤖 M3 — Peperoni as a Service (PaaS)",
     date: "Phase 3: Cheese Melt",
   },
   {
     review:
-      "PEPE Ecosystem sizzles - NFT toppings collection drops. PEPE becomes official currency of 3 pizza chains. Community burns 50% supply in the Great Pizza Oven event.",
+      "Grab the hottest meme merch straight from the oven. Think “Redbubble meets meme coin culture” — but spicy, fast, and fueled by $PEPERONI.",
     title: "🧢 M4 — Merchandising Store Goes Live",
     date: "Phase 4: Golden Crust",
   },
   {
     review:
-      "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
+      "Enable $PEPERONI as the native payment method across all our services. From tools to merch, the pepper gets you in.",
     title: "💰 M5 — $PEPERONI as Payment Integration",
     date: "Phase 5: Infinite Toppings",
   },
   {
     review:
-      "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
+      "Launch meme tokens without code in minutes. Think “$DOGELauncher” but Solana-speed and peppered with vibes.",
     title: "🚀 M6 — Meme Coin Launchpad",
-    date: "Phase 5: Infinite Toppings",
+    date: "Phase 6: Infinite Toppings",
   },
   {
     review:
-      "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
+      "Drop spicy tokens to your meme-loving followers, no devs needed. Think “Solana faucet meets meme campaign” fast, fun, and powered by $PEPERONI.",
     title: "🪂 M7 — Meme Airdrop Tool",
-    date: "Phase 5: Infinite Toppings",
+    date: "Phase 7: Infinite Toppings",
   },
   {
     review:
-      "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
+      "Permissionless wallet-based forms for token sales, whitelists, contests, and more. No Google Forms only meme forms.",
     title: "📄 M8 — Meme On-Chain Form Tool",
-    date: "Phase 5: Infinite Toppings",
+    date: "Phase 8: Infinite Toppings",
   },
 ];
 
