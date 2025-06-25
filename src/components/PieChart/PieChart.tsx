@@ -154,7 +154,7 @@ export default function PieAnimation() {
 
       <motion.div
         layout // smooth changes
-        className="border-2 border-gray-500/50 rounded-2xl bg-white/20 p-5 max-w-100 bg-gradient-to-b from-black/90 to-orange-900/20"
+        className=""
       >
         <AnimatePresence mode="wait">
           <motion.div
