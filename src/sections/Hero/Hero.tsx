@@ -7,11 +7,10 @@ import LandingHero from "@/components/design/tipography/LandingHero";
 import LandingText from "@/components/design/tipography/LandingText";
 import HeroExperience from "@/components/models/Hero/HeroExperience";
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { layout } from "@/styles/styles";
-import ComingSoonDialog from "@/components/ComingSoonDialog/ComingSoonDialog";
 import Dialog from "@mui/material/Dialog";
-import DialogContent from "@mui/material/DialogContent";
+import LandingTitle from "@/components/design/tipography/LandingTitle";
 
 const Hero = () => {
   const { ref, inView } = useInView({
@@ -22,6 +21,7 @@ const Hero = () => {
   const zIndexOven = 100;
 
   const [open, setOpen] = useState(false);
+  const handleClose = () => setOpen(false);
 
   return (
     <Section
@@ -100,9 +100,32 @@ const Hero = () => {
             Buy
           </LandingButton>
           <Dialog open={open} onClose={() => setOpen(false)}>
-            <DialogContent>
-              <ComingSoonDialog />
-            </DialogContent>
+            <AnimatePresence>
+              {open && (
+                <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
+                  <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.8, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="flex flex-col justify-center items-center shadow-xl max-w-md text-white w-full text-center gap-3"
+                  >
+                    <LandingTitle className="animate-bounce">
+                      🚧 Coming Soon 🚧
+                    </LandingTitle>
+                    <LandingText>
+                      We’re building something amazing. Check back soon!
+                    </LandingText>
+                    <LandingButton
+                      onClick={() => setOpen(false)}
+                      className="my-5"
+                    >
+                      Close
+                    </LandingButton>
+                  </motion.div>
+                </div>
+              )}
+            </AnimatePresence>
           </Dialog>
         </div>
       </div>
