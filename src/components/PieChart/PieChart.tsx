@@ -166,14 +166,17 @@ export default function PieAnimation() {
             layout // smooth changes
             className="flex flex-col items-start text-start gap-3 w-full"
           >
-            <LandingSubtitle color="white">
-              {distribution[currentSelectedItem - 1].label}
-            </LandingSubtitle>
+            <div className="flex flex-row w-full items-center justify-between">
+              <LandingSubtitle color="white">
+                {distribution[currentSelectedItem - 1].label}
+              </LandingSubtitle>
 
-            <span className="rounded-full border-1 border-white/50 flex flex-row items-center justify-center gap-2 px-4 py-1">
-              <InsightsIcon />
-              <p>{distribution[currentSelectedItem - 1].alocation}</p>
-            </span>
+              <span className="mb-2 rounded-full border-1 border-white/50 flex flex-row items-center justify-center gap-2 px-4 py-1">
+                <InsightsIcon />
+                <p>{distribution[currentSelectedItem - 1].alocation}</p>
+              </span>
+            </div>
+
             <Divider
               orientation="horizontal"
               flexItem
