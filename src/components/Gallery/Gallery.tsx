@@ -54,7 +54,6 @@ const Gallery = () => {
     pepeLibrary,
     pepePeperoni,
     pepePig,
-    pepeResurrection,
     pepeCar,
     pepeCivilian,
     pepeClimbing,
@@ -98,10 +97,7 @@ const Gallery = () => {
           const orderedImages = isEven ? chunk : [...chunk].reverse();
 
           return (
-            <div
-              key={strip}
-              className={`gap-5 gallery__strip--${strip} max-w-[25%]`}
-            >
+            <div key={strip} className={`gap-5 gallery__strip--${strip}`}>
               {orderedImages.map((src, imgIndex) => (
                 <GalleryCard
                   key={`${stripIndex}-${imgIndex}`}

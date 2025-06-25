@@ -85,3 +85,27 @@
   opacity: 1;
   transform: rotate(-45deg) translateY(300%);
 }
+
+/* Riples */
+.ripple {
+  position: absolute;
+  background: #ee0a0a;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: ripple 2s linear infinite;
+  transition: 0.5s;
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
