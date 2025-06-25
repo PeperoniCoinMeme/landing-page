@@ -1,6 +1,5 @@
 import React from "react";
 import "./LandingVideo.css";
-import { div } from "framer-motion/client";
 
 interface LandingVideoProps {
   src: string;
@@ -20,18 +19,16 @@ const LandingVideo: React.FC<LandingVideoProps> = ({
   autoPlay = true,
 }) => {
   return (
-    <div className="m2">
-      <video
-        className={` ${className}`}
-        src={src}
-        poster={poster}
-        autoPlay={autoPlay}
-        muted={muted}
-        loop={loop}
-        playsInline
-        preload="auto"
-      />
-    </div>
+    <video
+      className={className}
+      src={src}
+      poster={poster}
+      autoPlay={autoPlay}
+      muted={muted}
+      loop={loop}
+      playsInline
+      preload="auto"
+    />
   );
 };
 

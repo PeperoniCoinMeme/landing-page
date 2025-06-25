@@ -1,26 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Fredoka";
-  src: local("Fredoka"),
-    url("../../public/fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Inter";
-  src: local("Inter"),
-    url("../../public/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
-  font-weight: semibold;
-}
-@font-face {
-  font-family: "Poppins";
-  src: local("Poppins"), url("../../public/fonts/Poppins/Poppins-Light.ttf");
-}
-@font-face {
-  font-family: "Bangers";
-  src: local("bangers"), url("../../public/fonts/Bangers/Bangers-Regular.ttf");
-}
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -126,22 +105,6 @@
   height: 100%;
   border-radius: 10px;
   z-index: -1;
-}
-
-@layer utilities {
-  .animate-float-slow {
-    animation: float 4s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-30px);
-    }
-  }
 }
 
 @layer components {

@@ -1,13 +1,15 @@
 import React from "react";
 import { Section } from "@/layout";
-import { tiktokVideo } from "@/assets";
+import { pepeBanner, smartPhone, tiktokVideo } from "@/assets";
 import LandingHero from "@/components/design/tipography/LandingHero";
 import LandingText from "@/components/design/tipography/LandingText";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { layout } from "@/styles/styles";
 import LandingVideo from "@/components/LandingVideo/LandingVideo";
+import "./MissionVibes.css";
 import Checkmark from "@/assets/svg/Checkmark";
+import LandingCaption from "@/components/design/tipography/LandingCaption";
 
 const MissionVibes = () => {
   const { ref, inView } = useInView({
@@ -67,16 +69,32 @@ const MissionVibes = () => {
             flex flex-col gap-3"
               >
                 <Checkmark />
-                {text}
+                <LandingCaption>{text}</LandingCaption>
               </div>
             ))}
           </div>
           <div className="py-8">{/* <LandingButton>See</LandingButton> */}</div>
         </motion.div>
 
-        <div className="relative flex-1 flex flex-col items-center min-w-6/12 m-5">
-          <LandingVideo src={tiktokVideo} className="rounded-md md:h-120" />
-          <div className="absolute top-0 left-0 w-full h-full flex items-center bg-black/10 justify-center z-10 text-white"></div>
+        <div className="relative flex-1 flex flex-col items-center min-w-6/12 ">
+          <div className="h-150 w-100 parent-depth relative">
+            <LandingVideo
+              src={tiktokVideo}
+              className="video-depth absolute transform shadow-2xl"
+            />
+            {/* <div className="m2"></div> */}
+
+            <div
+              style={{
+                background: `url(${smartPhone})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+              className="h-150 w-100 parent-depth absolute"
+            ></div>
+          </div>
+
+          {/* <div className="absolute top-0 left-0 w-full h-full flex items-center bg-black/10 justify-center z-10 text-white"></div> */}
         </div>
 
         {/* <div className="hole absolute bottom-20 left-1/2">

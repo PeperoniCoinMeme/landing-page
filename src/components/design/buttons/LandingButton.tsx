@@ -19,6 +19,8 @@ interface LandingButtonProps {
   children: string;
   bgColor?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  href?: string;
+  downloadName?: string;
 }
 
 const Section: React.FC<LandingButtonProps> = ({
@@ -26,12 +28,29 @@ const Section: React.FC<LandingButtonProps> = ({
   children,
   bgColor = "#ff4500",
   onClick,
+  href,
+  downloadName,
 }) => {
   const styles: React.CSSProperties = {
     backgroundColor: bgColor,
     borderColor: darkenHexColor(bgColor, 0.1),
     zIndex: 1000,
   };
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        download={downloadName}
+        target="_blank" // 👉 new tab
+        // rel="noopener noreferrer" // ✅ good practices
+        className={`landing-button ${className || ""}`}
+        style={styles}
+      >
+        {children}
+      </a>
+    );
+  }
 
   return (
     <button

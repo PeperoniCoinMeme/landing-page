@@ -1,11 +1,11 @@
 import React from "react";
 
-interface LandingTextProps {
+interface LandingCaptionProps {
   color?: string;
   children: any;
   className?: string;
 }
-const LandingText: React.FC<LandingTextProps> = ({
+const LandingCaption: React.FC<LandingCaptionProps> = ({
   className,
   color,
   children,
@@ -14,12 +14,12 @@ const LandingText: React.FC<LandingTextProps> = ({
     color: color,
     zIndex: 1000,
     fontFamily: "montserrat",
-    fontSize: "17px",
+    fontSize: "14px",
   };
 
   return (
     <p
-      className={`text-shadow-sm font-medium transition-all max-w-2xl pointer-events-none ${
+      className={`text-shadow-sm font-medium transition-all max-w-lg pointer-events-none ${
         className || ""
       }`}
       style={styles}
@@ -29,4 +29,4 @@ const LandingText: React.FC<LandingTextProps> = ({
   );
 };
 
-export default LandingText;
+export default LandingCaption;

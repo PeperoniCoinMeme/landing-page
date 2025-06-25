@@ -95,6 +95,7 @@ import binance from "@/assets/binance.png";
 import coinbase from "@/assets/coinbase.png";
 import dropbox from "@/assets/dropbox.png";
 import goldStar from "@/assets/svg/hp_gold_star.png";
+import smartPhone from "@/assets/mock/smartphone.png";
 
 import google from "@/assets/google.svg";
 import apple from "@/assets/apple.svg";
@@ -165,6 +166,7 @@ export {
   coinbase,
   dropbox,
   goldStar,
+  smartPhone,
   google,
   apple,
   discount,

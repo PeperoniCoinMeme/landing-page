@@ -59,6 +59,9 @@ const About = () => {
     );
   });
 
+  const litePaper =
+    "https://github.com/PeperoniCoinMeme/litepaper/blob/4e955908f2ebfc7bc63c6ed6f387e2e5ec642c53/asset/PEPERONI_LitePAPER.pdf";
+
   return (
     <Section
       id="about"
@@ -120,8 +123,8 @@ const About = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a className="hero-btn md:bg-transparent md:text-white bg-orange-300"></a>
-              <LandingButton> Download LitePaper </LandingButton>
+              {/* <a className="hero-btn md:bg-transparent md:text-white bg-orange-300"></a> */}
+              <LandingButton href={litePaper}>Download LitePaper</LandingButton>
             </div>
           </motion.div>
 
@@ -131,7 +134,7 @@ const About = () => {
               <img
                 src={goldenMemeCoin}
                 alt="Illustration of Peperoni Coin - crypto meets pizza"
-                className="w-[100px] md:w-[400px] animate-float-slow meme-coin--glow"
+                className="w-[100px] md:w-[300px] animate-float-slow meme-coin--glow"
               />
               {/* <span className="w-[180 px] hero-img-shadow top-60"></span> */}
             </div>

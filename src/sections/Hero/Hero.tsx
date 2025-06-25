@@ -30,16 +30,16 @@ const Hero = () => {
       bgColor="#191716"
       backgroundSvg={brickBg}
     >
-      <div className="pt-40 flex flex-col sm:flex-row justify-around px-5">
+      <div className="pt-38 flex flex-col sm:flex-row justify-around px-5">
         {/* First Info container */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col p-10 md:p-18 justify-center flex-1"
+          className="flex flex-col p-10 md:p-18 md:py-30 justify-center flex-1"
         >
-          <LandingHero className="mt-5">
+          <LandingHero className="mt-10">
             DELICIOUSLY <br />
             COOKED BY YOU
           </LandingHero>{" "}
@@ -62,7 +62,7 @@ const Hero = () => {
             <img
               src={iaOven}
               alt=""
-              className="absolute max-w-190 md:max-w-270 -top-40 -left-50 md:-top-120 md:-left-86"
+              className="absolute max-w-190 md:max-w-270 -top-40 -left-50 md:-top-135 md:-left-86"
               style={{ zIndex: zIndexOven }}
             />
           </div>
@@ -87,10 +87,10 @@ const Hero = () => {
       </div>
 
       <div
-        className="min-w-full flex flex-col md:flex-row justify-center mt-30"
+        className="min-w-full flex flex-col md:flex-row justify-center"
         style={{ zIndex: zIndexOven + 1 }}
       >
-        <div className="flex flex-col sm:flex-row items-center justify-center z-100 -mt-3">
+        <div className="flex flex-col sm:flex-row items-center justify-center z-100 -mt-8">
           <LandingButton onClick={() => setOpen(true)} bgColor="#3f2c2f">
             Buy
           </LandingButton>

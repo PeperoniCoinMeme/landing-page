@@ -15,6 +15,7 @@ import Divider from "@mui/material/Divider";
 import InsightsIcon from "@mui/icons-material/Insights";
 import { motion, AnimatePresence } from "framer-motion";
 import { peperoniPizza } from "../../assets";
+import LandingText from "../design/tipography/LandingText";
 
 export default function PieAnimation() {
   const { ref, inView } = useInView({
@@ -178,9 +179,9 @@ export default function PieAnimation() {
               flexItem
               sx={{ borderColor: "#FFA8005A" }} // Cambia aquí por el color que prefieras
             />
-            <p className="text-white">
+            <LandingText className="text-white">
               {distribution[currentSelectedItem - 1].purpose}
-            </p>
+            </LandingText>
           </motion.div>
         </AnimatePresence>
       </motion.div>
