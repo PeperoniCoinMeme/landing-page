@@ -124,54 +124,57 @@ export const overlayCards: OverlayCards[] = [
     iconUrl: pepeLogo,
   },
 ];
-export const roadMapCards: RoadMapCards[] = [
+
+export const roadMapCardsA: RoadMapCards[] = [
   {
     review:
-      "The Great PEPE Launch - Our token rises like dough in a warm kitchen! Initial toppings (liquidity) added to the crypto pizza oven. Whitepaper served with extra cheese.",
-    title: "🥇 M1 — Token Goes Live on Solana’s DEX",
+      "The official $PEPERONI listing on a Solana’s DEX. Let the swaps begin and the oven starts warming.",
+    title: "M1 — Token Goes Live on Solana’s DEX",
     date: "Phase 1: Dough Preparation",
   },
   {
     review:
-      "PEPE Staking goes live - Earn extra toppings by locking your slices! First major exchange listing (PizzaSwap). Community grows faster than a yeast infection (the good kind!).",
-    title: "🔥 M2 — Bake the Most Valuable Pizza Over the World",
+      "Launch the on-chain most valuable pizza in the history where the community fights for meme glory and $PEPERONI.",
+    title: "M2 — Bake the Most Valuable Pizza Over the World",
     date: "Phase 2: Sauce Spread",
   },
+];
+export const roadMapCardsB: RoadMapCards[] = [
   {
     review:
-      "PEPE goes multi-chain - Like delivering to new neighborhoods! PEPE DeFi Kitchen opens with yield farming. First real-world pizza bought with PEPE (historic moment captured on blockchain).",
-    title: "🤖 M3 — Peperoni as a Service (PaaS)",
+      "A full-stack toolkit for meme creators, degens, and community builders powered by $PEPERONI.",
+    title: "M3 — Peperoni as a Service (PaaS)",
     date: "Phase 3: Cheese Melt",
   },
   {
     review:
-      "PEPE Ecosystem sizzles - NFT toppings collection drops. PEPE becomes official currency of 3 pizza chains. Community burns 50% supply in the Great Pizza Oven event.",
-    title: "🧢 M4 — Merchandising Store Goes Live",
+      "Grab the hottest meme merch straight from the oven. Think “Redbubble meets meme coin culture” — but spicy, fast, and fueled by $PEPERONI.",
+    title: "M4 — Merchandising Store Goes Live",
     date: "Phase 4: Golden Crust",
   },
   {
     review:
-      "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
-    title: "💰 M5 — $PEPERONI as Payment Integration",
+      "Enable $PEPERONI as the native payment method across all our services. From tools to merch, the pepper gets you in.",
+    title: "M5 — $PEPERONI as Payment Integration",
     date: "Phase 5: Infinite Toppings",
   },
   {
     review:
-      "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
-    title: "🚀 M6 — Meme Coin Launchpad",
-    date: "Phase 5: Infinite Toppings",
+      "Launch meme tokens without code in minutes. Think “$DOGELauncher” but Solana-speed and peppered with vibes.",
+    title: "M6 — Meme Coin Launchpad",
+    date: "Phase 6: Infinite Toppings",
   },
   {
     review:
-      "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
-    title: "🪂 M7 — Meme Airdrop Tool",
-    date: "Phase 5: Infinite Toppings",
+      "Drop spicy tokens to your meme-loving followers, no devs needed. Think “Solana faucet meets meme campaign” fast, fun, and powered by $PEPERONI.",
+    title: "M7 — Meme Airdrop Tool",
+    date: "Phase 7: Infinite Toppings",
   },
   {
     review:
-      "PEPE World Domination - Franchise PEPE pizzerias worldwide. Launch PEPE Space Program (actual pizza delivery to ISS). Secret project: The Pepperoni Protocol (shhh!).",
-    title: "📄 M8 — Meme On-Chain Form Tool",
-    date: "Phase 5: Infinite Toppings",
+      "Permissionless wallet-based forms for token sales, whitelists, contests, and more. No Google Forms only meme forms.",
+    title: "M8 — Meme On-Chain Form Tool",
+    date: "Phase 8: Infinite Toppings",
   },
 ];
 
@@ -379,5 +382,63 @@ export const socialMedia: SocialMedia[] = [
     // icon: coinmarketcap,
     link: "#cmc",
     name: "CoinMarketCap",
+  },
+];
+
+type GalleryItem = {
+  id: string;
+  imageUrl: string;
+  title: string;
+  description: string;
+};
+
+export const galleryItems: GalleryItem[] = [
+  {
+    id: "1",
+    imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+    title: "Paisaje Montañoso",
+    description: "Hermoso atardecer en las montañas con colores vibrantes",
+  },
+  {
+    id: "2",
+    imageUrl: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
+    title: "Bosque Encantado",
+    description: "Sendero a través de un bosque denso con luz solar filtrada",
+  },
+  {
+    id: "3",
+    imageUrl: "https://images.unsplash.com/photo-1429087969512-1e85aab2683d",
+    title: "Océano Infinito",
+    description: "Vista panorámica del océano con olas rompiendo",
+  },
+  {
+    id: "4",
+    imageUrl: "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+    title: "Lago Sereno",
+    description: "Aguas cristalinas reflejando las montañas circundantes",
+  },
+  {
+    id: "5",
+    imageUrl: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05",
+    title: "Neblina Matutina",
+    description: "Amanecer en el campo con neblina y rayos de sol",
+  },
+  {
+    id: "6",
+    imageUrl: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d",
+    title: "Selva Tropical",
+    description: "Vegetación exuberante en un entorno de selva húmeda",
+  },
+  {
+    id: "7",
+    imageUrl: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e",
+    title: "Formaciones Rocosas",
+    description: "Extrañas formaciones geológicas bajo un cielo dramático",
+  },
+  {
+    id: "8",
+    imageUrl: "https://images.unsplash.com/photo-1511497584788-876760111969",
+    title: "Ciudad Nocturna",
+    description: "Skyline urbano iluminado en la noche con rascacielos",
   },
 ];

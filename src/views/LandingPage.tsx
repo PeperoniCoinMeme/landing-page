@@ -1,85 +1,71 @@
-import React from "react";
-import { About, CTA, Hero, Tokenomics } from "../components";
-import { Navbar, Footer } from "../layout";
-
+import React, { useEffect, useState } from "react";
+import { Navbar, Footer } from "@/layout";
 import {
-  peperoniPizza,
-  waveYellowBlack1,
-  waveYellowBlack2,
-  waveYellowBlack4,
-  waveYellowBlack5,
-  waveYellowDark1,
-  waveYellowDark2,
-  waveYellowOrange1,
-  waveYellowOrange2,
-  waveYellowWhite1,
-  waveYellowWhite2,
-  waveYellowWhite3,
-} from "../assets";
+  Hero,
+  About,
+  Join,
+  MissionVibes,
+  Roadmap,
+  SliceOfUtility,
+  Slicenomics,
+} from "@/sections";
+import RoadmapHeader from "@/sections/RoadmapHeader/RoadmapHeader";
+import Loader from "@/components/Loader/Loader";
+import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 
-import Roadmap from "../components/Roadmap/Roadmap";
-import WavySpacer from "../components/design/WavySpacer";
-import MissionVibes from "../components/MissionVibes/MissionVibes";
+const imageList = [
+  "/images/hero.jpg",
+  "/images/logo.png",
+  "/images/banner.jpg",
+];
 
-import Join from "../components/Join/Join";
-import SliceOfUtility from "../components/SliceOfUtility/SliceOfUtility";
-import Feature from "../components/Feature/Feature";
+const preloadImage = (src: string): Promise<void> => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => resolve();
+    img.onerror = () => reject();
+  });
+};
 
 const LandingPage = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    Promise.all(imageList.map(preloadImage))
+      .then(() => setLoading(false))
+      .catch(() => setLoading(false));
+  }, []);
+
+  if (loading) return <Loader />;
+
   return (
-    <div className="overflow-hidden w-full max-w-[1920px] square-framed-container m-auto">
+    <div className="overflow-hidden w-full max-w-[1920px] m-auto">
       <Navbar />
+      <BackToTopButton />
+
       {/* 1 */}
       <Hero />
 
       {/* 2 */}
       <About />
-      <WavySpacer bgWaveUrl={waveYellowDark1} flip={false} />
 
       {/* 3 */}
       <MissionVibes />
-      <Feature />
+      {/* <Feature /> */}
+
       {/* 4 */}
       <SliceOfUtility />
-      <WavySpacer bgWaveUrl={waveYellowDark2} flip={true} />
 
       {/* 5 */}
-      <Tokenomics />
-      {/* Pepperoni Pizza */}
-      <div className="absolute top-900 md:top-1200 right-0 opacity-30 pointer-events-none z-11 overflow-hidden">
-        <img
-          src={peperoniPizza}
-          alt="Pepperoni Pizza"
-          style={{
-            zIndex: 9999,
-            transformOrigin: "center center",
-            animation: "clockSpin 20s linear infinite",
-          }}
-          className="w-[450px] relative -right-40"
-        />
-        <style>{`
-          @keyframes clockSpin {
-            from {
-              transform: rotate(0deg);
-            }
-            to {
-              transform: rotate(360deg);
-            }
-          }
-        `}</style>
-      </div>
+      <Slicenomics />
 
-      <WavySpacer bgWaveUrl={waveYellowDark1} flip={false} />
       {/* <LogoShowcase /> */}
 
       {/* 6 */}
+      <RoadmapHeader />
       <Roadmap />
-      <WavySpacer bgWaveUrl={waveYellowBlack4} flip={false} />
-      {/* <GlowingTokenOrbit
-        imageSrc={logo}
-        label="$PEPERONI – THE MOST DELICIOUS TOKEN"
-      /> */}
-      {/* <InfiniteCarousel images={images} speed={30} /> */}
+
       {/* <WavySpacer bgWaveUrl={waveYellowBlack1} flip={true} /> */}
       {/* 7 */}
       <Join />

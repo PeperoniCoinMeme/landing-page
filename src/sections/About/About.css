@@ -1,0 +1,68 @@
+.grid-memes {
+  position: absolute;
+  top: 120px;
+  right: -200px;
+  z-index: 0;
+
+  transform-style: preserve-3d;
+  border-radius: 32px;
+  transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+  opacity: 0.9;
+  transition: 0.6s ease all;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 16px;
+  max-width: 600px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+  box-shadow: -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+    28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+}
+
+.grid-item img:hover {
+  transform: translate3d(0px, 0px, 1px);
+  box-shadow: 1px 1px 0 1px #ce32075e, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+    54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+}
+
+.meme-coin--glow {
+  padding: 20px;
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  box-shadow: 0 0 10px rgba(255, 100, 0, 0.6);
+  /* filter: drop-shadow(0 0 6px rgba(255, 140, 0, 0.6)); */
+  /* background: radial-gradient(circle, #ff5c5c, #ff7f50, #ffa94d); */
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.84),
+    inset 0 0 10px rgba(228, 206, 9, 0.1);
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 200ms;
+}
+
+.meme-coin--glow:hover {
+  transform: scale(1.4);
+  filter: drop-shadow(0 0 1em #ff6347aa) /* Sombra roja de tomate */
+    drop-shadow(0 0 1.5em #ffd700aa) /* Sombra dorada de queso */
+    drop-shadow(0 0 2em #8b0000aa); /* Sombra oscura de pepperoni */
+}
+
+@layer utilities {
+  .animate-float-slow {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+}

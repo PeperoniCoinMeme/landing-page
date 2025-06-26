@@ -1,0 +1,66 @@
+/* From Uiverse.io by Cksunandh */
+.m2 {
+  position: relative;
+  background: linear-gradient(135deg, #1e1e24 10%, #050505 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  animation: gradient-shift 5s ease-in-out infinite; /* Faster animation */
+  background-size: 200% 200%; /* Gradient shift */
+  border-radius: 8px;
+  border: solid 2px;
+}
+
+.m2::before,
+.m2::after {
+  --size: 1px; /* Reduced glow size */
+  content: "";
+  position: absolute;
+  border-radius: 8px;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: calc(100% + var(--size));
+  height: calc(100% + var(--size));
+  background: radial-gradient(
+      circle at 0 0,
+      hsla(27, 93%, 60%, 0.53),
+      transparent
+    ),
+    radial-gradient(circle at 100% 0, #00a6ff57, transparent),
+    radial-gradient(circle at 0 100%, #ff00009c, transparent),
+    radial-gradient(circle at 100% 100%, #ffae00b5, transparent);
+}
+
+.m2::after {
+  --size: 2px; /* Reduced inner glow size */
+  z-index: -1;
+}
+
+.m2::before {
+  --size: 3px; /* Reduced outer glow size */
+  z-index: -2;
+  filter: blur(2vmin); /* Reduced blur */
+  animation: blur-animation 3s ease-in-out alternate infinite; /* Faster blur animation */
+}
+
+/* Faster blur animation */
+@keyframes blur-animation {
+  to {
+    filter: blur(3vmin);
+    transform: scale(1.05);
+  }
+}
+
+/* Faster gradient animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

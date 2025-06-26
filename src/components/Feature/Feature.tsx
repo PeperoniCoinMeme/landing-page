@@ -4,8 +4,8 @@ import Clients from "../Clients/Clients";
 
 const Feature = () => {
   return (
-    <Section id="feature" className="">
-      <div className="flex flex-row w-full justify-around h-[400px] items-center">
+    <Section id="feature" className="bg-orange-700/6">
+      <div className="flex flex-row w-full justify-around h-[300px] items-center">
         <Clients />
       </div>
     </Section>

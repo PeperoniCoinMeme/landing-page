@@ -43,7 +43,7 @@
 .landing-button {
   border: 1px #ff4500 solid;
   background-color: #ff4500;
-  padding: 8px 36px;
+  padding: 8px 34px;
   border-radius: 5px;
   border-bottom: 4px solid hsl(16, 100%, 40%);
   font-size: 1rem;
@@ -54,9 +54,58 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 .landing-button:hover {
   transform: translateY(-5px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.landing-button::before {
+  content: "";
+  position: absolute;
+  top: -80%;
+  left: -80%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 30%,
+    rgba(255, 255, 255, 0.909)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.landing-button:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(300%);
+}
+
+/* Riples */
+.ripple {
+  position: absolute;
+  background: #ee0a0a;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: ripple 2s linear infinite;
+  transition: 0.5s;
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
 }
