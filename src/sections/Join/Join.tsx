@@ -65,7 +65,7 @@ const Join = () => {
   return (
     <Section
       id="join"
-      className={`${layout.section} min-h-280`}
+      className={`${layout.section} min-h-240`}
       // bgColor="#0c0500"
     >
       <section className="relative md:px-20 px-4 py-40 lg:px-40 flex flex-col md:flex-row">
