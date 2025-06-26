@@ -62,6 +62,7 @@ const Section: React.FC<LandingButtonProps> = ({
    ${className || ""} ${isDisabled ? "landing-button-disabled" : ""}`}
       style={styles}
       onClick={onClick}
+      disabled={isDisabled}
     >
       {children}
     </button>

@@ -68,7 +68,7 @@ const Hero = () => {
             <div className="hidden lg:flex absolute md:w-130 my-25 flex-row justify-between md:-mx-4">
               <LandingButton
                 onClick={() => setOpen(true)}
-                bgColor="#3f2c2f"
+                bgColor="#514AAA"
                 className=""
               >
                 Buy
