@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navbar, Footer } from "../layout";
-import { peperoniPizza, planetBg, waveYellowDark1 } from "../assets";
-import WavySpacer from "../components/design/WavySpacer";
-import Feature from "../components/Feature/Feature";
+import { Navbar, Footer } from "@/layout";
 import {
   Hero,
   About,
@@ -11,11 +8,10 @@ import {
   Roadmap,
   SliceOfUtility,
   Slicenomics,
-} from "../sections";
-import RoadmapHeader from "../sections/RoadmapHeader/RoadmapHeader";
-import ScrollReveal from "../components/ScrollReveal/ScrollReveal";
-import BackToTopButton from "../components/BackToTopButton/BackToTopButton";
-import Loader from "../components/Loader/Loader";
+} from "@/sections";
+import RoadmapHeader from "@/sections/RoadmapHeader/RoadmapHeader";
+import Loader from "@/components/Loader/Loader";
+import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 
 const imageList = [
   "/images/hero.jpg",

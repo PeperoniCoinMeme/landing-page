@@ -1,21 +1,13 @@
 import React from "react";
-import { Section } from "../../layout";
-
-import {
-  brickBg,
-  pepeBanner,
-  splash,
-  tiktokVideo,
-  transitionDownBg,
-  transitionUpBg,
-} from "../../assets";
-import LandingHero from "../../components/design/tipography/LandingHero";
-import LandingText from "../../components/design/tipography/LandingText";
+import { Section } from "@/layout";
+import { tiktokVideo } from "@/assets";
+import LandingHero from "@/components/design/tipography/LandingHero";
+import LandingText from "@/components/design/tipography/LandingText";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { layout } from "../../styles/styles";
-import LandingVideo from "../../components/LandingVideo/LandingVideo";
-import Checkmark from "../../assets/svg/Checkmark";
+import { layout } from "@/styles/styles";
+import LandingVideo from "@/components/LandingVideo/LandingVideo";
+import Checkmark from "@/assets/svg/Checkmark";
 
 const MissionVibes = () => {
   const { ref, inView } = useInView({

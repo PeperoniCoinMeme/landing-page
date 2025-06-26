@@ -1,59 +1,49 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { Section } from "../../layout";
-import { logo, about, transitionUpBg, goldenMemeCoin } from "../../assets";
+import { Section } from "@/layout";
+import { goldenMemeCoin } from "@/assets";
 import "./About.css";
-import { words } from "../../constants";
-import LandingTitle from "../../components/design/tipography/LandingTitle";
-import LandingHero from "../../components/design/tipography/LandingHero";
 
-import {
-  CurrencyDollarIcon,
-  FireIcon,
-  ShoppingCartIcon,
-  ChartBarIcon,
-  GiftIcon,
-} from "@heroicons/react/24/solid";
-import LandingText from "../../components/design/tipography/LandingText";
-import LandingButton from "../../components/design/buttons/LandingButton";
+import LandingHero from "@/components/design/tipography/LandingHero";
+import LandingText from "@/components/design/tipography/LandingText";
+import LandingButton from "@/components/design/buttons/LandingButton";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { layout } from "../../styles/styles";
+import { layout } from "@/styles/styles";
 
-// Array de objetos con texto e iconos relacionados
-const cryptoPizzaWords = [
-  {
-    text: "Bitcoin Payments",
-    icon: (
-      <CurrencyDollarIcon className="xl:size-12 md:size-10 size-7 text-orange-500" />
-    ),
-  },
-  {
-    text: "Pizza Delivery",
-    icon: <FireIcon className="xl:size-12 md:size-10 size-7 text-yellow-500" />,
-  },
-  {
-    text: "Crypto Commerce",
-    icon: (
-      <ShoppingCartIcon className="xl:size-12 md:size-10 size-7 text-gray-800" />
-    ),
-  },
-  {
-    text: "Market Trends",
-    icon: (
-      <ChartBarIcon className="xl:size-12 md:size-10 size-7 text-green-300" />
-    ),
-  },
-  {
-    text: "Special Rewards",
-    icon: <GiftIcon className="xl:size-12 md:size-10 size-7 text-yellow-400" />,
-  },
-  {
-    text: "Hot Deals",
-    icon: <FireIcon className="xl:size-12 md:size-10 size-7 text-orange-600" />,
-  },
-];
+// const cryptoPizzaWords = [
+//   {
+//     text: "Bitcoin Payments",
+//     icon: (
+//       <CurrencyDollarIcon className="xl:size-12 md:size-10 size-7 text-orange-500" />
+//     ),
+//   },
+//   {
+//     text: "Pizza Delivery",
+//     icon: <FireIcon className="xl:size-12 md:size-10 size-7 text-yellow-500" />,
+//   },
+//   {
+//     text: "Crypto Commerce",
+//     icon: (
+//       <ShoppingCartIcon className="xl:size-12 md:size-10 size-7 text-gray-800" />
+//     ),
+//   },
+//   {
+//     text: "Market Trends",
+//     icon: (
+//       <ChartBarIcon className="xl:size-12 md:size-10 size-7 text-green-300" />
+//     ),
+//   },
+//   {
+//     text: "Special Rewards",
+//     icon: <GiftIcon className="xl:size-12 md:size-10 size-7 text-yellow-400" />,
+//   },
+//   {
+//     text: "Hot Deals",
+//     icon: <FireIcon className="xl:size-12 md:size-10 size-7 text-orange-600" />,
+//   },
+// ];
 
 const About = () => {
   const { ref, inView } = useInView({
