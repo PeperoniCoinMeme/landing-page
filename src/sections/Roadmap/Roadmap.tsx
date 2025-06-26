@@ -221,8 +221,8 @@ const Roadmap = () => {
       </div>
       {/* Parachutes4 | Provision */}
       <div
-        className="absolute -top-600 right-40 pointer-events-none"
-        style={{ transform: `translateY(${offsetY * 0.52}px)` }}
+        className="absolute -top-500 right-60 pointer-events-none"
+        style={{ transform: `translateY(${offsetY * 0.42}px)` }}
       >
         <img
           src={parachutes4}

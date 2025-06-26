@@ -65,12 +65,12 @@ const About = () => {
   return (
     <Section
       id="about"
-      className={`${layout.section} ${layout.sectionHeight} overflow-hidden square-framed-bg`}
+      className={`${layout.section} ${layout.sectionHeight} min-h-200 overflow-hidden square-framed-bg`}
       // bgColor="linear-gradient(to bottom, transparent, #0c0500)"
       // backgroundSvg={transitionUpBg}
     >
-      <section className="md:px-20 px-4 lg:px-40 flex my-20 md:px-16 px-6 py-10">
-        <div className="mx-auto grid md:grid-cols-2 gap-16 items-center relative">
+      <section className="flex my-20 md:p-16 p-8 lg:p-40">
+        <div className="mx-auto flex lg:flex-row flex-col gap-16 items-center relative">
           {/* Text Column */}
           <motion.div
             ref={ref}
@@ -134,7 +134,7 @@ const About = () => {
               <img
                 src={goldenMemeCoin}
                 alt="Illustration of Peperoni Coin - crypto meets pizza"
-                className="w-[100px] md:w-[300px] animate-float-slow meme-coin--glow"
+                className="w-[200px] md:w-[300px] animate-float-slow meme-coin--glow"
               />
               {/* <span className="w-[180 px] hero-img-shadow top-60"></span> */}
             </div>

@@ -7,9 +7,9 @@ import LandingText from "@/components/design/tipography/LandingText";
 
 const Footer = () => {
   return (
-    <Section id="footer" className="min-h-100" bgColor="0c0500">
-      <footer className="text-white dark:text-gray-300 py-30 px-5 w-full ">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 z-100">
+    <Section id="footer" className="min-h-100 z-0" bgColor="0c0500">
+      <footer className="text-white dark:text-gray-300 py-30 px-5 w-full overflow-hidden">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 z-0">
           {/* <!-- Logo & About --> */}
           <div>
             <LandingText className="font-2xl mb-3">Peperoni Coin</LandingText>
