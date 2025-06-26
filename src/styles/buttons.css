@@ -1,43 +1,5 @@
-.hero-btn {
-  cursor: pointer;
-  position: relative;
-  padding: 10px 24px;
-  font-size: 16px;
-  color: #ff4500;
-  border: 2px solid #ff4500;
-  border-radius: 12px;
-  font-weight: 600;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  overflow: hidden;
-  transform: scale(1); /* default scale */
-}
-
-.hero-btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 30%;
-  height: 50px;
-  border-radius: inherit;
-  transform: scale(0); /* fixed */
-  z-index: -1;
-  background-color: #ff4500;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.hero-btn:active {
-  transform: scale(1);
-}
-
-.hero-btn:hover {
-  color: #212121;
-  transform: scale(1.1); /* fixed */
-  box-shadow: 0 0px 20px rgb(255, 105, 51);
-}
-
-.hero-btn:hover::before {
-  transform: scale(4.2); /* fixed */
+:root {
+  --disabled: #232121;
 }
 
 .landing-button {
@@ -56,6 +18,17 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+}
+
+.landing-button-disabled {
+  border: 1px var(--disabled) solid !important;
+  background-color: transparent !important;
+  color: var(--disabled);
+  border-bottom: 4px solid var(--disabled) !important;
+}
+
+.landing-button-disabled:hover {
+  transform: translateY(0px);
 }
 
 .landing-button:hover {
@@ -109,3 +82,45 @@
     opacity: 0;
   }
 }
+/* 
+.hero-btn {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 16px;
+  color: #ff4500;
+  border: 2px solid #ff4500;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+  transform: scale(1); 
+}
+
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 30%;
+  height: 50px;
+  border-radius: inherit;
+  transform: scale(0); 
+  z-index: -1;
+  background-color: #ff4500;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hero-btn:active {
+  transform: scale(1);
+}
+
+.hero-btn:hover {
+  color: #212121;
+  transform: scale(1.1); 
+  box-shadow: 0 0px 20px rgb(255, 105, 51);
+}
+
+.hero-btn:hover::before {
+  transform: scale(4.2); 
+} */

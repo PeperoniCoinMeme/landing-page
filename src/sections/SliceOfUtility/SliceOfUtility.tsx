@@ -48,15 +48,15 @@ const SliceOfUtility = () => {
             </LandingText>
           </div>
 
-          <div className="pt-4">
+          {/* <div className="pt-4">
             <LandingButton>Services</LandingButton>
-          </div>
+          </div> */}
           <ParallaxPepperoni />
         </motion.div>
       </section>
 
       {/* Cheese moon */}
-      <div className="absolute top-50 -left-130 translate-x-1/3 pointer-events-none z-0">
+      <div className="md:opacity-100 opacity-40 absolute top-50 -left-130 translate-x-1/3 pointer-events-none z-0">
         <motion.img
           ref={ref}
           initial={{ opacity: 0 }}

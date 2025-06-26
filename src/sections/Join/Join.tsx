@@ -65,7 +65,7 @@ const Join = () => {
   return (
     <Section
       id="join"
-      className={`${layout.section} min-h-280`}
+      className={`${layout.section} min-h-240`}
       // bgColor="#0c0500"
     >
       <section className="relative md:px-20 px-4 py-40 lg:px-40 flex flex-col md:flex-row">
@@ -181,17 +181,16 @@ const Join = () => {
               transition={{ duration: 0.2, ease: "easeInOut" }}
             >
               <div
-                className="relative bg-dark-dough p-6 w-full space-y-6 flex justify-center"
+                className="relative bg-dark-dough p-6 w-full space-y-6 flex justify-center max-w-[1920px]"
                 onClick={(e) => e.stopPropagation()}
               >
+                <Gallery />
                 <button
                   onClick={toggleMenu}
-                  className="absolute top-25 right-5 text-[var(--color-pepperoni)] hover:text-red-400 transition"
+                  className="absolute top-15 right-0 text-[var(--color-pepperoni)] hover:text-red-400 transition z-9999"
                 >
-                  <XMarkIcon className="h-10 w-10 m-10 text-orange-600 text-shadow-lg" />
+                  <XMarkIcon className="h-8 w-8 my-10 mx-3 text-orange-600 text-shadow-lg" />
                 </button>
-
-                <Gallery />
               </div>
             </motion.div>
           </>

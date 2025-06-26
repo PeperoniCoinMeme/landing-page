@@ -7,12 +7,18 @@ import LandingText from "@/components/design/tipography/LandingText";
 
 const Footer = () => {
   return (
-    <Section id="footer" className="min-h-100" bgColor="0c0500">
-      <footer className="text-white dark:text-gray-300 py-30 px-5 w-full ">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 z-100">
+    <Section
+      id="footer"
+      className="min-h-100 z-0 border-t-1 border-white/20"
+      bgColor="0c0500"
+    >
+      <footer className="text-white dark:text-gray-300 py-20 px-5 w-full overflow-hidden">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 z-0">
           {/* <!-- Logo & About --> */}
           <div>
-            <LandingText className="font-2xl mb-3">Peperoni Coin</LandingText>
+            <LandingText className="mb-3 text-orange-400">
+              Peperoni Coin
+            </LandingText>
             <LandingCaption>
               The tastiest cryptocurrency on the market. Built for the
               community, powered by blockchain, topped with extra flavor.
@@ -47,7 +53,7 @@ const Footer = () => {
 
           {/* <!-- Social Media --> */}
           <div>
-            <h3 className="font-semibold text-lg mb-2">Follow Us</h3>
+            <LandingText className="font-2xl mb-3">Follow Us</LandingText>
             <div className="flex gap-4 mt-2">
               <a href="https://x.com/Peperoni_Meme">
                 {" "}

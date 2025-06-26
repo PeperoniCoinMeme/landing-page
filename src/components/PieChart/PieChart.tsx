@@ -79,7 +79,7 @@ export default function PieAnimation() {
     >
       <Box
         sx={{
-          width: 400,
+          width: 300,
           height: 400,
           backgroundImage: `url(/path/to/your/image.png)`, // Cambia la ruta
           backgroundSize: "cover", // o "contain"
@@ -87,8 +87,9 @@ export default function PieAnimation() {
           backgroundRepeat: "no-repeat",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center", // Centra el gráfico
+          justifyContent: "start",
           position: "relative",
+          marginRight: "50px",
         }}
         className="md:min-w-170 w-fit relative"
       >
