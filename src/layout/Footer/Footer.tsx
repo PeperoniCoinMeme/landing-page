@@ -4,6 +4,8 @@ import { XIcon } from "../../assets/svg/X";
 import { footerLinks, socialMedia } from "../../constants";
 import Section from "../Section/Section";
 import LandingText from "@/components/design/tipography/LandingText";
+import { InstagramIcon } from "@/assets/svg/Instagram";
+import { TikTokIcon } from "@/assets/svg/TikTok";
 
 const Footer = () => {
   return (
@@ -55,13 +57,28 @@ const Footer = () => {
           <div>
             <LandingText className="font-2xl mb-3">Follow Us</LandingText>
             <div className="flex gap-4 mt-2">
-              <a href="https://x.com/Peperoni_Meme">
+              <a href="https://x.com/Peperoni_Meme" className="hover:scale-105">
                 {" "}
                 <XIcon width={24} height={24} />
               </a>
-              <a href="https://t.me/PeperoniOven">
+              <a href="https://t.me/PeperoniOven" className="hover:scale-105">
                 {" "}
                 <TelegramIcon width={24} height={24} />
+              </a>
+
+              <a
+                href="https://instagram.com/peperoni_meme"
+                className="hover:scale-105"
+              >
+                {" "}
+                <InstagramIcon width={24} height={24} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@peperoni.memecoin"
+                className="hover:scale-105"
+              >
+                {" "}
+                <TikTokIcon width={24} height={24} />
               </a>
             </div>
           </div>
