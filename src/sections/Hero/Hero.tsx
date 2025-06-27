@@ -69,17 +69,17 @@ const Hero = () => {
             <div className="hidden lg:flex absolute md:w-130 my-28 flex-row justify-between md:-mx-4">
               <LandingButton
                 onClick={() => setOpen(true)}
-                bgColor="#d62828"
-                className=""
+                bgColor="#228B22"
+                className="w-18"
               >
                 Buy
               </LandingButton>
               <LandingButton
                 onClick={() => setOpen(true)}
                 isDisabled={true}
-                className=""
+                className="w-18"
               >
-                TBR
+                TBA
               </LandingButton>
             </div>
           </div>
@@ -94,7 +94,7 @@ const Hero = () => {
         >
           <LandingButton
             onClick={() => setOpen(true)}
-            className="max-w-35 lg:ml-20 lg:my-0 my-12"
+            className="w-30 lg:ml-20 lg:my-0 my-12"
           >
             Connect
           </LandingButton>
@@ -113,7 +113,11 @@ const Hero = () => {
         style={{ zIndex: zIndexOven + 1 }}
       >
         <div className="flex flex-col sm:flex-row items-center justify-center z-100 -mt-8">
-          <LandingButton onClick={() => setOpen(true)} bgColor="#3f2c2f">
+          <LandingButton
+            onClick={() => setOpen(true)}
+            bgColor="#228B22"
+            className="w-18"
+          >
             Buy
           </LandingButton>
         </div>
@@ -132,13 +136,6 @@ const Hero = () => {
           <LandingButton onClick={() => setOpen(true)} className="min-w-35">
             Connect
           </LandingButton>
-          <LandingButton
-            onClick={() => setOpen(true)}
-            bgColor="#3f2c2f"
-            className="min-w-35"
-          >
-            Buy
-          </LandingButton>
         </motion.div>
         {/* Oven container */}
         <div className="flex flex-col justify-center flex-1">
@@ -152,9 +149,25 @@ const Hero = () => {
             <img
               src={iaOven}
               alt=""
-              className="absolute max-w-150 -top-30 -left-32"
+              className="absolute max-w-150 -top-30 -left-33"
               style={{ zIndex: zIndexOven }}
             />
+            <div className="absolute w-full flex flex-row justify-between px-4 top-60">
+              <LandingButton
+                onClick={() => setOpen(true)}
+                bgColor="#228B22"
+                className="w-14"
+              >
+                Buy
+              </LandingButton>
+              <LandingButton
+                onClick={() => setOpen(true)}
+                isDisabled={true}
+                className="w-14"
+              >
+                TBA
+              </LandingButton>
+            </div>
           </div>
         </div>
         {/* First Info container */}
