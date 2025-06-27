@@ -98,7 +98,7 @@ const Join = () => {
 
                 {/* <div className="mt-15 px-10">
                   <JoinButton />
-              </div> */}
+                </div> */}
                 <div className="pt-12 relative">
                   <LandingButton onClick={toggleMenu}>Gallery</LandingButton>
                 </div>
