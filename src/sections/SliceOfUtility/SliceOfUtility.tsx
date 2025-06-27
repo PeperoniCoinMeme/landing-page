@@ -71,7 +71,7 @@ const SliceOfUtility = () => {
             animationDelay: "0.2s",
             animationFillMode: "forwards",
           }}
-          className="w-[500px] relative -right-35"
+          className="w-[500px] md:w-[700px] relative -right-35"
         />
       </div>
     </Section>

@@ -122,7 +122,7 @@ const About = () => {
               </LandingText>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-start">
               {/* <a className="hero-btn md:bg-transparent md:text-white bg-orange-300"></a> */}
               <LandingButton href={litePaper}>Download LitePaper</LandingButton>
             </div>

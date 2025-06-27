@@ -129,7 +129,7 @@ export default function PieAnimation() {
         />
 
         {/* Pepperoni Pizza */}
-        <div className="absolute -top-18 -left-1/2 translate-x-1/3 opacity-75 pointer-events-none">
+        <div className="absolute md:-top-18 -left-50 md:-left-1/2 md:translate-x-1/3 opacity-75 pointer-events-none">
           <img
             src={peperoniPizza}
             alt="Pepperoni Pizza"
