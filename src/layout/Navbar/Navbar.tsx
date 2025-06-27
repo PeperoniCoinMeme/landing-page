@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <>
       {/* <Headroom> */}
-      <nav className="fixed top-0 left-0 z-50 w-full flex justify-between px-3 py-8 h-1 items-center max-w-[1920px]">
+      <nav className="fixed top-0 left-0 z-50 w-full flex justify-between px-3 py-8 h-1 items-center max-w-[1920px] backdrop-blur-sm md:backdrop-blur-none border-b-1 border-white/20 md:border-0">
         <div id="logo" className="w-12 flex flex-row gap-3 items-center">
           <img src={logo} alt="" className="hover:scale-120 transition-all" />
           <h4

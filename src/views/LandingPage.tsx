@@ -12,8 +12,6 @@ import {
 import RoadmapHeader from "@/sections/RoadmapHeader/RoadmapHeader";
 import Loader from "@/components/Loader/Loader";
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
-import Feature from "@/components/Feature/Feature";
-import LogoShowcase from "@/components/LogoShowcase/LogoShowcase";
 import Carousel from "@/components/Carousel/Carousel";
 
 const imageList: string[] = [];

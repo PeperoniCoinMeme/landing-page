@@ -42,25 +42,27 @@ const MissionVibes = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative flex flex-col jutify-center flex-1"
         >
-          <div className="flex flex-col my-6 flex-wrap relative z-50 gap-7">
-            <LandingHero>Mission & Vibes</LandingHero>
+          <div className="flex flex-col my-6 flex-wrap relative z-50 gap-4">
+            <LandingHero className="text-center md:text-left">
+              Mission & Vibes
+            </LandingHero>
 
-            <LandingText>
+            <LandingText className="text-center md:text-left">
               "Cooked by the People". What happens when you throw community,
               culture, and a little insanity into a Solana oven? You get
               $PEPERONI, a decentralized memecoin that isn’t built on hype, but
               on fun, fairness, and freedom.
             </LandingText>
-            <LandingText>
+            <LandingText className="text-center md:text-left">
               No tax scams. No VCs calling shots. Just a growing tribe of meme
               chefs baking something tastier than the usual crypto soup.
             </LandingText>
           </div>
-          <p className="text-red-500 text-semibold text-xl underline pt-10 pb-4">
+          <p className="text-red-500 text-semibold text-xl underline pt-4 pb-4 text-center md:text-left">
             Built different
           </p>
           {/* It’s not just a vibe — it’s a movement with mozzarella. */}
-          <div className="flex flex-col md:flex-row gap-3 mt-2 z-50 md:max-w-150">
+          <div className="grid grid-cols-2 md:flex md:flex-row gap-3 mt-2 z-50 md:max-w-150">
             {highlights.map((text, index) => (
               <div
                 key={index}
@@ -76,7 +78,7 @@ const MissionVibes = () => {
           <div className="py-8">{/* <LandingButton>See</LandingButton> */}</div>
         </motion.div>
 
-        <div className="relative flex-1 flex flex-col items-center min-w-6/12 ">
+        <div className="relative flex-1 flex flex-col items-center min-w-6/12">
           <div className="h-150 w-100 parent-depth relative">
             <LandingVideo
               src={tiktokVideo}

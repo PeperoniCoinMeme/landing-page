@@ -165,9 +165,9 @@ export default function PieAnimation() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
             layout // smooth changes
-            className="flex flex-col items-start text-start gap-3 w-full"
+            className="flex flex-col items-start text-center md:text-start gap-3 w-full mt-4"
           >
-            <div className="flex flex-col w-full items-start">
+            <div className="flex flex-col w-full items-center md:items-start">
               <LandingSubtitle color="white">
                 {distribution[currentSelectedItem - 1].label}
               </LandingSubtitle>

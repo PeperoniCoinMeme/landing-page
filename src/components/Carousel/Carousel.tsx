@@ -83,7 +83,7 @@ const Carousel = () => (
     <div className="gradient-edge" />
     <div className="gradient-edge" />
 
-    <div className="overflow-hidden relative h-100">
+    <div className="overflow-hidden relative h-50 md:h-100">
       <div className="marquee-box md:gap-12 gap-5">
         {images.map((icon, index) => (
           <CarouselItem key={index} name={icon.name} imgPath={icon.imgPath} />

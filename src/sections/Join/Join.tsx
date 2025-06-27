@@ -87,9 +87,11 @@ const Join = () => {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="min-w-100 space-y-2 md:px-4 px-16"
               >
-                <LandingHero>Join to the Pizza!</LandingHero>
+                <LandingHero className="text-center md:text-left">
+                  Join to the Pizza!
+                </LandingHero>
 
-                <LandingText>
+                <LandingText className="text-center md:text-left">
                   At the heart of $PEPERONI is a community of pizza-pilled
                   memelords, creators, degens, and builders united by one
                   delicious mission: 🍕 To bake the most valuable pizza the
@@ -99,7 +101,7 @@ const Join = () => {
                 {/* <div className="mt-15 px-10">
                   <JoinButton />
                 </div> */}
-                <div className="pt-12 relative">
+                <div className="pt-12 relative flex flex-row justify-center md:justify-start">
                   <LandingButton onClick={toggleMenu}>Gallery</LandingButton>
                 </div>
               </motion.div>
