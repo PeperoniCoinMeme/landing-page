@@ -19,6 +19,7 @@ import Clouds from "./Clouds";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { layout } from "@/styles/styles";
+import LandingText from "@/components/design/tipography/LandingText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -158,7 +159,9 @@ const Roadmap = () => {
                           <LandingSubtitle color="white">
                             {card.title}
                           </LandingSubtitle>
-                          <p className="my-5 text-white">{card.date}</p>
+                          <LandingText className="my-5 text-white">
+                            {card.date}
+                          </LandingText>
                         </div>
                       </div>
                     </div>
@@ -218,8 +221,8 @@ const Roadmap = () => {
       </div>
       {/* Parachutes4 | Provision */}
       <div
-        className="absolute -top-600 right-40 pointer-events-none"
-        style={{ transform: `translateY(${offsetY * 0.52}px)` }}
+        className="absolute -top-500 right-60 pointer-events-none"
+        style={{ transform: `translateY(${offsetY * 0.42}px)` }}
       >
         <img
           src={parachutes4}

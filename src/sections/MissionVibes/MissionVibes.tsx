@@ -1,13 +1,15 @@
 import React from "react";
 import { Section } from "@/layout";
-import { tiktokVideo } from "@/assets";
+import { pepeBanner, smartPhone, tiktokVideo } from "@/assets";
 import LandingHero from "@/components/design/tipography/LandingHero";
 import LandingText from "@/components/design/tipography/LandingText";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { layout } from "@/styles/styles";
 import LandingVideo from "@/components/LandingVideo/LandingVideo";
+import "./MissionVibes.css";
 import Checkmark from "@/assets/svg/Checkmark";
+import LandingCaption from "@/components/design/tipography/LandingCaption";
 
 const MissionVibes = () => {
   const { ref, inView } = useInView({
@@ -31,7 +33,7 @@ const MissionVibes = () => {
       bgColor="linear-gradient(180deg, #0c0500, #000000)"
     >
       <section
-        className={`overflow-hidden flex flex-col lg:flex-row-reverse ${halfSectionPadding}`}
+        className={`overflow-hidden flex flex-col lg:flex-row-reverse ${halfSectionPadding} relative`}
       >
         <motion.div
           ref={ref}
@@ -40,25 +42,27 @@ const MissionVibes = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative flex flex-col jutify-center flex-1"
         >
-          <div className="flex flex-col my-6 flex-wrap relative z-50 gap-7">
-            <LandingHero>Mission & Vibes</LandingHero>
+          <div className="flex flex-col my-6 flex-wrap relative z-50 gap-4">
+            <LandingHero className="text-center md:text-left">
+              Mission & Vibes
+            </LandingHero>
 
-            <LandingText>
+            <LandingText className="text-center md:text-left">
               "Cooked by the People". What happens when you throw community,
               culture, and a little insanity into a Solana oven? You get
               $PEPERONI, a decentralized memecoin that isn’t built on hype, but
               on fun, fairness, and freedom.
             </LandingText>
-            <LandingText>
+            <LandingText className="text-center md:text-left">
               No tax scams. No VCs calling shots. Just a growing tribe of meme
               chefs baking something tastier than the usual crypto soup.
             </LandingText>
           </div>
-          <p className="text-red-500 text-semibold text-xl underline pt-10 pb-4">
+          <p className="text-red-500 text-semibold text-xl underline pt-4 pb-4 text-center md:text-left">
             Built different
           </p>
           {/* It’s not just a vibe — it’s a movement with mozzarella. */}
-          <div className="flex flex-col md:flex-row gap-3 mt-2 z-50 md:max-w-150">
+          <div className="grid grid-cols-2 md:flex md:flex-row gap-3 mt-2 z-50 md:max-w-150">
             {highlights.map((text, index) => (
               <div
                 key={index}
@@ -67,16 +71,32 @@ const MissionVibes = () => {
             flex flex-col gap-3"
               >
                 <Checkmark />
-                {text}
+                <LandingCaption>{text}</LandingCaption>
               </div>
             ))}
           </div>
           <div className="py-8">{/* <LandingButton>See</LandingButton> */}</div>
         </motion.div>
 
-        <div className="relative flex-1 flex flex-col items-center min-w-6/12 m-5">
-          <LandingVideo src={tiktokVideo} className="rounded-md md:h-120" />
-          <div className="absolute top-0 left-0 w-full h-full flex items-center bg-black/10 justify-center z-10 text-white"></div>
+        <div className="absolute -left-5 top-40 md:top-0 md:left-0 md:relative flex-1 flex flex-col items-center min-w-6/12">
+          <div className="md:opacity-100 opacity-10 h-150 w-100 parent-depth relative">
+            <LandingVideo
+              src={tiktokVideo}
+              className="video-depth absolute transform shadow-2xl"
+            />
+            {/* <div className="m2"></div> */}
+
+            <div
+              style={{
+                background: `url(${smartPhone})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+              className="h-150 w-100 parent-depth absolute"
+            ></div>
+          </div>
+
+          {/* <div className="absolute top-0 left-0 w-full h-full flex items-center bg-black/10 justify-center z-10 text-white"></div> */}
         </div>
 
         {/* <div className="hole absolute bottom-20 left-1/2">

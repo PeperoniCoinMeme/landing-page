@@ -1,16 +1,37 @@
 import logo from "@/assets/meme/logo.png";
 import peperoniPizza from "@/assets/pepperoni-pizza.png";
+import pepeAviator from "@/assets/meme/aviator.jpg";
+import pepeBaseball from "@/assets/meme/baseball.jpg";
 import pepeBanner from "@/assets/meme/pepe-banner.jpeg";
+import pepeBoxer from "@/assets/meme/boxer.png";
 import pepeCar from "@/assets/meme/car.jpeg";
+import pepeCatPizza from "@/assets/meme/cat-pizza.jpeg";
 import pepeCivilian from "@/assets/meme/civilian.jpeg";
 import pepeClimbing from "@/assets/meme/climbing.jpeg";
+import pepeCook from "@/assets/meme/cook.jpeg";
+import pepeCop from "@/assets/meme/cop.png";
+import pepeDavinci from "@/assets/meme/davinci.jpeg";
 import pepeFitStrong from "@/assets/meme/fit.jpeg";
 import pepeFitSkinny from "@/assets/meme/fit-2.jpeg";
+import pepeGamer from "@/assets/meme/gamestop.jpeg";
+import pepeGifted from "@/assets/meme/gifted.jpeg";
+import pepeHonors from "@/assets/meme/honors.jpeg";
+import pepeJumproper from "@/assets/meme/jumproper.png";
+import pepeLanding from "@/assets/meme/landing.png";
+import pepeLibrary from "@/assets/meme/library.jpg";
+import pepeMilitary from "@/assets/meme/military.jpeg";
+import pepeMiner from "@/assets/meme/miner.jpg";
+import pepePeperoni from "@/assets/meme/peperoni.jpeg";
 import pepePets from "@/assets/meme/pets.jpeg";
+import pepePig from "@/assets/meme/pig.jpeg";
 import pepePresident from "@/assets/meme/president.jpeg";
+import pepeResurrection from "@/assets/meme/resurrection.jpeg";
+import pepeSamurai from "@/assets/meme/samurai.png";
 import pepeSpy from "@/assets/meme/spy.jpeg";
 import pepeSurf from "@/assets/meme/surf.jpeg";
+import pepeWar from "@/assets/meme/war.jpeg";
 import pepeWarrior from "@/assets/meme/warrior.jpeg";
+import pepeWelder from "@/assets/meme/welder.jpg";
 import pepeLogo from "@/assets/meme/logo.png";
 import goldenMemeCoin from "@/assets/meme/golden-memecoin.png";
 
@@ -95,6 +116,7 @@ import binance from "@/assets/binance.png";
 import coinbase from "@/assets/coinbase.png";
 import dropbox from "@/assets/dropbox.png";
 import goldStar from "@/assets/svg/hp_gold_star.png";
+import smartPhone from "@/assets/mock/smartphone.png";
 
 import google from "@/assets/google.svg";
 import apple from "@/assets/apple.svg";
@@ -141,6 +163,28 @@ export {
   pepeSurf,
   pepeWarrior,
   pepeLogo,
+  pepeAviator,
+  pepeBaseball,
+  pepeBoxer,
+  pepeCatPizza,
+  pepeCook,
+  pepeCop,
+  pepeDavinci,
+  pepeGamer,
+  pepeGifted,
+  pepeHonors,
+  pepeJumproper,
+  pepeLanding,
+  pepeLibrary,
+  pepeMilitary,
+  pepeMiner,
+  pepePeperoni,
+  pepePig,
+  pepeResurrection,
+  pepeSamurai,
+  pepeWar,
+  pepeWelder,
+
   //
   tiktokVideo,
   //
@@ -165,6 +209,7 @@ export {
   coinbase,
   dropbox,
   goldStar,
+  smartPhone,
   google,
   apple,
   discount,

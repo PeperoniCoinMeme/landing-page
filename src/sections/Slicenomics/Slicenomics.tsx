@@ -36,7 +36,7 @@ const Slicenomics = () => {
           <PieAnimation />
 
           <div className="my-15 md:my-5 lg:my-10">
-            <LandingButton bgColor="#2b2c2f">More</LandingButton>
+            {/* <LandingButton bgColor="#2b2c2f">More</LandingButton> */}
           </div>
         </motion.div>
       </section>
@@ -62,7 +62,7 @@ const Slicenomics = () => {
         />
       </div>
       {/* Astronaut */}
-      <div className="absolute -bottom-30 left-30 pointer-events-none">
+      <div className="absolute -bottom-50 md:-bottom-30 left-30 pointer-events-none">
         <motion.img
           src={astronaut2}
           alt="Astronaut"

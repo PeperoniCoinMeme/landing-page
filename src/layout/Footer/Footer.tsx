@@ -1,46 +1,56 @@
-import { TelegramIcon } from "../../assets/svg/Telegram";
-import { XIcon } from "../../assets/svg/X";
-import { footerLinks, socialMedia } from "../../constants";
 import Section from "../Section/Section";
+import LandingText from "@/components/design/tipography/LandingText";
+import LandingSubtitle from "@/components/design/tipography/LandingSubtitle";
+import Social from "@/components/Social/Social";
 
 const Footer = () => {
   return (
-    <Section id="footer" className="min-h-100" bgColor="0c0500">
-      <footer className="text-white dark:text-gray-300 py-30 px-5 w-full ">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 z-100">
+    <Section
+      id="footer"
+      className="min-h-100 z-0 border-t-1 border-white/20"
+      bgColor="0c0500"
+    >
+      <footer className="text-white dark:text-gray-300 py-20 px-8 w-full overflow-hidden">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 z-0">
           {/* <!-- Logo & About --> */}
           <div>
-            <h2 className="text-2xl font-bold mb-2">Peperoni Coin</h2>
-            <p className="text-sm max-w-sm">
+            <LandingSubtitle>Peperoni Coin</LandingSubtitle>
+            <LandingText>
               The tastiest cryptocurrency on the market. Built for the
               community, powered by blockchain, topped with extra flavor.
-            </p>
+            </LandingText>
           </div>
 
           {/* <!-- Navigation --> */}
           <div className="flex flex-col gap-2">
-            <h3 className="font-semibold text-lg mb-2">Navigation</h3>
+            <LandingSubtitle>Navigation</LandingSubtitle>
             <a href="#hero" className="hover:underline text-sm">
-              Home
+              <LandingText>Home</LandingText>
             </a>
             <a href="#about" className="hover:underline text-sm">
-              About
+              <LandingText>About</LandingText>
             </a>
-            <a href="#tokenomics" className="hover:underline text-sm">
-              Tokenomics
+            <a href="#missionvibes" className="hover:underline text-sm">
+              <LandingText>Mission & Vibes</LandingText>
             </a>
-            <a href="#buy" className="hover:underline text-sm">
-              Buy Now
+            <a href="#sliceofutility" className="hover:underline text-sm">
+              <LandingText>The Slice of Utility</LandingText>
+            </a>
+            <a href="#slicenomics" className="hover:underline text-sm">
+              <LandingText>Slicenomics</LandingText>
+            </a>
+            <a href="#roadmap" className="hover:underline text-sm">
+              <LandingText>Roadmap</LandingText>
+            </a>
+            <a href="#join" className="hover:underline text-sm">
+              <LandingText>Join Us</LandingText>
             </a>
           </div>
 
           {/* <!-- Social Media --> */}
           <div>
-            <h3 className="font-semibold text-lg mb-2">Follow Us</h3>
-            <div className="flex gap-4 mt-2">
-              <TelegramIcon width={24} height={24} />
-              <XIcon width={24} height={24} />
-            </div>
+            <LandingText className="font-2xl mb-3">Follow Us</LandingText>
+            <Social mode="footer" />
           </div>
         </div>
 

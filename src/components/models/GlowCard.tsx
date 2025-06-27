@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { goldStar } from "../../assets";
+import LandingText from "../design/tipography/LandingText";
 
 interface GlowCardProps {
   card: any;
@@ -55,7 +56,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
         ))}
       </div>
       <div className="mb-5">
-        <p className={`${textColor}`}>{card.review}</p>
+        <LandingText className={`${textColor}`}>{card.review}</LandingText>
       </div>
       {children}
     </div>

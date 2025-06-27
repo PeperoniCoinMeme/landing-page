@@ -13,7 +13,7 @@ const MeltingCheese = () => {
       <img
         src={meltingCheese}
         alt=""
-        className="absolute top-0 left-0 z-0 min-w-full md:h-100"
+        className="absolute top-0 left-0 z-0 min-w-full md:h-120"
       />
     </div>
 

@@ -1,0 +1,199 @@
+/* From Uiverse.io by Fernando-sv */
+:root {
+  --loader-color: white;
+}
+
+/* From Uiverse.io by G4b413l */
+.three-body {
+  --uib-size: 40px;
+  --uib-speed: 0.8s;
+  --uib-color-1: var(--color-accent);
+  --uib-color-2: var(--color-secondary);
+  --uib-color-3: var(--color-tertiary);
+  position: relative;
+  display: inline-block;
+  height: var(--uib-size);
+  width: var(--uib-size);
+  animation: spin78236 calc(var(--uib-speed) * 2.5) infinite linear;
+}
+
+.three-body__dot {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+}
+
+.three-body__dot:after {
+  content: "";
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  padding-bottom: 100%;
+
+  border-radius: 50%;
+}
+
+.three-body__dot:nth-child(1) {
+  bottom: 5%;
+  left: 0;
+  transform: rotate(60deg);
+  transform-origin: 50% 85%;
+}
+
+.three-body__dot:nth-child(1)::after {
+  bottom: 0;
+  left: 0;
+  animation: wobble1 var(--uib-speed) infinite ease-in-out;
+  animation-delay: calc(var(--uib-speed) * -0.3);
+  background-color: var(--uib-color-1);
+}
+
+.three-body__dot:nth-child(2) {
+  bottom: 5%;
+  right: 0;
+  transform: rotate(-60deg);
+  transform-origin: 50% 85%;
+}
+
+.three-body__dot:nth-child(2)::after {
+  bottom: 0;
+  left: 0;
+  animation: wobble1 var(--uib-speed) infinite calc(var(--uib-speed) * -0.15)
+    ease-in-out;
+  background-color: var(--uib-color-1);
+}
+
+.three-body__dot:nth-child(3) {
+  bottom: -5%;
+  left: 0;
+  transform: translateX(116.666%);
+}
+
+.three-body__dot:nth-child(3)::after {
+  top: 0;
+  left: 0;
+  animation: wobble2 var(--uib-speed) infinite ease-in-out;
+  background-color: var(--uib-color-1);
+}
+
+@keyframes spin78236 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wobble1 {
+  0%,
+  100% {
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-66%) scale(0.65);
+    opacity: 0.8;
+  }
+}
+
+@keyframes wobble2 {
+  0%,
+  100% {
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(66%) scale(0.65);
+    opacity: 0.8;
+  }
+}
+
+/* From Uiverse.io by Shoh2008 */
+.loader {
+  width: 0;
+  height: 4.8px;
+  display: inline-block;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  animation: animFw 8s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+  content: "";
+  width: 10px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 9px;
+  right: -2px;
+  opacity: 0;
+  transform: rotate(-45deg) translateX(0px);
+  box-sizing: border-box;
+  animation: coli1 0.3s linear infinite;
+}
+
+.loader::before {
+  top: -4px;
+  transform: rotate(45deg);
+  animation: coli2 0.3s linear infinite;
+}
+
+@keyframes animFw {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes coli1 {
+  0% {
+    transform: rotate(-45deg) translateX(0px);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: rotate(-45deg) translateX(-45px);
+    opacity: 0;
+  }
+}
+
+@keyframes coli2 {
+  0% {
+    transform: rotate(45deg) translateX(0px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(45deg) translateX(-45px);
+    opacity: 0.7;
+  }
+}
+
+/* .loader {
+  border: 3px solid var(--loader-color);
+  border-left-color: transparent;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  animation: spin89345 1s linear infinite;
+}
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+} */

@@ -19,6 +19,9 @@ interface LandingButtonProps {
   children: string;
   bgColor?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  href?: string;
+  downloadName?: string;
+  isDisabled?: boolean;
 }
 
 const Section: React.FC<LandingButtonProps> = ({
@@ -26,6 +29,9 @@ const Section: React.FC<LandingButtonProps> = ({
   children,
   bgColor = "#ff4500",
   onClick,
+  href,
+  downloadName,
+  isDisabled,
 }) => {
   const styles: React.CSSProperties = {
     backgroundColor: bgColor,
@@ -33,12 +39,30 @@ const Section: React.FC<LandingButtonProps> = ({
     zIndex: 1000,
   };
 
+  if (href) {
+    return (
+      <a
+        href={href}
+        download={downloadName}
+        target="_blank" // 👉 new tab
+        // rel="noopener noreferrer" // ✅ good practices
+        className={`landing-button ${className || ""} ${
+          isDisabled ? "landing-button-disabled" : ""
+        }`}
+        style={styles}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <button
       className={`landing-button
-   ${className || ""}`}
+   ${className || ""} ${isDisabled ? "landing-button-disabled" : ""}`}
       style={styles}
       onClick={onClick}
+      disabled={isDisabled}
     >
       {children}
     </button>

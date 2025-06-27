@@ -24,7 +24,8 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
       <div className="absolute top-0 w-full">{status}</div>
       <div className="gallery-card__stripe">
         <a
-          href="#"
+          href="https://x.com/Peperoni_Meme"
+          target="_blank"
           className="rounded-full border-1 p-3 cursor-pointer gallery-card__social"
         >
           <svg

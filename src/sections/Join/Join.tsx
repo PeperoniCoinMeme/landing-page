@@ -65,7 +65,7 @@ const Join = () => {
   return (
     <Section
       id="join"
-      className={`${layout.section} min-h-280`}
+      className={`${layout.section} min-h-240`}
       // bgColor="#0c0500"
     >
       <section className="relative md:px-20 px-4 py-40 lg:px-40 flex flex-col md:flex-row">
@@ -87,9 +87,11 @@ const Join = () => {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="min-w-100 space-y-2 md:px-4 px-16"
               >
-                <LandingHero>Join to the Pizza!</LandingHero>
+                <LandingHero className="text-center md:text-left">
+                  Join to the Pizza!
+                </LandingHero>
 
-                <LandingText>
+                <LandingText className="text-center md:text-left">
                   At the heart of $PEPERONI is a community of pizza-pilled
                   memelords, creators, degens, and builders united by one
                   delicious mission: 🍕 To bake the most valuable pizza the
@@ -98,8 +100,8 @@ const Join = () => {
 
                 {/* <div className="mt-15 px-10">
                   <JoinButton />
-              </div> */}
-                <div className="pt-12 relative">
+                </div> */}
+                <div className="pt-12 relative flex flex-row justify-center md:justify-start">
                   <LandingButton onClick={toggleMenu}>Gallery</LandingButton>
                 </div>
               </motion.div>
@@ -181,17 +183,16 @@ const Join = () => {
               transition={{ duration: 0.2, ease: "easeInOut" }}
             >
               <div
-                className="relative bg-dark-dough p-6 w-full space-y-6 flex justify-center"
+                className="relative bg-dark-dough p-6 w-full space-y-6 flex justify-center max-w-[1920px]"
                 onClick={(e) => e.stopPropagation()}
               >
+                <Gallery />
                 <button
                   onClick={toggleMenu}
-                  className="absolute top-25 right-5 text-[var(--color-pepperoni)] hover:text-red-400 transition"
+                  className="absolute top-15 right-0 text-[var(--color-pepperoni)] hover:text-red-400 transition z-9999"
                 >
-                  <XMarkIcon className="h-10 w-10 m-10 text-orange-600 text-shadow-lg" />
+                  <XMarkIcon className="h-8 w-8 my-10 mx-3 text-orange-600 text-shadow-lg" />
                 </button>
-
-                <Gallery />
               </div>
             </motion.div>
           </>

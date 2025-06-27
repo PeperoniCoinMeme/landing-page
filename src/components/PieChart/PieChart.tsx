@@ -15,6 +15,7 @@ import Divider from "@mui/material/Divider";
 import InsightsIcon from "@mui/icons-material/Insights";
 import { motion, AnimatePresence } from "framer-motion";
 import { peperoniPizza } from "../../assets";
+import LandingText from "../design/tipography/LandingText";
 
 export default function PieAnimation() {
   const { ref, inView } = useInView({
@@ -78,7 +79,7 @@ export default function PieAnimation() {
     >
       <Box
         sx={{
-          width: 400,
+          width: 300,
           height: 400,
           backgroundImage: `url(/path/to/your/image.png)`, // Cambia la ruta
           backgroundSize: "cover", // o "contain"
@@ -86,8 +87,9 @@ export default function PieAnimation() {
           backgroundRepeat: "no-repeat",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center", // Centra el gráfico
+          justifyContent: "start",
           position: "relative",
+          marginRight: "50px",
         }}
         className="md:min-w-170 w-fit relative"
       >
@@ -127,7 +129,7 @@ export default function PieAnimation() {
         />
 
         {/* Pepperoni Pizza */}
-        <div className="absolute -top-18 -left-1/2 translate-x-1/3 opacity-75 pointer-events-none">
+        <div className="absolute md:-top-18 -left-50 md:-left-1/2 md:translate-x-1/3 opacity-75 pointer-events-none">
           <img
             src={peperoniPizza}
             alt="Pepperoni Pizza"
@@ -153,7 +155,7 @@ export default function PieAnimation() {
 
       <motion.div
         layout // smooth changes
-        className="border-2 border-gray-500/50 rounded-2xl bg-white/20 p-5 max-w-100 bg-gradient-to-b from-black/90 to-orange-900/20"
+        className=""
       >
         <AnimatePresence mode="wait">
           <motion.div
@@ -163,24 +165,27 @@ export default function PieAnimation() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
             layout // smooth changes
-            className="flex flex-col items-start text-start gap-3 w-full"
+            className="flex flex-col items-start text-center md:text-start gap-3 w-full mt-4"
           >
-            <LandingSubtitle color="white">
-              {distribution[currentSelectedItem - 1].label}
-            </LandingSubtitle>
+            <div className="flex flex-col w-full items-center md:items-start">
+              <LandingSubtitle color="white">
+                {distribution[currentSelectedItem - 1].label}
+              </LandingSubtitle>
 
-            <span className="rounded-full border-1 border-white/50 flex flex-row items-center justify-center gap-2 px-4 py-1">
-              <InsightsIcon />
-              <p>{distribution[currentSelectedItem - 1].alocation}</p>
-            </span>
+              <span className="rounded-full border-1 border-white/50 flex flex-row items-center justify-center gap-2 px-4 py-1">
+                <InsightsIcon />
+                <p>{distribution[currentSelectedItem - 1].alocation}</p>
+              </span>
+            </div>
+
             <Divider
               orientation="horizontal"
               flexItem
               sx={{ borderColor: "#FFA8005A" }} // Cambia aquí por el color que prefieras
             />
-            <p className="text-white">
+            <LandingText className="text-white">
               {distribution[currentSelectedItem - 1].purpose}
-            </p>
+            </LandingText>
           </motion.div>
         </AnimatePresence>
       </motion.div>

@@ -42,7 +42,7 @@ const RoadmapHeader = () => {
         >
           <div className="flex flex-col items-center gap-5 text-orange-500">
             <div className="hero-badge">
-              <p>⏱️ Roadmap Overview </p>
+              {/* <p>⏱️ Roadmap Overview </p> */}
             </div>
             <LandingHero color="white">"The Oven’s Always On"</LandingHero>
           </div>
@@ -79,7 +79,7 @@ const RoadmapHeader = () => {
                     </div>
                     <div className="xl:w-4/6">
                       <div className="flex items-start">
-                        <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
+                        <div className="expText flex xl:gap-20 md:gap-10 gap-3 md:gap-5 relative z-20">
                           <div className="timeline-logo">
                             <img src={logo} alt="logo" />
                           </div>
@@ -87,7 +87,9 @@ const RoadmapHeader = () => {
                             <LandingSubtitle color="white">
                               {card.title}
                             </LandingSubtitle>
-                            <p className="my-5 text-white">{card.date}</p>
+                            <LandingText className="my-5 text-white">
+                              {card.date}
+                            </LandingText>
                           </div>
                         </div>
                       </div>
