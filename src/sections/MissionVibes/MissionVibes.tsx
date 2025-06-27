@@ -33,7 +33,7 @@ const MissionVibes = () => {
       bgColor="linear-gradient(180deg, #0c0500, #000000)"
     >
       <section
-        className={`overflow-hidden flex flex-col lg:flex-row-reverse ${halfSectionPadding}`}
+        className={`overflow-hidden flex flex-col lg:flex-row-reverse ${halfSectionPadding} relative`}
       >
         <motion.div
           ref={ref}
@@ -78,8 +78,8 @@ const MissionVibes = () => {
           <div className="py-8">{/* <LandingButton>See</LandingButton> */}</div>
         </motion.div>
 
-        <div className="relative flex-1 flex flex-col items-center min-w-6/12">
-          <div className="h-150 w-100 parent-depth relative">
+        <div className="absolute -left-5 top-40 md:top-0 md:left-0 md:relative flex-1 flex flex-col items-center min-w-6/12">
+          <div className="md:opacity-100 opacity-10 h-150 w-100 parent-depth relative">
             <LandingVideo
               src={tiktokVideo}
               className="video-depth absolute transform shadow-2xl"

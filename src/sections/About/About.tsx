@@ -69,7 +69,7 @@ const About = () => {
       // bgColor="linear-gradient(to bottom, transparent, #0c0500)"
       // backgroundSvg={transitionUpBg}
     >
-      <section className="flex my-10 md:my-20 md:p-16 p-8 lg:p-40">
+      <section className="flex my-12 md:my-20 md:p-16 p-8 lg:p-40">
         <div className="mx-auto flex lg:flex-row flex-col-reverse gap-8 md:gap-16 items-center relative">
           {/* Text Column */}
           <motion.div
@@ -126,7 +126,7 @@ const About = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 md:items-start items-center">
               {/* <a className="hero-btn md:bg-transparent md:text-white bg-orange-300"></a> */}
-              <LandingButton href={litePaper}>Download LitePaper</LandingButton>
+              <LandingButton href={litePaper}>Go To LitePAPER</LandingButton>
             </div>
           </motion.div>
 

@@ -24,3 +24,7 @@
   src: local("montserrat"),
     url("../../public/fonts/Montserrat/static/Montserrat-Medium.ttf");
 }
+@font-face {
+  font-family: "Riffic";
+  src: local("riffic"), url("../../public/fonts/Riffic/riffic.bold.ttf");
+}

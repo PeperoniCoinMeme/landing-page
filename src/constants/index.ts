@@ -129,13 +129,13 @@ export const roadMapCardsA: RoadMapCards[] = [
   {
     review:
       "The official $PEPERONI listing on a Solana’s DEX. Let the swaps begin and the oven starts warming.",
-    title: "M1 — Token Goes Live on Solana’s DEX",
+    title: "M1: Token Goes Live on Solana’s DEX",
     date: "Phase 1: Dough Preparation",
   },
   {
     review:
       "Launch the on-chain most valuable pizza in the history where the community fights for meme glory and $PEPERONI.",
-    title: "M2 — Bake the Most Valuable Pizza Over the World",
+    title: "M2: Bake the Most Valuable Pizza Over the World",
     date: "Phase 2: Sauce Spread",
   },
 ];
@@ -143,37 +143,37 @@ export const roadMapCardsB: RoadMapCards[] = [
   {
     review:
       "A full-stack toolkit for meme creators, degens, and community builders powered by $PEPERONI.",
-    title: "M3 — Peperoni as a Service (PaaS)",
+    title: "M3: Peperoni as a Service (PaaS)",
     date: "Phase 3: Cheese Melt",
   },
   {
     review:
-      "Grab the hottest meme merch straight from the oven. Think “Redbubble meets meme coin culture” — but spicy, fast, and fueled by $PEPERONI.",
-    title: "M4 — Merchandising Store Goes Live",
+      "Grab the hottest meme merch straight from the oven. Think “Redbubble meets meme coin culture”: but spicy, fast, and fueled by $PEPERONI.",
+    title: "M4: Merchandising Store Goes Live",
     date: "Phase 4: Golden Crust",
   },
   {
     review:
       "Enable $PEPERONI as the native payment method across all our services. From tools to merch, the pepper gets you in.",
-    title: "M5 — $PEPERONI as Payment Integration",
+    title: "M5: $PEPERONI as Payment Integration",
     date: "Phase 5: Infinite Toppings",
   },
   {
     review:
       "Launch meme tokens without code in minutes. Think “$DOGELauncher” but Solana-speed and peppered with vibes.",
-    title: "M6 — Meme Coin Launchpad",
+    title: "M6: Meme Coin Launchpad",
     date: "Phase 6: Infinite Toppings",
   },
   {
     review:
       "Drop spicy tokens to your meme-loving followers, no devs needed. Think “Solana faucet meets meme campaign” fast, fun, and powered by $PEPERONI.",
-    title: "M7 — Meme Airdrop Tool",
+    title: "M7: Meme Airdrop Tool",
     date: "Phase 7: Infinite Toppings",
   },
   {
     review:
       "Permissionless wallet-based forms for token sales, whitelists, contests, and more. No Google Forms only meme forms.",
-    title: "M8 — Meme On-Chain Form Tool",
+    title: "M8: Meme On-Chain Form Tool",
     date: "Phase 8: Infinite Toppings",
   },
 ];

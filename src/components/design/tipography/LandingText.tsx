@@ -14,12 +14,12 @@ const LandingText: React.FC<LandingTextProps> = ({
     color: color,
     zIndex: 1000,
     fontFamily: "montserrat",
-    fontSize: "17px",
+    fontSize: "16.5px",
   };
 
   return (
     <p
-      className={`text-shadow-sm font-medium transition-all max-w-2xl pointer-events-none ${
+      className={`font-medium transition-all max-w-2xl pointer-events-none ${
         className || ""
       }`}
       style={styles}

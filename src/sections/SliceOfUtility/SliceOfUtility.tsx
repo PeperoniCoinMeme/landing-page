@@ -23,7 +23,7 @@ const SliceOfUtility = () => {
       // backgroundSvg={transitionDownBg}
     >
       <StarBackground />
-      <section className="relative rounded-xl md:px-20 px-4 lg:px-40 py-16 md:px-16 px-6 py-30">
+      <section className="relative rounded-xl md:px-20 px-4 lg:px-40 py-18 md:px-16 px-6 py-30">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}

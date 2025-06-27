@@ -11,9 +11,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { layout } from "@/styles/styles";
 import Dialog from "@mui/material/Dialog";
 import LandingTitle from "@/components/design/tipography/LandingTitle";
+import Social from "@/components/Social/Social";
 
 const Hero = () => {
-  const { ref, inView } = useInView({
+  const { ref: ref1, inView: inView1 } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const { ref: ref2, inView: inView2 } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
@@ -31,14 +36,14 @@ const Hero = () => {
       backgroundSvg={brickBg}
     >
       {/* Desktop */}
-      <div className="hidden pt-38 md:flex flex-col sm:flex-row justify-around px-5">
+      <div className="hidden md:flex pt-38 flex-row justify-around px-5">
         {/* First Info container */}
         <motion.div
-          ref={ref}
+          ref={ref1}
           initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={inView1 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col p-10 md:px-10 md:py-30 justify-center flex-1"
+          className="flex flex-col px-10 py-30 justify-center flex-1"
         >
           <LandingHero className="mt-10">
             DELICIOUSLY <br />
@@ -86,11 +91,11 @@ const Hero = () => {
         </div>
         {/* Wallet container */}
         <motion.div
-          ref={ref}
+          ref={ref1}
           initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={inView1 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col gap-1 items-center px-10 flex-1"
+          className="flex flex-col justify-between pb-20 gap-1 items-center px-10 flex-1"
         >
           <LandingButton
             onClick={() => setOpen(true)}
@@ -105,6 +110,7 @@ const Hero = () => {
           <div className="border-2 border-gray-300 my-1 px-5 py-4 rounded-lg shadow-md">
             <p className="text-gray-900">Leader board</p>
           </div> */}
+          <Social mode="hero" />
         </motion.div>
       </div>
 
@@ -127,9 +133,9 @@ const Hero = () => {
       <div className="md:hidden pt-15 md:flex flex-col sm:flex-row justify-around px-5">
         {/* Wallet container */}
         <motion.div
-          ref={ref}
+          ref={ref2}
           initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={inView2 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="flex flex-col gap-2 items-end flex-1 mt-5 mb-5"
         >
@@ -172,9 +178,9 @@ const Hero = () => {
         </div>
         {/* First Info container */}
         <motion.div
-          ref={ref}
+          ref={ref2}
           initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={inView2 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="flex flex-col justify-center flex-1"
         >
@@ -214,7 +220,7 @@ const Hero = () => {
                 <LandingTitle className="animate-bounce">
                   🚧 Coming Soon 🚧
                 </LandingTitle>
-                <LandingText>
+                <LandingText className="px-10">
                   We’re building something amazing. Check back soon!
                 </LandingText>
                 <LandingButton onClick={() => setOpen(false)} className="my-5">

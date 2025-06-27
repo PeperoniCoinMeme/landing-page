@@ -12,7 +12,7 @@ const LandingTitle: React.FC<LandingTitleProps> = ({
 }) => {
   const styles: React.CSSProperties = {
     color: color,
-    fontFamily: "bangers",
+    fontFamily: "Riffic",
     zIndex: 1000,
   };
 
