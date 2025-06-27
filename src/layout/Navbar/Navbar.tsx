@@ -18,6 +18,7 @@ import AboutContent from "./Content/About";
 import MeltingCheese from "../../components/MeltingCheese/MeltingCheese";
 import FlyoutLink from "./Flyout/Flyout";
 import Headroom from "../../components/Headroom/Headroom";
+import Social from "@/components/Social/Social";
 
 const menuItems = [
   { label: "Home", href: "#home", icon: FireIcon },
@@ -34,17 +35,17 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   const fontStyles: React.CSSProperties = {
-    fontFamily: "bangers",
+    fontFamily: "Riffic",
   };
 
   return (
     <>
       {/* <Headroom> */}
-      <nav className="fixed top-0 left-0 z-50 w-full flex justify-between px-3 py-8 h-1 items-center max-w-[1920px]">
+      <nav className="fixed top-0 left-0 z-50 w-full flex justify-between px-3 py-8 h-1 items-center max-w-[1920px] backdrop-blur-sm md:backdrop-blur-none border-b-1 border-white/20 md:border-0">
         <div id="logo" className="w-12 flex flex-row gap-3 items-center">
           <img src={logo} alt="" className="hover:scale-120 transition-all" />
           <h4
-            className="text-gray-100 text-3xl text-shadow-lg pointer-events-none"
+            className="text-gray-100 text-2xl text-shadow-lg pointer-events-none"
             style={fontStyles}
           >
             PEPERONI
@@ -98,14 +99,14 @@ const Navbar = () => {
               >
                 <button
                   onClick={toggleMenu}
-                  className="absolute top-3 right-3 text-[var(--color-pepperoni)] hover:text-red-400 transition"
+                  className="absolute -right-20 top-3 md:right-3 text-[var(--color-pepperoni)] hover:text-red-400 transition"
                 >
-                  <XMarkIcon className="h-10 w-10 m-3 text-orange-600 text-shadow-lg" />
+                  <XMarkIcon className="h-10 w-10 m-3 text-orange-100 text-shadow-lg" />
                 </button>
 
-                <h2 className="text-5xl font-bold">🍕</h2>
+                <h2 className="text-5xl font-bold opacity-0">🍕</h2>
 
-                <ul className="space-y-6">
+                <ul className="space-y-4">
                   {menuItems.map(({ label, href, icon: Icon }, index) => (
                     <motion.li
                       key={label}
@@ -120,7 +121,7 @@ const Navbar = () => {
                       <a
                         href={href}
                         onClick={toggleMenu}
-                        className="flex text-4xl font-bold text-center justify-center hover:text-yellow-300 text-[var(--color-pepperoni)] transition"
+                        className="flex text-3xl font-bold text-center justify-center hover:text-yellow-300 text-white/95 transition"
                         style={fontStyles}
                       >
                         {/* <Icon className="h-5 w-5 text-yellow-500" /> */}
@@ -133,6 +134,9 @@ const Navbar = () => {
                 {/* Flames */}
                 {/* <CryptoFlameTrail />
                 <CryptoFlameTrail /> */}
+                <div className="absolute -bottom-14 -left-18">
+                  <Social mode="footer" />
+                </div>
               </div>
             </motion.div>
           </>

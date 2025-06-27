@@ -3,7 +3,7 @@ import React from "react";
 interface LandingTitleProps {
   color?: string;
   children: any;
-  className: string;
+  className?: string;
 }
 const LandingTitle: React.FC<LandingTitleProps> = ({
   className,
@@ -12,7 +12,7 @@ const LandingTitle: React.FC<LandingTitleProps> = ({
 }) => {
   const styles: React.CSSProperties = {
     color: color,
-    fontFamily: "bangers",
+    fontFamily: "Riffic",
     zIndex: 1000,
   };
 

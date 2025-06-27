@@ -79,7 +79,7 @@ const RoadmapHeader = () => {
                     </div>
                     <div className="xl:w-4/6">
                       <div className="flex items-start">
-                        <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
+                        <div className="expText flex xl:gap-20 md:gap-10 gap-3 md:gap-5 relative z-20">
                           <div className="timeline-logo">
                             <img src={logo} alt="logo" />
                           </div>

@@ -129,7 +129,7 @@ export default function PieAnimation() {
         />
 
         {/* Pepperoni Pizza */}
-        <div className="absolute -top-18 -left-1/2 translate-x-1/3 opacity-75 pointer-events-none">
+        <div className="absolute md:-top-18 -left-50 md:-left-1/2 md:translate-x-1/3 opacity-75 pointer-events-none">
           <img
             src={peperoniPizza}
             alt="Pepperoni Pizza"
@@ -165,9 +165,9 @@ export default function PieAnimation() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
             layout // smooth changes
-            className="flex flex-col items-start text-start gap-3 w-full"
+            className="flex flex-col items-start text-center md:text-start gap-3 w-full mt-4"
           >
-            <div className="flex flex-col w-full items-start">
+            <div className="flex flex-col w-full items-center md:items-start">
               <LandingSubtitle color="white">
                 {distribution[currentSelectedItem - 1].label}
               </LandingSubtitle>

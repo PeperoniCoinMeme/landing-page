@@ -62,7 +62,7 @@ const Slicenomics = () => {
         />
       </div>
       {/* Astronaut */}
-      <div className="absolute -bottom-30 left-30 pointer-events-none">
+      <div className="absolute -bottom-50 md:-bottom-30 left-30 pointer-events-none">
         <motion.img
           src={astronaut2}
           alt="Astronaut"

@@ -69,8 +69,8 @@ const About = () => {
       // bgColor="linear-gradient(to bottom, transparent, #0c0500)"
       // backgroundSvg={transitionUpBg}
     >
-      <section className="flex my-20 md:p-16 p-8 lg:p-40">
-        <div className="mx-auto flex lg:flex-row flex-col gap-16 items-center relative">
+      <section className="flex my-12 md:my-20 md:p-16 p-8 lg:p-40">
+        <div className="mx-auto flex lg:flex-row flex-col-reverse gap-8 md:gap-16 items-center relative">
           {/* Text Column */}
           <motion.div
             ref={ref}
@@ -79,7 +79,9 @@ const About = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="flex flex-col justify-center relative"
           >
-            <LandingHero>About Peperoni</LandingHero>
+            <LandingHero className="text-center md:text-left">
+              About Peperoni
+            </LandingHero>
             {/*<h1 className="pointer-events-none text-2xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 hero-font">
              
               <span className="slide absolute pt-0 px-2 h-[55px] overflow-hidden">
@@ -113,7 +115,7 @@ const About = () => {
               <br />
             </h1>*/}
             <div className="mb-8 max-w-lg">
-              <LandingText color="white">
+              <LandingText color="white" className="text-center md:text-left">
                 It’s not just a coin. It’s not just a meme. $PEPERONI is a
                 community payment token built to celebrate the people who make
                 Web3 spicy creators, builders, and degens. It’s fast. It’s fair.
@@ -122,22 +124,20 @@ const About = () => {
               </LandingText>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 md:items-start items-center">
               {/* <a className="hero-btn md:bg-transparent md:text-white bg-orange-300"></a> */}
-              <LandingButton href={litePaper}>Download LitePaper</LandingButton>
+              <LandingButton href={litePaper}>Go To LitePAPER</LandingButton>
             </div>
           </motion.div>
 
-          <div className="relative">
-            {/* Image Column */}
-            <div className="flex flex-col items-center">
-              <img
-                src={goldenMemeCoin}
-                alt="Illustration of Peperoni Coin - crypto meets pizza"
-                className="w-[200px] md:w-[300px] animate-float-slow meme-coin--glow"
-              />
-              {/* <span className="w-[180 px] hero-img-shadow top-60"></span> */}
-            </div>
+          {/* Image Column */}
+          <div className="flex flex-col items-center relative">
+            <img
+              src={goldenMemeCoin}
+              alt="Illustration of Peperoni Coin - crypto meets pizza"
+              className="w-[200px] md:w-[300px] animate-float-slow meme-coin--glow"
+            />
+            {/* <span className="w-[180 px] hero-img-shadow top-60"></span> */}
           </div>
         </div>
       </section>

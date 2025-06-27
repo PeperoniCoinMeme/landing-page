@@ -23,7 +23,7 @@ const SliceOfUtility = () => {
       // backgroundSvg={transitionDownBg}
     >
       <StarBackground />
-      <section className="relative rounded-xl md:px-20 px-4 lg:px-40 py-16 md:px-16 px-6 py-30">
+      <section className="relative rounded-xl md:px-20 px-4 lg:px-40 py-18 md:px-16 px-6 py-30">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -31,18 +31,18 @@ const SliceOfUtility = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative flex flex-col justify-center"
         >
-          <div className="text-center">
-            <LandingHero>The Slice of Utility</LandingHero>
-          </div>
+          <LandingHero className="text-center md:text-left">
+            The Slice of Utility
+          </LandingHero>
 
           <div className="flex flex-col md:flex-row items-center my-6 flex-wrap relative z-50 gap-7">
-            <LandingText>
+            <LandingText className="text-center md:text-left">
               Whether you're a builder, creator, degen, or just here for the
               sauce, $PEPERONI isn't just a memecoin, it’s a full-course utility
               token inside the world’s most flavorful Web3 experience.
             </LandingText>
 
-            <LandingText>
+            <LandingText className="text-center md:text-left">
               Built on Solana for blazing speed. Fueled by community and
               creativity. Designed to be used, not just held.
             </LandingText>
@@ -71,7 +71,7 @@ const SliceOfUtility = () => {
             animationDelay: "0.2s",
             animationFillMode: "forwards",
           }}
-          className="w-[600px] relative -right-35"
+          className="w-[500px] md:w-[700px] relative -right-35"
         />
       </div>
     </Section>

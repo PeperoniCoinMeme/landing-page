@@ -12,19 +12,19 @@ import {
 import RoadmapHeader from "@/sections/RoadmapHeader/RoadmapHeader";
 import Loader from "@/components/Loader/Loader";
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
+import Carousel from "@/components/Carousel/Carousel";
 
-const imageList = [
-  "/images/hero.jpg",
-  "/images/logo.png",
-  "/images/banner.jpg",
-];
+const imageList: string[] = [];
 
 const preloadImage = (src: string): Promise<void> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.src = src;
     img.onload = () => resolve();
-    img.onerror = () => reject();
+    img.onerror = (err) => {
+      console.error("Error loading:", src);
+      reject(err);
+    };
   });
 };
 
@@ -32,9 +32,19 @@ const LandingPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    Promise.all(imageList.map(preloadImage))
-      .then(() => setLoading(false))
-      .catch(() => setLoading(false));
+    console.log("Loading started");
+    const preload = Promise.all(imageList.map(preloadImage));
+    const delay = new Promise((resolve) => setTimeout(resolve, 5500));
+
+    Promise.all([preload, delay])
+      .then(() => {
+        console.log("Loading finished");
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Some images failed to preload", err);
+        setLoading(false);
+      });
   }, []);
 
   if (loading) return <Loader />;
@@ -52,15 +62,15 @@ const LandingPage = () => {
 
       {/* 3 */}
       <MissionVibes />
-      {/* <Feature /> */}
+      <Carousel />
+      {/* <LogoShowcase />  */}
+      {/* <Feature />  */}
 
       {/* 4 */}
       <SliceOfUtility />
 
       {/* 5 */}
       <Slicenomics />
-
-      {/* <LogoShowcase /> */}
 
       {/* 6 */}
       <RoadmapHeader />

@@ -11,9 +11,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import { layout } from "@/styles/styles";
 import Dialog from "@mui/material/Dialog";
 import LandingTitle from "@/components/design/tipography/LandingTitle";
+import Social from "@/components/Social/Social";
+import LandingSubtitle from "@/components/design/tipography/LandingSubtitle";
 
 const Hero = () => {
-  const { ref, inView } = useInView({
+  const { ref: ref1, inView: inView1 } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const { ref: ref2, inView: inView2 } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
@@ -30,14 +36,15 @@ const Hero = () => {
       bgColor="#191716"
       backgroundSvg={brickBg}
     >
-      <div className="pt-38 flex flex-col sm:flex-row justify-around px-5">
+      {/* Desktop */}
+      <div className="hidden md:flex pt-38 flex-row justify-around px-5">
         {/* First Info container */}
         <motion.div
-          ref={ref}
+          ref={ref1}
           initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={inView1 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col p-10 md:px-10 md:py-30 justify-center flex-1"
+          className="flex flex-col px-10 py-30 justify-center flex-1"
         >
           <LandingHero className="mt-10">
             DELICIOUSLY <br />
@@ -62,38 +69,38 @@ const Hero = () => {
             <img
               src={iaOven}
               alt=""
-              className="hidden lg:flex absolute max-w-190 md:max-w-270 -top-40 left-50 md:-top-135 md:-left-70"
+              className="max-w-50 absolute max-w-190 md:max-w-270 -top-40 -left-50 md:-top-135 md:-left-70"
               style={{ zIndex: zIndexOven }}
             />
-            <div className="hidden lg:flex absolute md:w-130 my-25 flex-row justify-between md:-mx-4">
+            <div className="hidden lg:flex absolute md:w-130 my-28 flex-row justify-between md:-mx-4">
               <LandingButton
                 onClick={() => setOpen(true)}
-                bgColor="#514AAA"
-                className=""
+                bgColor="#228B22"
+                className="w-18"
               >
                 Buy
               </LandingButton>
-              <LandingButton
+              {/* <LandingButton
                 onClick={() => setOpen(true)}
                 isDisabled={true}
-                className=""
+                className="w-18"
               >
-                TBR
-              </LandingButton>
+                TBA
+              </LandingButton> */}
             </div>
           </div>
         </div>
         {/* Wallet container */}
         <motion.div
-          ref={ref}
+          ref={ref1}
           initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={inView1 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col gap-1 items-center px-10 flex-1"
+          className="flex flex-col justify-between pb-25 gap-1 items-end mx-10 flex-1 z-500"
         >
           <LandingButton
             onClick={() => setOpen(true)}
-            className="max-w-35 lg:ml-20 lg:my-0 my-12"
+            className="w-30 lg:mx-28 lg:my-0 my-12"
           >
             Connect
           </LandingButton>
@@ -104,6 +111,90 @@ const Hero = () => {
           <div className="border-2 border-gray-300 my-1 px-5 py-4 rounded-lg shadow-md">
             <p className="text-gray-900">Leader board</p>
           </div> */}
+          <Social mode="hero" />
+        </motion.div>
+      </div>
+
+      <div
+        className="hidden md:flex lg:hidden min-w-full flex flex-col md:flex-row justify-center"
+        style={{ zIndex: zIndexOven + 1 }}
+      >
+        <div className="flex flex-col sm:flex-row items-center justify-center z-100 -mt-8">
+          <LandingButton
+            onClick={() => setOpen(true)}
+            bgColor="#228B22"
+            className="w-18"
+          >
+            Buy
+          </LandingButton>
+        </div>
+      </div>
+
+      {/* Mobile */}
+      <div className="md:hidden pt-15 md:flex flex-col sm:flex-row justify-around px-5">
+        {/* Wallet container */}
+        <motion.div
+          ref={ref2}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView2 ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col gap-2 items-end flex-1 mt-5 mb-5"
+        >
+          <LandingButton onClick={() => setOpen(true)} className="min-w-35">
+            Connect
+          </LandingButton>
+        </motion.div>
+        {/* Oven container */}
+        <div className="flex flex-col justify-center flex-1">
+          <figure>
+            <div className="hero-3d-layout">
+              <HeroExperience />
+            </div>
+          </figure>
+          <div className="oven-container relative h-90">
+            {/* Oven Image */}
+            <img
+              src={iaOven}
+              alt=""
+              className="absolute max-w-150 -top-30 -left-33"
+              style={{ zIndex: zIndexOven }}
+            />
+            <div className="absolute w-full flex flex-row justify-between px-4 top-60">
+              <LandingButton
+                onClick={() => setOpen(true)}
+                bgColor="#228B22"
+                className="w-14"
+              >
+                Buy
+              </LandingButton>
+              {/* <LandingButton
+                onClick={() => setOpen(true)}
+                isDisabled={true}
+                className="w-14"
+              >
+                TBA
+              </LandingButton> */}
+            </div>
+          </div>
+        </div>
+        {/* First Info container */}
+        <motion.div
+          ref={ref2}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView2 ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col justify-center flex-1"
+        >
+          <LandingHero className="text-center">
+            DELICIOUSLY <br />
+            COOKED BY YOU
+          </LandingHero>{" "}
+          <div className="max-w-80 text-center">
+            <LandingText>
+              We're not promising world domination. We're just here to build,
+              vibe, and feed the ecosystem one slice at a time.
+            </LandingText>
+          </div>
         </motion.div>
       </div>
 
@@ -111,11 +202,7 @@ const Hero = () => {
         className="lg:hidden min-w-full flex flex-col md:flex-row justify-center"
         style={{ zIndex: zIndexOven + 1 }}
       >
-        <div className="flex flex-col sm:flex-row items-center justify-center z-100 -mt-8">
-          <LandingButton onClick={() => setOpen(true)} bgColor="#3f2c2f">
-            Buy
-          </LandingButton>
-        </div>
+        <div className="flex flex-col sm:flex-row items-center justify-center z-100 -mt-8"></div>
       </div>
 
       <AnimatedCounter />
@@ -131,10 +218,10 @@ const Hero = () => {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="flex flex-col justify-center items-center shadow-xl max-w-md text-white w-full text-center gap-3"
               >
-                <LandingTitle className="animate-bounce">
+                <LandingSubtitle className="animate-bounce">
                   🚧 Coming Soon 🚧
-                </LandingTitle>
-                <LandingText>
+                </LandingSubtitle>
+                <LandingText className="px-10">
                   We’re building something amazing. Check back soon!
                 </LandingText>
                 <LandingButton onClick={() => setOpen(false)} className="my-5">
