@@ -65,10 +65,10 @@ const Hero = () => {
               className="hidden lg:flex absolute max-w-190 md:max-w-270 -top-40 left-50 md:-top-135 md:-left-70"
               style={{ zIndex: zIndexOven }}
             />
-            <div className="hidden lg:flex absolute md:w-130 my-25 flex-row justify-between md:-mx-4">
+            <div className="hidden lg:flex absolute md:w-130 my-28 flex-row justify-between md:-mx-4">
               <LandingButton
                 onClick={() => setOpen(true)}
-                bgColor="#514AAA"
+                bgColor="#d62828"
                 className=""
               >
                 Buy
