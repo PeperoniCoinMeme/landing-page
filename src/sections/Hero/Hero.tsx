@@ -95,11 +95,11 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView1 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col justify-between pb-20 gap-1 items-center px-10 flex-1"
+          className="flex flex-col justify-between pb-25 gap-1 items-end mx-10 flex-1 z-500"
         >
           <LandingButton
             onClick={() => setOpen(true)}
-            className="w-30 lg:ml-20 lg:my-0 my-12"
+            className="w-30 lg:mx-28 lg:my-0 my-12"
           >
             Connect
           </LandingButton>
