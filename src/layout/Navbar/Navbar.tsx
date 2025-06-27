@@ -18,6 +18,7 @@ import AboutContent from "./Content/About";
 import MeltingCheese from "../../components/MeltingCheese/MeltingCheese";
 import FlyoutLink from "./Flyout/Flyout";
 import Headroom from "../../components/Headroom/Headroom";
+import Social from "@/components/Social/Social";
 
 const menuItems = [
   { label: "Home", href: "#home", icon: FireIcon },
@@ -105,7 +106,7 @@ const Navbar = () => {
 
                 <h2 className="text-5xl font-bold opacity-0">🍕</h2>
 
-                <ul className="space-y-6">
+                <ul className="space-y-4">
                   {menuItems.map(({ label, href, icon: Icon }, index) => (
                     <motion.li
                       key={label}
@@ -133,6 +134,9 @@ const Navbar = () => {
                 {/* Flames */}
                 {/* <CryptoFlameTrail />
                 <CryptoFlameTrail /> */}
+                <div className="absolute -bottom-14 -left-18">
+                  <Social mode="footer" />
+                </div>
               </div>
             </motion.div>
           </>

@@ -12,6 +12,7 @@ import { layout } from "@/styles/styles";
 import Dialog from "@mui/material/Dialog";
 import LandingTitle from "@/components/design/tipography/LandingTitle";
 import Social from "@/components/Social/Social";
+import LandingSubtitle from "@/components/design/tipography/LandingSubtitle";
 
 const Hero = () => {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -79,13 +80,13 @@ const Hero = () => {
               >
                 Buy
               </LandingButton>
-              <LandingButton
+              {/* <LandingButton
                 onClick={() => setOpen(true)}
                 isDisabled={true}
                 className="w-18"
               >
                 TBA
-              </LandingButton>
+              </LandingButton> */}
             </div>
           </div>
         </div>
@@ -166,13 +167,13 @@ const Hero = () => {
               >
                 Buy
               </LandingButton>
-              <LandingButton
+              {/* <LandingButton
                 onClick={() => setOpen(true)}
                 isDisabled={true}
                 className="w-14"
               >
                 TBA
-              </LandingButton>
+              </LandingButton> */}
             </div>
           </div>
         </div>
@@ -217,9 +218,9 @@ const Hero = () => {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="flex flex-col justify-center items-center shadow-xl max-w-md text-white w-full text-center gap-3"
               >
-                <LandingTitle className="animate-bounce">
+                <LandingSubtitle className="animate-bounce">
                   🚧 Coming Soon 🚧
-                </LandingTitle>
+                </LandingSubtitle>
                 <LandingText className="px-10">
                   We’re building something amazing. Check back soon!
                 </LandingText>

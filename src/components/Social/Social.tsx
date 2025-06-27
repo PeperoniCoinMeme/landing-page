@@ -42,7 +42,7 @@ const Social: React.FC<SocialProps> = ({ mode }) => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="flex justify-between gap-5 rounded-xl"
+        className="flex flex-col justify-between gap-5 rounded-xl"
       >
         <a href="https://x.com/Peperoni_Meme" className={iconStyleHero}>
           <XIcon width={28} height={28} />
