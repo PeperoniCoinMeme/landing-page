@@ -22,7 +22,7 @@ const Slicenomics = () => {
       bgColor="#000000"
     >
       <StarBackground />
-      <section className="py-10 md:px-20 px-4 lg:px-40 rounded-xl py-16 md:px-16 px-6 text-center">
+      <section className="md:px-20 px-4 lg:px-40 rounded-xl py-30 md:py-16 md:px-16 px-6 text-center">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
