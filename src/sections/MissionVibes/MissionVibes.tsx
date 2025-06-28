@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { layout } from "@/styles/styles";
 import LandingVideo from "@/components/LandingVideo/LandingVideo";
 import "./MissionVibes.css";
-import Checkmark from "@/assets/svg/Checkmark";
+import Checkmark from "@/assets/svg/checkmark";
 import LandingCaption from "@/components/design/tipography/LandingCaption";
 
 const MissionVibes = () => {
