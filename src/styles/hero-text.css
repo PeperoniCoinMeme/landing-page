@@ -91,17 +91,18 @@
   height: 100%;
   position: absolute;
   overflow: hidden;
-  animation: marquee 60s linear infinite;
+  animation: marqueeBounce 40s ease-in-out infinite alternate;
 }
 .marquee-item {
   float: left;
 }
-@keyframes marquee {
+
+@keyframes marqueeBounce {
   0% {
-    left: 0;
+    transform: translateX(0%);
   }
   100% {
-    left: -100%;
+    transform: translateX(-50%);
   }
 }
 /* marquee end */

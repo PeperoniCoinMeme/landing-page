@@ -18,7 +18,7 @@ const SliceOfUtility = () => {
   return (
     <Section
       id="sliceofutility"
-      className={`${layout.section} ${layout.sectionHeight} overflow-hidden`}
+      className={`${layout.section} ${layout.sectionHeight} min-h-210 overflow-hidden`}
       bgColor="#000000"
       // backgroundSvg={transitionDownBg}
     >
@@ -35,7 +35,7 @@ const SliceOfUtility = () => {
             The Slice of Utility
           </LandingHero>
 
-          <div className="flex flex-col md:flex-row items-center my-6 flex-wrap relative z-50 gap-7">
+          <div className="flex flex-col items-start my-6 flex-wrap relative z-50 gap-7">
             <LandingText className="text-center md:text-left">
               Whether you're a builder, creator, degen, or just here for the
               sauce, $PEPERONI isn't just a memecoin, it’s a full-course utility
@@ -56,7 +56,7 @@ const SliceOfUtility = () => {
       </section>
 
       {/* Cheese moon */}
-      <div className="md:opacity-100 opacity-40 absolute top-50 -left-130 translate-x-1/3 pointer-events-none z-0">
+      <div className="md:opacity-100 opacity-40 absolute top-80 lg:top-40 lg:left-100 translate-x-1/3 pointer-events-none z-0">
         <motion.img
           ref={ref}
           initial={{ opacity: 0 }}
@@ -68,10 +68,9 @@ const SliceOfUtility = () => {
             zIndex: 100,
             transformOrigin: "center center",
             animation: "clockSpin 350s linear infinite",
-            animationDelay: "0.2s",
             animationFillMode: "forwards",
           }}
-          className="w-[500px] md:w-[700px] relative -right-35"
+          className="w-[500px] relative -right-35"
         />
       </div>
     </Section>

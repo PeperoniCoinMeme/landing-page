@@ -1,17 +1,21 @@
 .gallery__strip--one {
-  animation: move-it 20s linear infinite;
+  animation: move-bounce 20s ease-in-out infinite alternate;
 }
 
 .gallery__strip--two {
-  animation: move-it-2 22s linear infinite;
+  animation: move-bounce 22s ease-in-out infinite alternate-reverse;
 }
 
 .gallery__strip--three {
-  animation: move-it 18s linear infinite;
+  animation: move-bounce 18s ease-in-out infinite alternate;
 }
 
 .gallery__strip--four {
-  animation: move-it-2 24s linear infinite;
+  animation: move-bounce 24s ease-in-out infinite alternate-reverse;
+}
+
+.gallery__strip {
+  width: 100vw;
 }
 
 .gallery-card {
@@ -68,7 +72,6 @@
 /* Gallery Card Hover  */
 .gallery-card:hover {
   box-shadow: 0px 0px 30px 1px rgba(50, 49, 50, 0.3);
-  border-radius: 0;
 }
 
 .gallery-card:hover > img {
@@ -107,6 +110,15 @@
   }
   100% {
     transform: translate(-99.5%, -99.5%);
+  }
+}
+
+@keyframes move-bounce {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }
 

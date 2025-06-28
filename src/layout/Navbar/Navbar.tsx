@@ -1,6 +1,6 @@
 import { AnimatePresence, easeOut, motion } from "framer-motion";
 import { div } from "framer-motion/client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   XMarkIcon,
   Bars3Icon,
@@ -34,6 +34,17 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const fontStyles: React.CSSProperties = {
     fontFamily: "Riffic",
   };
@@ -41,16 +52,28 @@ const Navbar = () => {
   return (
     <>
       {/* <Headroom> */}
-      <nav className="fixed top-0 left-0 z-50 w-full flex justify-between px-3 py-8 h-1 items-center max-w-[1920px] backdrop-blur-sm md:backdrop-blur-none border-b-1 border-white/20 md:border-0">
-        <div id="logo" className="w-12 flex flex-row gap-3 items-center">
+      <nav
+        className={`fixed top-0 left-0 z-50 w-full flex justify-between px-3 py-8 h-1 items-center max-w-[1920px]
+    ${
+      hasScrolled
+        ? "backdrop-blur-sm border-b border-white/20"
+        : "backdrop-blur-none border-0"
+    }
+    md:backdrop-blur-none md:border-0`}
+      >
+        <a
+          href="#hero"
+          id="logo"
+          className="w-12 flex flex-row gap-3 items-center cursor-pointer"
+        >
           <img src={logo} alt="" className="hover:scale-120 transition-all" />
           <h4
-            className="text-gray-100 text-2xl text-shadow-lg pointer-events-none"
+            className="text-gray-100 text-2xl text-shadow-lg"
             style={fontStyles}
           >
             PEPERONI
           </h4>
-        </div>
+        </a>
 
         <div className="flex justify-between w-6/12">
           {/* Deprecated | No nav links */}
@@ -66,7 +89,10 @@ const Navbar = () => {
             </FlyoutLink>
           </div> */}
         </div>
-        <button onClick={toggleMenu} className="text-white relative p-[14px] ">
+        <button
+          onClick={toggleMenu}
+          className="text-white relative p-[14px] cursor-pointer"
+        >
           <Bars3Icon className="h-7 w-7 absolute top-0 left-0" />
         </button>
         {/* Melting Cheese Images  */}
@@ -99,7 +125,7 @@ const Navbar = () => {
               >
                 <button
                   onClick={toggleMenu}
-                  className="absolute -right-20 top-3 md:right-3 text-[var(--color-pepperoni)] hover:text-red-400 transition"
+                  className="absolute cursor-pointer z-9999 -right-20 top-3 md:right-3 text-[var(--color-pepperoni)] hover:text-red-400 transition"
                 >
                   <XMarkIcon className="h-10 w-10 m-3 text-orange-100 text-shadow-lg" />
                 </button>

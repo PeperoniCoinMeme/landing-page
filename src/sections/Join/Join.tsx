@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import { Section } from "@/layout";
 
 import {
+  pepeBaseball,
+  pepeBoxer,
   pepeCar,
   pepeCivilian,
   pepeClimbing,
   pepeFitSkinny,
   pepeFitStrong,
+  pepeJumproper,
   pepePresident,
   pepeSpy,
-  pepeSurf,
+  pepeWelder,
 } from "@/assets";
 import LandingHero from "@/components/design/tipography/LandingHero";
 import LandingText from "@/components/design/tipography/LandingText";
@@ -28,19 +31,19 @@ const Join = () => {
       image: pepePresident,
     },
     {
-      image: pepeCivilian,
+      image: pepeWelder,
     },
     {
       image: pepeClimbing,
     },
     {
-      image: pepeSpy,
+      image: pepeBoxer,
     },
     {
-      image: pepeSurf,
+      image: pepeBaseball,
     },
     {
-      image: pepeFitSkinny,
+      image: pepeJumproper,
     },
     {
       image: pepeFitStrong,
@@ -65,7 +68,7 @@ const Join = () => {
   return (
     <Section
       id="join"
-      className={`${layout.section} min-h-240`}
+      className={`${layout.section} min-h-120`}
       // bgColor="#0c0500"
     >
       <section className="relative md:px-20 px-4 py-40 lg:px-40 flex flex-col md:flex-row">
@@ -94,8 +97,8 @@ const Join = () => {
                 <LandingText className="text-center md:text-left">
                   At the heart of $PEPERONI is a community of pizza-pilled
                   memelords, creators, degens, and builders united by one
-                  delicious mission: 🍕 To bake the most valuable pizza the
-                  world has ever seen, on-chain, together.
+                  delicious mission: To bake the most valuable pizza the world
+                  has ever seen, on-chain, together.
                 </LandingText>
 
                 {/* <div className="mt-15 px-10">

@@ -31,7 +31,6 @@ import {
   pepePresident,
   pepeSamurai,
   pepeSpy,
-  pepeSurf,
   pepeWar,
   pepeWarrior,
   pepeWelder,
@@ -68,7 +67,6 @@ const Gallery = () => {
     pepePets,
     pepePresident,
     pepeSpy,
-    pepeSurf,
     pepeWarrior,
     pepeAviator,
     pepeBaseball,
@@ -103,7 +101,10 @@ const Gallery = () => {
           const orderedImages = isEven ? chunk : [...chunk].reverse();
 
           return (
-            <div key={strip} className={`gap-5 gallery__strip--${strip}`}>
+            <div
+              key={strip}
+              className={`gap-5 gallery__strip gallery__strip--${strip}`}
+            >
               {orderedImages.map((src, imgIndex) => (
                 <GalleryCard
                   key={`${stripIndex}-${imgIndex}`}
@@ -117,8 +118,8 @@ const Gallery = () => {
       </div>
       <div className="absolute top-0 lg:hidden w-full flex justify-center items-center bg-gradient-to-t lg:bg-gradient-to-b from-bg-black/10 to-black/95 h-18 z-9999"></div>
       <div className="absolute bottom-0 lg:top-0 w-full flex justify-center items-center bg-gradient-to-b lg:bg-gradient-to-t from-bg-black/10 to-black/40 h-18 z-9999">
-        <LandingTitle className="lg:text-4xl text-xl">
-          The Peperoni gallery
+        <LandingTitle className="lg:text-4xl text-xl my-2">
+          Gallery
         </LandingTitle>
       </div>
     </div>
