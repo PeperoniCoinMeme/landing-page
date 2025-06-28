@@ -50,7 +50,7 @@ const Footer = () => {
               <LandingText>Join Us</LandingText>
             </a>
             <a
-              href="https://github.com/PeperoniCoinMeme/litepaper/blob/4e955908f2ebfc7bc63c6ed6f387e2e5ec642c53/asset/PEPERONI_LitePAPER.pdf"
+              href="https://github.com/PeperoniCoinMeme/litepaper"
               className="hover:underline text-sm"
               {...externalLinkProps}
             >
