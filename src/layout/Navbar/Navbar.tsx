@@ -66,7 +66,11 @@ const Navbar = () => {
           id="logo"
           className="w-12 flex flex-row gap-3 items-center cursor-pointer"
         >
-          <img src={logo} alt="" className="hover:scale-120 transition-all" />
+          <img
+            src={logo}
+            alt="Peperoni Coin"
+            className="hover:scale-120 transition-all"
+          />
           <h4
             className="text-gray-100 text-2xl text-shadow-lg"
             style={fontStyles}

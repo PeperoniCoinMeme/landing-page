@@ -18,7 +18,7 @@ const Slicenomics = () => {
   return (
     <Section
       id="slicenomics"
-      className={`${layout.section} ${layout.sectionHeight}`}
+      className={`${layout.section} ${layout.sectionHeight} min-h-280 lg:min-h-230`}
       bgColor="#000000"
     >
       <StarBackground />
@@ -34,7 +34,7 @@ const Slicenomics = () => {
             <LandingHero> Slicenomics: Slice by Slice </LandingHero>
           </div>
 
-          <div className="lg:flex lg:flex-col lg:text-left grid grid-cols-2 w-full mb-12 gap-1">
+          <div className="lg:flex lg:flex-col lg:text-left grid grid-cols-2 w-full mb-12 gap-8">
             <div className="flex flex-col lg:flex-row gap-3 items-center">
               <LandingText>Total Supply:</LandingText>
               <span className="text-red-400 text-2xl"> 1,790,000,000</span>
@@ -45,7 +45,7 @@ const Slicenomics = () => {
               <span className="text-red-400 text-2xl">790,000,000</span>
               will be burned progressively across project milestones.
             </div>
-            <div className="flex flex-col lg:flex-row gap-3 items-center">
+            <div className="col-span-2 justify-self-center flex flex-col lg:flex-row gap-3 items-center">
               <LandingText>Distribution of</LandingText>
               <span className="text-red-400 text-2xl">1 000 000 000</span>
               Remaining Supply:
@@ -81,7 +81,7 @@ const Slicenomics = () => {
         />
       </div>
       {/* Astronaut */}
-      <div className="absolute -bottom-50 md:-bottom-30 left-30 pointer-events-none">
+      <div className="absolute -bottom-50 md:-bottom-100 left-20 md:left-0 pointer-events-none">
         <motion.img
           src={astronaut2}
           alt="Astronaut"
@@ -94,7 +94,7 @@ const Slicenomics = () => {
             repeat: Infinity,
           }}
           style={{ zIndex: 9999 }}
-          className="rotate-[-10deg] w-[250px]"
+          className="rotate-[-10deg] w-[220px]"
         />
       </div>
     </Section>

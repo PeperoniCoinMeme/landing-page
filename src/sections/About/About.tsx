@@ -64,11 +64,11 @@ const About = () => {
   return (
     <Section
       id="about"
-      className={`${layout.section} ${layout.sectionHeight} min-h-200 overflow-hidden square-framed-bg`}
+      className={`${layout.section} ${layout.sectionHeight} min-h-200 square-framed-bg`}
       // bgColor="linear-gradient(to bottom, transparent, #0c0500)"
       // backgroundSvg={transitionUpBg}
     >
-      <section className="flex my-12 md:my-20 md:p-16 p-8 lg:p-40">
+      <section className="flex my-18 md:my-20 md:p-16 p-8 lg:p-40">
         <div className="mx-auto flex lg:flex-row flex-col-reverse gap-8 md:gap-16 items-center relative">
           {/* Text Column */}
           <motion.div
@@ -76,9 +76,9 @@ const About = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex flex-col justify-center relative"
+            className="flex flex-col justify-center items-center lg:items-start relative"
           >
-            <LandingHero className="text-center md:text-left">
+            <LandingHero className="text-center lg:text-left">
               About Peperoni
             </LandingHero>
             {/*<h1 className="pointer-events-none text-2xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 hero-font">
@@ -114,7 +114,7 @@ const About = () => {
               <br />
             </h1>*/}
             <div className="mb-8 max-w-lg">
-              <LandingText color="white" className="text-center md:text-left">
+              <LandingText color="white" className="text-center lg:text-left">
                 It’s not just a coin. It’s not just a meme. $PEPERONI is a
                 community payment token built to celebrate the people who make
                 Web3 spicy creators, builders, and degens. It’s fast. It’s fair.

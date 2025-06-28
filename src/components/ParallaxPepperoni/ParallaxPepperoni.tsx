@@ -26,7 +26,7 @@ export const ParallaxPepperoni: React.FC<ParallaxPepperoniProps> = ({
     <div className="lg:absolute w-full hidden lg:block">
       {/* Moving background colored circle balls */}
       <MouseParallax strength={0.1}>
-        <div className="absolute top-1/2 left-1/2 w-50 h-50 origin-bottom -rotate-[56deg]">
+        <div className="absolute top-20 -translate-x-100 left-1/2 w-50 h-50 origin-bottom -rotate-[56deg]">
           <img
             src={pepperoniSlice1}
             alt="Pepperoni Slice 1"
@@ -36,7 +36,7 @@ export const ParallaxPepperoni: React.FC<ParallaxPepperoniProps> = ({
           />
         </div>
 
-        <div className="absolute bottom-1/2 left-1/2 w-50 h-50 origin-bottom rotate-[54deg]">
+        <div className="absolute bottom-1/2 -translate-x-100 left-1/2 w-50 h-50 origin-bottom rotate-[54deg]">
           <img
             src={pepperoniSlice2}
             alt="Pepperoni Slice 2"
@@ -46,7 +46,7 @@ export const ParallaxPepperoni: React.FC<ParallaxPepperoniProps> = ({
           />
         </div>
 
-        <div className="absolute top-1/3 left-1/2 w-50 h-50 -rotate-[65deg]">
+        <div className="absolute top-40 -translate-x-180 left-1/2 w-50 h-50 -rotate-[65deg]">
           <img
             src={pepperoniSlice3}
             alt="Pepperoni Slice 3"
@@ -66,7 +66,7 @@ export const ParallaxPepperoni: React.FC<ParallaxPepperoniProps> = ({
           />
         </div> */}
 
-        <div className="absolute bottom-1/2 left-1/2 w-50 h-50 origin-bottom rotate-[70deg]">
+        <div className="absolute bottom-1/2 -translate-x-100 left-1/2 w-50 h-50 origin-bottom rotate-[70deg]">
           <img
             src={pepperoniSlice5}
             alt="Pepperoni Slice 5"
@@ -75,7 +75,7 @@ export const ParallaxPepperoni: React.FC<ParallaxPepperoniProps> = ({
             }`}
           />
         </div>
-        <div className="absolute bottom-1/2 left-1/2 w-50 h-50 origin-bottom rotate-[30deg]">
+        <div className="absolute bottom-1/2 -translate-x-150 left-1/2 w-50 h-50 origin-bottom rotate-[30deg]">
           <img
             src={pepperoniSlice6}
             alt="Pepperoni Slice 6"

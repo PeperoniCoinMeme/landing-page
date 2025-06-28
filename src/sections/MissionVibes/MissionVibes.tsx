@@ -78,7 +78,7 @@ const MissionVibes = () => {
           <div className="py-8">{/* <LandingButton>See</LandingButton> */}</div>
         </motion.div>
 
-        <div className="absolute left-25 top-15 md:-top-17 md:-left-10 md:relative flex-1 flex flex-col items-center min-w-6/12">
+        <div className="absolute -translate-x-1/2 left-1/2 md:translate-x-0 md:-left-10 top-15 md:-top-17 md:relative flex-1 flex flex-col items-center min-w-6/12">
           <div className="md:opacity-100 opacity-30 h-150 w-100 parent-depth relative">
             <LandingVideo
               src={tiktokVideo}

@@ -18,7 +18,7 @@ const SliceOfUtility = () => {
   return (
     <Section
       id="sliceofutility"
-      className={`${layout.section} ${layout.sectionHeight} min-h-210 overflow-hidden`}
+      className={`${layout.section} ${layout.sectionHeight} lg:min-h-200 min-h-250 overflow-hidden`}
       bgColor="#000000"
       // backgroundSvg={transitionDownBg}
     >
@@ -29,20 +29,20 @@ const SliceOfUtility = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative flex flex-col justify-center"
+          className="relative flex flex-col justify-center items-center lg:items-start"
         >
           <LandingHero className="text-center md:text-left">
             The Slice of Utility
           </LandingHero>
 
           <div className="flex flex-col items-start my-6 flex-wrap relative z-50 gap-7">
-            <LandingText className="text-center md:text-left">
+            <LandingText className="text-center lg:text-left">
               Whether you're a builder, creator, degen, or just here for the
               sauce, $PEPERONI isn't just a memecoin, it’s a full-course utility
               token inside the world’s most flavorful Web3 experience.
             </LandingText>
 
-            <LandingText className="text-center md:text-left">
+            <LandingText className="text-center lg:text-left">
               Built on Solana for blazing speed. Fueled by community and
               creativity. Designed to be used, not just held.
             </LandingText>
@@ -56,7 +56,7 @@ const SliceOfUtility = () => {
       </section>
 
       {/* Cheese moon */}
-      <div className="md:opacity-100 opacity-40 absolute top-80 lg:top-40 lg:left-100 translate-x-1/3 pointer-events-none z-0">
+      <div className="md:opacity-100 right-1/4 translate-x-1/2 opacity-40 absolute top-80 lg:top-40 translate-x-1/3 pointer-events-none z-0">
         <motion.img
           ref={ref}
           initial={{ opacity: 0 }}
