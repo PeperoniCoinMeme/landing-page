@@ -28,7 +28,6 @@ import pepePresident from "@/assets/meme/president.jpeg";
 import pepeResurrection from "@/assets/meme/resurrection.jpeg";
 import pepeSamurai from "@/assets/meme/samurai.png";
 import pepeSpy from "@/assets/meme/spy.jpeg";
-import pepeSurf from "@/assets/meme/surf.jpeg";
 import pepeWar from "@/assets/meme/war.jpeg";
 import pepeWarrior from "@/assets/meme/warrior.jpeg";
 import pepeWelder from "@/assets/meme/welder.jpg";
@@ -160,7 +159,6 @@ export {
   pepePets,
   pepePresident,
   pepeSpy,
-  pepeSurf,
   pepeWarrior,
   pepeLogo,
   pepeAviator,

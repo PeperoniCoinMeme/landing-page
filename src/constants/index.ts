@@ -156,25 +156,25 @@ export const roadMapCardsB: RoadMapCards[] = [
     review:
       "Enable $PEPERONI as the native payment method across all our services. From tools to merch, the pepper gets you in.",
     title: "M5: $PEPERONI as Payment Integration",
-    date: "Phase 5: Infinite Toppings",
+    date: "Phase 5: Spicy Utility",
   },
   {
     review:
-      "Launch meme tokens without code in minutes. Think “$DOGELauncher” but Solana-speed and peppered with vibes.",
+      "Launch meme tokens without code in minutes. Think “$DOGE Launcher” but Solana-speed and peppered with vibes.",
     title: "M6: Meme Coin Launchpad",
-    date: "Phase 6: Infinite Toppings",
+    date: "Phase 6: Meme Foundry",
   },
   {
     review:
       "Drop spicy tokens to your meme-loving followers, no devs needed. Think “Solana faucet meets meme campaign” fast, fun, and powered by $PEPERONI.",
     title: "M7: Meme Airdrop Tool",
-    date: "Phase 7: Infinite Toppings",
+    date: "Phase 7: Pepper Rain",
   },
   {
     review:
       "Permissionless wallet-based forms for token sales, whitelists, contests, and more. No Google Forms only meme forms.",
     title: "M8: Meme On-Chain Form Tool",
-    date: "Phase 8: Infinite Toppings",
+    date: "Phase 8: Form Revolution",
   },
 ];
 

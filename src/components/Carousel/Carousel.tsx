@@ -19,7 +19,6 @@ import {
   pepePets,
   pepePresident,
   pepeSpy,
-  pepeSurf,
   pepeWarrior,
   pepeAviator,
   pepeBaseball,
@@ -31,6 +30,7 @@ import {
   pepeWar,
 } from "@/assets";
 import { logoIconsList } from "../../constants";
+import GalleryCard from "../Gallery/GalleryCard";
 
 interface CarouselItemProps {
   name?: string;
@@ -66,7 +66,6 @@ const images = [
   { name: "pepePets", imgPath: pepePets },
   { name: "pepePresident", imgPath: pepePresident },
   { name: "pepeSpy", imgPath: pepeSpy },
-  { name: "pepeSurf", imgPath: pepeSurf },
   { name: "pepeWarrior", imgPath: pepeWarrior },
   { name: "pepeAviator", imgPath: pepeAviator },
   { name: "pepeBaseball", imgPath: pepeBaseball },
@@ -77,20 +76,20 @@ const images = [
   { name: "pepeSamurai", imgPath: pepeSamurai },
   { name: "pepeWar", imgPath: pepeWar },
 ];
-
+// <CarouselItem key={index} name={icon.name} imgPath={icon.imgPath} />
 const Carousel = () => (
   <div className="relative">
     <div className="gradient-edge" />
     <div className="gradient-edge" />
 
     <div className="overflow-hidden relative h-50 md:h-100">
-      <div className="marquee-box md:gap-12 gap-5">
+      <div className="marquee-box">
         {images.map((icon, index) => (
-          <CarouselItem key={index} name={icon.name} imgPath={icon.imgPath} />
-        ))}
-
-        {logoIconsList.map((icon, index) => (
-          <CarouselItem key={index} name={icon.name} imgPath={icon.imgPath} />
+          <GalleryCard
+            key={index}
+            imageUrl={icon.imgPath}
+            className={`my-2 mx-1 md:my-4 rounded-lg min-w-40 gallery-card border-1 border-white/40`}
+          />
         ))}
       </div>
     </div>

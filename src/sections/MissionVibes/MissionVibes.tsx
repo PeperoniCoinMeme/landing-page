@@ -42,7 +42,7 @@ const MissionVibes = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative flex flex-col jutify-center flex-1"
         >
-          <div className="flex flex-col my-6 flex-wrap relative z-50 gap-4">
+          <div className="flex flex-col items-center md:items-start my-6 flex-wrap relative z-50 gap-4">
             <LandingHero className="text-center md:text-left">
               Mission & Vibes
             </LandingHero>
@@ -62,13 +62,13 @@ const MissionVibes = () => {
             Built different
           </p>
           {/* It’s not just a vibe — it’s a movement with mozzarella. */}
-          <div className="grid grid-cols-2 md:flex md:flex-row gap-3 mt-2 z-50 md:max-w-150">
+          <div className="grid grid-cols-2 md:flex md:flex-row gap-5 mt-2 z-50 md:max-w-150">
             {highlights.map((text, index) => (
               <div
                 key={index}
                 className="px-5 md:px-0
             w-full md:w-44 text-sm text-gray-100 transition-transform duration-300 hover:scale-110
-            flex flex-col gap-3"
+            flex flex-col gap-3 text-center md:text-start items-center md:items-start"
               >
                 <Checkmark />
                 <LandingCaption>{text}</LandingCaption>
@@ -78,8 +78,8 @@ const MissionVibes = () => {
           <div className="py-8">{/* <LandingButton>See</LandingButton> */}</div>
         </motion.div>
 
-        <div className="absolute -left-5 top-40 md:top-0 md:left-0 md:relative flex-1 flex flex-col items-center min-w-6/12">
-          <div className="md:opacity-100 opacity-10 h-150 w-100 parent-depth relative">
+        <div className="absolute left-25 top-15 md:-top-17 md:-left-10 md:relative flex-1 flex flex-col items-center min-w-6/12">
+          <div className="md:opacity-100 opacity-30 h-150 w-100 parent-depth relative">
             <LandingVideo
               src={tiktokVideo}
               className="video-depth absolute transform shadow-2xl"

@@ -72,7 +72,7 @@ const Hero = () => {
               className="max-w-50 absolute max-w-190 md:max-w-270 -top-40 -left-50 md:-top-135 md:-left-70"
               style={{ zIndex: zIndexOven }}
             />
-            <div className="hidden lg:flex absolute md:w-130 my-28 flex-row justify-between md:-mx-4">
+            <div className="hidden md:flex absolute md:w-130 my-28 flex-row justify-between md:mx-1">
               <LandingButton
                 onClick={() => setOpen(true)}
                 bgColor="#228B22"
@@ -113,21 +113,6 @@ const Hero = () => {
           </div> */}
           <Social mode="hero" />
         </motion.div>
-      </div>
-
-      <div
-        className="hidden md:flex lg:hidden min-w-full flex flex-col md:flex-row justify-center"
-        style={{ zIndex: zIndexOven + 1 }}
-      >
-        <div className="flex flex-col sm:flex-row items-center justify-center z-100 -mt-8">
-          <LandingButton
-            onClick={() => setOpen(true)}
-            bgColor="#228B22"
-            className="w-18"
-          >
-            Buy
-          </LandingButton>
-        </div>
       </div>
 
       {/* Mobile */}
@@ -187,7 +172,7 @@ const Hero = () => {
         >
           <LandingHero className="text-center">
             DELICIOUSLY <br />
-            COOKED BY YOU
+            BAKED BY YOU
           </LandingHero>{" "}
           <div className="max-w-80 text-center">
             <LandingText>
