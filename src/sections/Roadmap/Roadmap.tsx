@@ -175,7 +175,7 @@ const Roadmap = () => {
       <Clouds />
       {/* Parachutes1 */}
       <div
-        className="absolute -top-630 left-290 pointer-events-none"
+        className="absolute -top-620 left-50 md:left-290 pointer-events-none"
         style={{ transform: `translateY(${offsetY * 0.38}px)` }}
       >
         <img
@@ -205,7 +205,7 @@ const Roadmap = () => {
       </div>
       {/* Parachutes3 */}
       <div
-        className="absolute -top-330 left-190 pointer-events-none"
+        className="absolute -top-330 md:left-190 pointer-events-none"
         style={{ transform: `translateY(${offsetY * 0.4}px)` }}
       >
         <img

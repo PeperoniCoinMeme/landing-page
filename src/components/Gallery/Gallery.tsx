@@ -101,7 +101,10 @@ const Gallery = () => {
           const orderedImages = isEven ? chunk : [...chunk].reverse();
 
           return (
-            <div key={strip} className={`gap-5 gallery__strip--${strip}`}>
+            <div
+              key={strip}
+              className={`gap-5 gallery__strip gallery__strip--${strip}`}
+            >
               {orderedImages.map((src, imgIndex) => (
                 <GalleryCard
                   key={`${stripIndex}-${imgIndex}`}

@@ -14,6 +14,10 @@
   animation: move-bounce 24s ease-in-out infinite alternate-reverse;
 }
 
+.gallery__strip {
+  width: 100vw;
+}
+
 .gallery-card {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
   cursor: pointer;
