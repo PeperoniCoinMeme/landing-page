@@ -1,6 +1,6 @@
 import { AnimatePresence, easeOut, motion } from "framer-motion";
 import { div } from "framer-motion/client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   XMarkIcon,
   Bars3Icon,
@@ -34,6 +34,17 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const fontStyles: React.CSSProperties = {
     fontFamily: "Riffic",
   };
@@ -41,7 +52,15 @@ const Navbar = () => {
   return (
     <>
       {/* <Headroom> */}
-      <nav className="fixed top-0 left-0 z-50 w-full flex justify-between px-3 py-8 h-1 items-center max-w-[1920px] backdrop-blur-sm md:backdrop-blur-none border-b-1 border-white/20 md:border-0">
+      <nav
+        className={`fixed top-0 left-0 z-50 w-full flex justify-between px-3 py-8 h-1 items-center max-w-[1920px]
+    ${
+      hasScrolled
+        ? "backdrop-blur-sm border-b border-white/20"
+        : "backdrop-blur-none border-0"
+    }
+    md:backdrop-blur-none md:border-0`}
+      >
         <a
           href="#hero"
           id="logo"

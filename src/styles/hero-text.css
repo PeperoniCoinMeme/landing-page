@@ -97,7 +97,6 @@
   float: left;
 }
 
-/* Animación de rebote */
 @keyframes marqueeBounce {
   0% {
     transform: translateX(0%);

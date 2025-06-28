@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import StarBackground from "@/components/StarBackground/StarBackground";
 import PieAnimation from "@/components/PieChart/PieChart";
 import { layout } from "@/styles/styles";
+import LandingText from "@/components/design/tipography/LandingText";
 
 const Slicenomics = () => {
   const { ref, inView } = useInView({
@@ -31,6 +32,24 @@ const Slicenomics = () => {
         >
           <div className="mb-5 text-center">
             <LandingHero> Slicenomics: Slice by Slice </LandingHero>
+          </div>
+
+          <div className="lg:flex lg:flex-col lg:text-left grid grid-cols-2 w-full mb-12 gap-1">
+            <div className="flex flex-col lg:flex-row gap-3 items-center">
+              <LandingText>Total Supply:</LandingText>
+              <span className="text-red-400 text-2xl"> 1,790,000,000</span>
+              $PEPERONI.
+            </div>
+            <div className="flex flex-col lg:flex-row gap-3 items-center">
+              <LandingText>Milestone Burn:</LandingText>
+              <span className="text-red-400 text-2xl">790,000,000</span>
+              will be burned progressively across project milestones.
+            </div>
+            <div className="flex flex-col lg:flex-row gap-3 items-center">
+              <LandingText>Distribution of</LandingText>
+              <span className="text-red-400 text-2xl">1 000 000 000</span>
+              Remaining Supply:
+            </div>
           </div>
 
           <PieAnimation />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Section } from "@/layout";
 import { brickBg, iaOven } from "@/assets";
 import AnimatedCounter from "@/components/AnimatedCounter/AnimatedCounter";
@@ -10,7 +10,6 @@ import { useInView } from "react-intersection-observer";
 import { AnimatePresence, motion } from "framer-motion";
 import { layout } from "@/styles/styles";
 import Dialog from "@mui/material/Dialog";
-import LandingTitle from "@/components/design/tipography/LandingTitle";
 import Social from "@/components/Social/Social";
 import LandingSubtitle from "@/components/design/tipography/LandingSubtitle";
 
@@ -141,14 +140,14 @@ const Hero = () => {
             <img
               src={iaOven}
               alt=""
-              className="absolute max-w-150 -top-30 -left-33"
+              className="absolute max-w-150 -top-30 left-1/2 -translate-x-1/2"
               style={{ zIndex: zIndexOven }}
             />
-            <div className="absolute w-full flex flex-row justify-between px-4 top-60">
+            <div className="absolute w-full flex flex-row justify-between top-60">
               <LandingButton
                 onClick={() => setOpen(true)}
                 bgColor="#228B22"
-                className="w-14"
+                className="w-13"
               >
                 Buy
               </LandingButton>
@@ -168,7 +167,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView2 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col justify-center flex-1"
+          className="flex flex-col justify-center items-center flex-1"
         >
           <LandingHero className="text-center">
             DELICIOUSLY <br />
@@ -192,7 +191,7 @@ const Hero = () => {
 
       <AnimatedCounter />
 
-      <Dialog open={open} onClose={() => setOpen(false)}>
+      <Dialog open={open} onClose={() => setOpen(false)} disableScrollLock>
         <AnimatePresence>
           {open && (
             <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">

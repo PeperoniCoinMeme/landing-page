@@ -88,7 +88,7 @@ const Carousel = () => (
           <GalleryCard
             key={index}
             imageUrl={icon.imgPath}
-            className={`my-2 mx-1 md:my-4 rounded-lg min-w-40 gallery-card border-1 border-white/40`}
+            className={`my-2 mx-1 md:my-4 rounded-lg min-w-40 gallery-card border-1 border-white/40 hover:scale-105`}
           />
         ))}
       </div>
