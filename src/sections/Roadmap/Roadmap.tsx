@@ -120,56 +120,54 @@ const Roadmap = () => {
       bgColor="linear-gradient(360deg,rgba(94, 35, 13, 1) 0%, rgba(199, 84, 42, 1) 14%, rgba(238, 159, 69, 1) 38%, rgba(255, 206, 97, 1) 65%, rgba(155, 214, 255, 1) 100%)"
       // backgroundSvg={sunsetGradientBg}
     >
-      <section className="w-full h-full md:px-20 px-5 xl:px-15">
-        <div className="mt-32 relative">
-          <div className="relative z-50 xl:space-y-32 space-y-10">
-            {roadMapCardsB.map((card, index) => {
-              const { ref, inView } = useInView({
-                triggerOnce: true,
-                threshold: 0.2,
-              });
+      <section className={`${layout.roadMapSection} py-30`}>
+        <div className={`${layout.roadMapMilestoneContainer}`}>
+          {roadMapCardsB.map((card, index) => {
+            const { ref, inView } = useInView({
+              triggerOnce: true,
+              threshold: 0.2,
+            });
 
-              return (
-                <motion.div
-                  key={card.title}
-                  ref={ref}
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{
-                    duration: 0.6,
-                    ease: "easeOut",
-                    delay: index * 0.1,
-                  }}
-                  className="exp-card-wrapper"
-                >
-                  <div className="xl:w-2/6 hover:-translate-y-5 transition-transform">
-                    <GlowCard
-                      card={card}
-                      index={index}
-                      textColor={index === 5 ? "text-white" : ""}
-                    ></GlowCard>
-                  </div>
-                  <div className="xl:w-4/6">
-                    <div className="flex items-start">
-                      <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
-                        <div className="timeline-logo">
-                          <img src={logo} alt="logo" />
-                        </div>
-                        <div>
-                          <LandingSubtitle color="white">
-                            {card.title}
-                          </LandingSubtitle>
-                          <LandingText className="my-5 text-white">
-                            {card.date}
-                          </LandingText>
-                        </div>
+            return (
+              <motion.div
+                key={card.title}
+                ref={ref}
+                initial={{ opacity: 0, x: -50 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeOut",
+                  delay: index * 0.1,
+                }}
+                className="exp-card-wrapper"
+              >
+                <div className="xl:w-2/6 hover:-translate-y-5 transition-transform">
+                  <GlowCard
+                    card={card}
+                    index={index}
+                    textColor={index === 5 ? "text-white" : ""}
+                  ></GlowCard>
+                </div>
+                <div className="xl:w-4/6">
+                  <div className="flex items-start">
+                    <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
+                      <div className="timeline-logo">
+                        <img src={logo} alt="logo" />
+                      </div>
+                      <div>
+                        <LandingSubtitle color="white">
+                          {card.title}
+                        </LandingSubtitle>
+                        <LandingText className="my-5 text-white">
+                          {card.date}
+                        </LandingText>
                       </div>
                     </div>
                   </div>
-                </motion.div>
-              );
-            })}
-          </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </section>
 
@@ -177,8 +175,8 @@ const Roadmap = () => {
       <Clouds />
       {/* Parachutes1 */}
       <div
-        className="absolute -top-630 left-310 pointer-events-none"
-        style={{ transform: `translateY(${offsetY * 0.4}px)` }}
+        className="absolute -top-620 left-50 md:left-290 pointer-events-none"
+        style={{ transform: `translateY(${offsetY * 0.38}px)` }}
       >
         <img
           src={parachutes1}
@@ -207,7 +205,7 @@ const Roadmap = () => {
       </div>
       {/* Parachutes3 */}
       <div
-        className="absolute -top-330 left-190 pointer-events-none"
+        className="absolute -top-330 md:left-190 pointer-events-none"
         style={{ transform: `translateY(${offsetY * 0.4}px)` }}
       >
         <img

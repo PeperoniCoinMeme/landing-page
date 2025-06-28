@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Section } from "@/layout";
 import { brickBg, iaOven } from "@/assets";
 import AnimatedCounter from "@/components/AnimatedCounter/AnimatedCounter";
@@ -10,7 +10,6 @@ import { useInView } from "react-intersection-observer";
 import { AnimatePresence, motion } from "framer-motion";
 import { layout } from "@/styles/styles";
 import Dialog from "@mui/material/Dialog";
-import LandingTitle from "@/components/design/tipography/LandingTitle";
 import Social from "@/components/Social/Social";
 import LandingSubtitle from "@/components/design/tipography/LandingSubtitle";
 
@@ -37,7 +36,7 @@ const Hero = () => {
       backgroundSvg={brickBg}
     >
       {/* Desktop */}
-      <div className="hidden md:flex pt-38 flex-row justify-around px-5">
+      <div className="hidden md:flex flex-col pt-38 lg:flex-row justify-around px-5">
         {/* First Info container */}
         <motion.div
           ref={ref1}
@@ -50,7 +49,7 @@ const Hero = () => {
             DELICIOUSLY <br />
             COOKED BY YOU
           </LandingHero>{" "}
-          <div className="max-w-80">
+          <div className="max-w-80 z-500">
             <LandingText>
               We're not promising world domination. We're just here to build,
               vibe, and feed the ecosystem one slice at a time.
@@ -64,15 +63,15 @@ const Hero = () => {
               <HeroExperience />
             </div>
           </figure>
-          <div className="oven-container md:mx-20 lg:mx-0 mb-5 relative h-90 md:h-0">
+          <div className="oven-container md:mx-20 lg:-mx-5 mb-5 relative h-90 md:h-0">
             {/* Oven Image */}
             <img
               src={iaOven}
               alt=""
-              className="max-w-50 absolute max-w-190 md:max-w-270 -top-40 -left-50 md:-top-135 md:-left-70"
+              className="max-w-50 absolute max-w-190 md:max-w-270 -top-40 md:-top-135 left-1/2 -translate-x-1/2"
               style={{ zIndex: zIndexOven }}
             />
-            <div className="hidden lg:flex absolute md:w-130 my-28 flex-row justify-between md:-mx-4">
+            <div className="hidden md:flex absolute md:w-130 my-28 flex-row justify-between mx-18 lg:mx-1">
               <LandingButton
                 onClick={() => setOpen(true)}
                 bgColor="#228B22"
@@ -96,11 +95,11 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView1 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col justify-between pb-25 gap-1 items-end mx-10 flex-1 z-500"
+          className="flex flex-col justify-between pb-25 gap-1 items-end mx-5 lg:mx-10 mt-21 lg:mt-0 flex-1 z-500"
         >
           <LandingButton
             onClick={() => setOpen(true)}
-            className="w-30 lg:mx-28 lg:my-0 my-12"
+            className="w-30 lg:mx-28 lg:my-0"
           >
             Connect
           </LandingButton>
@@ -111,23 +110,10 @@ const Hero = () => {
           <div className="border-2 border-gray-300 my-1 px-5 py-4 rounded-lg shadow-md">
             <p className="text-gray-900">Leader board</p>
           </div> */}
-          <Social mode="hero" />
+          <div className="hidden lg:flex">
+            <Social mode="hero" />
+          </div>
         </motion.div>
-      </div>
-
-      <div
-        className="hidden md:flex lg:hidden min-w-full flex flex-col md:flex-row justify-center"
-        style={{ zIndex: zIndexOven + 1 }}
-      >
-        <div className="flex flex-col sm:flex-row items-center justify-center z-100 -mt-8">
-          <LandingButton
-            onClick={() => setOpen(true)}
-            bgColor="#228B22"
-            className="w-18"
-          >
-            Buy
-          </LandingButton>
-        </div>
       </div>
 
       {/* Mobile */}
@@ -156,14 +142,14 @@ const Hero = () => {
             <img
               src={iaOven}
               alt=""
-              className="absolute max-w-150 -top-30 -left-33"
+              className="absolute max-w-150 -top-30 left-1/2 -translate-x-1/2"
               style={{ zIndex: zIndexOven }}
             />
-            <div className="absolute w-full flex flex-row justify-between px-4 top-60">
+            <div className="px-5 absolute w-full flex flex-row justify-between top-60 left-1/2 -translate-x-1/2 z-500">
               <LandingButton
                 onClick={() => setOpen(true)}
                 bgColor="#228B22"
-                className="w-14"
+                className="w-13"
               >
                 Buy
               </LandingButton>
@@ -183,11 +169,11 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView2 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col justify-center flex-1"
+          className="flex flex-col justify-center items-center flex-1"
         >
           <LandingHero className="text-center">
             DELICIOUSLY <br />
-            COOKED BY YOU
+            BAKED BY YOU
           </LandingHero>{" "}
           <div className="max-w-80 text-center">
             <LandingText>
@@ -207,7 +193,7 @@ const Hero = () => {
 
       <AnimatedCounter />
 
-      <Dialog open={open} onClose={() => setOpen(false)}>
+      <Dialog open={open} onClose={() => setOpen(false)} disableScrollLock>
         <AnimatePresence>
           {open && (
             <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">

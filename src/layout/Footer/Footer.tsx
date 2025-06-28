@@ -3,6 +3,11 @@ import LandingText from "@/components/design/tipography/LandingText";
 import LandingSubtitle from "@/components/design/tipography/LandingSubtitle";
 import Social from "@/components/Social/Social";
 
+const externalLinkProps = {
+  target: "_blank",
+  rel: "noopener noreferrer",
+};
+
 const Footer = () => {
   return (
     <Section
@@ -13,16 +18,15 @@ const Footer = () => {
       <footer className="text-white dark:text-gray-300 py-20 px-8 w-full overflow-hidden">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 z-0">
           {/* <!-- Logo & About --> */}
-          <div>
+          <div className="flex flex-col gap-2 md:items-start items-center">
             <LandingSubtitle>Peperoni Coin</LandingSubtitle>
             <LandingText>
-              The tastiest cryptocurrency on the market. Built for the
-              community, powered by blockchain, topped with extra flavor.
+              $Peperoni is not free, but it feels like delicious freedom!
             </LandingText>
           </div>
 
           {/* <!-- Navigation --> */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 md:items-start items-center">
             <LandingSubtitle>Navigation</LandingSubtitle>
             <a href="#hero" className="hover:underline text-sm">
               <LandingText>Home</LandingText>
@@ -45,10 +49,17 @@ const Footer = () => {
             <a href="#join" className="hover:underline text-sm">
               <LandingText>Join Us</LandingText>
             </a>
+            <a
+              href="https://github.com/PeperoniCoinMeme/litepaper/blob/4e955908f2ebfc7bc63c6ed6f387e2e5ec642c53/asset/PEPERONI_LitePAPER.pdf"
+              className="hover:underline text-sm"
+              {...externalLinkProps}
+            >
+              <LandingText>LitePAPER</LandingText>
+            </a>
           </div>
 
           {/* <!-- Social Media --> */}
-          <div>
+          <div className="flex flex-col gap-2 md:items-start items-center">
             <LandingText className="font-2xl mb-3">Follow Us</LandingText>
             <Social mode="footer" />
           </div>
@@ -56,7 +67,8 @@ const Footer = () => {
 
         {/* <!-- Bottom Line --> */}
         <div className="border-t border-red-500 dark:border-zinc-700 mt-10 pt-6 text-center text-sm text-white dark:text-gray-500">
-          © 2025 Peperoni Labs. All rights reserved. Made with love & cheese. 🧀
+          © {new Date().getFullYear()} Peperoni Labs. All rights reserved. Made
+          with love and cheese. 🧀
         </div>
       </footer>
 
