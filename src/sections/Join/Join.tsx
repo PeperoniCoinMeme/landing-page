@@ -179,14 +179,14 @@ const Join = () => {
 
             {/* Modal panel */}
             <motion.div
-              className="fixed z-600 inset-0 flex h-full items-center justify-center"
+              className="fixed min-h-[100vh] z-600 inset-0 flex items-center justify-center"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
             >
               <div
-                className="relative bg-dark-dough p-6 w-full space-y-6 flex justify-center max-w-[1920px]"
+                className="relative bg-dark-dough p-6 w-full flex justify-center max-w-[1920px]"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Gallery />

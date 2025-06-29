@@ -26,7 +26,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
         <a
           href="https://x.com/Peperoni_Meme"
           target="_blank"
-          className="rounded-full border-1 p-3 cursor-pointer gallery-card__social"
+          className="rounded-full border-1 p-3 cursor-pointer gallery-card__social hover:scale-120 transition-all"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

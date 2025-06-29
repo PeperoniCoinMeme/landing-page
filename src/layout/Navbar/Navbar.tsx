@@ -21,7 +21,7 @@ import Headroom from "../../components/Headroom/Headroom";
 import Social from "@/components/Social/Social";
 
 const menuItems = [
-  { label: "Home", href: "#home", icon: FireIcon },
+  { label: "Home", href: "#hero", icon: FireIcon },
   { label: "About", href: "#about", icon: FireIcon },
   { label: "Mission & Vibes", href: "#missionvibes", icon: FireIcon },
   { label: "Slice of Utility", href: "#sliceofutility", icon: FireIcon },
@@ -66,7 +66,11 @@ const Navbar = () => {
           id="logo"
           className="w-12 flex flex-row gap-3 items-center cursor-pointer"
         >
-          <img src={logo} alt="" className="hover:scale-120 transition-all" />
+          <img
+            src={logo}
+            alt="Peperoni Coin"
+            className="hover:scale-120 transition-all"
+          />
           <h4
             className="text-gray-100 text-2xl text-shadow-lg"
             style={fontStyles}

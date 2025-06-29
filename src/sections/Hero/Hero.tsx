@@ -12,6 +12,7 @@ import { layout } from "@/styles/styles";
 import Dialog from "@mui/material/Dialog";
 import Social from "@/components/Social/Social";
 import LandingSubtitle from "@/components/design/tipography/LandingSubtitle";
+import LandingTitle from "@/components/design/tipography/LandingTitle";
 
 const Hero = () => {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -28,6 +29,12 @@ const Hero = () => {
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
 
+  const ovenWidth = "md:max-w-180 lg:max-w-230 xl:max-w-270";
+  const ovenPosition =
+    "left-1/2 -translate-x-1/2 md:-top-95 lg:-top-100 xl:-top-120";
+
+  const heroSubsection = "flex flex-col flex-1";
+
   return (
     <Section
       id="hero"
@@ -36,42 +43,25 @@ const Hero = () => {
       backgroundSvg={brickBg}
     >
       {/* Desktop */}
-      <div className="hidden md:flex flex-col pt-38 lg:flex-row justify-around px-5">
-        {/* First Info container */}
-        <motion.div
-          ref={ref1}
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView1 ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col px-10 py-30 justify-center flex-1"
-        >
-          <LandingHero className="mt-10">
-            DELICIOUSLY <br />
-            COOKED BY YOU
-          </LandingHero>{" "}
-          <div className="max-w-80 z-500">
-            <LandingText>
-              We're not promising world domination. We're just here to build,
-              vibe, and feed the ecosystem one slice at a time.
-            </LandingText>
-          </div>
-        </motion.div>
+      <div className="hidden md:grid lg:flex md:grid-rows-2 md:grid-cols-2 pt-55 px-2">
         {/* Oven container */}
-        <div className="flex flex-col justify-center flex-1">
+        <div
+          className={`md:row-start-1 md:col-span-2 lg:order-2 lg:flex-1 ${heroSubsection} justify-center min-w-1/3`}
+        >
           <figure>
             <div className="hero-3d-layout">
               <HeroExperience />
             </div>
           </figure>
-          <div className="oven-container md:mx-20 lg:-mx-5 mb-5 relative h-90 md:h-0">
+          <div className="relative flex flex-col justify-end">
             {/* Oven Image */}
             <img
               src={iaOven}
-              alt=""
-              className="max-w-50 absolute max-w-190 md:max-w-270 -top-40 md:-top-135 left-1/2 -translate-x-1/2"
+              alt="Pizza Stone Oven"
+              className={`${ovenWidth} ${ovenPosition} absolute`}
               style={{ zIndex: zIndexOven }}
             />
-            <div className="hidden md:flex absolute md:w-130 my-28 flex-row justify-between mx-18 lg:mx-1">
+            <div className="flex flex-row justify-between md:mx-60 lg:-mx-8 xl:mx-8 mt-12 lg:mt-40">
               <LandingButton
                 onClick={() => setOpen(true)}
                 bgColor="#228B22"
@@ -89,17 +79,39 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
+        {/* First Info container */}
+        <motion.div
+          ref={ref1}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView1 ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className={`md:row-start-2 md:col-start-1 lg:order-1 lg:flex-1 ${heroSubsection} min-w-1/4 px-10 justify-center`}
+        >
+          <LandingTitle className="lg:mt-30">
+            DELICIOUSLY <br />
+            BAKED BY YOU
+          </LandingTitle>
+
+          <div className="max-w-80 z-500">
+            <LandingText>
+              We're not promising world domination. We're just here to build,
+              vibe, and feed the ecosystem one slice at a time.
+            </LandingText>
+          </div>
+        </motion.div>
+
         {/* Wallet container */}
         <motion.div
           ref={ref1}
           initial={{ opacity: 0, y: 50 }}
           animate={inView1 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col justify-between pb-25 gap-1 items-end mx-5 lg:mx-10 mt-21 lg:mt-0 flex-1 z-500"
+          className={`md:row-start-2 md:col-start-2 lg:order-3 lg:flex-1 ${heroSubsection} min-w-1/4 justify-between pb-25 gap-1 items-end mt-21 lg:mt-0 flex-1 z-500`}
         >
           <LandingButton
             onClick={() => setOpen(true)}
-            className="w-30 lg:mx-28 lg:my-0"
+            className="w-30 lg:mx-28 lg:my-0 absolute -top-100 -left-10 lg:-top-10 lg:left-0 md:-left-10"
           >
             Connect
           </LandingButton>
@@ -110,7 +122,7 @@ const Hero = () => {
           <div className="border-2 border-gray-300 my-1 px-5 py-4 rounded-lg shadow-md">
             <p className="text-gray-900">Leader board</p>
           </div> */}
-          <div className="hidden lg:flex">
+          <div className="hidden lg:flex px-4 top-90 absolute ">
             <Social mode="hero" />
           </div>
         </motion.div>
@@ -137,7 +149,7 @@ const Hero = () => {
               <HeroExperience />
             </div>
           </figure>
-          <div className="oven-container relative h-90">
+          <div className="relative h-90">
             {/* Oven Image */}
             <img
               src={iaOven}
@@ -145,7 +157,7 @@ const Hero = () => {
               className="absolute max-w-150 -top-30 left-1/2 -translate-x-1/2"
               style={{ zIndex: zIndexOven }}
             />
-            <div className="px-5 absolute w-full flex flex-row justify-between top-60 left-1/2 -translate-x-1/2 z-500">
+            <div className="px-6.5 absolute w-full flex flex-row justify-between top-60 left-1/2 -translate-x-1/2 z-500">
               <LandingButton
                 onClick={() => setOpen(true)}
                 bgColor="#228B22"
