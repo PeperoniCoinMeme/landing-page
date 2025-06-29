@@ -47,7 +47,7 @@ const Slicenomics = () => {
             </div>
             <div className="col-span-2 justify-self-center flex flex-col lg:flex-row gap-3 items-center">
               <LandingText>Distribution of</LandingText>
-              <span className="text-red-400 text-2xl">1 000 000 000</span>
+              <span className="text-red-400 text-2xl">1,000,000,000</span>
               Remaining Supply:
             </div>
           </div>

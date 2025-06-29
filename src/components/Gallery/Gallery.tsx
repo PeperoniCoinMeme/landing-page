@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "./Gallery.css";
 import { div } from "framer-motion/client";
 import LandingSubtitle from "../design/tipography/LandingSubtitle";
@@ -39,10 +39,29 @@ import GalleryCard from "./GalleryCard";
 import LandingTitle from "../design/tipography/LandingTitle";
 
 const useResponsiveStrips = (): string[] => {
-  return useMemo(() => {
-    const isSmall = window.matchMedia("(max-width: 768px)").matches;
-    return isSmall ? ["one", "two"] : ["one", "two", "three", "four"];
+  const [strips, setStrips] = useState<string[]>([
+    "one",
+    "two",
+    "three",
+    "four",
+  ]);
+
+  useEffect(() => {
+    const checkSize = () => {
+      const width = window.innerWidth;
+      if (width < 768) {
+        setStrips(["one", "two"]);
+      } else {
+        setStrips(["one", "two", "three", "four"]);
+      }
+    };
+
+    checkSize();
+    window.addEventListener("resize", checkSize);
+    return () => window.removeEventListener("resize", checkSize);
   }, []);
+
+  return strips;
 };
 
 const Gallery = () => {
@@ -80,6 +99,8 @@ const Gallery = () => {
 
   const galleryBorder = "border-gray-200/20";
 
+  const strips = useResponsiveStrips();
+
   return (
     <div
       className="relative max-w-[1000px] bg-gradient-to-b from-black/80 to-black/70"
@@ -89,10 +110,8 @@ const Gallery = () => {
         className={`h-[100vh] md:px-7 px-2 relative flex flex-row justify-around overflow-hidden border-x-1 ${galleryBorder}`}
         style={{ zIndex: 9999 }}
       >
-        {useResponsiveStrips().map((strip, stripIndex) => {
-          const chunkSize = Math.ceil(
-            images.length / useResponsiveStrips().length
-          );
+        {strips.map((strip, stripIndex) => {
+          const chunkSize = Math.ceil(images.length / strips.length);
           const start = stripIndex * chunkSize;
           const end = start + chunkSize;
           const chunk = images.slice(start, end);

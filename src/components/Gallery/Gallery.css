@@ -15,8 +15,19 @@
 }
 
 .gallery__strip {
-  max-width: 23.5%;
-  width: 100vw;
+  max-width: 50%;
+}
+
+@media (min-width: 768px) {
+  .gallery__strip {
+    max-width: 33.33%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery__strip {
+    max-width: 25%;
+  }
 }
 
 .gallery-card {
