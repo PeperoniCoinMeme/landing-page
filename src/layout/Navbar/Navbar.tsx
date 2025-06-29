@@ -21,7 +21,7 @@ import Headroom from "../../components/Headroom/Headroom";
 import Social from "@/components/Social/Social";
 
 const menuItems = [
-  { label: "Home", href: "#home", icon: FireIcon },
+  { label: "Home", href: "#hero", icon: FireIcon },
   { label: "About", href: "#about", icon: FireIcon },
   { label: "Mission & Vibes", href: "#missionvibes", icon: FireIcon },
   { label: "Slice of Utility", href: "#sliceofutility", icon: FireIcon },
