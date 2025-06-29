@@ -122,7 +122,7 @@ const Hero = () => {
           <div className="border-2 border-gray-300 my-1 px-5 py-4 rounded-lg shadow-md">
             <p className="text-gray-900">Leader board</p>
           </div> */}
-          <div className="hidden lg:flex">
+          <div className="hidden lg:flex px-4 top-90 absolute ">
             <Social mode="hero" />
           </div>
         </motion.div>
