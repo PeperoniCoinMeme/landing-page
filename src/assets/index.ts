@@ -144,6 +144,8 @@ import sunsetGradientBg from "@/assets/landscape/sunset-gradient-background.png"
 import blurryDarkGradient from "@/assets/svg/blurry-dark-gradient.svg";
 import about from "@/assets/about.png";
 import tiktokVideo from "@/assets/tiktok-video.mp4";
+import Checkmark from "@/assets/svg/checkmark";
+
 
 export {
   goldenMemeCoin,
