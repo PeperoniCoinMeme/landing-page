@@ -167,7 +167,7 @@ export default function PieAnimation() {
             layout // smooth changes
             className="flex flex-col items-start text-center md:text-start gap-3 w-full mt-4"
           >
-            <div className="flex flex-col w-full items-center md:items-start">
+            <div className="flex flex-col w-full items-center lg:items-start">
               <LandingSubtitle color="white">
                 {distribution[currentSelectedItem - 1].label}
               </LandingSubtitle>
@@ -181,7 +181,7 @@ export default function PieAnimation() {
             <Divider
               orientation="horizontal"
               flexItem
-              sx={{ borderColor: "#FFA8005A" }} // Cambia aquí por el color que prefieras
+              sx={{ borderColor: "#FFA8005A" }}
             />
             <LandingText className="text-white">
               {distribution[currentSelectedItem - 1].purpose}

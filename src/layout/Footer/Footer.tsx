@@ -2,6 +2,7 @@ import Section from "../Section/Section";
 import LandingText from "@/components/design/tipography/LandingText";
 import LandingSubtitle from "@/components/design/tipography/LandingSubtitle";
 import Social from "@/components/Social/Social";
+import { logo } from "@/assets";
 
 const externalLinkProps = {
   target: "_blank",
@@ -18,11 +19,19 @@ const Footer = () => {
       <footer className="text-white dark:text-gray-300 py-20 px-8 w-full overflow-hidden">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 z-0">
           {/* <!-- Logo & About --> */}
-          <div className="flex flex-col gap-2 md:items-start items-center">
-            <LandingSubtitle>Peperoni Coin</LandingSubtitle>
-            <LandingText>
-              $Peperoni is not free, but it feels like delicious freedom!
-            </LandingText>
+
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <div className="flex flex-col gap-2 md:items-start items-center">
+              <LandingSubtitle>Peperoni Coin</LandingSubtitle>
+              <LandingText>
+                $Peperoni is not free, but it feels like delicious freedom!
+              </LandingText>
+            </div>
+            <img
+              src={logo}
+              alt="Peperoni Coin"
+              className="hover:scale-120 transition-all w-23 h-23"
+            />
           </div>
 
           {/* <!-- Navigation --> */}
