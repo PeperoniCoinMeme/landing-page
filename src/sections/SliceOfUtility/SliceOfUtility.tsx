@@ -56,7 +56,7 @@ const SliceOfUtility = () => {
       </section>
 
       {/* Cheese moon */}
-      <div className="md:opacity-100 right-1/4 translate-x-1/2 opacity-40 absolute top-80 lg:top-40 translate-x-1/3 pointer-events-none z-0">
+      <div className="md:opacity-100 right-1/4 translate-x-1/2 opacity-40 absolute top-70 lg:top-40 translate-x-1/3 pointer-events-none z-0">
         <motion.img
           ref={ref}
           initial={{ opacity: 0 }}

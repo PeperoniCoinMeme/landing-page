@@ -61,7 +61,7 @@ const Slicenomics = () => {
       </section>
 
       {/* Satellite */}
-      <div className="absolute -top-40 md:top-10 left-30 md:left-270 pointer-events-none w-full">
+      <div className="absolute -top-40 md:-top-50 -translate-x-1/2 -right-30 pointer-events-none">
         <motion.img
           src={satelliteCold}
           alt="Satellite"
@@ -77,7 +77,7 @@ const Slicenomics = () => {
             repeat: Infinity,
           }}
           style={{ zIndex: 0 }}
-          className="md:w-[250px] w-[650px] rotate-[-10deg] opacity-20"
+          className="md:w-[250px] w-[400px] lg:w-[450px] rotate-[-10deg] opacity-20"
         />
       </div>
       {/* Astronaut */}
