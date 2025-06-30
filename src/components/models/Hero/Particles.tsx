@@ -54,7 +54,7 @@ const Particles: React.FC<ParticlesProps> = ({ count = 200 }) => {
   }, [particles, count]);
 
   return (
-    <points ref={mesh}>
+    <points ref={mesh} raycast={() => null}>
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"

@@ -14,12 +14,14 @@ const LandingHero: React.FC<LandingHeroProps> = ({
   const styles: React.CSSProperties = {
     color: color,
     fontFamily: "Riffic",
+    fontSize: "clamp(1.5rem, 10vmin, 4rem)",
+    lineHeight: 1,
     zIndex: 1000,
   };
 
   return (
     <h2
-      className={`text-orange-400 text-5xl md:text-6xl mb-4 text-shadow-lg flex text-4xl font-bold hover:text-yellow-300 text-[var(--color-pepperoni)] transition pointer-events-none ${
+      className={`text-orange-400 mb-4 text-shadow-lg flex font-bold hover:text-yellow-300 text-[var(--color-pepperoni)] transition pointer-events-none ${
         className || ""
       }`}
       style={styles}
