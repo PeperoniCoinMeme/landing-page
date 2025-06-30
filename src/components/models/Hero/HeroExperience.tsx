@@ -13,7 +13,10 @@ const HeroExperience = () => {
 
   return (
     <>
-      <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+      <Canvas
+        camera={{ position: [0, 0, 15], fov: 45 }}
+        style={{ pointerEvents: "none" }}
+      >
         {/* Configure OrbitControls to disable panning and control zoom based on device type */}
         <OrbitControls
           enablePan={false} // Prevents panning of the scene

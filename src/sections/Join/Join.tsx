@@ -136,33 +136,6 @@ const Join = () => {
             </div>
           </div>
         </div>
-
-        {/* <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col md:flex-row items-center justify-center m-2 flex-wrap relative z-50 gap-7"
-        >
-          {overlayCards.map((content, index) => (
-            <div key={index}>
-              <OverlayCard item={content} />
-            </div>
-          ))}
-        </motion.div> */}
-
-        {/* <div className="relative overflow-hidden justify-center flex-1">
-          <div className="grid-memes">
-            {images.map((src, index) => (
-              <div className="grid-item" key={index}>
-                <img src={src} alt={`meme-${index}`} className="h-16" />
-              </div>
-            ))}
-
-            Shadow 
-            <TrackingShadow />
-          </div>
-        </div> */}
       </section>
 
       <AnimatePresence>
@@ -192,7 +165,7 @@ const Join = () => {
                 <Gallery />
                 <button
                   onClick={toggleMenu}
-                  className="absolute top-15 right-0 text-[var(--color-pepperoni)] hover:text-red-400 transition z-9999"
+                  className="absolute top-15 right-0 text-[var(--color-pepperoni)] hover:text-red-400 transition z-9999 cursor-pointer"
                 >
                   <XMarkIcon className="h-8 w-8 my-10 mx-3 text-orange-600 text-shadow-lg" />
                 </button>
