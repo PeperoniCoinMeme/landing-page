@@ -101,6 +101,18 @@ const Gallery = () => {
 
   const strips = useResponsiveStrips();
 
+  useEffect(() => {
+    const preventScroll = (e: Event) => e.preventDefault();
+
+    window.addEventListener("wheel", preventScroll, { passive: false });
+    window.addEventListener("touchmove", preventScroll, { passive: false });
+
+    return () => {
+      window.removeEventListener("wheel", preventScroll);
+      window.removeEventListener("touchmove", preventScroll);
+    };
+  }, []);
+
   return (
     <div
       className="relative max-w-[1000px] bg-gradient-to-b from-black/80 to-black/70"

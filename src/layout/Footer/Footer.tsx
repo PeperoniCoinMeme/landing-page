@@ -17,13 +17,13 @@ const Footer = () => {
       bgColor="0c0500"
     >
       <footer className="text-white dark:text-gray-300 py-20 px-8 w-full overflow-hidden">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 z-0">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-20 z-0">
           {/* <!-- Logo & About --> */}
 
           <div className="flex flex-col items-center md:items-start gap-2">
             <div className="flex flex-col gap-2 md:items-start items-center">
               <LandingSubtitle>Peperoni Coin</LandingSubtitle>
-              <LandingText>
+              <LandingText className="text-center md:text-left max-w-80">
                 $Peperoni is not free, but it feels like delicious freedom!
               </LandingText>
             </div>
@@ -69,7 +69,7 @@ const Footer = () => {
 
           {/* <!-- Social Media --> */}
           <div className="flex flex-col gap-2 md:items-start items-center">
-            <LandingText className="font-2xl mb-3">Follow Us</LandingText>
+            <LandingSubtitle>Follow Us</LandingSubtitle>
             <Social mode="footer" />
           </div>
         </div>
