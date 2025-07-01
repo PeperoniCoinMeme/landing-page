@@ -15,6 +15,7 @@ const LandingCaption: React.FC<LandingCaptionProps> = ({
     zIndex: 1000,
     fontFamily: "montserrat",
     fontSize: "14px",
+    transition: "all ease-in-out 0.2s",
   };
 
   return (

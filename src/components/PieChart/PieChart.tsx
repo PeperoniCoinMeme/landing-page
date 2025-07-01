@@ -94,7 +94,10 @@ export default function PieAnimation() {
         className="md:min-w-170 w-fit relative"
       >
         <PieChart
-          style={{ zIndex: zIndex }}
+          style={{
+            zIndex: zIndex,
+            pointerEvents: window.innerWidth < 768 ? "none" : "auto",
+          }}
           colors={[
             "#09214792", // Púrpura profundo espacial
             "#bdbbb592", // Queso cheddar derretido

@@ -46,7 +46,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
         if (el) cardRefs.current[index] = el;
       }}
       onMouseMove={handleMouseMove(index)}
-      className="timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column shadow-lg text-gray-800 border-1 border-gray-300 max-w-80 bg-white/10"
+      className="landing-smooth timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column shadow-lg text-gray-800 border-1 border-gray-300 max-w-80 bg-white/10"
       style={{}}
     >
       <div className="glow"></div>

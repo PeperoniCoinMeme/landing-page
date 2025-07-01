@@ -37,6 +37,7 @@ const Section: React.FC<LandingButtonProps> = ({
     backgroundColor: bgColor,
     borderColor: darkenHexColor(bgColor, 0.1),
     zIndex: 1000,
+    transition: "all ease-in-out 0.2s",
   };
 
   if (href) {

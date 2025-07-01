@@ -58,18 +58,18 @@ const Roadmap = () => {
                   ease: "easeOut",
                 }}
                 key={card.title}
-                className="flex flex-col-reverse xl:items-start items-center xl:flex-row xl:gap-20 gap-10 justify-between"
+                className="flex flex-col-reverse xl:items-start items-center xl:flex-row xl:gap-20 gap-10 justify-between transition-all"
               >
-                <div className="xl:w-2/6 hover:-translate-y-5 transition-transform">
+                <div className="xl:w-2/6 hover:-translate-y-5 transition-all">
                   <GlowCard
                     card={card}
                     index={index}
                     textColor={index === 5 ? "text-white" : ""}
                   ></GlowCard>
                 </div>
-                <div className="xl:w-4/6">
-                  <div className="flex items-start">
-                    <div className="milestone flex xl:gap-20 md:gap-10 gap-5 relative z-20">
+                <div className="xl:w-4/6 transition-all">
+                  <div className="flex items-start transition-all">
+                    <div className="milestone flex xl:gap-20 md:gap-10 gap-5 relative z-20 transition-all">
                       <div className="timeline-logo">
                         <img src={logo} alt="logo" />
                       </div>

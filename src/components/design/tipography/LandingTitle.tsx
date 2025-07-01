@@ -16,6 +16,7 @@ const LandingTitle: React.FC<LandingTitleProps> = ({
     fontSize: "clamp(1.2rem, 6vmin, 3.5rem)",
     lineHeight: 1,
     zIndex: 1000,
+    transition: "all ease-in-out 0.2s",
   };
 
   return (

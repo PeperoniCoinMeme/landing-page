@@ -16,6 +16,7 @@ const LandingSubtitle: React.FC<LandingSubtitleProps> = ({
     fontSize: "clamp(1rem, 10vmin, 2rem)",
     lineHeight: 1,
     zIndex: 1000,
+    transition: "all ease-in-out 0.2s",
   };
 
   return (

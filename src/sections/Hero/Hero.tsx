@@ -102,7 +102,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className="flex flex-row justify-center mb-28">
+        <div className="flex flex-row justify-center mb-30">
           <LandingButton
             onClick={() => setOpen(true)}
             bgColor="#228B22"

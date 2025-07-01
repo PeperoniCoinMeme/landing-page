@@ -15,6 +15,7 @@ const LandingText: React.FC<LandingTextProps> = ({
     fontFamily: "montserrat",
     fontSize: "clamp(0.8rem, 10vmin, 1rem)",
     zIndex: 1000,
+    transition: "all ease-in-out 0.2s",
   };
 
   return (

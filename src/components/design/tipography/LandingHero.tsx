@@ -17,6 +17,7 @@ const LandingHero: React.FC<LandingHeroProps> = ({
     fontSize: "clamp(1.5rem, 10vmin, 4rem)",
     lineHeight: 1,
     zIndex: 1000,
+    transition: "all ease-in-out 0.2s",
   };
 
   return (
