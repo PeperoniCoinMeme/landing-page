@@ -32,7 +32,7 @@ const RoadmapHeader = () => {
       className={`${layout.section}`}
       backgroundSvg={planetBg}
     >
-      <section className={`${layout.roadMapSection} pt-30 pb-5`}>
+      <section className={`${layout.roadMapSection} pt-60 pb-5`}>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}

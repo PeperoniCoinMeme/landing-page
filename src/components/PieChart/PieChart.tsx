@@ -81,17 +81,13 @@ export default function PieAnimation() {
         sx={{
           width: 300,
           height: 400,
-          backgroundImage: `url(/path/to/your/image.png)`, // Cambia la ruta
-          backgroundSize: "cover", // o "contain"
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
           display: "flex",
           alignItems: "center",
           justifyContent: "start",
           position: "relative",
           marginRight: "50px",
         }}
-        className="md:min-w-170 w-fit relative"
+        className="md:min-w-170 w-fit md:mx-auto relative md:pl-45 w-1/2"
       >
         <PieChart
           style={{
@@ -123,7 +119,7 @@ export default function PieAnimation() {
           ]}
           sx={{
             [`& .${pieArcLabelClasses.root}`]: {
-              fill: "#ffffff", // Cambia el color del texto aquí
+              fill: "#ffffff",
               fontWeight: 600,
               fontSize: 14,
             },
@@ -132,7 +128,7 @@ export default function PieAnimation() {
         />
 
         {/* Pepperoni Pizza */}
-        <div className="absolute md:-top-18 -left-50 md:-left-1/2 md:translate-x-1/3 opacity-75 pointer-events-none">
+        <div className="absolute md:-top-18 -left-50 md:-left-1/2 md:translate-x-1/2 opacity-75 pointer-events-none">
           <img
             src={peperoniPizza}
             alt="Pepperoni Pizza"
@@ -141,7 +137,7 @@ export default function PieAnimation() {
               transformOrigin: "center center",
               animation: "clockSpin 50s linear infinite",
             }}
-            className="w-[550px] relative -right-35"
+            className="w-[525px] relative -right-45"
           />
           <style>{`
                     @keyframes clockSpin {
@@ -158,7 +154,7 @@ export default function PieAnimation() {
 
       <motion.div
         layout // smooth changes
-        className=""
+        className="min-w-1/2"
       >
         <AnimatePresence mode="wait">
           <motion.div
@@ -168,9 +164,9 @@ export default function PieAnimation() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
             layout // smooth changes
-            className="flex flex-col items-start text-center md:text-start gap-3 w-full mt-4"
+            className="flex flex-col items-start text-center md:text-start gap-3 w-full mt-4 "
           >
-            <div className="flex flex-col w-full items-center lg:items-start">
+            <div className="flex flex-col w-full items-center xl:items-start">
               <LandingSubtitle color="white">
                 {distribution[currentSelectedItem - 1].label}
               </LandingSubtitle>

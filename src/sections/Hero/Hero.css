@@ -31,9 +31,9 @@
   transition: all 0.1s ease-in-out;
 }
 
-.hero__oven:hover {
+/* .hero__oven:hover {
   animation: tilt-n-move-shaking 0.4s ease-out;
-}
+} */
 
 @keyframes tilt-n-move-shaking {
   0% {

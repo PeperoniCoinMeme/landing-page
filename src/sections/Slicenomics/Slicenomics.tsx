@@ -28,11 +28,11 @@ const Slicenomics = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative flex flex-col justify-center"
+          className="relative flex flex-col justify-center lg:items-start items-center"
         >
-          <div className="mb-5 text-center">
-            <LandingHero> Slicenomics: Slice by Slice </LandingHero>
-          </div>
+          <LandingHero className="mb-5 text-center">
+            Slicenomics: Slice by Slice
+          </LandingHero>
 
           <div className="lg:flex lg:flex-col lg:text-left grid grid-cols-2 w-full mb-12 gap-8">
             <div className="flex flex-col lg:flex-row gap-3 items-center">
