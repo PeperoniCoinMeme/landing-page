@@ -40,7 +40,7 @@ const Roadmap = () => {
       bgColor="linear-gradient(360deg,rgba(94, 35, 13, 1) 0%, rgba(199, 84, 42, 1) 14%, rgba(238, 159, 69, 1) 38%, rgba(255, 206, 97, 1) 65%, rgba(155, 214, 255, 1) 100%)"
       // backgroundSvg={sunsetGradientBg}
     >
-      <section className={`${layout.roadMapSection} py-30`}>
+      <section className={`${layout.roadMapSection} py-10`}>
         <div className={`${layout.roadMapMilestoneContainer}`}>
           {roadMapCardsB.map((card, index) => {
             const { ref: cardRef, inView: cardInView } = useInView({

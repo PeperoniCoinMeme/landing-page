@@ -97,7 +97,7 @@
 @media (max-width: 720px) {
   .marquee-box {
     width: 2000%;
-    animation: marqueeBounce 10s ease-in-out infinite alternate;
+    animation: marqueeBounce 30s ease-in-out infinite alternate;
   }
 }
 

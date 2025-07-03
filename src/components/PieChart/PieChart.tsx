@@ -125,11 +125,11 @@ export default function PieAnimation() {
               data: distribution,
               innerRadius: radius,
               outerRadius: 170,
-              highlightScope: { fade: "global", highlight: "item" },
+              //   highlightScope: { fade: "global", highlight: "item" },
               faded: { innerRadius: 30, additionalRadius: -30, color: "gray" },
               arcLabel: (params) =>
                 params.label + " " + params.value.toString() + "%",
-              arcLabelMinAngle: 10,
+              arcLabelMinAngle: 30,
 
               paddingAngle: 9,
               cornerRadius: 5,
