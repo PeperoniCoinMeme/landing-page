@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <Section
       id="hero"
-      className={`${layout.section} h-180 relative`}
+      className={`${layout.section} min-h-120 md:min-h-150 relative overflow-hidden`}
       bgColor="#191716"
       backgroundSvg={brickBg}
     >
@@ -41,14 +41,16 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView1 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="hero__info-container lg:mt-30 md:mt-20 mt-0"
+          className="hero__info-container w-full lg:mt-30 md:mt-75 mt-60 z-500 flex flex-row lg:flex-col justify-between pr-15"
         >
-          <LandingTitle className="mb-48 md:mb-25 lg:mb-3">
-            DELICIOUSLY <br />
+          <LandingTitle className="text-center lg:text-left min-w-1/3 max-w-1/3">
+            DELICIOUSLY <br className="hidden md:flex" />
             BAKED BY YOU
           </LandingTitle>
 
-          <LandingText className="max-w-full md:max-w-70 lg:max-w-full z-500">
+          <div className="flex lg:hidden md:min-w-1/4 min-w-1/3"></div>
+
+          <LandingText className="text-center lg:text-left w-50 md:w-80 lg:w-70 max-w-1/3">
             We're not promising world domination. We're just here to build,
             vibe, and feed the ecosystem one slice at a time.
           </LandingText>
@@ -63,15 +65,14 @@ const Hero = () => {
       </div>
 
       {/* Flex container */}
-      <div className="flex flex-col justify-between pt-25 h-[100%] px-5 md:px-25 lg:px-50">
-        <div className="flex flex-row justify-end">
+      <div className="flex flex-col justify-between items-center pt-25 h-[100%] px-5 md:px-25 lg:px-50 transition-all">
+        <div className="flex flex-row justify-end self-end">
           <LandingButton onClick={() => setOpen(true)} className="w-30">
             Connect
           </LandingButton>
         </div>
 
         <div className="flex flex-row">
-          {" "}
           <div
             className={`${heroSubsection} min-w-1/4 px-10 justify-center`}
           ></div>
@@ -102,29 +103,20 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className="flex flex-row justify-center mb-30">
-          <LandingButton
-            onClick={() => setOpen(true)}
-            bgColor="#228B22"
-            className="w-18"
-          >
-            Buy
-          </LandingButton>
-          {/* <LandingButton
+        <LandingButton
+          onClick={() => setOpen(true)}
+          bgColor="#228B22"
+          className="w-18 z-9999 mb-25 -translate-y-2"
+        >
+          Buy
+        </LandingButton>
+        {/* <LandingButton
               onClick={() => setOpen(true)}
               isDisabled={true}
               className="w-18"
             >
               TBA
             </LandingButton> */}
-        </div>
-      </div>
-
-      <div
-        className="lg:hidden min-w-full flex flex-col md:flex-row justify-center"
-        style={{ zIndex: zIndexOven + 1 }}
-      >
-        <div className="flex flex-col sm:flex-row items-center justify-center z-100 -mt-8"></div>
       </div>
 
       <AnimatedCounter />
@@ -154,7 +146,7 @@ const Hero = () => {
           )}
         </AnimatePresence>
       </Dialog>
-      <div className="absolute bottom-0 min-w-full w-[1920px] h-24 bg-gradient-to-b from-transparent to-[#0c0500] pointer-events-none z-9999" />
+      <div className="absolute bottom-0 min-w-full w-[1920px] h-24 bg-gradient-to-b from-transparent to-[#0c0500] pointer-events-none z-9000" />
     </Section>
   );
 };

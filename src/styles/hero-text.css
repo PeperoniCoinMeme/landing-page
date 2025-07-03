@@ -87,12 +87,20 @@
   display: flex;
   align-items: center;
   background-color: black;
-  width: 200%;
+  width: 580%;
   height: 100%;
   position: absolute;
   overflow: hidden;
   animation: marqueeBounce 40s ease-in-out infinite alternate;
 }
+
+@media (max-width: 720px) {
+  .marquee-box {
+    width: 2000%;
+    animation: marqueeBounce 10s ease-in-out infinite alternate;
+  }
+}
+
 .marquee-item {
   float: left;
 }

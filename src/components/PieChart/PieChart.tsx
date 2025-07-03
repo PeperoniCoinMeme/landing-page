@@ -1,21 +1,37 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Slider from "@mui/material/Slider";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
 import { PieChart, pieArcLabelClasses } from "@mui/x-charts/PieChart";
 import { distribution } from "./webUsageStats";
 import type { PieItemIdentifier } from "@mui/x-charts/models";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import LandingSubtitle from "../design/tipography/LandingSubtitle";
-import Chip from "@mui/material/Chip";
 import Divider from "@mui/material/Divider";
 import InsightsIcon from "@mui/icons-material/Insights";
 import { motion, AnimatePresence } from "framer-motion";
 import { peperoniPizza } from "../../assets";
 import LandingText from "../design/tipography/LandingText";
+import "./PieChart.css";
+
+function useIsSmallScreen(query = "(max-width: 768px)"): boolean {
+  const [isSmallScreen, setIsSmallScreen] = React.useState(
+    () => window.matchMedia(query).matches
+  );
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(query);
+
+    const handler = (event: any) => {
+      setIsSmallScreen(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handler);
+
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, [query]);
+
+  return isSmallScreen;
+}
 
 export default function PieAnimation() {
   const { ref, inView } = useInView({
@@ -25,13 +41,15 @@ export default function PieAnimation() {
 
   // States
   const [itemData, setItemData] = React.useState<PieItemIdentifier>();
-  const [radius, setRadius] = React.useState(10);
+  const [radius, setRadius] = React.useState(60);
   const [itemNb, setItemNb] = React.useState(1);
   const [currentSelectedItem, setCurrentSelectedItem] = React.useState(1);
 
+  const isSmallScreen = useIsSmallScreen();
+
   // Effect 1, change char dinamically
   useEffect(() => {
-    if (!inView) {
+    if (!inView || !isSmallScreen) {
       setItemData(undefined);
       return;
     }
@@ -52,7 +70,7 @@ export default function PieAnimation() {
       clearInterval(interval);
       handleItemNbChange(1);
     };
-  }, [inView]);
+  }, [inView, isSmallScreen]);
 
   // Effect 2, change char data on click
   useEffect(() => {
@@ -75,19 +93,19 @@ export default function PieAnimation() {
   return (
     <div
       ref={ref}
-      className="relative flex flex-col xl:flex-row justify-between items-center md:gap-10"
+      className="relative flex flex-col xl:flex-row justify-center items-center md:gap-4"
     >
       <Box
         sx={{
           width: 300,
-          height: 400,
+          height: 390,
           display: "flex",
           alignItems: "center",
           justifyContent: "start",
           position: "relative",
           marginRight: "50px",
         }}
-        className="md:min-w-170 w-fit md:mx-auto relative md:pl-45 w-1/2"
+        className="md:min-w-170 w-fit md:mx-auto relative md:pl-15 w-1/2"
       >
         <PieChart
           style={{
@@ -95,13 +113,13 @@ export default function PieAnimation() {
             pointerEvents: window.innerWidth < 768 ? "none" : "auto",
           }}
           colors={[
-            "#09214792", // Púrpura profundo espacial
-            "#bdbbb592", // Queso cheddar derretido
-            "#2f3f3b92", // Pepperoni vibrante
             "#f3441432", // Masa dorada tipo horno de piedra
+            "#2f3f3b92", // Pepperoni vibrante
+            "#bdbbb592", // Queso cheddar derretido
+            "#09214792", // Púrpura profundo espacial
           ]}
-          height={400}
-          width={400}
+          height={365}
+          width={365}
           series={[
             {
               data: distribution,
@@ -109,12 +127,13 @@ export default function PieAnimation() {
               outerRadius: 170,
               highlightScope: { fade: "global", highlight: "item" },
               faded: { innerRadius: 30, additionalRadius: -30, color: "gray" },
-              arcLabel: (params) => params.label ?? "",
-              arcLabelMinAngle: 30,
+              arcLabel: (params) =>
+                params.label + " " + params.value.toString() + "%",
+              arcLabelMinAngle: 10,
 
               paddingAngle: 9,
               cornerRadius: 5,
-              startAngle: -105,
+              startAngle: -90,
             },
           ]}
           sx={{
@@ -128,7 +147,7 @@ export default function PieAnimation() {
         />
 
         {/* Pepperoni Pizza */}
-        <div className="absolute md:-top-18 -left-50 md:-left-1/2 md:translate-x-1/2 opacity-75 pointer-events-none">
+        <div className="absolute md:-top-18 -left-52 md:-left-1/2 md:translate-x-1/2 opacity-75 pointer-events-none">
           <img
             src={peperoniPizza}
             alt="Pepperoni Pizza"
@@ -137,18 +156,18 @@ export default function PieAnimation() {
               transformOrigin: "center center",
               animation: "clockSpin 50s linear infinite",
             }}
-            className="w-[525px] relative -right-45"
+            className="w-[525px] relative md:-right-45 -right-35"
           />
           <style>{`
-                    @keyframes clockSpin {
-                      from {
-                        transform: rotate(0deg);
-                      }
-                      to {
-                        transform: rotate(360deg);
-                      }
-                    }
-                  `}</style>
+            @keyframes clockSpin {
+              from {
+                transform: rotate(0deg);
+              }
+              to {
+                transform: rotate(360deg);
+              }
+            }
+          `}</style>
         </div>
       </Box>
 
@@ -173,7 +192,10 @@ export default function PieAnimation() {
 
               <span className="rounded-full border-1 border-white/50 flex flex-row items-center justify-center gap-2 px-4 py-1">
                 <InsightsIcon />
-                <p>{distribution[currentSelectedItem - 1].alocation}</p>
+                <p>{distribution[currentSelectedItem - 1].alocation} </p> |
+                <span className="text-green-400 font-bolder">
+                  {distribution[currentSelectedItem - 1].percent}
+                </span>
               </span>
             </div>
 
