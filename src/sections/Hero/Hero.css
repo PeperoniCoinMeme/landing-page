@@ -13,7 +13,6 @@
 }
 
 .hero__info-container {
-  width: 25%;
   position: absolute;
   top: 25%;
   left: 4%;
@@ -25,7 +24,7 @@
   position: absolute;
   /* border: solid 1px red; */
   height: auto;
-  top: 45%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.1s ease-in-out;
@@ -57,16 +56,15 @@
   .hero__oven {
     width: 70vw;
   }
-  .hero__info-container {
-    width: 25%;
-  }
 }
-@media (max-width: 860px) {
+@media (max-width: 960px) {
   .hero__oven {
     width: 80vw;
   }
-  .hero__info-container {
-    width: 33%;
+}
+@media (max-width: 760px) {
+  .hero__oven {
+    width: 80vw;
   }
 }
 @media (max-width: 600px) {

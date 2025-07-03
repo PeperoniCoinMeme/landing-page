@@ -13,7 +13,7 @@ const LandingText: React.FC<LandingTextProps> = ({
   const styles: React.CSSProperties = {
     color: color,
     fontFamily: "montserrat",
-    fontSize: "clamp(0.8rem, 10vmin, 1rem)",
+    fontSize: "clamp(0.8rem, 2.5vmin, 1rem)",
     zIndex: 1000,
     transition: "all ease-in-out 0.2s",
   };
