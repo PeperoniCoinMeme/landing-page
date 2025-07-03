@@ -94,7 +94,23 @@ const Hero = () => {
               animate={inView1 ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: "easeOut" }}
               className={`${heroSubsection} hidden md:flex min-w-4/12 justify-between pb-25 gap-1 items-end mt-21 lg:mt-0 flex-1 z-500`}
-            ></motion.div>
+            >
+              {/* <span className="flex flex-row gap-2 items-center px-5 py-1 rounded-xl bg-gradient-to-r from-orange-800 to-red-900 border-2 border-gray-100 hover:border-yellow-500 hover:text-white transition-all shadow-lg">
+                <img src={logo} alt="" className="max-w-7" />
+                <p className="text-sm">1.234.884</p>
+              </span>
+              <div className="border-2 border-gray-300 my-1 px-5 py-4 rounded-lg shadow-md">
+                <p className="text-gray-900">Leader board</p>
+              </div> */}
+
+              {/* <LandingButton
+              onClick={() => setOpen(true)}
+              isDisabled={true}
+              className="w-18"
+            >
+              TBA
+            </LandingButton> */}
+            </motion.div>
           </div>
         </div>
 
