@@ -45,7 +45,7 @@ const Hero = () => {
         >
           <LandingTitle className="text-center lg:text-left min-w-1/3 max-w-1/3">
             DELICIOUSLY <br className="hidden md:flex" />
-            BAKED BY YOU
+            BAKED BY <br className="hidden lg:flex" /> YOU
           </LandingTitle>
 
           <div className="flex lg:hidden md:min-w-1/4 min-w-1/3"></div>
@@ -106,7 +106,7 @@ const Hero = () => {
         <LandingButton
           onClick={() => setOpen(true)}
           bgColor="#228B22"
-          className="w-18 z-9999 mb-25 -translate-y-2"
+          className="w-18 z-9999 mb-25 md:mb-20 -translate-y-2"
         >
           Buy
         </LandingButton>
