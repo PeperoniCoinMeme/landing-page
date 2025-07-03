@@ -14,6 +14,7 @@ import Social from "@/components/Social/Social";
 import LandingSubtitle from "@/components/design/tipography/LandingSubtitle";
 import LandingTitle from "@/components/design/tipography/LandingTitle";
 import "./Hero.css";
+import ComingSoon from "@/components/ComingSoon/ComingSoon";
 
 const Hero = () => {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -31,121 +32,83 @@ const Hero = () => {
   return (
     <Section
       id="hero"
-      className={`${layout.section} min-h-120 md:min-h-150 relative overflow-hidden`}
+      className={`${layout.section} relative overflow-hidden`}
       bgColor="#191716"
       backgroundSvg={brickBg}
     >
-      <div className="hero__oven-container md:flex pt-55 px-2">
-        <motion.div
-          ref={ref1}
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView1 ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="hero__info-container w-full lg:mt-30 md:mt-75 mt-60 z-500 flex flex-row lg:flex-col justify-between pr-15"
-        >
-          <LandingTitle className="text-center lg:text-left min-w-1/3 max-w-1/3">
-            DELICIOUSLY <br className="hidden md:flex" />
-            BAKED BY <br className="hidden lg:flex" /> YOU
-          </LandingTitle>
+      <section className="h-160 w-full">
+        {/* Oven Container */}
+        <div className="hero__oven-container">
+          <div className="absolute -translate-x-1/2 left-1/2 w-full h-full z-1000">
+            <img
+              src={iaOven}
+              alt="Pizza Stone Oven"
+              className={`hero__oven`}
+              style={{ zIndex: zIndexOven }}
+            />
+            <LandingButton
+              onClick={() => setOpen(true)}
+              bgColor="#228B22"
+              className="w-18 z-9999 absolute top-83 md:top-92 lg:top-95 -translate-x-1/2 left-1/2"
+            >
+              Buy
+            </LandingButton>
 
-          <div className="flex lg:hidden md:min-w-1/4 min-w-1/3"></div>
-
-          <LandingText className="text-center lg:text-left w-50 md:w-80 lg:w-70 max-w-1/3">
-            We're not promising world domination. We're just here to build,
-            vibe, and feed the ecosystem one slice at a time.
-          </LandingText>
-        </motion.div>
-
-        <img
-          src={iaOven}
-          alt="Pizza Stone Oven"
-          className={`hero__oven`}
-          style={{ zIndex: zIndexOven }}
-        />
-      </div>
-
-      {/* Flex container */}
-      <div className="flex flex-col justify-between items-center pt-25 h-[100%] px-5 md:px-25 lg:px-50 transition-all">
-        <div className="flex flex-row justify-end self-end">
-          <LandingButton onClick={() => setOpen(true)} className="w-30">
-            Connect
-          </LandingButton>
-        </div>
-
-        <div className="flex flex-row">
-          <div
-            className={`${heroSubsection} min-w-1/4 px-10 justify-center`}
-          ></div>
-          <div className={`${heroSubsection} justify-center min-w-1/3`}>
             <figure>
               <div className="hero-3d-layout">
                 <HeroExperience />
               </div>
             </figure>
           </div>
-          <motion.div
-            ref={ref1}
-            initial={{ opacity: 0, y: 50 }}
-            animate={inView1 ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className={`${heroSubsection} min-w-1/4 justify-between pb-25 gap-1 items-end mt-21 lg:mt-0 flex-1 z-500`}
-          >
-            {/* <span className="flex flex-row gap-2 items-center px-5 py-1 rounded-xl bg-gradient-to-r from-orange-800 to-red-900 border-2 border-gray-100 hover:border-yellow-500 hover:text-white transition-all shadow-lg">
-            <img src={logo} alt="" className="max-w-7" />
-            <p className="text-sm">1.234.884</p>
-          </span>
-          <div className="border-2 border-gray-300 my-1 px-5 py-4 rounded-lg shadow-md">
-            <p className="text-gray-900">Leader board</p>
+        </div>
+        {/* Flex container */}
+        <div className="flex flex-col justify-between items-center h-[100%]">
+          <div className="flex flex-row justify-end self-end w-full pt-25 px-5 md:px-25 lg:px-50 transition-all">
+            <LandingButton onClick={() => setOpen(true)} className="w-30">
+              Connect
+            </LandingButton>
           </div>
-          <div className="hidden lg:flex px-4 top-90 absolute ">
-            <Social mode="hero" />
-          </div> */}
-          </motion.div>
+
+          <div className="flex flex-row w-full md:h-full z-999">
+            <motion.div
+              ref={ref1}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView1 ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className={`${heroSubsection} px-8 lg:mt-0 mt-5 w-full z-500 flex flex-col justify-center mb-25 lg:mb-5 min-w-3/12 items-center md:items-start`}
+            >
+              <LandingTitle className="text-center md:text-left">
+                DELICIOUSLY BAKED BY YOU
+              </LandingTitle>
+              <LandingText className="text-center md:text-left">
+                We're not promising world domination. We're just here to build,
+                vibe, and feed the ecosystem one slice at a time.
+              </LandingText>
+            </motion.div>
+            <div
+              className={`${heroSubsection} hidden md:flex justify-center min-w-5/12`}
+            ></div>
+            <motion.div
+              //   ref={ref1}
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView1 ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className={`${heroSubsection} hidden md:flex min-w-4/12 justify-between pb-25 gap-1 items-end mt-21 lg:mt-0 flex-1 z-500`}
+            ></motion.div>
+          </div>
         </div>
 
-        <LandingButton
-          onClick={() => setOpen(true)}
-          bgColor="#228B22"
-          className="w-18 z-9999 mb-25 md:mb-20 -translate-y-2"
-        >
-          Buy
-        </LandingButton>
-        {/* <LandingButton
-              onClick={() => setOpen(true)}
-              isDisabled={true}
-              className="w-18"
-            >
-              TBA
-            </LandingButton> */}
-      </div>
-
-      <AnimatedCounter />
-
-      <Dialog open={open} onClose={() => setOpen(false)} disableScrollLock>
-        <AnimatePresence>
-          {open && (
-            <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="flex flex-col justify-center items-center shadow-xl max-w-md text-white w-full text-center gap-3"
-              >
-                <LandingSubtitle className="animate-bounce">
-                  🚧 Coming Soon 🚧
-                </LandingSubtitle>
-                <LandingText className="px-10">
-                  We’re building something amazing. Check back soon!
-                </LandingText>
-                <LandingButton onClick={() => setOpen(false)} className="my-5">
-                  Close
-                </LandingButton>
-              </motion.div>
-            </div>
-          )}
-        </AnimatePresence>
-      </Dialog>
+        {/* Social */}
+        <div className="hidden lg:flex px-4 top-90 absolute right-10">
+          <Social mode="hero" />
+        </div>
+        {/* Dialog */}
+        <Dialog open={open} onClose={() => setOpen(false)} disableScrollLock>
+          <AnimatePresence>
+            {open && <ComingSoon setOpen={setOpen} />}
+          </AnimatePresence>
+        </Dialog>
+      </section>
       <div className="absolute bottom-0 min-w-full w-[1920px] h-24 bg-gradient-to-b from-transparent to-[#0c0500] pointer-events-none z-9000" />
     </Section>
   );
