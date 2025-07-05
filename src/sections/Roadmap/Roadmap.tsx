@@ -94,14 +94,14 @@ const Roadmap = () => {
       <Clouds />
       {/* Parachutes1 */}
       <div
-        className="absolute -top-620 right-10 -translate-x-1/2 pointer-events-none"
+        className="absolute -top-635 -right-46 md:right-10 -translate-x-1/2 pointer-events-none"
         style={{ transform: `translateY(${offsetY * 0.38}px)` }}
       >
         <img
           src={parachutes1}
           alt="Parachutes"
           aria-hidden="true"
-          className="w-[200px] rotate-[12deg]"
+          className="w-[180px] rotate-[12deg]"
         />
       </div>
       {/* Parachutes2 */}

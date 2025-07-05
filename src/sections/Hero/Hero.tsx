@@ -49,7 +49,7 @@ const Hero = () => {
             <LandingButton
               onClick={() => setOpen(true)}
               bgColor="#228B22"
-              className="w-18 z-9999 absolute top-83 md:top-92 lg:top-95 -translate-x-1/2 left-1/2"
+              className="w-18 z-9999 absolute top-85 md:top-92 lg:top-95 -translate-x-1/2 left-1/2 -ml-2"
             >
               Buy
             </LandingButton>
@@ -89,7 +89,7 @@ const Hero = () => {
               className={`${heroSubsection} hidden md:flex justify-center min-w-5/12`}
             ></div>
             <motion.div
-              //   ref={ref1}
+              // ref={ref1}
               initial={{ opacity: 0, y: 50 }}
               animate={inView1 ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: "easeOut" }}
@@ -115,7 +115,7 @@ const Hero = () => {
         </div>
 
         {/* Social */}
-        <div className="hidden lg:flex px-4 top-90 absolute right-10">
+        <div className="hidden lg:flex px-4 top-90 absolute right-10 z-5000">
           <Social mode="hero" />
         </div>
         {/* Dialog */}

@@ -45,24 +45,28 @@
     transform: translate(-50%, -50%) rotate(0deg);
   }
 }
+/* --- Mobile (base) ---------------------- */
+.hero__oven {
+  width: 100%; /* 0 px – 599 px */
+}
 
-@media (max-width: 1100px) {
+/* --- Small Tablet --------------------- */
+@media (min-width: 600px) {
   .hero__oven {
-    width: 70vw;
+    width: 80vw; /* 600 px – 959 px */
   }
 }
-@media (max-width: 960px) {
+
+/* --- Tablet/posterior ------------------- */
+@media (min-width: 960px) {
   .hero__oven {
-    width: 80vw;
+    width: 70vw; /* 960 px – 1099 px */
   }
 }
-@media (max-width: 760px) {
+
+/* --- Desktop ---------------------------- */
+@media (min-width: 1100px) {
   .hero__oven {
-    width: 80vw;
-  }
-}
-@media (max-width: 600px) {
-  .hero__oven {
-    width: 100vw;
+    width: clamp(100px, 60vw, 800px); /* ≥ 1100 px */
   }
 }
