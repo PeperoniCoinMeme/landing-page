@@ -13,20 +13,20 @@
 }
 
 .hero__oven {
-  /* width: min(60vw, 800px); */
-  width: clamp(100px, 60vw, 800px);
+  width: min(65vw, 750px);
   position: absolute;
-  /* border: solid 1px red; */
   height: auto;
-  top: 42%;
+  top: 200px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -48%);
   transition: all 0.1s ease-in-out;
 }
 
-/* .hero__oven:hover {
-  animation: tilt-n-move-shaking 0.4s ease-out;
-} */
+@media (max-width: 830px) {
+  .hero__oven {
+    width: 600px;
+  }
+}
 
 @keyframes tilt-n-move-shaking {
   0% {
@@ -43,30 +43,5 @@
   }
   100% {
     transform: translate(-50%, -50%) rotate(0deg);
-  }
-}
-/* --- Mobile (base) ---------------------- */
-.hero__oven {
-  width: 100%; /* 0 px – 599 px */
-}
-
-/* --- Small Tablet --------------------- */
-@media (min-width: 600px) {
-  .hero__oven {
-    width: 80vw; /* 600 px – 959 px */
-  }
-}
-
-/* --- Tablet/posterior ------------------- */
-@media (min-width: 960px) {
-  .hero__oven {
-    width: 70vw; /* 960 px – 1099 px */
-  }
-}
-
-/* --- Desktop ---------------------------- */
-@media (min-width: 1100px) {
-  .hero__oven {
-    width: clamp(100px, 60vw, 800px); /* ≥ 1100 px */
   }
 }

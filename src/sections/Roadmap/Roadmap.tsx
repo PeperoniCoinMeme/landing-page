@@ -73,7 +73,7 @@ const Roadmap = () => {
                       <div className="timeline-logo">
                         <img src={logo} alt="logo" />
                       </div>
-                      <div>
+                      <div className="max-w-110 min-w-110">
                         <LandingSubtitle color="white" className="text-left">
                           {card.title}
                         </LandingSubtitle>

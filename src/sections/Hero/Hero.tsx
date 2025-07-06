@@ -36,7 +36,7 @@ const Hero = () => {
       bgColor="#191716"
       backgroundSvg={brickBg}
     >
-      <section className="h-160 w-full">
+      <section className="h-170 w-full">
         {/* Oven Container */}
         <div className="hero__oven-container">
           <div className="absolute -translate-x-1/2 left-1/2 w-full h-full z-1000">
@@ -46,14 +46,6 @@ const Hero = () => {
               className={`hero__oven`}
               style={{ zIndex: zIndexOven }}
             />
-            <LandingButton
-              onClick={() => setOpen(true)}
-              bgColor="#228B22"
-              className="w-18 z-9999 absolute top-85 md:top-92 lg:top-95 -translate-x-1/2 left-1/2 -ml-2"
-            >
-              Buy
-            </LandingButton>
-
             <figure>
               <div className="hero-3d-layout">
                 <HeroExperience />
@@ -69,47 +61,74 @@ const Hero = () => {
             </LandingButton>
           </div>
 
-          <div className="flex flex-row w-full md:h-full z-999">
+          {/* <div className="flex flex-row w-full xl:h-full z-999 border-2">
             <motion.div
               ref={ref1}
               initial={{ opacity: 0, y: 20 }}
               animate={inView1 ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className={`${heroSubsection} px-8 lg:mt-0 mt-5 w-full z-500 flex flex-col justify-center mb-25 lg:mb-5 min-w-3/12 items-center md:items-start`}
+              className={`${heroSubsection} px-6 mb-12 w-full z-500 flex flex-col justify-center min-w-4/12 items-center xl:items-start`}
             >
-              <LandingTitle className="text-center md:text-left">
-                DELICIOUSLY BAKED BY YOU
-              </LandingTitle>
-              <LandingText className="text-center md:text-left">
+              <LandingHero className="text-center xl:text-left">
+                Deliciously Baked by You
+              </LandingHero>
+              <LandingText className="text-center xl:text-left px-10 xl:px-0">
                 We're not promising world domination. We're just here to build,
                 vibe, and feed the ecosystem one slice at a time.
               </LandingText>
             </motion.div>
             <div
-              className={`${heroSubsection} hidden md:flex justify-center min-w-5/12`}
+              className={`${heroSubsection} hidden xl:flex justify-center min-w-5/12`}
             ></div>
             <motion.div
               // ref={ref1}
               initial={{ opacity: 0, y: 50 }}
               animate={inView1 ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className={`${heroSubsection} hidden md:flex min-w-4/12 justify-between pb-25 gap-1 items-end mt-21 lg:mt-0 flex-1 z-500`}
+              className={`${heroSubsection} hidden xl:flex min-w-4/12 justify-between pb-25 gap-1 items-end mt-21 lg:mt-0 flex-1 z-500`}
             >
-              {/* <span className="flex flex-row gap-2 items-center px-5 py-1 rounded-xl bg-gradient-to-r from-orange-800 to-red-900 border-2 border-gray-100 hover:border-yellow-500 hover:text-white transition-all shadow-lg">
+              <span className="flex flex-row gap-2 items-center px-5 py-1 rounded-xl bg-gradient-to-r from-orange-800 to-red-900 border-2 border-gray-100 hover:border-yellow-500 hover:text-white transition-all shadow-lg">
                 <img src={logo} alt="" className="max-w-7" />
                 <p className="text-sm">1.234.884</p>
               </span>
               <div className="border-2 border-gray-300 my-1 px-5 py-4 rounded-lg shadow-md">
                 <p className="text-gray-900">Leader board</p>
-              </div> */}
+              </div>
 
-              {/* <LandingButton
+              <LandingButton
+                onClick={() => setOpen(true)}
+                isDisabled={true}
+                className="w-18"
+              >
+                TBA
+              </LandingButton>
+            </motion.div>
+          </div> */}
+
+          <div className="flex flex-col w-full justify-end items-center lg:h-65 md:h-70 h-78 gap-3">
+            <LandingButton
               onClick={() => setOpen(true)}
-              isDisabled={true}
-              className="w-18"
+              bgColor="#228B22"
+              className="w-18 z-500 self-center -ml-2"
             >
-              TBA
-            </LandingButton> */}
+              Buy
+            </LandingButton>
+
+            <motion.div
+              ref={ref1}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView1 ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className={`${heroSubsection} px-6 mb-12 w-full z-500 flex flex-col justify-start items-center`}
+            >
+              <LandingHero className="text-center px-5 md:px-20">
+                Deliciously <br className="flex md:hidden" />
+                Baked by You
+              </LandingHero>
+              <LandingText className="text-center px-15 xl:px-0 z-500">
+                We're not promising world domination. We're just here to build,
+                vibe, and feed the ecosystem one slice at a time.
+              </LandingText>
             </motion.div>
           </div>
         </div>

@@ -12,6 +12,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { peperoniPizza } from "../../assets";
 import LandingText from "../design/tipography/LandingText";
 import "./PieChart.css";
+import Chip from "@mui/material/Chip";
+import RotatingGalaxy from "../RotatingGalaxy/RotatingGalaxy";
 
 function useIsSmallScreen(query = "(max-width: 768px)"): boolean {
   const [isSmallScreen, setIsSmallScreen] = React.useState(
@@ -21,8 +23,8 @@ function useIsSmallScreen(query = "(max-width: 768px)"): boolean {
   useEffect(() => {
     const mediaQuery = window.matchMedia(query);
 
-    const handler = (event: any) => {
-      setIsSmallScreen(event.matches);
+    const handler = (e: MediaQueryListEvent) => {
+      setIsSmallScreen(e.matches);
     };
 
     mediaQuery.addEventListener("change", handler);
@@ -45,39 +47,45 @@ export default function PieAnimation() {
   const [itemNb, setItemNb] = React.useState(1);
   const [currentSelectedItem, setCurrentSelectedItem] = React.useState(1);
 
+  const [chip, setChip] = React.useState<{
+    x: number;
+    y: number;
+    label: string;
+  } | null>(null);
+
   const isSmallScreen = useIsSmallScreen();
 
   // Effect 1, change char dinamically
-  useEffect(() => {
-    if (!inView || !isSmallScreen) {
-      setItemData(undefined);
-      return;
-    }
-    setItemData(undefined);
-    let counter = 1;
+  //   useEffect(() => {
+  //     if (!inView || !isSmallScreen) {
+  //       setItemData(undefined);
+  //       return;
+  //     }
+  //     setItemData(undefined);
+  //     let counter = 1;
 
-    const interval = setInterval(() => {
-      counter++;
+  //     const interval = setInterval(() => {
+  //       counter++;
 
-      handleItemNbChange(counter);
+  //       handleItemNbChange(counter);
 
-      if (counter === 4) {
-        counter = 0;
-      }
-    }, 3000);
+  //       if (counter === 4) {
+  //         counter = 0;
+  //       }
+  //     }, 3000);
 
-    return () => {
-      clearInterval(interval);
-      handleItemNbChange(1);
-    };
-  }, [inView, isSmallScreen]);
+  //     return () => {
+  //       clearInterval(interval);
+  //       handleItemNbChange(1);
+  //     };
+  //   }, [inView, isSmallScreen]);
 
   // Effect 2, change char data on click
   useEffect(() => {
     if (itemData) {
       setCurrentSelectedItem(itemData.dataIndex + 1);
     }
-  });
+  }, [itemData]);
 
   // Dinamically change the number of items in the char
   const handleItemNbChange = (newValue: number) => {
@@ -87,6 +95,33 @@ export default function PieAnimation() {
     setItemNb(newValue);
     setCurrentSelectedItem(newValue);
   };
+
+  // Chip display
+  const handleSliceClick = (
+    event: React.MouseEvent<SVGPathElement, MouseEvent>,
+    d: PieItemIdentifier
+  ) => {
+    const rect = event.currentTarget.ownerSVGElement!.getBoundingClientRect();
+
+    const localX = event.clientX - rect.left / 1.6;
+    const localY = event.clientY - rect.top / 0.98;
+
+    const p = distribution[d.dataIndex];
+    setChip({
+      x: localX,
+      y: localY,
+      label: `${p.label} ${p.value}%`,
+    });
+
+    handleItemNbChange(d.dataIndex + 1);
+  };
+
+  // Chip hide
+  React.useEffect(() => {
+    if (!chip) return;
+    const id = setTimeout(() => setChip(null), 1000);
+    return () => clearTimeout(id);
+  }, [chip]);
 
   const zIndex = 500;
 
@@ -103,21 +138,36 @@ export default function PieAnimation() {
           alignItems: "center",
           justifyContent: "start",
           position: "relative",
-          marginRight: "50px",
+          marginRight: "0px",
         }}
-        className="md:min-w-170 w-fit md:mx-auto relative md:pl-15 w-1/2"
+        className="md:min-w-170 w-fit md:mx-auto relative md:pl-35 w-1/2"
       >
+        {/* ---------- Floating Chip ---------- */}
+        {chip && (
+          <Chip
+            label={chip.label}
+            sx={{
+              position: "absolute",
+              left: chip.x,
+              top: chip.y,
+              transform: "translate(-50%, -100%)",
+              bgcolor: "#000000cc",
+              color: "white",
+              fontWeight: 700,
+              zIndex: 9999,
+            }}
+            size="small"
+          />
+        )}
+
+        {/* ---------- Pie Chart ---------- */}
         <PieChart
           style={{
-            zIndex: zIndex,
-            pointerEvents: window.innerWidth < 768 ? "none" : "auto",
+            zIndex: 500,
+            // pointerEvents: window.innerWidth < 768 ? "none" : "auto",
+            pointerEvents: "auto",
           }}
-          colors={[
-            "#f3441432", // Masa dorada tipo horno de piedra
-            "#2f3f3b92", // Pepperoni vibrante
-            "#bdbbb592", // Queso cheddar derretido
-            "#09214792", // Púrpura profundo espacial
-          ]}
+          colors={["#f3441432", "#2f3f3b92", "#bdbbb592", "#09214792"]}
           height={365}
           width={365}
           series={[
@@ -125,12 +175,8 @@ export default function PieAnimation() {
               data: distribution,
               innerRadius: radius,
               outerRadius: 170,
-              //   highlightScope: { fade: "global", highlight: "item" },
               faded: { innerRadius: 30, additionalRadius: -30, color: "gray" },
-              arcLabel: (params) =>
-                params.label + " " + params.value.toString() + "%",
-              arcLabelMinAngle: 30,
-
+              arcLabelMinAngle: 0,
               paddingAngle: 9,
               cornerRadius: 5,
               startAngle: -90,
@@ -142,33 +188,27 @@ export default function PieAnimation() {
               fontWeight: 600,
               fontSize: 14,
             },
+            [`& .MuiPieArc-root`]: {
+              touchAction: "pan-y",
+            },
+            [`& path`]: {
+              touchAction: "pan-y",
+            },
+            [`& g`]: {
+              touchAction: "pan-y",
+            },
+            [`& svg`]: {
+              touchAction: "pan-y",
+            },
           }}
-          onItemClick={(event, d) => setItemData(d)}
+          slotProps={{
+            tooltip: { trigger: "none" },
+          }}
+          onItemClick={handleSliceClick}
         />
 
-        {/* Pepperoni Pizza */}
-        <div className="absolute md:-top-18 -left-52 md:-left-1/2 md:translate-x-1/2 opacity-75 pointer-events-none">
-          <img
-            src={peperoniPizza}
-            alt="Pepperoni Pizza"
-            style={{
-              zIndex: zIndex - 1,
-              transformOrigin: "center center",
-              animation: "clockSpin 50s linear infinite",
-            }}
-            className="w-[525px] relative md:-right-45 -right-35"
-          />
-          <style>{`
-            @keyframes clockSpin {
-              from {
-                transform: rotate(0deg);
-              }
-              to {
-                transform: rotate(360deg);
-              }
-            }
-          `}</style>
-        </div>
+        {/* Rotating Pepperoni Galaxy */}
+        <RotatingGalaxy zIndex={zIndex} />
       </Box>
 
       <motion.div
