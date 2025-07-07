@@ -38,17 +38,19 @@ const Slicenomics = () => {
             <div className="flex flex-col lg:flex-row gap-3 items-center">
               <LandingText>Total Supply:</LandingText>
               <span className="text-red-400 text-2xl"> 1,790,000,000</span>
-              $PEPERONI.
+              <LandingText>$PEPERONI.</LandingText>
             </div>
             <div className="flex flex-col lg:flex-row gap-3 items-center">
               <LandingText>Milestone Burn:</LandingText>
               <span className="text-red-400 text-2xl">790,000,000</span>
-              will be burned progressively across project milestones.
+              <LandingText>
+                will be burned progressively across project milestones.
+              </LandingText>
             </div>
             <div className="col-span-2 justify-self-center flex flex-col lg:flex-row gap-3 items-center">
               <LandingText>Distribution of</LandingText>
               <span className="text-red-400 text-2xl">1,000,000,000</span>
-              Remaining Supply:
+              <LandingText>Remaining Supply:</LandingText>
             </div>
           </div>
 

@@ -64,7 +64,7 @@ const About = () => {
   return (
     <Section
       id="about"
-      className={`${layout.section} ${layout.sectionHeight} min-h-200 square-framed-bg`}
+      className={`${layout.section} ${layout.sectionHeight} min-h-170 square-framed-bg overflow-hidden`}
       // bgColor="linear-gradient(to bottom, transparent, #0c0500)"
       // backgroundSvg={transitionUpBg}
     >

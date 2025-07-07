@@ -32,7 +32,7 @@ const RoadmapHeader = () => {
       className={`${layout.section}`}
       backgroundSvg={planetBg}
     >
-      <section className={`${layout.roadMapSection} pt-60 pb-5`}>
+      <section className={`${layout.roadMapSection} pt-60 pb-18`}>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -80,7 +80,7 @@ const RoadmapHeader = () => {
                       <div className="timeline-logo">
                         <img src={logo} alt="logo" />
                       </div>
-                      <div>
+                      <div className="max-w-110 min-w-110">
                         <LandingSubtitle color="white" className="text-left">
                           {card.title}
                         </LandingSubtitle>

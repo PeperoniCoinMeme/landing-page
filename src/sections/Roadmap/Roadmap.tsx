@@ -40,7 +40,7 @@ const Roadmap = () => {
       bgColor="linear-gradient(360deg,rgba(94, 35, 13, 1) 0%, rgba(199, 84, 42, 1) 14%, rgba(238, 159, 69, 1) 38%, rgba(255, 206, 97, 1) 65%, rgba(155, 214, 255, 1) 100%)"
       // backgroundSvg={sunsetGradientBg}
     >
-      <section className={`${layout.roadMapSection} py-30`}>
+      <section className={`${layout.roadMapSection} py-10`}>
         <div className={`${layout.roadMapMilestoneContainer}`}>
           {roadMapCardsB.map((card, index) => {
             const { ref: cardRef, inView: cardInView } = useInView({
@@ -73,7 +73,7 @@ const Roadmap = () => {
                       <div className="timeline-logo">
                         <img src={logo} alt="logo" />
                       </div>
-                      <div>
+                      <div className="max-w-110 min-w-110">
                         <LandingSubtitle color="white" className="text-left">
                           {card.title}
                         </LandingSubtitle>
@@ -94,14 +94,14 @@ const Roadmap = () => {
       <Clouds />
       {/* Parachutes1 */}
       <div
-        className="absolute -top-620 right-10 -translate-x-1/2 pointer-events-none"
+        className="absolute -top-635 -right-46 md:right-10 -translate-x-1/2 pointer-events-none"
         style={{ transform: `translateY(${offsetY * 0.38}px)` }}
       >
         <img
           src={parachutes1}
           alt="Parachutes"
           aria-hidden="true"
-          className="w-[200px] rotate-[12deg]"
+          className="w-[180px] rotate-[12deg]"
         />
       </div>
       {/* Parachutes2 */}
