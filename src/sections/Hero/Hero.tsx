@@ -59,7 +59,7 @@ const Hero = () => {
           <div className="z-5000">
             <BackgroundImage
               imageUrl={iaOven}
-              className="h-90 w-170 md:h-100 md:w-200 "
+              className="h-90 w-170 md:h-100 md:w-200 ml-5"
             />
           </div>
 
