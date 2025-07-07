@@ -13,13 +13,15 @@ const LandingSubtitle: React.FC<LandingSubtitleProps> = ({
   const styles: React.CSSProperties = {
     color: color,
     fontFamily: "Riffic",
+    fontSize: "clamp(1rem, 10vmin, 2rem)",
+    lineHeight: 1,
     zIndex: 1000,
-    fontSize: "27px",
+    transition: "all ease-in-out 0.2s",
   };
 
   return (
     <h2
-      className={`text-orange-400 mb-2 text-shadow-md flex text-4xl font-bold text-[var(--color-pepperoni)] transition pointer-events-none ${
+      className={`text-orange-400 mb-2 text-shadow-md flex font-bold text-[var(--color-pepperoni)] transition pointer-events-none ${
         className || ""
       }`}
       style={styles}

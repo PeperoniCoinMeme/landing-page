@@ -42,33 +42,33 @@ const MissionVibes = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative flex flex-col jutify-center flex-1"
         >
-          <div className="flex flex-col items-center md:items-start my-6 flex-wrap relative z-50 gap-4">
-            <LandingHero className="text-center md:text-left">
+          <div className="flex flex-col items-center lg:items-start my-6 flex-wrap relative z-50 gap-4">
+            <LandingHero className="text-center lg:text-left">
               Mission & Vibes
             </LandingHero>
 
-            <LandingText className="text-center md:text-left">
+            <LandingText className="text-center lg:text-left">
               "Cooked by the People". What happens when you throw community,
               culture, and a little insanity into a Solana oven? You get
               $PEPERONI, a decentralized memecoin that isn’t built on hype, but
               on fun, fairness, and freedom.
             </LandingText>
-            <LandingText className="text-center md:text-left">
+            <LandingText className="text-center lg:text-left">
               No tax scams. No VCs calling shots. Just a growing tribe of meme
               chefs baking something tastier than the usual crypto soup.
             </LandingText>
           </div>
-          <p className="text-red-500 text-semibold text-xl underline pt-4 pb-4 text-center md:text-left">
+          <p className="text-red-500 text-semibold text-xl underline pt-4 pb-4 text-center lg:text-left">
             Built different
           </p>
           {/* It’s not just a vibe — it’s a movement with mozzarella. */}
-          <div className="grid grid-cols-2 md:flex md:flex-row gap-5 mt-2 z-50 md:max-w-150">
+          <div className="grid grid-cols-2 lg:flex lg:flex-row gap-5 mt-2 z-50 lg:max-w-150">
             {highlights.map((text, index) => (
               <div
                 key={index}
-                className="px-5 md:px-0
-            w-full md:w-44 text-sm text-gray-100 transition-transform duration-300 hover:scale-110
-            flex flex-col gap-3 text-center md:text-start items-center md:items-start"
+                className="px-5 lg:px-0
+            w-full lg:w-44 text-sm text-gray-100 transition-transform duration-300 hover:scale-110
+            flex flex-col gap-3 text-center lg:text-start items-center lg:items-start"
               >
                 <Checkmark />
                 <LandingCaption>{text}</LandingCaption>
@@ -78,8 +78,8 @@ const MissionVibes = () => {
           <div className="py-8">{/* <LandingButton>See</LandingButton> */}</div>
         </motion.div>
 
-        <div className="absolute -translate-x-1/2 left-1/2 md:translate-x-0 md:-left-10 top-15 md:-top-17 md:relative flex-1 flex flex-col items-center min-w-6/12">
-          <div className="md:opacity-100 opacity-30 h-150 w-100 parent-depth relative">
+        <div className="absolute -translate-x-1/2 left-1/2 lg:translate-x-0 lg:left-5 xl:-left-10 top-15 lg:-top-17 lg:relative flex-1 flex flex-col items-center min-w-6/12 transition-transform duration-400">
+          <div className="lg:opacity-100 opacity-30 h-150 w-100 parent-depth relative ">
             <LandingVideo
               src={tiktokVideo}
               className="video-depth absolute transform shadow-2xl"

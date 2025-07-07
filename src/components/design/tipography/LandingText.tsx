@@ -12,14 +12,15 @@ const LandingText: React.FC<LandingTextProps> = ({
 }) => {
   const styles: React.CSSProperties = {
     color: color,
-    zIndex: 1000,
     fontFamily: "montserrat",
-    fontSize: "16.5px",
+    fontSize: "clamp(0.8rem, 2.5vmin, 1rem)",
+    zIndex: 1000,
+    transition: "all ease-in-out 0.2s",
   };
 
   return (
     <p
-      className={`font-medium transition-all max-w-2xl pointer-events-none ${
+      className={`transition-all max-w-2xl pointer-events-none ${
         className || ""
       }`}
       style={styles}

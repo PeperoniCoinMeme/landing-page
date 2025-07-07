@@ -28,27 +28,29 @@ const Slicenomics = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative flex flex-col justify-center"
+          className="relative flex flex-col justify-center lg:items-start items-center"
         >
-          <div className="mb-5 text-center">
-            <LandingHero> Slicenomics: Slice by Slice </LandingHero>
-          </div>
+          <LandingHero className="mb-5 text-center">
+            Slicenomics: Slice by Slice
+          </LandingHero>
 
           <div className="lg:flex lg:flex-col lg:text-left grid grid-cols-2 w-full mb-12 gap-8">
             <div className="flex flex-col lg:flex-row gap-3 items-center">
               <LandingText>Total Supply:</LandingText>
               <span className="text-red-400 text-2xl"> 1,790,000,000</span>
-              $PEPERONI.
+              <LandingText>$PEPERONI.</LandingText>
             </div>
             <div className="flex flex-col lg:flex-row gap-3 items-center">
               <LandingText>Milestone Burn:</LandingText>
               <span className="text-red-400 text-2xl">790,000,000</span>
-              will be burned progressively across project milestones.
+              <LandingText>
+                will be burned progressively across project milestones.
+              </LandingText>
             </div>
             <div className="col-span-2 justify-self-center flex flex-col lg:flex-row gap-3 items-center">
               <LandingText>Distribution of</LandingText>
               <span className="text-red-400 text-2xl">1,000,000,000</span>
-              Remaining Supply:
+              <LandingText>Remaining Supply:</LandingText>
             </div>
           </div>
 

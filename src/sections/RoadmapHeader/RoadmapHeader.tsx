@@ -32,7 +32,7 @@ const RoadmapHeader = () => {
       className={`${layout.section}`}
       backgroundSvg={planetBg}
     >
-      <section className={`${layout.roadMapSection} pt-30 pb-5`}>
+      <section className={`${layout.roadMapSection} pt-60 pb-18`}>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -69,22 +69,22 @@ const RoadmapHeader = () => {
                 animate={cardInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 key={card.title}
-                className="exp-card-wrapper"
+                className="flex flex-col-reverse xl:items-start items-center xl:flex-row xl:gap-20 gap-10 justify-between"
               >
                 <div className="xl:w-2/6 hover:-translate-y-5 transition-transform">
                   <GlowCard card={card} index={0}></GlowCard>
                 </div>
                 <div className="xl:w-4/6">
                   <div className="flex items-start">
-                    <div className="expText flex xl:gap-20 md:gap-10 gap-3 md:gap-5 relative z-20">
+                    <div className="flex xl:gap-20 md:gap-10 gap-3 md:gap-5 relative z-20">
                       <div className="timeline-logo">
                         <img src={logo} alt="logo" />
                       </div>
-                      <div>
-                        <LandingSubtitle color="white">
+                      <div className="max-w-110 min-w-110">
+                        <LandingSubtitle color="white" className="text-left">
                           {card.title}
                         </LandingSubtitle>
-                        <LandingText className="my-5 text-white">
+                        <LandingText className="my-5 text-white text-left">
                           {card.date}
                         </LandingText>
                       </div>
@@ -96,17 +96,6 @@ const RoadmapHeader = () => {
           })}
         </div>
       </section>
-
-      {/* <div className="absolute left-0 top-0 pointer-events-none z-0 overflow-hidden">
-        <img
-          src={planetBg}
-          alt="Pepperoni Pizza"
-          style={{
-            zIndex: 0,
-          }}
-          className="w-[1920px] relative"
-        />
-      </div> */}
     </Section>
   );
 };

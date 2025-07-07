@@ -49,6 +49,10 @@ const Navbar = () => {
     fontFamily: "Riffic",
   };
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+  }, [menuOpen]);
+
   return (
     <>
       {/* <Headroom> */}
