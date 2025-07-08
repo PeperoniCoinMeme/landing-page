@@ -12,51 +12,10 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { layout } from "@/styles/styles";
 
-// const cryptoPizzaWords = [
-//   {
-//     text: "Bitcoin Payments",
-//     icon: (
-//       <CurrencyDollarIcon className="xl:size-12 md:size-10 size-7 text-orange-500" />
-//     ),
-//   },
-//   {
-//     text: "Pizza Delivery",
-//     icon: <FireIcon className="xl:size-12 md:size-10 size-7 text-yellow-500" />,
-//   },
-//   {
-//     text: "Crypto Commerce",
-//     icon: (
-//       <ShoppingCartIcon className="xl:size-12 md:size-10 size-7 text-gray-800" />
-//     ),
-//   },
-//   {
-//     text: "Market Trends",
-//     icon: (
-//       <ChartBarIcon className="xl:size-12 md:size-10 size-7 text-green-300" />
-//     ),
-//   },
-//   {
-//     text: "Special Rewards",
-//     icon: <GiftIcon className="xl:size-12 md:size-10 size-7 text-yellow-400" />,
-//   },
-//   {
-//     text: "Hot Deals",
-//     icon: <FireIcon className="xl:size-12 md:size-10 size-7 text-orange-600" />,
-//   },
-// ];
-
 const About = () => {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.2,
-  });
-
-  useGSAP(() => {
-    gsap.fromTo(
-      ".hero-text h1",
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
-    );
   });
 
   const litePaper = "https://github.com/PeperoniCoinMeme/litepaper";
@@ -81,38 +40,7 @@ const About = () => {
             <LandingHero className="text-center lg:text-left">
               About Peperoni
             </LandingHero>
-            {/*<h1 className="pointer-events-none text-2xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 hero-font">
-             
-              <span className="slide absolute pt-0 px-2 h-[55px] overflow-hidden">
-                <span className="wrapper">
-                 in {words.map((word, index) => (
-                    <span
-                      key={index}
-                      className="flex items-center md:gap-3 gap-1 pb-2"
-                    >
-                      <img
-                        src={word.imgPath}
-                        alt="person"
-                        className="object-contain xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
-                      />
-                      <LandingTitle>{word.text}</LandingTitle>
-                    </span>
-                  ))} 
-             {cryptoPizzaWords.map((item, index) => (
-                    <span
-                      key={index}
-                      className="flex flex-row items-center md:gap-3 gap-1"
-                    >
-                      <span className="object-contain rounded-full bg-white bg-opacity-50">
-                        {item.icon}
-                      </span>
-                      <LandingTitle>{item.text}</LandingTitle>
-                    </span>
-                  ))} 
-                </span>
-              </span>
-              <br />
-            </h1>*/}
+
             <div className="mb-8 max-w-lg">
               <LandingText color="white" className="text-center lg:text-left">
                 It’s not just a coin. It’s not just a meme. $PEPERONI is a
