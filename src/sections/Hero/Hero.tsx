@@ -50,13 +50,13 @@ const Hero = () => {
           <div className="flex flex-row justify-end self-end w-full pt-10 px-5 md:px-25 lg:px-50 transition-all">
             <LandingButton
               onClick={() => setDialogOpen(true)}
-              className="w-30 translate-y-15 md:translate-x-9 lg:translate-x-18 translate-x-4"
+              className="w-30 translate-y-15 md:translate-x-9 lg:translate-x-18 translate-x-4 z-9999"
             >
               Connect
             </LandingButton>
           </div>
 
-          <div className="z-5000">
+          <div className="z-500">
             <BackgroundImage
               imageUrl={iaOven}
               className="h-90 w-170 md:h-100 md:w-200 ml-5"
