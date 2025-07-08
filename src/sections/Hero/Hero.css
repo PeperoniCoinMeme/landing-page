@@ -13,18 +13,19 @@
 }
 
 .hero__oven {
-  width: min(65vw, 750px);
+  width: 800px;
   position: absolute;
   height: auto;
   top: 200px;
   left: 50%;
-  transform: translate(-50%, -48%);
+  transform: translate(-50%, -40%);
   transition: all 0.1s ease-in-out;
 }
 
 @media (max-width: 830px) {
   .hero__oven {
-    width: 600px;
+    height: 300px;
+    width: 1500px;
   }
 }
 

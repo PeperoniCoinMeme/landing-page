@@ -13,9 +13,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-:root {
   --font-title: "Fredoka";
   --font-body: "Baloo 2", sans-serif;
 }

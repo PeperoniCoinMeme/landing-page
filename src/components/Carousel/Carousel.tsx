@@ -82,13 +82,13 @@ const Carousel = () => (
     <div className="gradient-edge" />
     <div className="gradient-edge" />
 
-    <div className="overflow-hidden relative h-50 md:h-100">
+    <div className="overflow-hidden relative h-80 md:h-100">
       <div className="marquee-box">
         {images.map((icon, index) => (
           <GalleryCard
             key={index}
             imageUrl={icon.imgPath}
-            className={`my-2 mx-1 md:my-4 rounded-lg min-w-40 gallery-card border-1 border-white/40 hover:scale-105`}
+            className={`my-2 mx-1 md:my-4 rounded-lg min-w-40 gallery-card border-1 border-white/40 hover:scale-105 hover:mx-2`}
           />
         ))}
       </div>

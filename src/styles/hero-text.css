@@ -89,15 +89,16 @@
   background-color: black;
   width: 580%;
   height: 100%;
+  padding: 0.5rem 0;
   position: absolute;
-  overflow: hidden;
-  animation: marqueeBounce 40s ease-in-out infinite alternate;
+  overflow-x: hidden;
+  animation: marqueeBounce 55s linear infinite alternate;
 }
 
 @media (max-width: 720px) {
   .marquee-box {
-    width: 2000%;
-    animation: marqueeBounce 60s ease-in-out infinite alternate;
+    width: 1000%;
+    animation: marqueeBounce 70s linear infinite alternate;
   }
 }
 

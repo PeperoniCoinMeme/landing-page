@@ -15,11 +15,12 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
     <div
       className={`relative overflow-hidden max-w-sm
    ${className || ""}`}
+      onClick={() => window.open("https://x.com/Peperoni_Meme", "_blank")}
     >
       <img
         src={imageUrl}
         alt="Gallery Item"
-        className="w-full h-60 md:h-70 lg:h-78 object-cover"
+        className="w-full h-60 md:h-70 lg:h-78 object-cover opacity-90 hover:opacity-100"
       />
       <div className="absolute top-0 w-full">{status}</div>
       <div className="gallery-card__stripe">

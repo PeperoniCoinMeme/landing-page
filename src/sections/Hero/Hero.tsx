@@ -11,10 +11,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { layout } from "@/styles/styles";
 import Dialog from "@mui/material/Dialog";
 import Social from "@/components/Social/Social";
-import LandingSubtitle from "@/components/design/tipography/LandingSubtitle";
-import LandingTitle from "@/components/design/tipography/LandingTitle";
 import "./Hero.css";
 import ComingSoon from "@/components/ComingSoon/ComingSoon";
+import BackgroundImage from "@/components/BackgroundImage/BackgroundImage";
 
 const Hero = () => {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -22,43 +21,46 @@ const Hero = () => {
     threshold: 0.2,
   });
 
-  const zIndexOven = 100;
+  const zIndexOven = 500;
 
-  const [open, setOpen] = useState(false);
-  const handleClose = () => setOpen(false);
+  const [open, setDialogOpen] = useState(false);
+  const handleClose = () => setDialogOpen(false);
 
   const heroSubsection = "flex flex-col flex-1";
 
   return (
     <Section
       id="hero"
-      className={`${layout.section} relative overflow-hidden`}
+      className={`${layout.section} lg:h-200 relative overflow-hidden`}
       bgColor="#191716"
       backgroundSvg={brickBg}
     >
-      <section className="h-170 w-full">
+      {/* <img
+        src={iaOven}
+        alt="Pizza Stone Oven"
+        className={`hero__oven`}
+        style={{ zIndex: zIndexOven }}
+      /> */}
+      <section className="h-185 w-full">
         {/* Oven Container */}
-        <div className="hero__oven-container">
-          <div className="absolute -translate-x-1/2 left-1/2 w-full h-full z-1000">
-            <img
-              src={iaOven}
-              alt="Pizza Stone Oven"
-              className={`hero__oven`}
-              style={{ zIndex: zIndexOven }}
-            />
-            <figure>
-              <div className="hero-3d-layout">
-                <HeroExperience />
-              </div>
-            </figure>
-          </div>
-        </div>
+
+        <div className="absolute -translate-x-1/2 left-1/2 w-full h-full z-500"></div>
         {/* Flex container */}
         <div className="flex flex-col justify-between items-center h-[100%]">
-          <div className="flex flex-row justify-end self-end w-full pt-25 px-5 md:px-25 lg:px-50 transition-all">
-            <LandingButton onClick={() => setOpen(true)} className="w-30">
+          <div className="flex flex-row justify-end self-end w-full pt-10 px-5 md:px-25 lg:px-50 transition-all">
+            <LandingButton
+              onClick={() => setDialogOpen(true)}
+              className="w-30 translate-y-15 md:translate-x-9 lg:translate-x-18 translate-x-4"
+            >
               Connect
             </LandingButton>
+          </div>
+
+          <div className="z-5000">
+            <BackgroundImage
+              imageUrl={iaOven}
+              className="h-90 w-170 md:h-100 md:w-200 ml-5"
+            />
           </div>
 
           {/* <div className="flex flex-row w-full xl:h-full z-999 border-2">
@@ -105,9 +107,9 @@ const Hero = () => {
             </motion.div>
           </div> */}
 
-          <div className="flex flex-col w-full justify-end items-center lg:h-65 md:h-70 h-78 gap-3">
+          <div className="flex flex-col w-full justify-end items-center lg:h-65 md:h-70 h-75 gap-3">
             <LandingButton
-              onClick={() => setOpen(true)}
+              onClick={() => setDialogOpen(true)}
               bgColor="#228B22"
               className="w-18 z-500 self-center -ml-2"
             >
@@ -122,10 +124,9 @@ const Hero = () => {
               className={`${heroSubsection} px-6 mb-12 w-full z-500 flex flex-col justify-start items-center`}
             >
               <LandingHero className="text-center px-5 md:px-20">
-                Deliciously <br className="flex md:hidden" />
-                Baked by You
+                Deliciously Baked by You
               </LandingHero>
-              <LandingText className="text-center px-15 xl:px-0 z-500">
+              <LandingText className="text-center px-8 xl:px-0 z-500">
                 We're not promising world domination. We're just here to build,
                 vibe, and feed the ecosystem one slice at a time.
               </LandingText>
@@ -137,13 +138,26 @@ const Hero = () => {
         <div className="hidden lg:flex px-4 top-90 absolute right-10 z-5000">
           <Social mode="hero" />
         </div>
+
         {/* Dialog */}
-        <Dialog open={open} onClose={() => setOpen(false)} disableScrollLock>
+        <Dialog
+          open={open}
+          onClose={() => setDialogOpen(false)}
+          disableScrollLock
+        >
           <AnimatePresence>
-            {open && <ComingSoon setOpen={setOpen} />}
+            {open && <ComingSoon setOpen={setDialogOpen} />}
           </AnimatePresence>
         </Dialog>
       </section>
+
+      {/* 3d layout  */}
+      <figure>
+        <div className="hero-3d-layout">
+          <HeroExperience />
+        </div>
+      </figure>
+
       <div className="absolute bottom-0 min-w-full w-[1920px] h-24 bg-gradient-to-b from-transparent to-[#0c0500] pointer-events-none z-9000" />
     </Section>
   );

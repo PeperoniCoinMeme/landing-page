@@ -20,13 +20,13 @@ const ComingSoon: React.FC<DialogProps> = ({ setOpen }) => {
   }
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
+    <div className="fixed inset-0 bg-opacity-90 backdrop-blur-md flex items-center justify-center z-50">
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.8, opacity: 0 }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
-        className="flex flex-col justify-center items-center shadow-xl max-w-md text-white w-full text-center gap-3"
+        className="flex flex-col justify-center items-center max-w-md text-white w-full text-center gap-3"
       >
         <LandingSubtitle className="animate-bounce">
           🚧 Coming Soon 🚧
