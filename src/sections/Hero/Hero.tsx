@@ -65,24 +65,6 @@ const Hero = () => {
 
           {/* <div className="flex flex-row w-full xl:h-full z-999 border-2">
             <motion.div
-              ref={ref1}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView1 ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className={`${heroSubsection} px-6 mb-12 w-full z-500 flex flex-col justify-center min-w-4/12 items-center xl:items-start`}
-            >
-              <LandingHero className="text-center xl:text-left">
-                Deliciously Baked by You
-              </LandingHero>
-              <LandingText className="text-center xl:text-left px-10 xl:px-0">
-                We're not promising world domination. We're just here to build,
-                vibe, and feed the ecosystem one slice at a time.
-              </LandingText>
-            </motion.div>
-            <div
-              className={`${heroSubsection} hidden xl:flex justify-center min-w-5/12`}
-            ></div>
-            <motion.div
               // ref={ref1}
               initial={{ opacity: 0, y: 50 }}
               animate={inView1 ? { opacity: 1, y: 0 } : {}}
@@ -96,7 +78,6 @@ const Hero = () => {
               <div className="border-2 border-gray-300 my-1 px-5 py-4 rounded-lg shadow-md">
                 <p className="text-gray-900">Leader board</p>
               </div>
-
               <LandingButton
                 onClick={() => setOpen(true)}
                 isDisabled={true}
