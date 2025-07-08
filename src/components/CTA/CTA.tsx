@@ -12,7 +12,7 @@ import {
   pepeLogo,
   pepePresident,
   pepeSpy,
-  pepeSurf,
+  pepeSun,
   pepeWarrior,
   waveYellowOrange2,
 } from "../../assets";
@@ -24,7 +24,7 @@ const CTA = () => {
     pepeFitStrong,
     pepePresident,
     pepeCivilian,
-    pepeSurf,
+    pepeSun,
     pepeSpy,
     pepeClimbing,
     pepeCar,
