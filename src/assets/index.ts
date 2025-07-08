@@ -146,6 +146,7 @@ import about from "@/assets/about.png";
 import tiktokVideo from "@/assets/tiktok-video.mp4";
 
 export {
+  Checkmark,
   goldenMemeCoin,
   arrowUp,
   logo,
