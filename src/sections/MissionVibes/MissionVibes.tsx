@@ -8,8 +8,8 @@ import { motion } from "framer-motion";
 import { layout } from "@/styles/styles";
 import LandingVideo from "@/components/LandingVideo/LandingVideo";
 import LandingCaption from "@/components/design/tipography/LandingCaption";
-import "./MissionVibes.css";
 import Checkmark from "@/assets/svg/checkmark";
+import "./MissionVibes.css";
 
 const MissionVibes = () => {
   const { ref, inView } = useInView({
