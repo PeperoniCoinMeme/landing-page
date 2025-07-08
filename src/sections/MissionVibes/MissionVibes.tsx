@@ -1,15 +1,15 @@
 import React from "react";
 import { Section } from "@/layout";
-import { pepeBanner, smartPhone, tiktokVideo } from "@/assets";
+import { smartPhone, tiktokVideo } from "@/assets";
 import LandingHero from "@/components/design/tipography/LandingHero";
 import LandingText from "@/components/design/tipography/LandingText";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { layout } from "@/styles/styles";
 import LandingVideo from "@/components/LandingVideo/LandingVideo";
+import LandingCaption from "@/components/design/tipography/LandingCaption";
 import "./MissionVibes.css";
 import Checkmark from "@/assets/svg/checkmark";
-import LandingCaption from "@/components/design/tipography/LandingCaption";
 
 const MissionVibes = () => {
   const { ref, inView } = useInView({
