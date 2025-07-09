@@ -83,7 +83,7 @@
   display: flex;
   align-items: center;
   background-color: black;
-  width: 580%;
+  width: 420%;
   height: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -91,6 +91,12 @@
   animation: marqueeBounce 55s linear infinite alternate;
 }
 
+@media (max-width: 1920px) {
+  .marquee-box {
+    width: 680%;
+    animation: marqueeBounce 55s linear infinite alternate;
+  }
+}
 @media (max-width: 720px) {
   .marquee-box {
     width: 1000%;
