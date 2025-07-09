@@ -13,6 +13,7 @@ import RoadmapHeader from "@/sections/RoadmapHeader/RoadmapHeader";
 import Loader from "@/components/Loader/Loader";
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Carousel from "@/components/Carousel/Carousel";
+import React from "react";
 
 const imageList: string[] = [];
 
@@ -30,6 +31,7 @@ const preloadImage = (src: string): Promise<void> => {
 
 const LandingPage = () => {
   const [loading, setLoading] = useState(true);
+  const [isDialogOpen, setIsDialogOpen] = React.useState(false);
 
   useEffect(() => {
     console.log("Loading started");
@@ -52,7 +54,7 @@ const LandingPage = () => {
   return (
     <div className="overflow-hidden w-full max-w-[1920px] m-auto">
       <Navbar />
-      <BackToTopButton />
+      {!isDialogOpen && <BackToTopButton />}
 
       {/* 1 */}
       <Hero />
@@ -78,7 +80,7 @@ const LandingPage = () => {
 
       {/* <WavySpacer bgWaveUrl={waveYellowBlack1} flip={true} /> */}
       {/* 7 */}
-      <Join />
+      <Join setIsDialogOpen={setIsDialogOpen} />
       {/* <CTA /> */}
       {/* <WavySpacer bgWaveUrl={waveYellowBlack1} flip={false} /> */}
 
