@@ -63,7 +63,7 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ setOpen }) => {
           <h2 className="text-5xl font-bold opacity-0">🍕</h2>
 
           <ul className="space-y-4">
-            {menuItems.map(({ label, href, icon: Icon }, index) => (
+            {menuItems.map(({ label, href }, index) => (
               <motion.li
                 key={label}
                 initial={{ opacity: 0, x: -100 }}

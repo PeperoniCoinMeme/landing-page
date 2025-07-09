@@ -1,15 +1,11 @@
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { useMediaQuery } from "react-responsive";
-
 import { Suspense } from "react";
-import HeroLights from "./HeroLights";
 import Particles from "./Particles";
-import { logo } from "../../../assets";
 
 const HeroExperience = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+  //   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  //   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
   return (
     <>

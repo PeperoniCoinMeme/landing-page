@@ -1,10 +1,7 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Gallery.css";
-import { div } from "framer-motion/client";
-import LandingSubtitle from "../design/tipography/LandingSubtitle";
 import {
   pepeAviator,
-  pepeBanner,
   pepeBaseball,
   pepeBoxer,
   pepeCar,
@@ -22,7 +19,6 @@ import {
   pepeJumproper,
   pepeLanding,
   pepeLibrary,
-  pepeLogo,
   pepeMilitary,
   pepeMiner,
   pepePeperoni,

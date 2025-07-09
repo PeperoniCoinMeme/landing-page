@@ -1,7 +1,5 @@
-import React from "react";
 import { Section } from "@/layout";
 import { cheeseMoon } from "@/assets";
-import LandingButton from "@/components/design/buttons/LandingButton";
 import LandingHero from "@/components/design/tipography/LandingHero";
 import LandingText from "@/components/design/tipography/LandingText";
 import { ParallaxPepperoni } from "@/components/ParallaxPepperoni/ParallaxPepperoni";

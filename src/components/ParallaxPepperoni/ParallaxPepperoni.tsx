@@ -4,7 +4,7 @@ import {
   pepperoniSlice1,
   pepperoniSlice2,
   pepperoniSlice3,
-  pepperoniSlice4,
+  //   pepperoniSlice4,
   pepperoniSlice5,
   pepperoniSlice6,
 } from "../../assets";
@@ -13,9 +13,11 @@ interface ParallaxPepperoniProps {
   parallaxRef?: any;
 }
 
-export const ParallaxPepperoni: React.FC<ParallaxPepperoniProps> = ({
-  parallaxRef,
-}) => {
+export const ParallaxPepperoni: React.FC<ParallaxPepperoniProps> = (
+  {
+    //   parallaxRef,
+  }
+) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

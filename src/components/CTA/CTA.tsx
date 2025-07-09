@@ -1,9 +1,6 @@
-import React from "react";
 import { Section } from "../../layout";
 import JoinButton from "../JoinButton/JoinButton";
 import {
-  logo,
-  orangeScatteredYellow2,
   pepeBanner,
   pepeCar,
   pepeCivilian,
@@ -14,7 +11,6 @@ import {
   pepeSpy,
   pepeSun,
   pepeWarrior,
-  waveYellowOrange2,
 } from "../../assets";
 import LandingHero from "../design/tipography/LandingHero";
 

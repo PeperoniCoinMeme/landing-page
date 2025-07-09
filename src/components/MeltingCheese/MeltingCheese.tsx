@@ -1,10 +1,4 @@
-import React from "react";
-import {
-  cheeseCenter,
-  cheeseLeft,
-  cheeseRight,
-  meltingCheese,
-} from "../../assets";
+import { meltingCheese } from "../../assets";
 
 const MeltingCheese = () => {
   // const cheesePositions = Array.from({ length: 50 }, (_, i) => i);

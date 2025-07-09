@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { Section } from "@/layout";
-import { brickBg, iaOven, logo } from "@/assets";
-import AnimatedCounter from "@/components/AnimatedCounter/AnimatedCounter";
+import { brickBg, iaOven } from "@/assets";
 import LandingButton from "@/components/design/buttons/LandingButton";
 import LandingHero from "@/components/design/tipography/LandingHero";
 import LandingText from "@/components/design/tipography/LandingText";
@@ -21,10 +20,7 @@ const Hero = () => {
     threshold: 0.2,
   });
 
-  const zIndexOven = 500;
-
   const [open, setDialogOpen] = useState(false);
-  const handleClose = () => setDialogOpen(false);
 
   const heroSubsection = "flex flex-col flex-1";
 
