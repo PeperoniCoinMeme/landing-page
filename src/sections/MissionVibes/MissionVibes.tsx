@@ -1,4 +1,3 @@
-import React from "react";
 import { Section } from "@/layout";
 import { smartPhone, tiktokVideo } from "@/assets";
 import LandingHero from "@/components/design/tipography/LandingHero";

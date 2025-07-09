@@ -127,14 +127,12 @@ import linkedin from "@/assets/social/linkedin.svg";
 import twitter from "@/assets/social/twitter.svg";
 
 import iaOven from "@/assets/oven/ia-oven.png";
-import splash from "@/assets/cheese/splash.png";
+// import splash from "@/assets/cheese/splash.png";
 import meltingCheese from "@/assets/cheese/melting-cheese.png";
 import cheeseCenter from "@/assets/cheese/cheeseCenter.png";
 import cheeseRight from "@/assets/cheese/cheeseRight.png";
 import cheeseLeft from "@/assets/cheese/cheeseLeft.png";
 import brickBg from "@/assets/brickbg.png";
-import transitionDownBg from "@/assets/transitionDownBg.png";
-import transitionUpBg from "@/assets/transitionUpBg.png";
 import planetBg from "@/assets/landscape/planet.png";
 import starsBg from "@/assets/landscape/stars.png";
 import mountainBg from "@/assets/landscape/mountain.png";
@@ -220,7 +218,7 @@ export {
   cheeseCenter,
   cheeseRight,
   cheeseLeft,
-  splash,
+  //   splash,
   //
   bg1,
   bg2,
@@ -283,8 +281,6 @@ export {
 
   // Backgrounds
   brickBg,
-  transitionDownBg,
-  transitionUpBg,
   planetBg,
   starsBg,
   mountainBg,

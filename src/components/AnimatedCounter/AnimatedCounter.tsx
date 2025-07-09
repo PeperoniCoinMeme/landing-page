@@ -7,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedCounter = () => {
   const counterRef = useRef(null);
-  const countersRef = useRef([]);
 
   useGSAP(() => {
     // countersRef.current.forEach((counter, index) => {

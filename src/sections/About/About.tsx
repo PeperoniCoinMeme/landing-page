@@ -1,6 +1,3 @@
-import React from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import { Section } from "@/layout";
 import { goldenMemeCoin } from "@/assets";
 import "./About.css";

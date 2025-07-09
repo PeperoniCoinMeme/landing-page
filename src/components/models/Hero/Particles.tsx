@@ -1,7 +1,6 @@
 import { useRef, useMemo } from "react";
-import { useFrame, useLoader } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
-import { peperoniBlob1 } from "../../../assets";
 
 interface Particle {
   position: [number, number, number];

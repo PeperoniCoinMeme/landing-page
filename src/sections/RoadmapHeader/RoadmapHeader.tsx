@@ -1,5 +1,3 @@
-import React from "react";
-import { useState, useEffect } from "react";
 import { logo, planetBg } from "@/assets";
 import LandingHero from "@/components/design/tipography/LandingHero";
 import LandingText from "@/components/design/tipography/LandingText";
@@ -17,14 +15,12 @@ const RoadmapHeader = () => {
     threshold: 0.2,
   });
 
-  const [offsetY, setOffsetY] = useState(0);
-
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   const [offsetY, setOffsetY] = useState(0);
+  //   const handleScroll = () => setOffsetY(window.pageYOffset);
+  //   useEffect(() => {
+  //     window.addEventListener("scroll", handleScroll);
+  //     return () => window.removeEventListener("scroll", handleScroll);
+  //   }, []);
 
   return (
     <Section

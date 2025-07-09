@@ -1,7 +1,5 @@
-import React from "react";
 import { Section } from "@/layout";
 import { astronaut2, satelliteCold } from "@/assets";
-import LandingButton from "@/components/design/buttons/LandingButton";
 import LandingHero from "@/components/design/tipography/LandingHero";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
