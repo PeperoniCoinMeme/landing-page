@@ -2,14 +2,14 @@ import {
   pepeCop,
   pepeDavinci,
   pepeMiner,
-  pepeGamer,
+  //   pepeGamer,
   pepeMilitary,
   pepeGifted,
   pepeHonors,
   pepeJumproper,
   pepeLanding,
   pepeLibrary,
-  pepePeperoni,
+  //   pepePeperoni,
   pepePig,
   pepeCar,
   pepeCivilian,
@@ -29,21 +29,20 @@ import {
   pepeSamurai,
   pepeWar,
 } from "@/assets";
-import { logoIconsList } from "../../constants";
 import GalleryCard from "../Gallery/GalleryCard";
 
-interface CarouselItemProps {
-  name?: string;
-  imgPath?: string;
-}
+// interface CarouselItemProps {
+//   name?: string;
+//   imgPath?: string;
+// }
 
-const CarouselItem: React.FC<CarouselItemProps> = ({ name, imgPath }) => {
-  return (
-    <div className="flex-none flex-center marquee-item">
-      <img src={imgPath} alt={name} className="rounded-2xl" />
-    </div>
-  );
-};
+// const CarouselItem: React.FC<CarouselItemProps> = ({ name, imgPath }) => {
+//   return (
+//     <div className="flex-none flex-center marquee-item">
+//       <img src={imgPath} alt={name} className="rounded-2xl" />
+//     </div>
+//   );
+// };
 
 const images = [
   { name: "pepeCop", imgPath: pepeCop },

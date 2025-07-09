@@ -9,42 +9,42 @@ import LandingSubtitle from "../design/tipography/LandingSubtitle";
 import Divider from "@mui/material/Divider";
 import InsightsIcon from "@mui/icons-material/Insights";
 import { motion, AnimatePresence } from "framer-motion";
-import { peperoniPizza } from "../../assets";
 import LandingText from "../design/tipography/LandingText";
 import "./PieChart.css";
 import Chip from "@mui/material/Chip";
 import RotatingGalaxy from "../RotatingGalaxy/RotatingGalaxy";
 
-function useIsSmallScreen(query = "(max-width: 768px)"): boolean {
-  const [isSmallScreen, setIsSmallScreen] = React.useState(
-    () => window.matchMedia(query).matches
-  );
+// function useIsSmallScreen(query = "(max-width: 768px)"): boolean {
+//   const [isSmallScreen, setIsSmallScreen] = React.useState(
+//     () => window.matchMedia(query).matches
+//   );
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(query);
+//   useEffect(() => {
+//     const mediaQuery = window.matchMedia(query);
 
-    const handler = (e: MediaQueryListEvent) => {
-      setIsSmallScreen(e.matches);
-    };
+//     const handler = (e: MediaQueryListEvent) => {
+//       setIsSmallScreen(e.matches);
+//     };
 
-    mediaQuery.addEventListener("change", handler);
+//     mediaQuery.addEventListener("change", handler);
 
-    return () => mediaQuery.removeEventListener("change", handler);
-  }, [query]);
+//     return () => mediaQuery.removeEventListener("change", handler);
+//   }, [query]);
 
-  return isSmallScreen;
-}
+//   return isSmallScreen;
+// }
 
 export default function PieAnimation() {
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     triggerOnce: false,
     threshold: 0.2,
   });
 
   // States
-  const [itemData, setItemData] = React.useState<PieItemIdentifier>();
-  const [radius, setRadius] = React.useState(60);
-  const [itemNb, setItemNb] = React.useState(1);
+  const [itemData] = React.useState<PieItemIdentifier>();
+  //   const [radius, setRadius] = React.useState(60);
+  const radius = 60;
+  const [, setItemNb] = React.useState(1);
   const [currentSelectedItem, setCurrentSelectedItem] = React.useState(1);
 
   const [chip, setChip] = React.useState<{
@@ -53,8 +53,7 @@ export default function PieAnimation() {
     label: string;
   } | null>(null);
 
-  const isSmallScreen = useIsSmallScreen();
-
+  //   const isSmallScreen = useIsSmallScreen();
   // Effect 1, change char dinamically
   //   useEffect(() => {
   //     if (!inView || !isSmallScreen) {

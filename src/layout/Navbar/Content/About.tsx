@@ -1,5 +1,3 @@
-import React from "react";
-
 const AboutContent = () => {
   return (
     <div className="h-auto w-[300px] bg-[var(--color-card-bg)] p-6 shadow-md border border-[var(--color-tertiary)]/30">

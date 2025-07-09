@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import LandingButton from "../design/buttons/LandingButton";
-import { div } from "framer-motion/client";
 import { arrowUp } from "../../assets";
 
 const BackToTopButton: React.FC = () => {

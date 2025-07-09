@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Section } from "@/layout";
 
 import {
   pepeBaseball,
   pepeBoxer,
   pepeCar,
-  pepeCivilian,
   pepeClimbing,
-  pepeFitSkinny,
   pepeFitStrong,
   pepeJumproper,
   pepePresident,
-  pepeSpy,
   pepeWelder,
 } from "@/assets";
 import LandingHero from "@/components/design/tipography/LandingHero";

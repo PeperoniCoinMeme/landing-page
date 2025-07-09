@@ -11,7 +11,7 @@ const BackgroundImage: React.FC<BackgroundImageProps> = ({
   imageUrl,
   children,
   className = "",
-  overlayColor = "rgba(0, 0, 0, 0.3)",
+  //   overlayColor = "rgba(0, 0, 0, 0.3)",
 }) => {
   return (
     <div

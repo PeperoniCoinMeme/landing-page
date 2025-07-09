@@ -1,5 +1,3 @@
-import React from "react";
-
 const TokenomicsContent = () => {
   return (
     <div className="h-auto w-64 bg-[var(--color-card-bg)] p-6 shadow-md rounded-lg border border-[var(--color-border)]">

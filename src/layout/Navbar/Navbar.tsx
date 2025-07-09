@@ -1,24 +1,7 @@
-import { AnimatePresence, easeOut, motion } from "framer-motion";
-import { div } from "framer-motion/client";
 import React, { useEffect, useState } from "react";
-import {
-  XMarkIcon,
-  Bars3Icon,
-  CurrencyDollarIcon,
-  MapIcon,
-  QuestionMarkCircleIcon,
-  FireIcon,
-  GiftIcon,
-  ClockIcon,
-} from "@heroicons/react/24/solid";
-import { logo, meltingCheese } from "../../assets";
-import PricingContent from "./Content/Pricing";
-import TokenomicsContent from "./Content/Tokenomics";
-import AboutContent from "./Content/About";
+import { Bars3Icon } from "@heroicons/react/24/solid";
+import { logo } from "../../assets";
 import MeltingCheese from "../../components/MeltingCheese/MeltingCheese";
-import FlyoutLink from "./Flyout/Flyout";
-import Headroom from "../../components/Headroom/Headroom";
-import Social from "@/components/Social/Social";
 import Dialog from "@mui/material/Dialog";
 import NavbarMenu from "@/components/NavbarMenu/NavbarMenu";
 
@@ -28,7 +11,6 @@ const Navbar = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
 
   const [open, setDialogOpen] = useState(false);
-  const handleClose = () => setDialogOpen(false);
 
   const fontStyles: React.CSSProperties = {
     fontFamily: "Riffic",

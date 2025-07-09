@@ -1,7 +1,6 @@
 // HeroAnimatedText.tsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./HeroAnimatedText.css";
-import { div, label } from "framer-motion/client";
 
 const phrases = [
   {

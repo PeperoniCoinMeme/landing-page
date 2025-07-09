@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import GlowCard from "@/components/models/GlowCard";
@@ -53,10 +52,7 @@ const Roadmap = () => {
                 ref={cardRef}
                 initial={{ opacity: 0, x: -50 }}
                 animate={cardInView ? { opacity: 1, x: 0 } : {}}
-                transition={{
-                  duration: 0.6,
-                  ease: "easeOut",
-                }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
                 key={card.title}
                 className="flex flex-col-reverse xl:items-start items-center xl:flex-row xl:gap-20 gap-10 justify-between transition-all"
               >
