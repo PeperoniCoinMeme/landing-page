@@ -6,10 +6,10 @@ import {
   Join,
   MissionVibes,
   Roadmap,
+  RoadmapHeader,
   SliceOfUtility,
   Slicenomics,
 } from "@/sections";
-import RoadmapHeader from "@/sections/RoadmapHeader/RoadmapHeader";
 import Loader from "@/components/Loader/Loader";
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Carousel from "@/components/Carousel/Carousel";
@@ -65,8 +65,6 @@ const LandingPage = () => {
       {/* 3 */}
       <MissionVibes />
       <Carousel />
-      {/* <LogoShowcase />  */}
-      {/* <Feature />  */}
 
       {/* 4 */}
       <SliceOfUtility />
@@ -78,11 +76,8 @@ const LandingPage = () => {
       <RoadmapHeader />
       <Roadmap />
 
-      {/* <WavySpacer bgWaveUrl={waveYellowBlack1} flip={true} /> */}
       {/* 7 */}
       <Join setIsDialogOpen={setIsDialogOpen} />
-      {/* <CTA /> */}
-      {/* <WavySpacer bgWaveUrl={waveYellowBlack1} flip={false} /> */}
 
       <Footer />
     </div>

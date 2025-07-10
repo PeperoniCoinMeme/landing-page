@@ -4,12 +4,14 @@ import { logo } from "../../assets";
 import MeltingCheese from "../../components/MeltingCheese/MeltingCheese";
 import Dialog from "@mui/material/Dialog";
 import NavbarMenu from "@/components/NavbarMenu/NavbarMenu";
+import { useDispatch } from "react-redux";
+import { toggleNavbarMenu } from "@/store/uiSlice";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
   //   const [menuOpen, setMenuOpen] = useState(false);
   //   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const [hasScrolled, setHasScrolled] = useState(false);
-
   const [open, setDialogOpen] = useState(false);
 
   const fontStyles: React.CSSProperties = {
@@ -17,7 +19,6 @@ const Navbar = () => {
   };
 
   // Effects
-
   useEffect(() => {
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 20);
@@ -29,6 +30,9 @@ const Navbar = () => {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+
+    // Set redux value for navbar menu
+    dispatch(toggleNavbarMenu());
   }, [open]);
 
   return (

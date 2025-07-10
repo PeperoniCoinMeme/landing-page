@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Section } from "@/layout";
+import { useSelector } from "react-redux";
+import type { RootState } from "@/store";
 
 import {
   pepeBaseball,
@@ -27,31 +29,19 @@ interface JoinProps {
 const Join: React.FC<JoinProps> = ({ setIsDialogOpen }) => {
   const [expandedIndex, setExpandedIndex] = useState(0);
 
-  const panels = [
-    {
-      image: pepePresident,
-    },
-    {
-      image: pepeWelder,
-    },
-    {
-      image: pepeClimbing,
-    },
-    {
-      image: pepeBoxer,
-    },
-    {
-      image: pepeBaseball,
-    },
-    {
-      image: pepeJumproper,
-    },
-    {
-      image: pepeFitStrong,
-    },
-    {
-      image: pepeCar,
-    },
+  const isNavbarMenuOpen = useSelector(
+    (state: RootState) => state.ui.isNavbarMenuOpen
+  );
+
+  const panelsImage = [
+    pepePresident,
+    pepeWelder,
+    pepeClimbing,
+    pepeBoxer,
+    pepeBaseball,
+    pepeJumproper,
+    pepeFitStrong,
+    pepeCar,
   ];
 
   const handleClick = (index: number) => {
@@ -69,6 +59,12 @@ const Join: React.FC<JoinProps> = ({ setIsDialogOpen }) => {
     threshold: 0.2,
   });
 
+  useEffect(() => {
+    if (isNavbarMenuOpen) {
+      setMenuOpen(false);
+    }
+  }, [isNavbarMenuOpen]);
+
   return (
     <Section
       id="join"
@@ -80,7 +76,7 @@ const Join: React.FC<JoinProps> = ({ setIsDialogOpen }) => {
           <div
             className="overflow-hidden flex items-center rounded-2xl justify-center p-4 relative border-1 border-gray-200/30"
             style={{
-              backgroundImage: `url(${panels[expandedIndex].image})`,
+              backgroundImage: `url(${panelsImage[expandedIndex]})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
             }}
@@ -114,7 +110,7 @@ const Join: React.FC<JoinProps> = ({ setIsDialogOpen }) => {
               </motion.div>
 
               <div className="hidden lg:flex px-16 py-8 items-center h-[80vh] max-h-[500px] justify-center gap-1">
-                {panels.map((panel, index) => (
+                {panelsImage.map((image, index) => (
                   <div
                     key={index}
                     onClick={() => handleClick(index)}
@@ -130,7 +126,7 @@ const Join: React.FC<JoinProps> = ({ setIsDialogOpen }) => {
             `}
                   >
                     <img
-                      src={panel.image}
+                      src={image}
                       alt=""
                       className="w-full h-full object-cover object-top"
                     />
