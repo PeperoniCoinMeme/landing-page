@@ -20,7 +20,11 @@ import { layout } from "@/styles/styles";
 import Gallery from "@/components/Gallery/Gallery";
 import XMarkIcon from "@heroicons/react/24/solid/XMarkIcon";
 
-const Join = () => {
+interface JoinProps {
+  setIsDialogOpen: (open: boolean) => void;
+}
+
+const Join: React.FC<JoinProps> = ({ setIsDialogOpen }) => {
   const [expandedIndex, setExpandedIndex] = useState(0);
 
   const panels = [
@@ -55,7 +59,10 @@ const Join = () => {
   };
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+    setIsDialogOpen(!menuOpen);
+  };
 
   const { ref, inView } = useInView({
     triggerOnce: false,
