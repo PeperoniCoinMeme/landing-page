@@ -127,7 +127,8 @@ const Join: React.FC<JoinProps> = ({ setIsDialogOpen }) => {
                   >
                     <img
                       src={image}
-                      alt=""
+                      loading="lazy"
+                      alt="Peperoni Panel Image"
                       className="w-full h-full object-cover object-top"
                     />
                   </div>
