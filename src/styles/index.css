@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import "tailwindcss";
 
 :root {
@@ -162,4 +165,19 @@ img {
     opacity: 0;
     box-shadow: 0px 10px 20px rgba(255, 255, 255, 0);
   }
+}
+
+.parent-depth {
+  perspective: 1900px;
+  z-index: 500 !important;
+}
+
+.video-depth {
+  transform: rotateX(6deg) rotateY(55deg) rotateZ(-0.5deg);
+  transform-style: preserve-3d;
+  border-radius: 30px;
+  left: 4.6rem;
+  top: 3.7rem;
+  height: 495px;
+  z-index: 100;
 }

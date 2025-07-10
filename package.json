@@ -19,6 +19,7 @@
     "@mui/x-charts": "^8.5.3",
     "@react-three/drei": "^10.1.2",
     "@react-three/fiber": "^9.1.2",
+    "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.8",
     "@types/react-helmet": "^6.1.11",
     "framer-motion": "^12.16.0",
@@ -26,6 +27,7 @@
     "react-dom": "^19.1.0",
     "react-intersection-observer": "^9.16.0",
     "react-just-parallax": "^3.1.16",
+    "react-redux": "^9.2.0",
     "react-responsive": "^10.0.1",
     "styled-components": "^6.1.19",
     "tailwindcss": "^4.1.8"
