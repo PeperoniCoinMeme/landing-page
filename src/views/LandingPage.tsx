@@ -14,14 +14,48 @@ import Loader from "@/components/Loader/Loader";
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Carousel from "@/components/Carousel/Carousel";
 import React from "react";
+import {
+  astronaut1,
+  astronaut2,
+  brickBg,
+  cheeseMoon,
+  goldenMemeCoin,
+  iaOven,
+  mountainBg,
+  parachutes1,
+  parachutes2,
+  parachutes3,
+  parachutes4,
+  peperoniPizza,
+  planetBg,
+  smartPhone,
+} from "@/assets";
 
-const imageList: string[] = [];
+const imageList: string[] = [
+  iaOven,
+  brickBg,
+  goldenMemeCoin,
+  smartPhone,
+  cheeseMoon,
+  peperoniPizza,
+  astronaut1,
+  astronaut2,
+  parachutes1,
+  parachutes2,
+  parachutes3,
+  parachutes4,
+  planetBg,
+  mountainBg,
+];
 
 const preloadImage = (src: string): Promise<void> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.src = src;
-    img.onload = () => resolve();
+    img.onload = () => {
+      //   console.log(`✅ Img loaded: ${src}`);
+      resolve();
+    };
     img.onerror = (err) => {
       console.error("Error loading:", src);
       reject(err);

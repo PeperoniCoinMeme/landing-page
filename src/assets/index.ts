@@ -129,9 +129,9 @@ import twitter from "@/assets/social/twitter.svg";
 import iaOven from "@/assets/oven/ia-oven.png";
 // import splash from "@/assets/cheese/splash.png";
 import meltingCheese from "@/assets/cheese/melting-cheese.png";
-import cheeseCenter from "@/assets/cheese/cheeseCenter.png";
-import cheeseRight from "@/assets/cheese/cheeseRight.png";
-import cheeseLeft from "@/assets/cheese/cheeseLeft.png";
+// import cheeseCenter from "@/assets/cheese/cheeseCenter.png";
+// import cheeseRight from "@/assets/cheese/cheeseRight.png";
+// import cheeseLeft from "@/assets/cheese/cheeseLeft.png";
 import brickBg from "@/assets/brickbg.png";
 import planetBg from "@/assets/landscape/planet.png";
 import starsBg from "@/assets/landscape/stars.png";
@@ -140,7 +140,6 @@ import grassBg from "@/assets/landscape/grass.png";
 import pepeSun from "@/assets/landscape/pepe-sun.png";
 import sunsetGradientBg from "@/assets/landscape/sunset-gradient-background.png";
 import blurryDarkGradient from "@/assets/svg/blurry-dark-gradient.svg";
-import about from "@/assets/about.png";
 import tiktokVideo from "@/assets/tiktok-video.mp4";
 
 export {
@@ -215,9 +214,9 @@ export {
   twitter,
   //
   meltingCheese,
-  cheeseCenter,
-  cheeseRight,
-  cheeseLeft,
+  //   cheeseCenter,
+  //   cheeseRight,
+  //   cheeseLeft,
   //   splash,
   //
   bg1,
@@ -288,5 +287,4 @@ export {
   pepeSun,
   sunsetGradientBg,
   blurryDarkGradient,
-  about,
 };

@@ -19,6 +19,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
     >
       <img
         src={imageUrl}
+        loading="lazy"
         alt="Gallery Item"
         className="w-full h-60 md:h-70 lg:h-78 object-cover opacity-90 hover:opacity-100"
       />
