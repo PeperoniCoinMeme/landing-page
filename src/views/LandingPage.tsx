@@ -28,8 +28,10 @@ import {
   parachutes4,
   peperoniPizza,
   planetBg,
+  satelliteCold,
   smartPhone,
 } from "@/assets";
+import { meltingCheese } from "../assets";
 
 const imageList: string[] = [
   iaOven,
@@ -46,6 +48,8 @@ const imageList: string[] = [
   parachutes4,
   planetBg,
   mountainBg,
+  meltingCheese,
+  satelliteCold,
 ];
 
 const preloadImage = (src: string): Promise<void> => {
